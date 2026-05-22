@@ -123,36 +123,36 @@ export default function Home() {
 
 
       {/* Manifesto Section */}
-      <section className="bg-black section-pad md:py-0 md:h-screen md:min-h-[720px] flex flex-col justify-center relative overflow-hidden" aria-labelledby="man-h">
+      <section className="bg-black section-pad md:py-0 md:h-[100svh] 2xl:min-h-[720px] flex flex-col justify-center relative overflow-hidden" aria-labelledby="man-h">
         <div className="wrap">
           <Reveal className="max-w-[1300px] mx-auto text-center">
-            <span className="font-space text-[clamp(12px,0.85vw,16px)] font-light tracking-[0.22em] uppercase text-[#d9d9d9] inline-block mb-[32px]" id="man-h">
+            <span className="font-space text-[clamp(12px,0.85vw,16px)] font-light tracking-[0.22em] uppercase text-[#d9d9d9] inline-block mb-6 md:mb-3 2xl:mb-[32px]" id="man-h">
               Core Philosophy
             </span>
-            <p className="text-[clamp(18px,1.4vw,28px)] leading-[1.65] text-[#E3E3E3] font-sans tracking-[-0.01em]">
+            <p className="text-[clamp(18px,1.4vw,28px)] md:text-[14px] xl:text-[18px] 2xl:text-[clamp(18px,1.4vw,28px)] leading-[1.65] text-[#E3E3E3] font-sans tracking-[-0.01em]">
               Pragyan is a 360° branding and marketing agency that works as<br />
               <em className="italic">an extension of the founder&apos;s mind.</em>
             </p>
 
-            <p className="text-[clamp(18px,1.4vw,28px)] leading-[1.65] text-[#E3E3E3] font-sans tracking-[-0.01em]">
+            <p className="text-[clamp(18px,1.4vw,28px)] md:text-[14px] xl:text-[18px] 2xl:text-[clamp(18px,1.4vw,28px)] leading-[1.65] text-[#E3E3E3] font-sans tracking-[-0.01em]">
               We&apos;re a young, sharp team of strategists and creators<br />
               who take your raw, human spark<br />
               and give it the professional gravity it deserves.
             </p>
-            <p className="text-[clamp(18px,1.4vw,28px)] leading-[1.65] text-[#FFD111] font-sans font-medium tracking-[-0.01em] mt-[28px]">
+            <p className="text-[clamp(18px,1.4vw,28px)] md:text-[14px] xl:text-[18px] 2xl:text-[clamp(18px,1.4vw,28px)] leading-[1.65] text-[#FFD111] font-sans font-medium tracking-[-0.01em] mt-5 md:mt-2 2xl:mt-[28px]">
               We believe in building long-term partnerships with intellectual honesty.
             </p>
-            <p className="text-[clamp(18px,1.4vw,28px)] leading-[1.65] text-[#E3E3E3] font-sans tracking-[-0.01em] mt-[6px]">
+            <p className="text-[clamp(18px,1.4vw,28px)] md:text-[14px] xl:text-[18px] 2xl:text-[clamp(18px,1.4vw,28px)] leading-[1.65] text-[#E3E3E3] font-sans tracking-[-0.01em] mt-[6px]">
               We aren&apos;t for everyone — and we&apos;re okay with that.
             </p>
           </Reveal>
 
           {/* Methodology Cards Section */}
-          <div className="mt-8 md:mt-10 max-w-[1100px] mx-auto">
-            <Reveal className="text-center mb-12">
+          <div className="mt-8 md:mt-4 xl:mt-6 2xl:mt-10 max-w-[1100px] md:max-w-[760px] xl:max-w-[920px] 2xl:max-w-[1100px] mx-auto">
+            <Reveal className="text-center mb-6 md:mb-3 xl:mb-4 2xl:mb-12">
               <span className="font-space text-[clamp(12px,0.85vw,16px)] font-light tracking-[0.22em] uppercase text-[#d9d9d9]">Methodology</span>
             </Reveal>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-4 2xl:gap-6">
               {[
                 {
                   img: "/assets/img/h1.jpeg", // Replace with your image path
@@ -176,8 +176,8 @@ export default function Home() {
                         className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0"
                       />
                     </div>
-                    <div className="p-7 flex-grow text-center md:text-left">
-                      <p className="text-[#C9C9CE] text-[clamp(17px,1.2vw,21px)] leading-[1.5] font-medium">
+                    <div className="p-7 md:p-4 xl:p-5 2xl:p-7 flex-grow text-center md:text-left">
+                      <p className="text-[#C9C9CE] text-[clamp(17px,1.2vw,21px)] md:text-[13px] xl:text-[16px] 2xl:text-[clamp(17px,1.2vw,21px)] leading-[1.5] font-medium">
                         {card.text}
                       </p>
                     </div>
@@ -190,7 +190,7 @@ export default function Home() {
       </section>
 
       {/* Process Section */}
-      <section className="bg-white text-black border-t border-[#E5E5E7] py-[clamp(80px,8vw,140px)] md:py-0 md:h-screen 2xl:min-h-[700px] md:flex md:flex-col md:justify-center relative overflow-hidden" aria-labelledby="process-h">
+      <section className="bg-white text-black border-t border-[#E5E5E7] py-[clamp(80px,8vw,140px)] md:py-0 md:h-[100svh] 2xl:min-h-[700px] md:flex md:flex-col md:justify-center relative overflow-hidden" aria-labelledby="process-h">
 
 
 
@@ -238,7 +238,7 @@ export default function Home() {
       </section>
 
       {/* Breathe Section */}
-      <section className="bg-black section-pad md:py-0 md:h-screen 2xl:min-h-[850px] md:flex md:flex-col md:justify-center relative overflow-hidden" aria-labelledby="breathe-h">
+      <section className="bg-black section-pad md:py-0 md:h-[100svh] 2xl:min-h-[850px] md:flex md:flex-col md:justify-center relative overflow-hidden" aria-labelledby="breathe-h">
         <div className="wrap">
           <Reveal className="mb-6 md:mb-3 2xl:mb-[32px] max-w-[820px] text-center md:text-left mx-auto md:mx-0">
             <span className="font-space text-[clamp(12px,0.85vw,16px)] font-light tracking-[0.22em] uppercase text-[#d9d9d9] mb-3 md:mb-2 2xl:mb-6 block">Our Projects</span>
@@ -282,7 +282,7 @@ export default function Home() {
 
             <div className="space-y-8 md:space-y-4 2xl:space-y-5 pt-0 md:pt-2 2xl:pt-6">
               <Reveal delay={0.5}>
-                <div className="rounded-none overflow-hidden aspect-[3/4] md:aspect-[3/5] bg-ink border border-border transition-all duration-500 hover:scale-[1.03] hover:border-violet group cursor-pointer max-w-[340px] sm:max-w-none w-full mx-auto">
+                <div className="rounded-none overflow-hidden aspect-[3/4] md:aspect-[3/4.2] 2xl:aspect-[3/5] bg-ink border border-border transition-all duration-500 hover:scale-[1.03] hover:border-violet group cursor-pointer max-w-[340px] sm:max-w-none w-full mx-auto">
                   <img src="/assets/img/g5.png" alt="" className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0" />
                 </div>
               </Reveal>
