@@ -13,7 +13,7 @@ export default function Home() {
 
         {/* DESKTOP: gradient image, absolutely positioned */}
         <div
-          className="absolute z-0 pointer-events-none hidden md:block"
+          className="absolute z-0 pointer-events-none hidden md:block md:translate-y-[4vh] 2xl:translate-y-0"
           style={{
             left: 'clamp(20px, 3vw, 60px)',
             top: 'clamp(120px, 20vh, 260px)',
@@ -46,8 +46,8 @@ export default function Home() {
           {/* Heading row */}
           <div className="flex items-start justify-between gap-3 pt-[135px] md:pt-[clamp(140px,18vh,240px)]">
             <Reveal>
-              <h1 id="hero-h" className="text-[clamp(32px,3.2vw,68px)] leading-[1.08] font-sans font-bold text-[#fcfcfc] tracking-[-0.03em] max-w-[80%] sm:max-w-[72%] md:max-w-[75%]">
-                Behind every brand is a human mind. That&apos;s where we start.
+              <h1 id="hero-h" className="text-[clamp(32px,3.2vw,68px)] leading-[1.08] font-sans font-bold text-[#fcfcfc] tracking-[-0.03em] max-w-[80%] sm:max-w-[72%] md:max-w-[90%] 2xl:max-w-[75%] md:-translate-x-[2vw] 2xl:translate-x-0">
+                Behind every brand is a human <br className="hidden md:inline 2xl:hidden" /> mind. That&apos;s where we start.
               </h1>
             </Reveal>
             {/* Hide on very small screens */}
@@ -190,7 +190,7 @@ export default function Home() {
       </section>
 
       {/* Process Section */}
-      <section className="bg-white text-black border-t border-[#E5E5E7] py-[clamp(80px,8vw,140px)] md:py-0 md:h-screen md:min-h-[700px] md:flex md:flex-col md:justify-center relative overflow-hidden" aria-labelledby="process-h">
+      <section className="bg-white text-black border-t border-[#E5E5E7] py-[clamp(80px,8vw,140px)] md:py-0 md:h-screen 2xl:min-h-[700px] md:flex md:flex-col md:justify-center relative overflow-hidden" aria-labelledby="process-h">
 
 
 
@@ -200,10 +200,10 @@ export default function Home() {
 
         <div className="wrap relative z-[1] flex justify-start">
           <div className="w-full md:w-[80%] md:ml-[clamp(40px,4vw,80px)] md:-translate-x-[5vw] lg:-translate-x-[7vw]">
-            <div className="mb-[clamp(40px,6vw,64px)] text-left md:ml-[-clamp(40px,4vw,80px)]">
+            <div className="mb-[clamp(40px,6vw,64px)] md:mb-5 2xl:mb-[clamp(40px,6vw,64px)] text-left md:ml-[-clamp(40px,4vw,80px)]">
               <Reveal>
                 <span className="font-space font-light text-[clamp(12px,0.85vw,16px)] tracking-[0.22em] uppercase text-[#6a6a6a] block mb-2">Process Index</span>
-                <h2 id="process-h" className="mt-4 text-[#1b1b1b] tracking-[-0.03em] !text-[clamp(36px,3.5vw,64px)]">
+                <h2 id="process-h" className="mt-4 text-[#1b1b1b] tracking-[-0.03em] !text-[clamp(36px,3.5vw,64px)] md:!text-[32px] xl:!text-[40px] 2xl:!text-[clamp(36px,3.5vw,64px)]">
                   <span className="font-bold">How we</span> <em className="italic font-light">work.</em>
                 </h2>
               </Reveal>
@@ -221,11 +221,11 @@ export default function Home() {
               ].map((step, idx) => (
                 <Reveal key={idx} delay={idx * 0.1}>
                   <div className="relative">
-                    <div className="grid grid-cols-[44px_1fr] sm:grid-cols-[52px_380px_1fr] xl:grid-cols-[64px_460px_1fr] 2xl:grid-cols-[80px_540px_1fr] gap-x-8 items-center text-left py-[clamp(20px,2.5vw,36px)] hover:pl-2 transition-all duration-300 md:ml-[-clamp(40px,4vw,80px)]">
-                      <div className="font-space text-[clamp(40px,3.5vw,58px)] text-[#E0E0E0] font-normal leading-none self-start pt-1 sm:pt-0 sm:self-auto">{step.num}</div>
+                    <div className="grid grid-cols-[44px_1fr] sm:grid-cols-[52px_380px_1fr] xl:grid-cols-[64px_460px_1fr] 2xl:grid-cols-[80px_540px_1fr] gap-x-8 items-center text-left py-[clamp(20px,2.5vw,36px)] md:py-3 xl:py-4 2xl:py-[clamp(20px,2.5vw,36px)] hover:pl-2 transition-all duration-300 md:ml-[-clamp(40px,4vw,80px)]">
+                      <div className="font-space text-[clamp(40px,3.5vw,58px)] md:text-[34px] xl:text-[44px] 2xl:text-[clamp(40px,3.5vw,58px)] text-[#E0E0E0] font-normal leading-none self-start pt-1 sm:pt-0 sm:self-auto">{step.num}</div>
                       <div className="flex flex-col gap-3 sm:contents">
-                        <div className="font-sans text-[clamp(32px,3.5vw,60px)] font-extrabold tracking-[-0.02em] text-black leading-none">{step.title}</div>
-                        <div className="font-sans font-light text-[#6a6a6a] text-[clamp(16px,1.4vw,24px)] leading-[1.6]">{step.desc}</div>
+                        <div className="font-sans text-[clamp(32px,3.5vw,60px)] md:text-[28px] xl:text-[36px] 2xl:text-[clamp(32px,3.5vw,60px)] font-extrabold tracking-[-0.02em] text-black leading-none">{step.title}</div>
+                        <div className="font-sans font-light text-[#6a6a6a] text-[clamp(16px,1.4vw,24px)] md:text-[14px] xl:text-[18px] 2xl:text-[clamp(16px,1.4vw,24px)] leading-[1.6]">{step.desc}</div>
                       </div>
                     </div>
                     <div className="absolute bottom-0 left-0 h-px bg-[#d9d9d9] w-full md:w-[165%]" />
@@ -238,49 +238,49 @@ export default function Home() {
       </section>
 
       {/* Breathe Section */}
-      <section className="bg-black section-pad md:py-0 md:h-screen md:min-h-[850px] md:flex md:flex-col md:justify-center relative overflow-hidden" aria-labelledby="breathe-h">
+      <section className="bg-black section-pad md:py-0 md:h-screen 2xl:min-h-[850px] md:flex md:flex-col md:justify-center relative overflow-hidden" aria-labelledby="breathe-h">
         <div className="wrap">
-          <Reveal className="mb-[40px] md:mb-[32px] max-w-[820px] text-center md:text-left mx-auto md:mx-0">
-            <span className="font-space text-[clamp(12px,0.85vw,16px)] font-light tracking-[0.22em] uppercase text-[#d9d9d9] mb-6 block">Our Projects</span>
-            <h2 id="breathe-h" className="font-sans font-bold leading-[1.1] tracking-[-0.04em] text-[#FFD111]">
+          <Reveal className="mb-6 md:mb-3 2xl:mb-[32px] max-w-[820px] text-center md:text-left mx-auto md:mx-0">
+            <span className="font-space text-[clamp(12px,0.85vw,16px)] font-light tracking-[0.22em] uppercase text-[#d9d9d9] mb-3 md:mb-2 2xl:mb-6 block">Our Projects</span>
+            <h2 id="breathe-h" className="font-sans font-bold leading-[1.1] tracking-[-0.04em] text-[#FFD111] text-[clamp(28px,2.8vw,48px)] md:text-[26px] xl:text-[36px] 2xl:text-[clamp(28px,2.8vw,48px)]">
               Great ideas<br />
               need room to breathe.
             </h2>
-            <p className="text-[#a5a5a5] text-[clamp(18px,1.5vw,26px)] font-light leading-[1.6] mt-6 italic max-w-[720px] mx-auto md:mx-0">
+            <p className="text-[#a5a5a5] text-[clamp(18px,1.5vw,26px)] md:text-[14px] xl:text-[18px] 2xl:text-[clamp(18px,1.5vw,26px)] font-light leading-[1.6] mt-3 md:mt-2 2xl:mt-6 italic max-w-[720px] mx-auto md:mx-0">
               We&apos;re fine-tuning this section —<br />
               come back soon to see the work we&apos;re excited to share.
             </p>
           </Reveal>
 
           {/* Staggered Masonry-like Grid */}
-          <div className="grid grid-cols-4 gap-8 md:gap-5 items-start max-[1024px]:grid-cols-2 max-[640px]:grid-cols-1 max-w-[1150px] mx-auto w-full">
-            <div className="space-y-8 md:space-y-5">
+          <div className="grid grid-cols-4 gap-8 md:gap-5 items-start max-[1024px]:grid-cols-2 max-[640px]:grid-cols-1 max-w-[1150px] md:max-w-[780px] xl:max-w-[940px] 2xl:max-w-[1150px] mx-auto w-full">
+            <div className="space-y-8 md:space-y-4 2xl:space-y-5">
               <Reveal delay={0.1}>
                 <div className="rounded-none overflow-hidden aspect-[4/5] bg-ink border border-border transition-all duration-500 hover:scale-[1.03] hover:border-violet group cursor-pointer max-w-[340px] sm:max-w-none w-full mx-auto">
                   <img src="/assets/img/g1.png" alt="" className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0" />
                 </div>
               </Reveal>
-              <Reveal delay={0.2} className="md:translate-y-6 translate-y-0 w-full flex justify-center">
+              <Reveal delay={0.2} className="md:translate-y-2 2xl:translate-y-6 translate-y-0 w-full flex justify-center">
                 <div className="rounded-none overflow-hidden aspect-[3/4] bg-ink border border-border transition-all duration-500 hover:scale-[1.03] hover:border-violet group cursor-pointer max-w-[340px] sm:max-w-none w-full">
                   <img src="/assets/img/g2.png" alt="" className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0" />
                 </div>
               </Reveal>
             </div>
 
-            <div className="space-y-8 md:space-y-5 pt-0 md:pt-12">
+            <div className="space-y-8 md:space-y-4 2xl:space-y-5 pt-0 md:pt-4 2xl:pt-12">
               <Reveal delay={0.3}>
                 <div className="rounded-none overflow-hidden aspect-square bg-ink border border-border transition-all duration-500 hover:scale-[1.03] hover:border-violet group cursor-pointer max-w-[340px] sm:max-w-none w-full mx-auto">
                   <img src="/assets/img/g3.png" alt="" className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0" />
                 </div>
               </Reveal>
-              <Reveal delay={0.4} className="md:translate-y-6 translate-y-0 w-full flex justify-center">
+              <Reveal delay={0.4} className="md:translate-y-2 2xl:translate-y-6 translate-y-0 w-full flex justify-center">
                 <div className="rounded-none overflow-hidden aspect-[4/3] bg-ink border border-border transition-all duration-500 hover:scale-[1.03] hover:border-violet group cursor-pointer max-w-[340px] sm:max-w-none w-full">
                   <img src="/assets/img/g4.png" alt="" className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0" />
                 </div>
               </Reveal>
             </div>
 
-            <div className="space-y-8 md:space-y-5 pt-0 md:pt-6">
+            <div className="space-y-8 md:space-y-4 2xl:space-y-5 pt-0 md:pt-2 2xl:pt-6">
               <Reveal delay={0.5}>
                 <div className="rounded-none overflow-hidden aspect-[3/4] md:aspect-[3/5] bg-ink border border-border transition-all duration-500 hover:scale-[1.03] hover:border-violet group cursor-pointer max-w-[340px] sm:max-w-none w-full mx-auto">
                   <img src="/assets/img/g5.png" alt="" className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0" />
@@ -289,7 +289,7 @@ export default function Home() {
             </div>
 
 
-            <div className="space-y-8 md:space-y-5 pt-0 md:pt-16">
+            <div className="space-y-8 md:space-y-4 2xl:space-y-5 pt-0 md:pt-6 2xl:pt-16">
               <Reveal delay={0.6}>
                 <div className="rounded-none overflow-hidden aspect-[4/5] bg-ink border border-border transition-all duration-500 hover:scale-[1.03] hover:border-violet group cursor-pointer max-w-[340px] sm:max-w-none w-full mx-auto">
                   <img src="/assets/img/g6.png" alt="" className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0" />
