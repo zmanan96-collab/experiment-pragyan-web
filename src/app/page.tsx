@@ -123,7 +123,7 @@ export default function Home() {
 
 
       {/* Manifesto Section */}
-      <section className="bg-black section-pad md:py-0 md:h-[100svh] 2xl:min-h-[720px] flex flex-col justify-center relative overflow-hidden" aria-labelledby="man-h">
+      <section className="bg-black section-pad md:py-0 md:h-[100svh] flex flex-col justify-center relative overflow-hidden" aria-labelledby="man-h">
         <div className="wrap">
           <Reveal className="max-w-[1300px] mx-auto text-center">
             <span className="font-space text-[clamp(12px,0.85vw,16px)] font-light tracking-[0.22em] uppercase text-[#d9d9d9] inline-block mb-6 md:mb-3 2xl:mb-[32px]" id="man-h">
@@ -190,7 +190,7 @@ export default function Home() {
       </section>
 
       {/* Process Section */}
-      <section className="bg-white text-black border-t border-[#E5E5E7] py-[clamp(80px,8vw,140px)] md:py-0 md:h-[100svh] 2xl:min-h-[700px] md:flex md:flex-col md:justify-center relative overflow-hidden" aria-labelledby="process-h">
+      <section className="bg-white text-black border-t border-[#E5E5E7] py-[clamp(80px,8vw,140px)] md:py-0 md:h-[100svh] md:flex md:flex-col md:justify-center relative overflow-hidden" aria-labelledby="process-h">
 
 
 
@@ -238,7 +238,7 @@ export default function Home() {
       </section>
 
       {/* Breathe Section */}
-      <section className="bg-black section-pad md:py-0 md:h-[100svh] 2xl:min-h-[850px] md:flex md:flex-col md:justify-center relative overflow-hidden" aria-labelledby="breathe-h">
+      <section className="bg-black section-pad md:py-0 md:h-[100svh] md:flex md:flex-col md:justify-center relative overflow-hidden" aria-labelledby="breathe-h">
         <div className="wrap">
           <Reveal className="mb-6 md:mb-1.5 lg:mb-2 2xl:mb-[32px] max-w-[820px] text-center md:text-left mx-auto md:mx-0">
             <span className="font-space text-[clamp(12px,0.85vw,16px)] font-light tracking-[0.22em] uppercase text-[#d9d9d9] mb-3 md:mb-1 2xl:mb-6 block">Our Projects</span>
