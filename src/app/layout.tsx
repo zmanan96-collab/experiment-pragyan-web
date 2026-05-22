@@ -3,11 +3,12 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import ScrollSnapController from "../components/ScrollSnapController";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -100,6 +101,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <ScrollSnapController />
         <a href="#main" className="absolute -left-[9999px] top-0 p-3 bg-yellow text-black font-semibold text-sm rounded-br-md z-[100] focus:left-0 transition-all">Skip to content</a>
         <Header />
         <main id="main">

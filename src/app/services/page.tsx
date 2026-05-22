@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, Fragment } from 'react';
 import Reveal from '../../components/Reveal';
 import Link from 'next/link';
 import Marquee from '@/components/Marquee';
@@ -8,90 +8,128 @@ import Marquee from '@/components/Marquee';
 export default function Services() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
+  useEffect(() => {
+    const html = document.documentElement;
+    const originalStyle = html.style.scrollSnapType;
+    html.style.scrollSnapType = 'none';
+    return () => {
+      html.style.scrollSnapType = originalStyle;
+    };
+  }, []);
+
+
   const services = [
     {
       title: "Brand Strategy",
       tagline: "The single idea your entire business stands on.",
-      copy: "Every strong brand is built around one clear idea — a perspective sharp enough to guide every decision, every hire, every message. Brand Strategy is the work of finding that idea.",
-      deliverables: ["Brand positioning", "Audience definition", "Core messaging"]
+      copy: "Every strong brand is built around one clear idea — a perspective sharp enough to guide every decision,\nevery hire, every message. Brand Strategy is the work of finding that idea. We listen closely, ask the harder\nquestions, and dig past the obvious until we reach something real. Something that belongs to you and\nonly you. When that core is clear, the rest follows with uncommon ease. Positioning sharpens.\nCommunication tightens. The brand stops feeling scattered and starts feeling inevitable.",
+      deliverables: ["Brand positioning", "Audience definition", "Competitive mapping", "Core messaging pillars", "Brand narrative"]
     },
     {
       title: "Identity & Expression",
       tagline: "How you look and sound when no one is paying attention.",
-      copy: "Identity is the entire sensory experience of encountering your brand — the typeface, the palette, the tone. We build identities rooted in your strategy.",
-      deliverables: ["Logo & visual identity", "Brand guidelines", "Typography system"]
+      copy: "Identity is the entire sensory experience of encountering your brand — the typeface, the palette, the\ntone, the way your email lands in a crowded inbox. We build identities rooted in your strategy, shaped by\nyour perspective, and designed to hold up across formats, contexts, and years. A visual and verbal\nlanguage that feels unmistakably yours. Coherent enough to be consistent. Alive enough to be\ninteresting.",
+      deliverables: ["Logo & visual identity", "Brand guidelines", "Typography & colour system", "Verbal identity", "Brand collateral"]
     },
     {
       title: "Content & Communication",
       tagline: "Your thinking, made readable. Your voice, made consistent.",
-      copy: "Good content earns its place. It carries a perspective, respects the reader's intelligence, and sounds like a human wrote it.",
-      deliverables: ["Website copywriting", "Brand storytelling", "Campaign messaging"]
+      copy: "Good content earns its place. It carries a perspective, respects the reader's intelligence, and sounds like\na specific human wrote it — because one did. We write from the inside out. Starting with what you believe,\nwhat your audience actually cares about, and where those two things create genuine tension or\nresonance. Website copy, brand stories, pitch decks, long-form essays — whatever the format, the\nstandard holds. It has to say something. And it has to sound alive.",
+      deliverables: ["Website copywriting", "Brand storytelling", "Pitch decks", "Email sequences", "Campaign messaging"]
     },
     {
       title: "Digital Marketing",
       tagline: "Your work, in front of the right people. With intention.",
-      copy: "Reach is a result of clarity. We plan digital marketing from the brand outward, ensuring every campaign is anchored in something real.",
-      deliverables: ["Paid media strategy", "SEO marketing", "Funnel design"]
+      copy: "Reach is a result of clarity. When a brand knows exactly what it stands for and who it is speaking to, getting\nseen becomes a strategy — and strategy compounds. We plan digital marketing from the brand outward.\nThe channels, campaigns, and content we build are anchored in something real. The kind of marketing\nthat builds trust gradually, earns attention honestly, and produces results that hold up quarter after\nquarter.",
+      deliverables: ["Paid media strategy", "SEO & content marketing", "Performance campaigns", "Analytics & reporting", "Funnel design"]
     },
     {
       title: "Social & Community",
       tagline: "Showing up with intent — because you actually have something to say.",
-      copy: "The brands that build real communities online are the ones willing to have a genuine point of view and say it out loud.",
-      deliverables: ["Content strategy", "Community building", "Platform content"]
+      copy: "Consistency on social media is easy when you know exactly what you believe. The brands that build real\ncommunities online are the ones willing to have a genuine point of view — and say it out loud, repeatedly,\nwithout flinching. We help you build that kind of presence. Rooted in your values. Tuned to your audience.\nSharp enough to cut through the scroll. Fewer posts. More meaning. The kind of community that grows\nbecause people actually want to be part of it.",
+      deliverables: ["Content strategy", "Community building", "Platform-specific content", "Engagement frameworks", "Monthly content planning"]
     },
     {
       title: "Personal Branding & LinkedIn",
       tagline: "The founder is the brand. Time to act like it.",
-      copy: "People trust people before they trust companies. We help founders surface their real perspective and shape it into a personal brand.",
-      deliverables: ["LinkedIn audit", "Content strategy", "Thought leadership"]
+      copy: "People trust people before they trust companies. A founder with a clear, consistent voice on LinkedIn\nbuilds authority that advertising cannot buy — and a pipeline that compounds over time. We work directly\nwith founders and senior professionals to surface their real perspective, shape it into a personal brand\nwith edges and depth, and show up on LinkedIn in a way that earns genuine respect. Well-crafted\nthinking, in your voice, about things you actually care about. The presence that makes the right people\nreach out first.",
+      deliverables: ["LinkedIn profile audit & rewrite", "Personal brand positioning", "Content strategy & voice guide", "Monthly post creation", "Thought leadership content", "LinkedIn page management", "Analytics & growth tracking"]
     },
     {
       title: "OOH Advertising",
       tagline: "Your brand, at the scale of the city.",
-      copy: "A billboard is not a social media post made larger. Out-of-home advertising works when the idea is strong enough to land in three seconds.",
-      deliverables: ["Campaign concept", "Copywriting", "Media planning"]
+      copy: "A billboard is not a social media post made larger. It is a different discipline entirely — one that rewards\nsimplicity, demands confidence, and punishes hesitation. Out-of-home advertising works when the idea\nis strong enough to land in three seconds on a moving highway or a crowded street corner. We plan and\ncreate OOH campaigns from the idea inward — finding the one line, the one image, the one moment of\nclarity that earns a second look. Placed with precision. Designed to be remembered.",
+      deliverables: ["Campaign concept & creative", "Copywriting & art direction", "Media planning & placement", "Format adaptation (billboards, transit, retail)", "Production coordination"]
     }
   ];
 
   return (
     <article aria-label="Services">
       {/* Main Intro Section */}
-      <section className="bg-white text-black pt-[clamp(140px,18vw,200px)] pb-[clamp(80px,10vw,120px)] relative overflow-hidden">
-        <div className="absolute right-[0%] top-[0%] select-none pointer-events-none opacity-[0.1] md:opacity-[0.18] drop-shadow-[0_10px_40px_rgba(0,0,0,0.08)] z-0">
-          <span className="text-[300px] md:text-[720px] font-bold leading-none text-[#dcdcdc] select-none" style={{ fontFamily: 'var(--font-nexa), sans-serif' }}>g</span>
-        </div>
+      <section className="bg-white text-black pt-[clamp(140px,18vw,200px)] pb-[clamp(80px,10vw,120px)] md:py-0 md:h-screen md:min-h-[750px] md:flex md:flex-col md:justify-center relative overflow-hidden">
         <div className="wrap relative z-10">
-          <Reveal className="mb-10">
-            <span className="text-[12px] font-space font-medium tracking-[0.3em] uppercase text-muted block mb-10">Services</span>
-            <h2 className="text-[clamp(48px,6vw,84px)] font-bold leading-[1.05] tracking-[-0.03em] text-black">
-              What we do &ndash;<br />
-              and what <span className="text-yellow">we don&rsquo;t</span>
+
+          <Reveal className="mb-10 max-w-[700px] lg:max-w-[850px] md:-translate-x-[7vw] lg:-translate-x-[9vw] md:-translate-y-14 lg:-translate-y-24">
+            <span className="text-[clamp(12px,0.85vw,16px)] font-space font-light tracking-[0.22em] uppercase text-[#6a6a6a] block mb-3">Services</span>
+            <h2 className="font-sans text-[clamp(44px,7.5vw,105px)] font-bold leading-[1.05] tracking-[-0.03em] text-black">
+              <span className="block">What we do &ndash;</span>
+              <span className="block md:inline md:whitespace-nowrap">and what</span>
+              <span className="hidden md:inline">&nbsp;</span>
+              <span className="block md:inline md:whitespace-nowrap text-yellow">we don&rsquo;t</span>
             </h2>
           </Reveal>
-          <Reveal delay={0.1}>
-            <p className="text-[#333] text-[clamp(18px,1.4vw,22px)] font-light leading-[1.6] max-w-[700px]">
-              Pragyan is for founders who are tired of the same old<br />
-              and want to build something that actually carries weight.
+
+          {/* Paragraph spans full original width with zero grid constraints */}
+          <Reveal delay={0.1} className="md:-translate-x-[7vw] lg:-translate-x-[9vw] md:-translate-y-14 lg:-translate-y-24">
+
+            <p className="font-sans text-[#6A6A6A] text-[clamp(20px,1.6vw,25px)] font-light leading-[1.6] max-w-[780px] text-left">
+              Pragyan is for founders who are tired of the same old<br className="hidden md:inline" /><span className="md:hidden">&nbsp;</span>
+              and want to build something that actually carries weight.<br className="hidden md:inline" /><span className="md:hidden">&nbsp;</span>
+              We&apos;re obsessed with the work we do &mdash;<br className="hidden md:inline" /><span className="md:hidden">&nbsp;</span>
+              but even more protective of the work we choose not to do.<br className="hidden md:inline" /><span className="md:hidden">&nbsp;</span>
+              We only move when there&apos;s a point of view worth fighting for.
             </p>
           </Reveal>
+
         </div>
+
+        {/* water.svg ("g" watermark) absolutely positioned and slightly lower down (Visible on all devices) */}
+        <div className="absolute right-[-2%] bottom-[50px] md:right-[-4%] md:lg:right-[-3%] md:xl:right-[-2%] md:top-[56%] md:-translate-y-1/2 md:bottom-auto pointer-events-none select-none z-0">
+
+          <Reveal delay={0.15}>
+            <div className="w-[250px] md:w-[750px] lg:w-[980px] xl:w-[1180px] aspect-square relative">
+
+              <img
+                src="/assets/img/water.svg"
+                alt="Water ripples vector illustration"
+                className="w-full h-full object-contain mix-blend-multiply opacity-80 drop-shadow-[-12px_16px_24px_rgba(0,0,0,0.38)]"
+              />
+            </div>
+          </Reveal>
+        </div>
+
+        {/* Bottom Solid Black Transition Bar (Desktop only) */}
+        <div className="hidden md:block absolute bottom-0 left-0 w-full h-[225px] lg:h-[270px] bg-black z-10" />
+
       </section>
+
 
       {/* Services List - Vertical Timeline Staggered UI */}
       <section className="bg-black py-[clamp(100px,12vw,160px)] relative overflow-hidden">
-        {/* Topographic Background Pattern */}
-        <div className="absolute inset-0 opacity-[0.06] pointer-events-none select-none">
-          <svg width="100%" height="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0,100 Q250,50 500,100 T1000,100" fill="none" stroke="white" strokeWidth="0.5" />
-            <path d="M0,300 Q250,250 500,300 T1000,300" fill="none" stroke="white" strokeWidth="0.5" />
-            <path d="M0,500 Q250,450 500,500 T1000,500" fill="none" stroke="white" strokeWidth="0.5" />
-            <path d="M0,700 Q250,650 500,700 T1000,700" fill="none" stroke="white" strokeWidth="0.5" />
-          </svg>
+        {/* Responsive Background Image with Dark Cinematic Overlay (Hidden on desktop, visible on mobile) */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none md:hidden">
+          <img
+            src="/assets/img/services.jpeg"
+            alt="Services background"
+            className="w-full h-full object-cover opacity-[0.16] filter saturate-[0.15] contrast-[1.1]"
+          />
+          {/* Edge fading gradient for organic integration */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black via-black/85 to-black" />
         </div>
 
         <div className="wrap relative z-10 text-white">
           <Reveal className="mb-24">
-            <span className="text-[12px] font-space font-medium tracking-[0.3em] uppercase text-muted block">Our Services</span>
+            <span className="text-[clamp(12px,0.85vw,16px)] font-space font-light tracking-[0.22em] uppercase text-[#d9d9d9] block">Our Services</span>
           </Reveal>
 
           <div className="max-w-[1200px] mx-auto relative">
@@ -107,37 +145,92 @@ export default function Services() {
                       onClick={() => setOpenIndex(isOpen ? null : idx)}
                     >
                       <div
-                        className={`absolute bottom-[50%] w-[1.5px] bg-gradient-to-b from-transparent via-violet/30 to-violet/70 pointer-events-none z-0 hidden md:block ${idx === 0 ? 'top-[-80px]' : 'top-[-180px]'}`}
-                        style={{ left: `${30 + offset}px` }}
-                      >
-                        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[9px] h-[9px] bg-violet rounded-full shadow-[0_0_15px_#8b5cf6,0_0_35px_#8b5cf6,0_0_60px_rgba(139,92,246,0.3)] transition-transform duration-500 group-hover:scale-125" />
-                      </div>
+                        className="absolute w-[2px] bg-gradient-to-b from-[#4B3FD4] via-[#4B3FD4]/70 to-transparent pointer-events-none z-0 hidden md:block top-[62px] md:top-[95px]"
+                        style={{ left: `${offset + 8}px`, bottom: `-${(services.length - 1 - idx) * 110 + 420}px` }}
+                      />
 
-                      <div className="flex items-start py-3 md:py-4 transition-all duration-300 group-hover:translate-x-1 relative z-10" style={{ paddingLeft: typeof window !== 'undefined' && window.innerWidth < 768 ? '0px' : `${offset}px` }}>
+                      <div
+                        className="flex items-start py-3 md:py-4 transition-all duration-300 group-hover:translate-x-1 relative z-10 md:[padding-left:var(--padding-left)]"
+                        style={{ '--padding-left': `${offset}px` } as React.CSSProperties}
+                      >
                         <div className="relative shrink-0 mr-3 md:mr-4 z-0">
-                          <span className="text-[50px] md:text-[80px] leading-none text-white/[0.025] font-bold transition-colors group-hover:text-violet/10 select-none">
+                          <span className="text-[65px] md:text-[100px] leading-none text-[#6a6a6a] font-space font-light transition-colors group-hover:text-[#4B3FD4]/30 select-none">
                             {String(idx + 1).padStart(2, '0')}
                           </span>
                         </div>
 
                         <div className="pt-2 relative z-20">
-                          <h3 className="text-[clamp(26px,3.2vw,44px)] font-bold mb-2 tracking-tight group-hover:text-violet transition-colors duration-300">{service.title}</h3>
-                          <p className="text-[clamp(14px,1.1vw,17px)] text-white/35 font-medium tracking-wide max-w-[700px] group-hover:text-white/60 transition-colors">{service.tagline}</p>
+                          <h3 className="text-[clamp(26px,3.2vw,44px)] font-sans font-semibold mb-2 tracking-[0.02em] group-hover:text-[#4B3FD4] transition-colors duration-300">{service.title}</h3>
+                          <p className="text-[clamp(18px,1.35vw,22px)] text-[#d9d9d9] font-sans font-light tracking-wide max-w-none transition-colors">{service.tagline}</p>
 
-                          <div className={`overflow-hidden transition-all duration-700 ease-in-out ${isOpen ? 'max-h-[800px] mt-12 opacity-100 border-t border-white/10 pt-12' : 'max-h-0 opacity-0'}`}>
-                            <div className="grid grid-cols-[1fr_340px] gap-24 max-[1100px]:grid-cols-1">
-                              <p className="text-grey text-[18.5px] leading-relaxed opacity-75 font-light">
-                                {service.copy}
+                          <div className={`overflow-hidden transition-all duration-700 ease-in-out ${isOpen ? 'max-h-[1400px] mt-12 opacity-100 border-t border-white/10 pt-12' : 'max-h-0 opacity-0'}`}>
+                            <div className="flex flex-col gap-8 pb-8">
+                              <p className="text-grey text-[18.5px] leading-relaxed opacity-75 font-light text-left">
+                                {service.copy.split('\n').map((line, lIdx) => (
+                                  <Fragment key={lIdx}>
+                                    {lIdx > 0 && (
+                                      <>
+                                        <br className="hidden md:inline" />
+                                        <span className="md:hidden">&nbsp;</span>
+                                      </>
+                                    )}
+                                    <span className="inline md:whitespace-nowrap">
+                                      {line}
+                                    </span>
+                                  </Fragment>
+                                ))}
                               </p>
-                              <div className="border-l border-violet/20 pl-6 md:pl-10">
-                                <span className="block text-[11px] font-space uppercase tracking-widest text-violet/60 mb-7">Deliverables</span>
-                                <ul className="list-none space-y-5">
-                                  {service.deliverables.map(d => (
-                                    <li key={d} className="text-[15px] text-white/50 flex items-center gap-5 hover:text-white transition-colors">
-                                      <span className="w-2.5 h-2.5 bg-violet/30 rounded-full shrink-0 group-hover:bg-violet transition-colors" /> {d}
-                                    </li>
-                                  ))}
-                                </ul>
+
+                              <div className="pt-6 border-t border-white/5">
+                                <span className="block md:hidden text-[clamp(11px,0.8vw,13px)] font-space font-light uppercase tracking-[0.22em] text-[#4B3FD4]/70 mb-5">Deliverables</span>
+                                {service.title === 'Personal Branding & LinkedIn' ? (
+                                  <div className="flex flex-col gap-3">
+                                    <div className="flex flex-wrap md:flex-nowrap gap-3">
+                                      {service.deliverables.slice(0, 5).map(d => (
+                                        <div key={d} className="flex items-center gap-3 px-5 py-2.5 bg-white/[0.02] border border-white/10 rounded-none text-[14px] font-sans font-light tracking-wide text-white/70 hover:text-white hover:border-[#4B3FD4]/40 hover:bg-white/[0.04] transition-all duration-300 select-none md:whitespace-nowrap">
+                                          <span className="inline-block md:hidden w-1.5 h-1.5 bg-[#4B3FD4] rounded-full shrink-0" />
+                                          {d}
+                                        </div>
+                                      ))}
+                                    </div>
+                                    <div className="flex flex-wrap md:flex-nowrap gap-3">
+                                      {service.deliverables.slice(5).map(d => (
+                                        <div key={d} className="flex items-center gap-3 px-5 py-2.5 bg-white/[0.02] border border-white/10 rounded-none text-[14px] font-sans font-light tracking-wide text-white/70 hover:text-white hover:border-[#4B3FD4]/40 hover:bg-white/[0.04] transition-all duration-300 select-none md:whitespace-nowrap">
+                                          <span className="inline-block md:hidden w-1.5 h-1.5 bg-[#4B3FD4] rounded-full shrink-0" />
+                                          {d}
+                                        </div>
+                                      ))}
+                                    </div>
+                                  </div>
+                                ) : service.title === 'OOH Advertising' ? (
+                                  <div className="flex flex-col gap-3">
+                                    <div className="flex flex-wrap md:flex-nowrap gap-3">
+                                      {service.deliverables.slice(0, 4).map(d => (
+                                        <div key={d} className="flex items-center gap-3 px-5 py-2.5 bg-white/[0.02] border border-white/10 rounded-none text-[14px] font-sans font-light tracking-wide text-white/70 hover:text-white hover:border-[#4B3FD4]/40 hover:bg-white/[0.04] transition-all duration-300 select-none md:whitespace-nowrap">
+                                          <span className="inline-block md:hidden w-1.5 h-1.5 bg-[#4B3FD4] rounded-full shrink-0" />
+                                          {d}
+                                        </div>
+                                      ))}
+                                    </div>
+                                    <div className="flex flex-wrap md:flex-nowrap gap-3">
+                                      {service.deliverables.slice(4).map(d => (
+                                        <div key={d} className="flex items-center gap-3 px-5 py-2.5 bg-white/[0.02] border border-white/10 rounded-none text-[14px] font-sans font-light tracking-wide text-white/70 hover:text-white hover:border-[#4B3FD4]/40 hover:bg-white/[0.04] transition-all duration-300 select-none md:whitespace-nowrap">
+                                          <span className="inline-block md:hidden w-1.5 h-1.5 bg-[#4B3FD4] rounded-full shrink-0" />
+                                          {d}
+                                        </div>
+                                      ))}
+                                    </div>
+                                  </div>
+                                ) : (
+                                  <div className="flex flex-wrap md:flex-nowrap gap-3">
+                                    {service.deliverables.map(d => (
+                                      <div key={d} className="flex items-center gap-3 px-5 py-2.5 bg-white/[0.02] border border-white/10 rounded-none text-[14px] font-sans font-light tracking-wide text-white/70 hover:text-white hover:border-[#4B3FD4]/40 hover:bg-white/[0.04] transition-all duration-300 select-none md:whitespace-nowrap">
+                                        <span className="inline-block md:hidden w-1.5 h-1.5 bg-[#4B3FD4] rounded-full shrink-0" />
+                                        {d}
+                                      </div>
+                                    ))}
+                                  </div>
+                                )}
                               </div>
                             </div>
                           </div>
@@ -152,26 +245,24 @@ export default function Services() {
 
           <div className="mt-20 md:mt-32 relative">
             <Reveal className="flex items-center justify-end gap-12 max-[760px]:flex-col max-[760px]:items-center">
-              <p className="text-right max-[760px]:text-center text-[16px] italic text-white/70 max-w-[500px] leading-[1.6] font-space font-light uppercase tracking-widest">
+              <p className="text-right max-[760px]:text-center text-[clamp(18px,1.5vw,26px)] italic text-white font-sans font-semibold leading-[1.5] max-w-[620px]">
                 We don&rsquo;t believe in one-size-fits-all thinking.<br />
                 If you&rsquo;re ready to stop being an echo and<br />
                 start being original, let&rsquo;s talk.
               </p>
               <Link
                 href="/inquiry"
-                className="w-[95px] h-[95px] bg-violet rounded-full flex items-center justify-center transition-all duration-500 hover:scale-110 hover:shadow-[0_0_50px_rgba(139,92,246,0.4)] group shrink-0"
+                className="w-[115px] h-[115px] bg-[#4B3FD4] rounded-full flex items-center justify-center transition-all duration-500 hover:scale-110 hover:shadow-[0_0_50px_rgba(75,63,212,0.4)] group shrink-0"
               >
-                <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:rotate-45">
-                  <line x1="7" y1="17" x2="17" y2="7" />
-                  <polyline points="7 7 17 7 17 17" />
+                <svg width="68" height="68" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:rotate-45">
+                  <line x1="3" y1="21" x2="21" y2="3" />
+                  <polyline points="8 3 21 3 21 16" />
                 </svg>
               </Link>
             </Reveal>
           </div>
         </div>
       </section>
-
-      <Marquee />
 
     </article>
   );

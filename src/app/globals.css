@@ -25,19 +25,25 @@
   --font-nexa: 'Nexa Light', sans-serif;
   --font-mono: 'Plus Jakarta Sans', monospace, sans-serif;
   --font-space: 'Space Grotesk', sans-serif;
-  
+
   /* Global Overrides for Space Grotesk */
   --font-btn: var(--font-space);
   --font-label: var(--font-space);
 
   /* Requested sizes converted to rem/px roughly */
-  --text-heading: 1rem; /* 12pt approx */
-  --text-body: 0.67rem; /* 8pt approx */
-  --text-sub: 0.58rem; /* 7pt approx */
+  --text-heading: 1rem;
+  /* 12pt approx */
+  --text-body: 0.67rem;
+  /* 8pt approx */
+  --text-sub: 0.58rem;
+  /* 7pt approx */
 }
 
 /* Force Space Grotesk on all buttons and specific labels */
-button, .font-space, .btn, [class*="Button"] {
+button,
+.font-space,
+.btn,
+[class*="Button"] {
   font-family: var(--font-space) !important;
 }
 
@@ -55,32 +61,44 @@ button, .font-space, .btn, [class*="Button"] {
     color: var(--color-white);
     font-family: var(--font-sans);
     font-weight: 500;
-    font-size: 10.66px; /* 8pt Body */
+    font-size: 10.66px;
+    /* 8pt Body */
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-heading);
     font-weight: 400;
-    font-size: 16px; /* 12pt Heading base */
+    font-size: 16px;
+    /* 12pt Heading base */
     line-height: 1.2;
     letter-spacing: -0.01em;
   }
 
-  .sub-heading, 
-  .font-mono[class*="text-[12px]"], 
+  .sub-heading,
+  .font-mono[class*="text-[12px]"],
   .font-mono[class*="text-[11px]"] {
     font-family: var(--font-space) !important;
-    font-weight: 600 !important; /* SemiBold Subheading */
-    font-size: 9.33px !important; /* 7pt Subheading */
+    font-weight: 600 !important;
+    /* SemiBold Subheading */
+    font-size: 9.33px !important;
+    /* 7pt Subheading */
     letter-spacing: 0.15em !important;
     text-transform: uppercase;
   }
 
-  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible {
     outline: 2px solid var(--color-yellow);
     outline-offset: 3px;
     border-radius: 4px;
@@ -91,18 +109,38 @@ button, .font-space, .btn, [class*="Button"] {
     color: var(--color-black);
   }
 
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     margin: 0;
     font-weight: 700;
     letter-spacing: -0.025em;
     line-height: 1.04;
   }
-  
-  h1 { font-size: clamp(48px, 8.5vw, 116px); }
-  h2 { font-size: clamp(38px, 5.8vw, 78px); }
-  h3 { font-size: clamp(24px, 2.8vw, 34px); line-height: 1.18; letter-spacing: -0.02em; }
-  h4 { font-size: clamp(18px, 1.7vw, 22px); letter-spacing: -0.01em; }
-  p { margin: 0; }
+
+  h1 {
+    font-size: clamp(48px, 8.5vw, 116px);
+  }
+
+  h2 {
+    font-size: clamp(38px, 5.8vw, 78px);
+  }
+
+  h3 {
+    font-size: clamp(24px, 2.8vw, 34px);
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+  }
+
+  h4 {
+    font-size: clamp(18px, 1.7vw, 22px);
+    letter-spacing: -0.01em;
+  }
+
+  p {
+    margin: 0;
+  }
 }
 
 @layer utilities {
@@ -118,11 +156,31 @@ button, .font-space, .btn, [class*="Button"] {
   }
 
   @keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
   }
 
   .animate-marquee {
     animation: marquee 20s linear infinite;
+  }
+}
+
+/* Premium Desktop/Laptop Scroll Snapping */
+@media (min-width: 768px) {
+  html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: auto;
+  }
+  
+  /* Snaps each main homepage section and footer exactly to screen */
+  article[aria-label="Home"] section,
+  body:has(article[aria-label="Home"]) footer {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
   }
 }
