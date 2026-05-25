@@ -24,7 +24,7 @@
   --font-heading: 'Nexa Light', 'Plus Jakarta Sans', sans-serif;
   --font-nexa: 'Nexa Light', sans-serif;
   --font-mono: 'Plus Jakarta Sans', monospace, sans-serif;
-  --font-space: 'Space Grotesk', sans-serif;
+  --font-space: var(--font-space-grotesk), sans-serif;
 
   /* Global Overrides for Space Grotesk */
   --font-btn: var(--font-space);

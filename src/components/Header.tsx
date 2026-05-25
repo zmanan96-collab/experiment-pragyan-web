@@ -20,13 +20,13 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#010101c7] backdrop-blur-[14px] backdrop-saturate-[160%] border-b border-border">
       <div className="wrap">
-        <nav className="flex items-center justify-between h-[90px]" aria-label="Primary">
+        <nav className="flex items-center justify-between h-[76px]" aria-label="Primary">
           <Link href="/" className="inline-flex items-center" aria-label="Pragyan — home">
             <img src="/assets/img/pglogo.svg" alt="Pragyan — Wisdom. Action. Growth." className="h-[280px] w-auto" />
           </Link>
 
           <ul className={`
-            max-[920px]:absolute max-[920px]:top-[90px] max-[920px]:left-0 max-[920px]:right-0 
+            max-[920px]:absolute max-[920px]:top-[76px] max-[920px]:left-0 max-[920px]:right-0 
             max-[920px]:bg-black max-[920px]:flex-col max-[920px]:p-[28px_var(--pad)] max-[920px]:gap-[22px] 
             max-[920px]:border-b max-[920px]:border-border max-[920px]:text-[16px]
             ${isOpen ? 'max-[920px]:flex' : 'max-[920px]:hidden'}

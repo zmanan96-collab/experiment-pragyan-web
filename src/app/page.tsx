@@ -16,8 +16,8 @@ export default function Home() {
           className="absolute z-0 pointer-events-none hidden md:block md:translate-y-[4vh] 2xl:translate-y-0"
           style={{
             left: 'clamp(20px, 3vw, 60px)',
-            top: 'clamp(120px, 20vh, 260px)',
-            bottom: 'clamp(40px, 7vh, 100px)',
+            top: 'clamp(320px, 38vh, 440px)',
+            bottom: 'clamp(20px, 4vh, 60px)',
             right: '45%',
             perspective: '1200px',
           }}
@@ -44,21 +44,22 @@ export default function Home() {
         <div className="relative z-[1] md:flex-1 flex flex-col max-w-[1600px] mx-auto w-full px-[var(--pad)]">
 
           {/* Heading row */}
-          <div className="flex items-start justify-between gap-3 pt-[135px] md:pt-[clamp(140px,18vh,240px)]">
+          <div className="flex items-start justify-between gap-3 pt-[175px] md:pt-[clamp(150px,20vh,250px)] md:px-[4vw] lg:px-[6vw] xl:px-[8vw]">
             <Reveal>
-              <h1 id="hero-h" className="text-[clamp(32px,3.2vw,68px)] leading-[1.08] font-sans font-bold text-[#fcfcfc] tracking-[-0.03em] max-w-[80%] sm:max-w-[72%] md:max-w-[90%] 2xl:max-w-[75%] md:-translate-x-[2vw] 2xl:translate-x-0">
-                Behind every brand is a human <br className="hidden md:inline 2xl:hidden" /> mind. That&apos;s where we start.
+              <h1 id="hero-h" className="text-[clamp(32px,3.2vw,68px)] leading-[1.08] font-sans font-bold text-[#fcfcfc] tracking-[-0.03em] 2xl:translate-x-0">
+                <span className="whitespace-nowrap">It starts with a</span> <br />
+                <span className="whitespace-nowrap">Point of view.</span>
               </h1>
             </Reveal>
             {/* Hide on very small screens */}
-            <div className="hidden sm:block shrink-0 text-right font-sans font-bold text-[clamp(10px,1.1vw,20px)] tracking-[0.12em] uppercase text-[#fcfcfc] leading-[1.6]" aria-hidden="true">
+            <div className="hidden sm:block shrink-0 text-right font-sans font-bold text-[clamp(10px,1.1vw,20px)] tracking-[0.12em] uppercase text-[#fcfcfc] leading-[1.6] mt-[clamp(10px,1.2vw,24px)]" aria-hidden="true">
               BRANDING<br />BUILT<br />FOR<br />FOUNDERS
             </div>
           </div>
 
           {/* Facts subtext — no indent on mobile */}
           <Reveal delay={0.12}>
-            <p className="mt-[clamp(14px,2.2vw,32px)] ml-0 md:ml-[clamp(40px,10vw,220px)] text-[#fcfcfc] text-[clamp(16px,1.25vw,22px)] font-sans italic font-light leading-[1.55]">
+            <p className="mt-0 md:mt-[4px] xl:mt-[8px] ml-0 md:ml-[clamp(70px,13vw,190px)] text-[#fcfcfc] text-[clamp(16px,1.25vw,22px)] font-sans italic font-light leading-[1.55]">
               Facts are easy to find.<br />Perspectives are rare.
             </p>
           </Reveal>
@@ -98,8 +99,8 @@ export default function Home() {
 
           {/* ── DESKTOP ONLY: absolute "We uncover" ── */}
           <div
-            className="hidden md:flex absolute right-[var(--pad)] z-[2] flex-col items-end text-right max-w-[clamp(440px,34vw,700px)]"
-            style={{ top: 'clamp(380px, 45vh, 720px)' }}
+            className="hidden md:flex absolute right-[calc(var(--pad)+4vw)] lg:right-[calc(var(--pad)+6vw)] xl:right-[calc(var(--pad)+8vw)] z-[2] flex-col items-end text-right max-w-[clamp(440px,34vw,700px)]"
+            style={{ top: 'clamp(440px, 50vh, 760px)' }}
           >
             <Reveal delay={0.2}>
               <p className="text-[clamp(15px,1.1vw,22px)] leading-[1.7] text-[#C9C9CE] font-light">
@@ -123,36 +124,36 @@ export default function Home() {
 
 
       {/* Manifesto Section */}
-      <section className="bg-black section-pad md:py-0 md:h-[100svh] 2xl:min-h-[720px] flex flex-col justify-center relative overflow-hidden" aria-labelledby="man-h">
+      <section className="bg-black pt-[80px] pb-[80px] md:pt-[clamp(80px,10vh,120px)] md:pb-[clamp(20px,4vh,60px)] md:h-[100svh] 2xl:min-h-[720px] [@media(max-height:850px)]:min-h-0 flex flex-col md:justify-center relative overflow-hidden" aria-labelledby="man-h">
         <div className="wrap">
           <Reveal className="max-w-[1300px] mx-auto text-center">
-            <span className="font-space text-[clamp(12px,0.85vw,16px)] font-light tracking-[0.22em] uppercase text-[#d9d9d9] inline-block mb-6 md:mb-3 2xl:mb-[32px]" id="man-h">
+            <span className="font-space text-[clamp(12px,0.85vw,16px)] font-light tracking-[0.22em] uppercase text-[#d9d9d9] inline-block mb-4 md:mb-1 2xl:mb-4" id="man-h">
               Core Philosophy
             </span>
-            <p className="text-[clamp(18px,1.4vw,28px)] md:text-[14px] xl:text-[18px] 2xl:text-[clamp(18px,1.4vw,28px)] leading-[1.65] text-[#E3E3E3] font-sans tracking-[-0.01em]">
+            <p className="text-[clamp(18px,1.4vw,28px)] md:text-[14px] xl:text-[17px] 2xl:text-[clamp(18px,1.2vw,24px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em]">
               Pragyan is a 360° branding and marketing agency that works as<br />
               <em className="italic">an extension of the founder&apos;s mind.</em>
             </p>
 
-            <p className="text-[clamp(18px,1.4vw,28px)] md:text-[14px] xl:text-[18px] 2xl:text-[clamp(18px,1.4vw,28px)] leading-[1.65] text-[#E3E3E3] font-sans tracking-[-0.01em]">
+            <p className="text-[clamp(18px,1.4vw,28px)] md:text-[14px] xl:text-[17px] 2xl:text-[clamp(18px,1.2vw,24px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] mt-1 md:mt-1 2xl:mt-2">
               We&apos;re a young, sharp team of strategists and creators<br />
               who take your raw, human spark<br />
               and give it the professional gravity it deserves.
             </p>
-            <p className="text-[clamp(18px,1.4vw,28px)] md:text-[14px] xl:text-[18px] 2xl:text-[clamp(18px,1.4vw,28px)] leading-[1.65] text-[#FFD111] font-sans font-medium tracking-[-0.01em] mt-5 md:mt-2 2xl:mt-[28px]">
+            <p className="text-[clamp(18px,1.4vw,28px)] md:text-[14px] xl:text-[17px] 2xl:text-[clamp(18px,1.2vw,24px)] leading-[1.5] md:leading-[1.4] text-[#FFD111] font-sans font-medium tracking-[-0.01em] mt-4 md:mt-1 2xl:mt-4">
               We believe in building long-term partnerships with intellectual honesty.
             </p>
-            <p className="text-[clamp(18px,1.4vw,28px)] md:text-[14px] xl:text-[18px] 2xl:text-[clamp(18px,1.4vw,28px)] leading-[1.65] text-[#E3E3E3] font-sans tracking-[-0.01em] mt-[6px]">
+            <p className="text-[clamp(18px,1.4vw,28px)] md:text-[14px] xl:text-[17px] 2xl:text-[clamp(18px,1.2vw,24px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] mt-1 md:mt-0 2xl:mt-1">
               We aren&apos;t for everyone — and we&apos;re okay with that.
             </p>
           </Reveal>
 
           {/* Methodology Cards Section */}
-          <div className="mt-8 md:mt-4 xl:mt-6 2xl:mt-10 max-w-[1100px] md:max-w-[760px] xl:max-w-[920px] 2xl:max-w-[1100px] mx-auto">
-            <Reveal className="text-center mb-6 md:mb-3 xl:mb-4 2xl:mb-12">
+          <div className="mt-8 md:mt-2 xl:mt-3 2xl:mt-6 max-w-[1100px] md:max-w-[760px] xl:max-w-[920px] 2xl:max-w-[1100px] mx-auto">
+            <Reveal className="text-center mb-6 md:mb-1.5 xl:mb-2 2xl:mb-6">
               <span className="font-space text-[clamp(12px,0.85vw,16px)] font-light tracking-[0.22em] uppercase text-[#d9d9d9]">Methodology</span>
             </Reveal>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-4 2xl:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-3 xl:gap-4 2xl:gap-6">
               {[
                 {
                   img: "/assets/img/h1.jpeg", // Replace with your image path
@@ -169,15 +170,15 @@ export default function Home() {
               ].map((card, i) => (
                 <Reveal key={i} delay={i * 0.1}>
                   <div className="bg-surface border border-border-strong rounded-none overflow-hidden transition-all duration-500 hover:border-violet hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] h-full flex flex-col cursor-pointer">
-                    <div className="aspect-[4/3] overflow-hidden bg-ink group">
+                    <div className="aspect-[4/3] md:aspect-[1.9/1] lg:aspect-[2.1/1] xl:aspect-[2.1/1] 2xl:aspect-[2/1] overflow-hidden bg-ink group">
                       <img
                         src={card.img}
                         alt=""
                         className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0"
                       />
                     </div>
-                    <div className="p-7 md:p-4 xl:p-5 2xl:p-7 flex-grow text-center md:text-left">
-                      <p className="text-[#C9C9CE] text-[clamp(17px,1.2vw,21px)] md:text-[13px] xl:text-[16px] 2xl:text-[clamp(17px,1.2vw,21px)] leading-[1.5] font-medium">
+                    <div className="p-7 md:p-3 xl:p-4 2xl:p-5 flex-grow text-center md:text-left">
+                      <p className="text-[#C9C9CE] text-[clamp(17px,1.2vw,21px)] md:text-[13px] xl:text-[15px] 2xl:text-[17px] leading-[1.4] font-medium">
                         {card.text}
                       </p>
                     </div>
@@ -190,7 +191,7 @@ export default function Home() {
       </section>
 
       {/* Process Section */}
-      <section className="bg-white text-black border-t border-[#E5E5E7] py-[clamp(80px,8vw,140px)] md:py-0 md:h-[100svh] 2xl:min-h-[700px] md:flex md:flex-col md:justify-center relative overflow-hidden" aria-labelledby="process-h">
+      <section className="bg-white text-black border-t border-[#E5E5E7] py-[clamp(80px,8vw,140px)] md:pt-[clamp(140px,16vh,200px)] md:pb-[clamp(30px,4vh,60px)] md:h-[100svh] 2xl:min-h-[700px] md:flex md:flex-col md:justify-start relative overflow-hidden" aria-labelledby="process-h">
 
 
 
@@ -200,7 +201,7 @@ export default function Home() {
 
         <div className="wrap relative z-[1] flex justify-start">
           <div className="w-full md:w-[80%] md:ml-[clamp(40px,4vw,80px)] md:-translate-x-[5vw] lg:-translate-x-[7vw]">
-            <div className="mb-[clamp(40px,6vw,64px)] md:mb-5 2xl:mb-[clamp(40px,6vw,64px)] text-left md:ml-[-clamp(40px,4vw,80px)]">
+            <div className="mb-[clamp(40px,6vw,64px)] md:mb-5 2xl:mb-[clamp(40px,6vw,64px)] [@media(max-height:900px)]:mb-4 text-left md:ml-[-clamp(40px,4vw,80px)]">
               <Reveal>
                 <span className="font-space font-light text-[clamp(12px,0.85vw,16px)] tracking-[0.22em] uppercase text-[#6a6a6a] block mb-2">Process Index</span>
                 <h2 id="process-h" className="mt-4 text-[#1b1b1b] tracking-[-0.03em] !text-[clamp(36px,3.5vw,64px)] md:!text-[32px] xl:!text-[40px] 2xl:!text-[clamp(36px,3.5vw,64px)]">
@@ -210,25 +211,25 @@ export default function Home() {
             </div>
 
             {/* Top line — before 01 (5 lines total) */}
-            <div className="h-px bg-[#d9d9d9] mb-0 w-full md:w-[165%]" />
+            <div className="h-px bg-[#d9d9d9] mb-0 w-full md:w-[140%]" />
 
             <div>
               {[
-                { num: '01', title: 'Listen.', desc: <><span className="block md:whitespace-nowrap">Extract the identity that</span><span className="block md:whitespace-nowrap">drives the business.</span></> },
-                { num: '02', title: 'Think.', desc: <><span className="block md:whitespace-nowrap">Turn creativity into clear</span><span className="block md:whitespace-nowrap">direction.</span></> },
-                { num: '03', title: 'Simplify.', desc: <><span className="block md:whitespace-nowrap">Strip away the noise to</span><span className="block md:whitespace-nowrap">find the voice.</span></> },
-                { num: '04', title: 'Magnify.', desc: <><span className="block md:whitespace-nowrap">Take what works and help it</span><span className="block md:whitespace-nowrap">reach the right people.</span></> }
+                { num: '01', title: 'Listen.', lineWidth: 'md:w-[140%]', desc: <><span className="block md:whitespace-nowrap">Extract the identity that</span><span className="block md:whitespace-nowrap">drives the business.</span></> },
+                { num: '02', title: 'Think.', lineWidth: 'md:w-[140%]', desc: <><span className="block md:whitespace-nowrap">Turn creativity into clear</span><span className="block md:whitespace-nowrap">direction.</span></> },
+                { num: '03', title: 'Simplify.', lineWidth: 'md:w-[135%]', desc: <><span className="block md:whitespace-nowrap">Strip away the noise to</span><span className="block md:whitespace-nowrap">find the voice.</span></> },
+                { num: '04', title: 'Magnify.', lineWidth: 'md:w-[135%]', desc: <><span className="block md:whitespace-nowrap">Take what works and help it</span><span className="block md:whitespace-nowrap">reach the right people.</span></> }
               ].map((step, idx) => (
                 <Reveal key={idx} delay={idx * 0.1}>
                   <div className="relative">
-                    <div className="grid grid-cols-[44px_1fr] sm:grid-cols-[52px_380px_1fr] xl:grid-cols-[64px_460px_1fr] 2xl:grid-cols-[80px_540px_1fr] gap-x-8 items-center text-left py-[clamp(20px,2.5vw,36px)] md:py-3 xl:py-4 2xl:py-[clamp(20px,2.5vw,36px)] hover:pl-2 transition-all duration-300 md:ml-[-clamp(40px,4vw,80px)]">
-                      <div className="font-space text-[clamp(40px,3.5vw,58px)] md:text-[34px] xl:text-[44px] 2xl:text-[clamp(40px,3.5vw,58px)] text-[#E0E0E0] font-normal leading-none self-start pt-1 sm:pt-0 sm:self-auto">{step.num}</div>
+                    <div className="grid grid-cols-[44px_1fr] sm:grid-cols-[52px_380px_1fr] xl:grid-cols-[64px_460px_1fr] 2xl:grid-cols-[80px_540px_1fr] gap-x-8 items-center text-left py-[clamp(20px,2.5vw,36px)] md:py-3 xl:py-4 2xl:py-[clamp(20px,2.5vw,36px)] [@media(max-height:900px)]:py-[18px] hover:pl-2 transition-all duration-300 md:ml-[-clamp(40px,4vw,80px)]">
+                      <div className="font-space text-[clamp(56px,5.5vw,78px)] md:text-[48px] xl:text-[64px] 2xl:text-[clamp(56px,5.5vw,78px)] [@media(max-height:900px)]:text-[44px] [@media(max-height:900px)]:2xl:text-[52px] text-[#E0E0E0] font-light leading-none self-start pt-1 sm:pt-0 sm:self-auto">{step.num}</div>
                       <div className="flex flex-col gap-3 sm:contents">
                         <div className="font-sans text-[clamp(32px,3.5vw,60px)] md:text-[28px] xl:text-[36px] 2xl:text-[clamp(32px,3.5vw,60px)] font-extrabold tracking-[-0.02em] text-black leading-none">{step.title}</div>
                         <div className="font-sans font-light text-[#6a6a6a] text-[clamp(16px,1.4vw,24px)] md:text-[14px] xl:text-[18px] 2xl:text-[clamp(16px,1.4vw,24px)] leading-[1.6]">{step.desc}</div>
                       </div>
                     </div>
-                    <div className="absolute bottom-0 left-0 h-px bg-[#d9d9d9] w-full md:w-[165%]" />
+                    <div className={`absolute bottom-0 left-0 h-px bg-[#d9d9d9] w-full ${step.lineWidth}`} />
                   </div>
                 </Reveal>
               ))}
@@ -252,46 +253,57 @@ export default function Home() {
             </p>
           </Reveal>
 
-          {/* Staggered Masonry-like Grid */}
-          <div className="grid grid-cols-4 gap-8 md:gap-5 items-start max-[1024px]:grid-cols-2 max-[640px]:grid-cols-1 max-w-[1150px] md:max-w-[780px] xl:max-w-[940px] 2xl:max-w-[1150px] mx-auto w-full">
-            <div className="space-y-8 md:space-y-4 2xl:space-y-5">
+          {/* Staggered Grid — 6 Columns in a Single Row */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 md:gap-3 xl:gap-4 items-start max-w-[1200px] md:max-w-[90%] lg:max-w-[95%] 2xl:max-w-[1200px] mx-auto w-full">
+            {/* 1. Project 1 */}
+            <div className="space-y-0 pt-0">
               <Reveal delay={0.1}>
-                <div className="rounded-none overflow-hidden aspect-[4/5] bg-ink border border-border transition-all duration-500 hover:scale-[1.03] hover:border-violet group cursor-pointer max-w-[340px] sm:max-w-none w-full mx-auto">
+                <div className="rounded-none overflow-hidden aspect-[4/5] bg-ink border border-border transition-all duration-500 hover:scale-[1.03] hover:border-violet group cursor-pointer w-full">
                   <img src="/assets/img/g1.png" alt="" className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0" />
                 </div>
               </Reveal>
-              <Reveal delay={0.2} className="md:translate-y-2 2xl:translate-y-6 translate-y-0 w-full flex justify-center">
-                <div className="rounded-none overflow-hidden aspect-[3/4] bg-ink border border-border transition-all duration-500 hover:scale-[1.03] hover:border-violet group cursor-pointer max-w-[340px] sm:max-w-none w-full">
+            </div>
+
+            {/* 2. Project 2 */}
+            <div className="space-y-0 pt-0 md:pt-4 2xl:pt-8">
+              <Reveal delay={0.2}>
+                <div className="rounded-none overflow-hidden aspect-[3/4] bg-ink border border-border transition-all duration-500 hover:scale-[1.03] hover:border-violet group cursor-pointer w-full">
                   <img src="/assets/img/g2.png" alt="" className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0" />
                 </div>
               </Reveal>
             </div>
 
-            <div className="space-y-8 md:space-y-4 2xl:space-y-5 pt-0 md:pt-4 2xl:pt-12">
+            {/* 3. Project 3 */}
+            <div className="space-y-0 pt-0 md:pt-2 2xl:pt-4">
               <Reveal delay={0.3}>
-                <div className="rounded-none overflow-hidden aspect-square bg-ink border border-border transition-all duration-500 hover:scale-[1.03] hover:border-violet group cursor-pointer max-w-[340px] sm:max-w-none w-full mx-auto">
+                <div className="rounded-none overflow-hidden aspect-square bg-ink border border-border transition-all duration-500 hover:scale-[1.03] hover:border-violet group cursor-pointer w-full">
                   <img src="/assets/img/g3.png" alt="" className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0" />
                 </div>
               </Reveal>
-              <Reveal delay={0.4} className="md:translate-y-2 2xl:translate-y-6 translate-y-0 w-full flex justify-center">
-                <div className="rounded-none overflow-hidden aspect-[4/3] bg-ink border border-border transition-all duration-500 hover:scale-[1.03] hover:border-violet group cursor-pointer max-w-[340px] sm:max-w-none w-full">
+            </div>
+
+            {/* 4. Project 4 */}
+            <div className="space-y-0 pt-0 md:pt-6 2xl:pt-12">
+              <Reveal delay={0.4}>
+                <div className="rounded-none overflow-hidden aspect-[4/3] bg-ink border border-border transition-all duration-500 hover:scale-[1.03] hover:border-violet group cursor-pointer w-full">
                   <img src="/assets/img/g4.png" alt="" className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0" />
                 </div>
               </Reveal>
             </div>
 
-            <div className="space-y-8 md:space-y-4 2xl:space-y-5 pt-0 md:pt-2 2xl:pt-6">
+            {/* 5. Project 5 */}
+            <div className="space-y-0 pt-0 md:pt-1 2xl:pt-3">
               <Reveal delay={0.5}>
-                <div className="rounded-none overflow-hidden aspect-[3/4] md:aspect-[3/4.2] 2xl:aspect-[3/5] bg-ink border border-border transition-all duration-500 hover:scale-[1.03] hover:border-violet group cursor-pointer max-w-[340px] sm:max-w-none w-full mx-auto">
+                <div className="rounded-none overflow-hidden aspect-[3/4] md:aspect-[3/4.2] 2xl:aspect-[3/5] bg-ink border border-border transition-all duration-500 hover:scale-[1.03] hover:border-violet group cursor-pointer w-full">
                   <img src="/assets/img/g5.png" alt="" className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0" />
                 </div>
               </Reveal>
             </div>
 
-
-            <div className="space-y-8 md:space-y-4 2xl:space-y-5 pt-0 md:pt-6 2xl:pt-16">
+            {/* 6. Project 6 */}
+            <div className="space-y-0 pt-0 md:pt-5 2xl:pt-10">
               <Reveal delay={0.6}>
-                <div className="rounded-none overflow-hidden aspect-[4/5] bg-ink border border-border transition-all duration-500 hover:scale-[1.03] hover:border-violet group cursor-pointer max-w-[340px] sm:max-w-none w-full mx-auto">
+                <div className="rounded-none overflow-hidden aspect-[4/5] bg-ink border border-border transition-all duration-500 hover:scale-[1.03] hover:border-violet group cursor-pointer w-full">
                   <img src="/assets/img/g6.png" alt="" className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0" />
                 </div>
               </Reveal>

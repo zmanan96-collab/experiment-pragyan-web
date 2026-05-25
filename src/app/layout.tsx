@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Plus_Jakarta_Sans, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -9,6 +9,12 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-sans",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800"],
+});
+
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -42,15 +48,18 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport = {
+  themeColor: "#010101",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-IN" className={`${plusJakartaSans.variable} antialiased scroll-smooth`} data-scroll-behavior="smooth">
-      <head>
-        <meta name="theme-color" content="#010101" />
+    <html lang="en-IN" className={`${plusJakartaSans.variable} ${spaceGrotesk.variable} antialiased scroll-smooth`} data-scroll-behavior="smooth">
+      <body>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -99,8 +108,6 @@ export default function RootLayout({
             })
           }}
         />
-      </head>
-      <body>
         <ScrollSnapController />
         <a href="#main" className="absolute -left-[9999px] top-0 p-3 bg-yellow text-black font-semibold text-sm rounded-br-md z-[100] focus:left-0 transition-all">Skip to content</a>
         <Header />

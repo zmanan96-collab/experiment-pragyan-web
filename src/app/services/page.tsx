@@ -1,12 +1,13 @@
 'use client';
 
-import { useState, useEffect, Fragment } from 'react';
+import { useState, useEffect, Fragment, useRef } from 'react';
 import Reveal from '../../components/Reveal';
 import Link from 'next/link';
 import Marquee from '@/components/Marquee';
 
 export default function Services() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const html = document.documentElement;
@@ -15,6 +16,22 @@ export default function Services() {
     return () => {
       html.style.scrollSnapType = originalStyle;
     };
+  }, []);
+
+  // Auto-close accordion when section leaves the viewport
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) {
+          setOpenIndex(null);
+        }
+      },
+      { threshold: 0 }
+    );
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+    return () => observer.disconnect();
   }, []);
 
 
@@ -66,23 +83,22 @@ export default function Services() {
   return (
     <article aria-label="Services">
       {/* Main Intro Section */}
-      <section className="bg-white text-black pt-[clamp(140px,18vw,200px)] pb-[clamp(80px,10vw,120px)] md:py-0 md:h-screen md:min-h-[750px] md:flex md:flex-col md:justify-center relative overflow-hidden">
-        <div className="wrap relative z-10">
+      <section className="bg-white text-black pt-[clamp(140px,18vw,200px)] max-[768px]:pb-[280px] pb-[clamp(80px,10vw,120px)] md:pb-0 md:pt-0 md:h-screen md:max-h-[100svh] md:min-h-[500px] md:flex md:flex-col md:justify-center relative overflow-hidden">
+        <div className="wrap relative z-20">
 
-          <Reveal className="mb-10 max-w-[700px] lg:max-w-[850px] md:-translate-x-[7vw] lg:-translate-x-[9vw] md:-translate-y-14 lg:-translate-y-24">
+          <Reveal className="mb-4 lg:mb-6 max-w-[700px] lg:max-w-[850px] md:-translate-x-[7vw] lg:-translate-x-[9vw] xl:-translate-x-[11vw] [@media(display-mode:fullscreen)]:md:-translate-x-[8vw] [@media(display-mode:fullscreen)]:xl:-translate-x-[12vw] transition-transform duration-700 ease-out">
             <span className="text-[clamp(12px,0.85vw,16px)] font-space font-light tracking-[0.22em] uppercase text-[#6a6a6a] block mb-3">Services</span>
-            <h2 className="font-sans text-[clamp(44px,7.5vw,105px)] font-bold leading-[1.05] tracking-[-0.03em] text-black">
+            <h2 className="font-sans text-[clamp(32px,5vw,75px)] md:text-[clamp(30px,4vw,55px)] [@media(display-mode:fullscreen)]:md:text-[clamp(38px,4.5vw,75px)] transition-all duration-700 ease-out font-bold leading-[1.05] tracking-[-0.03em] text-black">
               <span className="block">What we do &ndash;</span>
-              <span className="block md:inline md:whitespace-nowrap">and what</span>
-              <span className="hidden md:inline">&nbsp;</span>
-              <span className="block md:inline md:whitespace-nowrap text-yellow">we don&rsquo;t</span>
+              <span className="block">and what</span>
+              <span className="block text-[#FFD111]">we don&apos;t</span>
             </h2>
           </Reveal>
 
           {/* Paragraph spans full original width with zero grid constraints */}
-          <Reveal delay={0.1} className="md:-translate-x-[7vw] lg:-translate-x-[9vw] md:-translate-y-14 lg:-translate-y-24">
+          <Reveal delay={0.1} className="md:-translate-x-[7vw] lg:-translate-x-[9vw] xl:-translate-x-[11vw] [@media(display-mode:fullscreen)]:md:-translate-x-[8vw] [@media(display-mode:fullscreen)]:xl:-translate-x-[12vw] transition-transform duration-700 ease-out">
 
-            <p className="font-sans text-[#6A6A6A] text-[clamp(20px,1.6vw,25px)] font-light leading-[1.6] max-w-[780px] text-left">
+            <p className="font-sans text-[#6A6A6A] text-[clamp(16px,1.3vw,20px)] md:text-[clamp(15px,1.2vw,18px)] [@media(display-mode:fullscreen)]:md:text-[clamp(18px,1.4vw,24px)] md:leading-[1.6] font-light leading-[1.6] max-w-[750px] md:max-w-[650px] [@media(display-mode:fullscreen)]:md:max-w-[800px] text-left transition-all duration-700 ease-out">
               Pragyan is for founders who are tired of the same old<br className="hidden md:inline" /><span className="md:hidden">&nbsp;</span>
               and want to build something that actually carries weight.<br className="hidden md:inline" /><span className="md:hidden">&nbsp;</span>
               We&apos;re obsessed with the work we do &mdash;<br className="hidden md:inline" /><span className="md:hidden">&nbsp;</span>
@@ -94,45 +110,41 @@ export default function Services() {
         </div>
 
         {/* water.svg ("g" watermark) absolutely positioned and slightly lower down (Visible on all devices) */}
-        <div className="absolute right-[-2%] bottom-[50px] md:right-[-4%] md:lg:right-[-3%] md:xl:right-[-2%] md:top-[56%] md:-translate-y-1/2 md:bottom-auto pointer-events-none select-none z-0">
-
+        <div className="absolute right-[-8%] max-[768px]:right-auto max-[768px]:left-1/2 max-[768px]:-translate-x-1/2 bottom-[-60px] max-[768px]:bottom-[0px] md:right-[0%] lg:right-[2%] xl:right-[3%] [@media(display-mode:fullscreen)]:md:right-[-5%] [@media(display-mode:fullscreen)]:lg:right-[-4%] [@media(display-mode:fullscreen)]:xl:right-[-3%] md:bottom-[-30px] lg:bottom-[-50px] xl:bottom-[-60px] md:top-auto md:translate-y-0 pointer-events-none select-none z-10 transition-all duration-700 ease-out">
           <Reveal delay={0.15}>
-            <div className="w-[250px] md:w-[750px] lg:w-[980px] xl:w-[1180px] aspect-square relative">
-
+            <div className="w-[290px] md:w-[450px] lg:w-[550px] xl:w-[700px] [@media(display-mode:fullscreen)]:md:w-[550px] [@media(display-mode:fullscreen)]:lg:w-[680px] [@media(display-mode:fullscreen)]:xl:w-[850px] transition-all duration-700 ease-out aspect-square relative">
               <img
                 src="/assets/img/water.svg"
                 alt="Water ripples vector illustration"
-                className="w-full h-full object-contain mix-blend-multiply opacity-80 drop-shadow-[-12px_16px_24px_rgba(0,0,0,0.38)]"
+                className="w-full h-full object-contain opacity-80 md:mix-blend-multiply md:drop-shadow-[-12px_16px_24px_rgba(0,0,0,0.38)] max-[768px]:opacity-100 max-[768px]:mix-blend-normal max-[768px]:drop-shadow-[0_8px_16px_rgba(0,0,0,0.5)]"
               />
             </div>
           </Reveal>
         </div>
 
         {/* Bottom Solid Black Transition Bar (Desktop only) */}
-        <div className="hidden md:block absolute bottom-0 left-0 w-full h-[225px] lg:h-[270px] bg-black z-10" />
-
-      </section>
+        <div className="hidden md:block absolute bottom-0 left-0 w-full h-[40px] lg:h-[60px] xl:h-[120px] [@media(display-mode:fullscreen)]:h-[80px] [@media(display-mode:fullscreen)]:lg:h-[120px] [@media(display-mode:fullscreen)]:xl:h-[180px] transition-all duration-700 ease-out bg-black z-30" />      </section>
 
 
       {/* Services List - Vertical Timeline Staggered UI */}
-      <section className="bg-black py-[clamp(100px,12vw,160px)] relative overflow-hidden">
-        {/* Responsive Background Image with Dark Cinematic Overlay (Hidden on desktop, visible on mobile) */}
-        <div className="absolute inset-0 z-0 select-none pointer-events-none md:hidden">
+      <section ref={sectionRef} className="bg-black pt-[clamp(60px,8vw,100px)] pb-[clamp(100px,12vw,160px)] relative overflow-hidden">
+        {/* Responsive Background Image with Dark Cinematic Overlay */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none">
           <img
             src="/assets/img/services.jpeg"
             alt="Services background"
-            className="w-full h-full object-cover opacity-[0.16] filter saturate-[0.15] contrast-[1.1]"
+            className="w-full h-full object-cover opacity-30 filter saturate-50 contrast-125"
           />
           {/* Edge fading gradient for organic integration */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black via-black/85 to-black" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black via-black/75 to-black" />
         </div>
 
         <div className="wrap relative z-10 text-white">
-          <Reveal className="mb-24">
+          <Reveal className="mb-16 md:mb-20 md:ml-[5vw] lg:ml-[8vw] xl:ml-[10vw]">
             <span className="text-[clamp(12px,0.85vw,16px)] font-space font-light tracking-[0.22em] uppercase text-[#d9d9d9] block">Our Services</span>
           </Reveal>
 
-          <div className="max-w-[1200px] mx-auto relative">
+          <div className="max-w-[1200px] relative md:ml-[5vw] lg:ml-[8vw] xl:ml-[10vw]">
             <div className="space-y-4">
               {services.map((service, idx) => {
                 const isOpen = openIndex === idx;
@@ -145,7 +157,7 @@ export default function Services() {
                       onClick={() => setOpenIndex(isOpen ? null : idx)}
                     >
                       <div
-                        className="absolute w-[2px] bg-gradient-to-b from-[#4B3FD4] via-[#4B3FD4]/70 to-transparent pointer-events-none z-0 hidden md:block top-[62px] md:top-[95px]"
+                        className="absolute w-[2px] bg-gradient-to-b from-[#4B3FD4] via-[#4B3FD4]/70 to-transparent pointer-events-none z-0 hidden md:block top-[30px] md:top-[45px]"
                         style={{ left: `${offset + 8}px`, bottom: `-${(services.length - 1 - idx) * 110 + 420}px` }}
                       />
 
@@ -154,49 +166,34 @@ export default function Services() {
                         style={{ '--padding-left': `${offset}px` } as React.CSSProperties}
                       >
                         <div className="relative shrink-0 mr-3 md:mr-4 z-0">
-                          <span className="text-[65px] md:text-[100px] leading-none text-[#6a6a6a] font-space font-light transition-colors group-hover:text-[#4B3FD4]/30 select-none">
+                          <span className="text-[65px] md:text-[85px] leading-none text-[#6a6a6a] font-space font-light transition-colors group-hover:text-[#4B3FD4]/30 select-none">
                             {String(idx + 1).padStart(2, '0')}
                           </span>
                         </div>
 
                         <div className="pt-2 relative z-20">
-                          <h3 className="text-[clamp(26px,3.2vw,44px)] font-sans font-semibold mb-2 tracking-[0.02em] group-hover:text-[#4B3FD4] transition-colors duration-300">{service.title}</h3>
-                          <p className="text-[clamp(18px,1.35vw,22px)] text-[#d9d9d9] font-sans font-light tracking-wide max-w-none transition-colors">{service.tagline}</p>
+                          <h3 className="text-[clamp(24px,2.8vw,38px)] font-sans font-semibold mb-2 tracking-[0.02em] group-hover:text-[#4B3FD4] transition-colors duration-300">{service.title}</h3>
+                          <p className="text-[clamp(16px,1.2vw,19px)] text-[#d9d9d9] font-sans font-light tracking-wide max-w-none transition-colors">{service.tagline}</p>
 
                           <div className={`overflow-hidden transition-all duration-700 ease-in-out ${isOpen ? 'max-h-[1400px] mt-12 opacity-100 border-t border-white/10 pt-12' : 'max-h-0 opacity-0'}`}>
                             <div className="flex flex-col gap-8 pb-8">
                               <p className="text-grey text-[18.5px] leading-relaxed opacity-75 font-light text-left">
-                                {service.copy.split('\n').map((line, lIdx) => (
-                                  <Fragment key={lIdx}>
-                                    {lIdx > 0 && (
-                                      <>
-                                        <br className="hidden md:inline" />
-                                        <span className="md:hidden">&nbsp;</span>
-                                      </>
-                                    )}
-                                    <span className="inline md:whitespace-nowrap">
-                                      {line}
-                                    </span>
-                                  </Fragment>
-                                ))}
+                                {service.copy.replace(/\n/g, ' ')}
                               </p>
 
                               <div className="pt-6 border-t border-white/5">
-                                <span className="block md:hidden text-[clamp(11px,0.8vw,13px)] font-space font-light uppercase tracking-[0.22em] text-[#4B3FD4]/70 mb-5">Deliverables</span>
                                 {service.title === 'Personal Branding & LinkedIn' ? (
                                   <div className="flex flex-col gap-3">
-                                    <div className="flex flex-wrap md:flex-nowrap gap-3">
+                                    <div className="flex flex-wrap gap-3">
                                       {service.deliverables.slice(0, 5).map(d => (
                                         <div key={d} className="flex items-center gap-3 px-5 py-2.5 bg-white/[0.02] border border-white/10 rounded-none text-[14px] font-sans font-light tracking-wide text-white/70 hover:text-white hover:border-[#4B3FD4]/40 hover:bg-white/[0.04] transition-all duration-300 select-none md:whitespace-nowrap">
-                                          <span className="inline-block md:hidden w-1.5 h-1.5 bg-[#4B3FD4] rounded-full shrink-0" />
                                           {d}
                                         </div>
                                       ))}
                                     </div>
-                                    <div className="flex flex-wrap md:flex-nowrap gap-3">
+                                    <div className="flex flex-wrap gap-3">
                                       {service.deliverables.slice(5).map(d => (
                                         <div key={d} className="flex items-center gap-3 px-5 py-2.5 bg-white/[0.02] border border-white/10 rounded-none text-[14px] font-sans font-light tracking-wide text-white/70 hover:text-white hover:border-[#4B3FD4]/40 hover:bg-white/[0.04] transition-all duration-300 select-none md:whitespace-nowrap">
-                                          <span className="inline-block md:hidden w-1.5 h-1.5 bg-[#4B3FD4] rounded-full shrink-0" />
                                           {d}
                                         </div>
                                       ))}
@@ -204,28 +201,25 @@ export default function Services() {
                                   </div>
                                 ) : service.title === 'OOH Advertising' ? (
                                   <div className="flex flex-col gap-3">
-                                    <div className="flex flex-wrap md:flex-nowrap gap-3">
+                                    <div className="flex flex-wrap gap-3">
                                       {service.deliverables.slice(0, 4).map(d => (
                                         <div key={d} className="flex items-center gap-3 px-5 py-2.5 bg-white/[0.02] border border-white/10 rounded-none text-[14px] font-sans font-light tracking-wide text-white/70 hover:text-white hover:border-[#4B3FD4]/40 hover:bg-white/[0.04] transition-all duration-300 select-none md:whitespace-nowrap">
-                                          <span className="inline-block md:hidden w-1.5 h-1.5 bg-[#4B3FD4] rounded-full shrink-0" />
                                           {d}
                                         </div>
                                       ))}
                                     </div>
-                                    <div className="flex flex-wrap md:flex-nowrap gap-3">
+                                    <div className="flex flex-wrap gap-3">
                                       {service.deliverables.slice(4).map(d => (
                                         <div key={d} className="flex items-center gap-3 px-5 py-2.5 bg-white/[0.02] border border-white/10 rounded-none text-[14px] font-sans font-light tracking-wide text-white/70 hover:text-white hover:border-[#4B3FD4]/40 hover:bg-white/[0.04] transition-all duration-300 select-none md:whitespace-nowrap">
-                                          <span className="inline-block md:hidden w-1.5 h-1.5 bg-[#4B3FD4] rounded-full shrink-0" />
                                           {d}
                                         </div>
                                       ))}
                                     </div>
                                   </div>
                                 ) : (
-                                  <div className="flex flex-wrap md:flex-nowrap gap-3">
+                                  <div className="flex flex-wrap gap-3">
                                     {service.deliverables.map(d => (
                                       <div key={d} className="flex items-center gap-3 px-5 py-2.5 bg-white/[0.02] border border-white/10 rounded-none text-[14px] font-sans font-light tracking-wide text-white/70 hover:text-white hover:border-[#4B3FD4]/40 hover:bg-white/[0.04] transition-all duration-300 select-none md:whitespace-nowrap">
-                                        <span className="inline-block md:hidden w-1.5 h-1.5 bg-[#4B3FD4] rounded-full shrink-0" />
                                         {d}
                                       </div>
                                     ))}

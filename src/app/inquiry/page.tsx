@@ -47,16 +47,16 @@ export default function Inquiry() {
   };
 
   return (
-    <section aria-label="Inquiry" className="bg-[#FAFAFA] min-h-screen md:h-screen md:min-h-[850px] flex flex-col items-center justify-between p-0 md:pt-[90px] relative font-sans">
-      <div className="w-full flex-grow flex items-center justify-center p-4 py-16 md:py-0 md:px-10">
-        <Reveal className="w-full max-w-[1350px] shadow-[0_30px_100px_-20px_rgba(0,0,0,0.15)] bg-white">
-          <div className="flex md:min-h-[720px] max-[920px]:flex-col overflow-hidden" role="region" aria-labelledby="inquiry-h">
+    <section aria-label="Inquiry" className="bg-[#FAFAFA] min-h-screen md:h-screen flex flex-col items-center justify-between p-0 md:pt-[45px] [@media(display-mode:fullscreen)]:md:pt-[60px] relative font-sans">
+      <div className="w-full flex-grow flex items-center justify-center p-4 py-8 md:py-0 md:px-10">
+        <Reveal className="w-full max-w-[1250px] shadow-[0_30px_100px_-20px_rgba(0,0,0,0.15)] bg-white [@media(display-mode:fullscreen)]:max-w-[1300px] transition-all duration-700">
+          <div className="flex md:min-h-[430px] [@media(display-mode:fullscreen)]:md:min-h-[550px] max-[920px]:flex-col overflow-hidden transition-all duration-700" role="region" aria-labelledby="inquiry-h">
 
             {/* Left Side: Solid Black (Top) & Radiating Texture (Bottom) */}
-            <div className="w-[44%] bg-black flex flex-col max-[920px]:w-full md:min-h-[600px]">
+            <div className="w-[44%] bg-black flex flex-col max-[920px]:w-full">
               {/* Top Half: Yellow bold text in sentence case */}
-              <div className="h-1/2 flex items-center p-8 md:p-12 bg-black md:min-h-[300px] py-12 max-[920px]:py-10">
-                <h2 id="inquiry-h" className="text-[clamp(32px,4.3vw,64px)] leading-[1.1] font-extrabold text-[#FFD111] tracking-[-0.02em] font-sans">
+              <div className="h-1/2 flex items-center p-4 md:p-6 [@media(display-mode:fullscreen)]:md:p-8 bg-black py-6 max-[920px]:py-6">
+                <h2 id="inquiry-h" className="text-[clamp(22px,3vw,45px)] [@media(display-mode:fullscreen)]:text-[clamp(28px,3.8vw,56px)] leading-[1.1] font-extrabold text-[#FFD111] tracking-[-0.02em] font-sans transition-all duration-700">
                   <span className="block whitespace-nowrap">Got a project,</span>
                   <span className="block whitespace-nowrap">a question, or</span>
                   <span className="block whitespace-nowrap">an idea about</span>
@@ -65,7 +65,7 @@ export default function Inquiry() {
               </div>
 
               {/* Bottom Half: Radiating texture background */}
-              <div className="h-1/2 flex-grow relative bg-black overflow-hidden md:min-h-[300px] max-[920px]:h-[200px]">
+              <div className="h-1/2 flex-grow relative bg-black overflow-hidden max-[920px]:h-[200px]">
                 {/* 
                   TO LINK YOUR OWN IMAGE:
                   Simply replace the "/assets/img/round.png" path below with your own image path!
@@ -82,9 +82,9 @@ export default function Inquiry() {
             </div>
 
             {/* Right Side: Clean Form with Black Border Outer Box */}
-            <div className="flex-1 bg-white flex items-center justify-center p-6 md:p-12">
-              <div className="w-full max-w-[720px] border-[1.5px] border-black p-6 md:p-10 bg-white">
-                <p className="text-[clamp(18px,1.4vw,22px)] leading-[1.7] text-black font-sans font-light mb-8">
+            <div className="flex-1 bg-white flex items-center justify-center p-3 md:p-5 [@media(display-mode:fullscreen)]:md:p-8 transition-all duration-700">
+              <div className="w-full max-w-[720px] border-[1.5px] border-black p-4 md:p-5 [@media(display-mode:fullscreen)]:md:p-6 bg-white transition-all duration-700">
+                <p className="text-[clamp(14px,0.9vw,16px)] [@media(display-mode:fullscreen)]:text-[clamp(16px,1.1vw,18px)] leading-[1.4] [@media(display-mode:fullscreen)]:leading-[1.5] text-black font-sans font-light mb-2 md:mb-3 [@media(display-mode:fullscreen)]:md:mb-4 transition-all duration-700">
                   Whether it&apos;s strategy, storytelling, or exploring how we can bring your brand to life &mdash; reach out, and we&apos;ll figure it out together.
                 </p>
 
@@ -92,37 +92,37 @@ export default function Inquiry() {
                   action="https://formspree.io/f/REPLACE_ME"
                   method="POST"
                   onSubmit={handleSubmit}
-                  className="space-y-5"
+                  className="space-y-1.5 [@media(display-mode:fullscreen)]:space-y-3 transition-all duration-700"
                 >
                   <div>
-                    <label htmlFor="f-name" className="block text-[18px] font-sans font-medium text-black mb-2">Name</label>
+                    <label htmlFor="f-name" className="block text-[13px] [@media(display-mode:fullscreen)]:text-[15px] font-sans font-medium text-black mb-0.5 [@media(display-mode:fullscreen)]:mb-1.5 transition-all duration-700">Name</label>
                     <input
                       id="f-name"
                       name="name"
                       type="text"
                       required
-                      className="w-full p-3 border border-black/30 bg-transparent text-black text-[15px] rounded-[4px] transition-colors focus:outline-none focus:border-[#FFD111]"
+                      className="w-full p-1.5 [@media(display-mode:fullscreen)]:p-2.5 border border-black/30 bg-transparent text-black text-[13px] [@media(display-mode:fullscreen)]:text-[14px] rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
                     />
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4 max-[480px]:grid-cols-1">
+                  <div className="grid grid-cols-2 gap-2 [@media(display-mode:fullscreen)]:gap-3 max-[480px]:grid-cols-1 transition-all duration-700">
                     <div>
-                      <label htmlFor="f-email" className="block text-[18px] font-sans font-medium text-black mb-2">Email address</label>
+                      <label htmlFor="f-email" className="block text-[13px] [@media(display-mode:fullscreen)]:text-[15px] font-sans font-medium text-black mb-0.5 [@media(display-mode:fullscreen)]:mb-1.5 transition-all duration-700">Email address</label>
                       <input
                         id="f-email"
                         name="email"
                         type="email"
                         required
-                        className="w-full p-3 border border-black/30 bg-transparent text-black text-[15px] rounded-[4px] transition-colors focus:outline-none focus:border-[#FFD111]"
+                        className="w-full p-1.5 [@media(display-mode:fullscreen)]:p-2.5 border border-black/30 bg-transparent text-black text-[13px] [@media(display-mode:fullscreen)]:text-[14px] rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="f-phone" className="block text-[18px] font-sans font-medium text-black mb-2">Mobile Number</label>
+                      <label htmlFor="f-phone" className="block text-[13px] [@media(display-mode:fullscreen)]:text-[15px] font-sans font-medium text-black mb-0.5 [@media(display-mode:fullscreen)]:mb-1.5 transition-all duration-700">Mobile Number</label>
                       <div className="flex gap-2">
                         <select
                           name="countryCode"
-                          className="w-[85px] p-3 border border-black/30 bg-transparent text-black text-[14px] rounded-[4px] focus:outline-none focus:border-[#FFD111] appearance-none cursor-pointer"
+                          className="w-[75px] [@media(display-mode:fullscreen)]:w-[80px] p-1.5 [@media(display-mode:fullscreen)]:p-2.5 border border-black/30 bg-transparent text-black text-[12px] [@media(display-mode:fullscreen)]:text-[13px] rounded-[4px] focus:outline-none focus:border-[#FFD111] appearance-none cursor-pointer transition-all duration-700"
                         >
                           <option value="+91">IN +91</option>
                           <option value="+1">US +1</option>
@@ -137,19 +137,19 @@ export default function Inquiry() {
                           type="tel"
                           placeholder="99980 81399"
                           required
-                          className="flex-1 p-3 border border-black/30 bg-transparent text-black text-[15px] rounded-[4px] transition-colors focus:outline-none focus:border-[#FFD111]"
+                          className="flex-1 p-1.5 [@media(display-mode:fullscreen)]:p-2.5 border border-black/30 bg-transparent text-black text-[13px] [@media(display-mode:fullscreen)]:text-[14px] rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
                         />
                       </div>
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-[18px] font-sans font-medium text-black mb-2">Service Interested In</label>
+                    <label className="block text-[13px] [@media(display-mode:fullscreen)]:text-[15px] font-sans font-medium text-black mb-0.5 [@media(display-mode:fullscreen)]:mb-1.5 transition-all duration-700">Service Interested In</label>
                     <select
                       name="service"
                       required
                       defaultValue=""
-                      className="w-full p-3 border border-black/30 bg-transparent text-black text-[15px] rounded-[4px] focus:outline-none focus:border-[#FFD111] appearance-none cursor-pointer"
+                      className="w-full p-1.5 [@media(display-mode:fullscreen)]:p-2.5 border border-black/30 bg-transparent text-black text-[13px] [@media(display-mode:fullscreen)]:text-[14px] rounded-[4px] focus:outline-none focus:border-[#FFD111] appearance-none cursor-pointer transition-all duration-700"
                     >
                       <option value="" disabled>Select a service</option>
                       <option value="Branding Strategy">Branding Strategy</option>
@@ -163,20 +163,20 @@ export default function Inquiry() {
                   </div>
 
                   <div>
-                    <label htmlFor="f-message" className="block text-[18px] font-sans font-medium text-black mb-2">Leave a message</label>
+                    <label htmlFor="f-message" className="block text-[13px] [@media(display-mode:fullscreen)]:text-[15px] font-sans font-medium text-black mb-0.5 [@media(display-mode:fullscreen)]:mb-1.5 transition-all duration-700">Leave a message</label>
                     <textarea
                       id="f-message"
                       name="message"
                       required
-                      className="w-full min-h-[105px] p-3 border border-black/30 bg-transparent text-black text-[15px] rounded-[4px] transition-colors focus:outline-none focus:border-[#FFD111] resize-none"
+                      className="w-full min-h-[50px] [@media(display-mode:fullscreen)]:min-h-[70px] p-1.5 [@media(display-mode:fullscreen)]:p-2.5 border border-black/30 bg-transparent text-black text-[13px] [@media(display-mode:fullscreen)]:text-[14px] rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111] resize-none"
                     ></textarea>
                   </div>
 
-                  <div className="pt-3">
+                  <div className="pt-1.5 [@media(display-mode:fullscreen)]:pt-2 transition-all duration-700">
                     <button
                       type="submit"
                       disabled={status === 'submitting'}
-                      className="w-full bg-[#FFD111] text-black py-4 px-8 font-space font-light text-[clamp(16px,1.1vw,19px)] tracking-[0.1em] uppercase rounded-[8px] hover:brightness-105 active:scale-[0.99] disabled:opacity-50 transition-all duration-300 shadow-lg shadow-[#FFD111]/10"
+                      className="w-full bg-[#FFD111] text-black py-2 [@media(display-mode:fullscreen)]:py-3 px-8 font-space font-light text-[clamp(14px,1vw,16px)] [@media(display-mode:fullscreen)]:text-[clamp(15px,1.1vw,18px)] tracking-[0.1em] uppercase rounded-[8px] hover:brightness-105 active:scale-[0.99] disabled:opacity-50 transition-all duration-700 shadow-lg shadow-[#FFD111]/10"
                     >
                       {status === 'submitting' ? 'Submitting...' : 'Submit'}
                     </button>
@@ -205,9 +205,6 @@ export default function Inquiry() {
             </div>
           </div>
         </Reveal>
-      </div>
-      <div className="w-full z-10 hidden md:block">
-        <Marquee />
       </div>
     </section>
   );
