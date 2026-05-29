@@ -47,7 +47,7 @@ export default function Inquiry() {
   };
 
   return (
-    <section aria-label="Inquiry" className="bg-[#FAFAFA] min-h-screen md:h-screen flex flex-col items-center justify-between p-0 md:pt-[45px] [@media(display-mode:fullscreen)]:md:pt-[60px] relative font-sans">
+    <section aria-label="Inquiry" className="bg-[#FAFAFA] min-h-screen md:h-screen flex flex-col items-center justify-between pt-[100px] px-0 pb-0 md:pt-[45px] [@media(display-mode:fullscreen)]:md:pt-[60px] relative font-sans">
       <div className="w-full flex-grow flex items-center justify-center p-4 py-8 md:py-0 md:px-10">
         <Reveal className="w-full max-w-[1250px] shadow-[0_30px_100px_-20px_rgba(0,0,0,0.15)] bg-white [@media(display-mode:fullscreen)]:max-w-[1300px] transition-all duration-700">
           <div className="flex md:min-h-[430px] [@media(display-mode:fullscreen)]:md:min-h-[550px] max-[920px]:flex-col overflow-hidden transition-all duration-700" role="region" aria-labelledby="inquiry-h">

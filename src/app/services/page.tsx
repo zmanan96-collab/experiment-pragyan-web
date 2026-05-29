@@ -9,14 +9,6 @@ export default function Services() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
 
-  useEffect(() => {
-    const html = document.documentElement;
-    const originalStyle = html.style.scrollSnapType;
-    html.style.scrollSnapType = 'none';
-    return () => {
-      html.style.scrollSnapType = originalStyle;
-    };
-  }, []);
 
   // Auto-close accordion when section leaves the viewport
   useEffect(() => {
@@ -83,22 +75,22 @@ export default function Services() {
   return (
     <article aria-label="Services">
       {/* Main Intro Section */}
-      <section className="bg-white text-black pt-[clamp(140px,18vw,200px)] max-[768px]:pb-[280px] pb-[clamp(80px,10vw,120px)] md:pb-0 md:pt-0 md:h-screen md:max-h-[100svh] md:min-h-[500px] md:flex md:flex-col md:justify-center relative overflow-hidden">
-        <div className="wrap relative z-20">
+      <section className="bg-white text-black pt-[clamp(140px,18vw,200px)] max-[768px]:pb-[280px] pb-[clamp(80px,10vw,120px)] md:pt-[80px] md:pb-[140px] md:h-[100svh] md:flex md:flex-col md:justify-center relative overflow-hidden">
+        <div className="wrap relative z-20 md:-translate-y-4 lg:-translate-y-6 xl:-translate-y-8 2xl:-translate-y-4 2xl:-translate-x-[14vw]">
 
-          <Reveal className="mb-4 lg:mb-6 max-w-[700px] lg:max-w-[850px] md:-translate-x-[7vw] lg:-translate-x-[9vw] xl:-translate-x-[11vw] [@media(display-mode:fullscreen)]:md:-translate-x-[8vw] [@media(display-mode:fullscreen)]:xl:-translate-x-[12vw] transition-transform duration-700 ease-out">
+          <Reveal className="mb-4 lg:mb-6 max-w-[700px] lg:max-w-[850px] 2xl:max-w-[1000px] md:-translate-x-[7vw] lg:-translate-x-[9vw] xl:-translate-x-[11vw] 2xl:translate-x-0 [@media(display-mode:fullscreen)]:md:-translate-x-[8vw] [@media(display-mode:fullscreen)]:xl:-translate-x-[12vw] transition-transform duration-700 ease-out">
             <span className="text-[clamp(12px,0.85vw,16px)] font-space font-light tracking-[0.22em] uppercase text-[#6a6a6a] block mb-3">Services</span>
-            <h2 className="font-sans text-[clamp(32px,5vw,75px)] md:text-[clamp(30px,4vw,55px)] [@media(display-mode:fullscreen)]:md:text-[clamp(38px,4.5vw,75px)] transition-all duration-700 ease-out font-bold leading-[1.05] tracking-[-0.03em] text-black">
+            <h2 className="font-sans text-[clamp(32px,5vw,75px)] md:text-[clamp(30px,4vw,55px)] 2xl:text-[68px] [@media(display-mode:fullscreen)]:md:text-[clamp(38px,4.5vw,75px)] transition-all duration-700 ease-out font-bold leading-[1.05] tracking-[-0.03em] text-black">
               <span className="block">What we do &ndash;</span>
               <span className="block">and what</span>
-              <span className="block text-[#FFD111]">we don&apos;t</span>
+              <span className="inline-block bg-gradient-to-r from-[#161245] via-[#4B3FD4] to-[#786CF0] bg-clip-text text-transparent pb-2">we don&apos;t</span>
             </h2>
           </Reveal>
 
           {/* Paragraph spans full original width with zero grid constraints */}
-          <Reveal delay={0.1} className="md:-translate-x-[7vw] lg:-translate-x-[9vw] xl:-translate-x-[11vw] [@media(display-mode:fullscreen)]:md:-translate-x-[8vw] [@media(display-mode:fullscreen)]:xl:-translate-x-[12vw] transition-transform duration-700 ease-out">
+          <Reveal delay={0.1} className="md:-translate-x-[7vw] lg:-translate-x-[9vw] xl:-translate-x-[11vw] 2xl:translate-x-0 [@media(display-mode:fullscreen)]:md:-translate-x-[8vw] [@media(display-mode:fullscreen)]:xl:-translate-x-[12vw] transition-transform duration-700 ease-out">
 
-            <p className="font-sans text-[#6A6A6A] text-[clamp(16px,1.3vw,20px)] md:text-[clamp(15px,1.2vw,18px)] [@media(display-mode:fullscreen)]:md:text-[clamp(18px,1.4vw,24px)] md:leading-[1.6] font-light leading-[1.6] max-w-[750px] md:max-w-[650px] [@media(display-mode:fullscreen)]:md:max-w-[800px] text-left transition-all duration-700 ease-out">
+            <p className="font-sans text-[#6A6A6A] text-[clamp(16px,1.3vw,20px)] md:text-[clamp(15px,1.2vw,18px)] 2xl:text-[20px] 2xl:max-w-[750px] 2xl:leading-[1.7] [@media(display-mode:fullscreen)]:md:text-[clamp(18px,1.4vw,24px)] md:leading-[1.6] font-light leading-[1.6] max-w-[750px] md:max-w-[650px] [@media(display-mode:fullscreen)]:md:max-w-[800px] text-left transition-all duration-700 ease-out">
               Pragyan is for founders who are tired of the same old<br className="hidden md:inline" /><span className="md:hidden">&nbsp;</span>
               and want to build something that actually carries weight.<br className="hidden md:inline" /><span className="md:hidden">&nbsp;</span>
               We&apos;re obsessed with the work we do &mdash;<br className="hidden md:inline" /><span className="md:hidden">&nbsp;</span>
@@ -110,9 +102,9 @@ export default function Services() {
         </div>
 
         {/* water.svg ("g" watermark) absolutely positioned and slightly lower down (Visible on all devices) */}
-        <div className="absolute right-[-8%] max-[768px]:right-auto max-[768px]:left-1/2 max-[768px]:-translate-x-1/2 bottom-[-60px] max-[768px]:bottom-[0px] md:right-[0%] lg:right-[2%] xl:right-[3%] [@media(display-mode:fullscreen)]:md:right-[-5%] [@media(display-mode:fullscreen)]:lg:right-[-4%] [@media(display-mode:fullscreen)]:xl:right-[-3%] md:bottom-[-30px] lg:bottom-[-50px] xl:bottom-[-60px] md:top-auto md:translate-y-0 pointer-events-none select-none z-10 transition-all duration-700 ease-out">
+        <div className="absolute right-[-8%] max-[768px]:right-auto max-[768px]:left-1/2 max-[768px]:-translate-x-1/2 bottom-[-60px] max-[768px]:bottom-[0px] md:right-[-5%] lg:right-[-5%] xl:right-[-8%] 2xl:right-[0%] md:bottom-[-20px] lg:bottom-[-30px] xl:bottom-[-40px] 2xl:bottom-[-60px] [@media(display-mode:fullscreen)]:md:right-[-10%] [@media(display-mode:fullscreen)]:lg:right-[-10%] [@media(display-mode:fullscreen)]:xl:right-[-12%] md:top-auto md:translate-y-0 pointer-events-none select-none z-10 transition-all duration-700 ease-out">
           <Reveal delay={0.15}>
-            <div className="w-[290px] md:w-[450px] lg:w-[550px] xl:w-[700px] [@media(display-mode:fullscreen)]:md:w-[550px] [@media(display-mode:fullscreen)]:lg:w-[680px] [@media(display-mode:fullscreen)]:xl:w-[850px] transition-all duration-700 ease-out aspect-square relative">
+            <div className="w-[290px] md:w-[320px] lg:w-[380px] xl:w-[480px] 2xl:w-[700px] [@media(display-mode:fullscreen)]:md:w-[450px] [@media(display-mode:fullscreen)]:lg:w-[550px] [@media(display-mode:fullscreen)]:xl:w-[700px] transition-all duration-700 ease-out aspect-square relative">
               <img
                 src="/assets/img/water.svg"
                 alt="Water ripples vector illustration"

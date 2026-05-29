@@ -36,12 +36,12 @@ export default function Culture() {
             <div className="flex flex-col-reverse md:flex-col items-center justify-center w-full overflow-visible gap-4 relative md:translate-y-[55px] lg:translate-y-[65px]">
 
               <Reveal delay={0.15} className="w-full overflow-visible max-[880px]:mt-6 max-[880px]:translate-y-[50px]">
-                <div className="w-[80vw] max-w-[280px] md:max-w-none md:w-[380px] lg:w-[450px] aspect-square ml-auto max-[880px]:mx-auto relative overflow-visible">
+                <div className="w-[80vw] max-w-[280px] md:max-w-none md:w-[380px] lg:w-[450px] aspect-square ml-auto max-[880px]:mx-auto relative overflow-visible md:translate-y-[80px] lg:translate-y-[100px] xl:translate-y-[120px]">
                   {/* REPLACE THE SRC BELOW WITH YOUR IMAGE PATH */}
                   <img
                     src="/assets/img/5.png"
                     alt="Pragyan Culture"
-                    className="w-full h-full object-contain scale-[1.6] md:scale-[1.4] lg:scale-[1.5] md:translate-x-[60px] lg:translate-x-[85px] max-[880px]:rotate-90 origin-center mix-blend-multiply border-none outline-none transition-transform duration-700 hover:scale-[1.7] md:hover:scale-[1.5] lg:hover:scale-[1.6] hover:md:translate-x-[60px] lg:hover:translate-x-[85px]"
+                    className="w-full h-full object-contain scale-[1.6] md:scale-[1.4] lg:scale-[1.5] xl:scale-[1.6] 2xl:scale-[1.4] md:translate-x-[160px] lg:translate-x-[190px] xl:translate-x-[220px] 2xl:translate-x-[180px] max-[880px]:rotate-90 md:rotate-[10deg] lg:rotate-[12deg] xl:rotate-[15deg] 2xl:rotate-[10deg] origin-center md:origin-bottom mix-blend-multiply border-none outline-none"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800';
                     }}
