@@ -17,7 +17,7 @@ export default function About() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <h1 id="about-h" className="font-sans text-[clamp(56px,7.5vw,105px)] md:text-[clamp(36px,4.2vw,58px)] font-bold leading-[1.05] tracking-[-0.03em] text-black mb-4 md:mb-1">
+            <h1 id="about-h" className="font-sans text-[clamp(28px,7.5vw,42px)] md:text-[clamp(36px,4.2vw,58px)] font-bold leading-[1.05] tracking-[-0.03em] text-black mb-4 md:mb-1">
               At Pragyan,<br />
               the human lens is<br />
               <span className="inline-block bg-gradient-to-r from-[#161245] via-[#4B3FD4] to-[#786CF0] bg-clip-text text-transparent pb-2">
