@@ -7,6 +7,20 @@ export default function ScrollSnapController() {
   const pathname = usePathname();
 
   useEffect(() => {
+    if (typeof window !== 'undefined') {
+      try {
+        const platform = window.navigator?.platform || '';
+        const userAgent = window.navigator?.userAgent || '';
+        if (platform.indexOf('Mac') !== -1 || userAgent.indexOf('Macintosh') !== -1) {
+          document.documentElement.classList.add('is-mac');
+        } else {
+          document.documentElement.classList.add('is-not-mac');
+        }
+      } catch (e) {}
+    }
+  }, []);
+
+  useEffect(() => {
     // Only run on desktop/laptop views (768px and above)
     if (typeof window === 'undefined' || window.innerWidth < 768) return;
 

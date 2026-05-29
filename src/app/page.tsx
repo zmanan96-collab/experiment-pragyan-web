@@ -46,13 +46,13 @@ export default function Home() {
           {/* Heading row */}
           <div className="flex items-start justify-between gap-3 pt-[175px] md:pt-[clamp(200px,25vh,300px)] lg:pt-[160px] xl:pt-[180px] 2xl:pt-[clamp(200px,25vh,300px)] md:px-[4vw] lg:px-[6vw] xl:px-[8vw]">
             <Reveal className="md:translate-x-[4vw] lg:translate-x-[6vw]">
-              <h1 id="hero-h" className="text-[clamp(36px,4.2vw,92px)] lg:text-[62px] xl:text-[74px] 2xl:text-[clamp(36px,4.2vw,92px)] leading-[1.08] font-sans font-bold text-[#fcfcfc] tracking-[-0.03em] 2xl:translate-x-0">
+              <h1 id="hero-h" className="text-[clamp(28px,7.5vw,42px)] md:text-[clamp(36px,4.2vw,92px)] lg:text-[62px] xl:text-[74px] 2xl:text-[clamp(36px,4.2vw,92px)] leading-[1.08] font-sans font-bold text-[#fcfcfc] tracking-[-0.03em] 2xl:translate-x-0">
                 <span className="whitespace-nowrap">It starts with a</span> <br />
                 <span className="whitespace-nowrap">Point of view.</span>
               </h1>
             </Reveal>
-            {/* Hide on very small screens */}
-            <div className="hidden sm:block shrink-0 text-right font-sans font-bold text-[clamp(10px,1.1vw,20px)] tracking-[0.12em] uppercase text-[#fcfcfc] leading-[1.6] -mt-2" aria-hidden="true">
+            {/* Visible on all screens, adjusted size on mobile */}
+            <div className="block shrink-0 text-right font-sans font-bold text-[9px] sm:text-[clamp(10px,1.1vw,20px)] tracking-[0.12em] uppercase text-[#fcfcfc] leading-[1.6] -mt-1 sm:-mt-2" aria-hidden="true">
               BRANDING<br />BUILT<br />FOR<br />FOUNDERS
             </div>
           </div>

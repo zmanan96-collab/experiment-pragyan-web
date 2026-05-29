@@ -61,23 +61,6 @@ export default function RootLayout({
     <html lang="en-IN" className={`${plusJakartaSans.variable} ${spaceGrotesk.variable} antialiased scroll-smooth`} data-scroll-behavior="smooth">
       <body>
         <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  var platform = window.navigator?.platform || '';
-                  var userAgent = window.navigator?.userAgent || '';
-                  if (platform.indexOf('Mac') !== -1 || userAgent.indexOf('Macintosh') !== -1) {
-                    document.documentElement.classList.add('is-mac');
-                  } else {
-                    document.documentElement.classList.add('is-not-mac');
-                  }
-                } catch (e) {}
-              })();
-            `
-          }}
-        />
-        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
