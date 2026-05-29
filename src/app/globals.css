@@ -184,3 +184,52 @@ button,
     scroll-snap-stop: always;
   }
 }
+
+/* --- Manifesto Section Spacing (Dynamic Windows/HP vs Mac) --- */
+.manifesto-wrap {
+  transition: transform var(--ease) 0.5s;
+}
+
+/* Default styling for Windows / HP / Others (keeps original vertical alignment) */
+@media (min-width: 768px) {
+  .manifesto-wrap {
+    transform: translateY(0) !important;
+  }
+}
+@media (min-width: 1024px) {
+  .manifesto-wrap {
+    transform: translateY(-30px) !important;
+  }
+}
+@media (min-width: 1280px) {
+  .manifesto-wrap {
+    transform: translateY(-45px) !important;
+  }
+}
+@media (min-width: 1536px) {
+  .manifesto-wrap {
+    transform: translateY(0) !important;
+  }
+}
+
+/* Raised styling for MacBook / macOS systems ONLY */
+@media (min-width: 768px) {
+  html.is-mac .manifesto-wrap {
+    transform: translateY(-20px) !important;
+  }
+}
+@media (min-width: 1024px) {
+  html.is-mac .manifesto-wrap {
+    transform: translateY(-45px) !important;
+  }
+}
+@media (min-width: 1280px) {
+  html.is-mac .manifesto-wrap {
+    transform: translateY(-62px) !important;
+  }
+}
+@media (min-width: 1536px) {
+  html.is-mac .manifesto-wrap {
+    transform: translateY(-40px) !important;
+  }
+}
