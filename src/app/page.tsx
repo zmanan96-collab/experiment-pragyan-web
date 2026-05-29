@@ -125,7 +125,7 @@ export default function Home() {
 
       {/* Manifesto Section */}
       <section className="bg-black px-[var(--pad)] pt-[100px] pb-[60px] md:pt-[120px] md:pb-[40px] md:h-[100svh] flex flex-col justify-center relative overflow-hidden" aria-labelledby="man-h">
-        <div className="wrap w-full lg:-translate-y-[30px] xl:-translate-y-[45px] 2xl:translate-y-0">
+        <div className="wrap w-full lg:-translate-y-[70px] xl:-translate-y-[85px] 2xl:-translate-y-[70px]">
           <Reveal className="max-w-[1300px] mx-auto text-center">
             <span className="font-space text-[clamp(12px,0.85vw,16px)] font-light tracking-[0.22em] uppercase text-[#d9d9d9] inline-block mb-4 md:mb-[clamp(10px,2vh,20px)]" id="man-h">
               Core Philosophy
