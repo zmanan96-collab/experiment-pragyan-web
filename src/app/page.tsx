@@ -44,9 +44,9 @@ export default function Home() {
         <div className="relative z-[1] md:flex-1 flex flex-col max-w-[1600px] mx-auto w-full px-[var(--pad)]">
 
           {/* Heading row */}
-          <div className="flex items-start justify-between gap-3 pt-[175px] md:pt-[clamp(200px,25vh,300px)] md:px-[4vw] lg:px-[6vw] xl:px-[8vw]">
+          <div className="flex items-start justify-between gap-3 pt-[175px] md:pt-[clamp(200px,25vh,300px)] lg:pt-[160px] xl:pt-[180px] 2xl:pt-[clamp(200px,25vh,300px)] md:px-[4vw] lg:px-[6vw] xl:px-[8vw]">
             <Reveal className="md:translate-x-[4vw] lg:translate-x-[6vw]">
-              <h1 id="hero-h" className="text-[clamp(36px,4.2vw,92px)] leading-[1.08] font-sans font-bold text-[#fcfcfc] tracking-[-0.03em] 2xl:translate-x-0">
+              <h1 id="hero-h" className="text-[clamp(36px,4.2vw,92px)] lg:text-[62px] xl:text-[74px] 2xl:text-[clamp(36px,4.2vw,92px)] leading-[1.08] font-sans font-bold text-[#fcfcfc] tracking-[-0.03em] 2xl:translate-x-0">
                 <span className="whitespace-nowrap">It starts with a</span> <br />
                 <span className="whitespace-nowrap">Point of view.</span>
               </h1>
@@ -125,7 +125,7 @@ export default function Home() {
 
       {/* Manifesto Section */}
       <section className="bg-black px-[var(--pad)] pt-[100px] pb-[60px] md:pt-[120px] md:pb-[40px] md:h-[100svh] flex flex-col justify-center relative overflow-hidden" aria-labelledby="man-h">
-        <div className="wrap w-full">
+        <div className="wrap w-full lg:-translate-y-[30px] xl:-translate-y-[45px] 2xl:translate-y-0">
           <Reveal className="max-w-[1300px] mx-auto text-center">
             <span className="font-space text-[clamp(12px,0.85vw,16px)] font-light tracking-[0.22em] uppercase text-[#d9d9d9] inline-block mb-4 md:mb-[clamp(10px,2vh,20px)]" id="man-h">
               Core Philosophy
@@ -241,7 +241,7 @@ export default function Home() {
       {/* Breathe Section */}
       <section className="bg-black pt-[80px] pb-[60px] md:pt-[120px] md:pb-[40px] md:h-[100svh] flex flex-col justify-center relative overflow-hidden" aria-labelledby="breathe-h">
         <div className="wrap w-full">
-          <Reveal className="mb-[clamp(20px,3vh,48px)] max-w-[820px] text-center md:text-left mx-auto md:mx-0">
+          <Reveal className="mb-[clamp(20px,3vh,48px)] max-w-[820px] text-center md:text-left mx-auto md:mx-0 lg:-translate-y-[15px] xl:-translate-y-[25px] 2xl:translate-y-0">
             <span className="font-space text-[clamp(12px,0.85vw,16px)] font-light tracking-[0.22em] uppercase text-[#d9d9d9] mb-3 md:mb-[clamp(8px,1.5vh,16px)] block">Our Projects</span>
             <h2 id="breathe-h" className="font-sans font-bold leading-[1.1] tracking-[-0.04em] text-[#FFD111] text-[clamp(28px,2.8vw,48px)] md:text-[clamp(26px,3vw,38px)] xl:text-[clamp(32px,3vw,48px)]">
               Great ideas<br />
