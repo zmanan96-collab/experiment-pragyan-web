@@ -233,3 +233,26 @@ button,
     transform: translateY(-40px) !important;
   }
 }
+
+/* Push methodology section slightly down on MacBook systems ONLY to balance the layout */
+@media (min-width: 768px) {
+  html.is-mac .methodology-section {
+    transform: translateY(15px) !important;
+    transition: transform var(--ease) 0.5s;
+  }
+}
+@media (min-width: 1024px) {
+  html.is-mac .methodology-section {
+    transform: translateY(22px) !important;
+  }
+}
+@media (min-width: 1280px) {
+  html.is-mac .methodology-section {
+    transform: translateY(28px) !important;
+  }
+}
+@media (min-width: 1536px) {
+  html.is-mac .methodology-section {
+    transform: translateY(18px) !important;
+  }
+}

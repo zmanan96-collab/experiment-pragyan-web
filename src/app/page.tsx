@@ -148,7 +148,7 @@ export default function Home() {
           </Reveal>
 
           {/* Methodology Cards Section */}
-          <div className="mt-10 md:mt-[clamp(10px,2vh,50px)] max-w-[1100px] md:max-w-[760px] xl:max-w-[920px] 2xl:max-w-[1100px] mx-auto">
+          <div className="methodology-section mt-10 md:mt-[clamp(10px,2vh,50px)] max-w-[1100px] md:max-w-[760px] xl:max-w-[920px] 2xl:max-w-[1100px] mx-auto">
             <Reveal className="text-center mb-6 md:mb-4 lg:mb-5 xl:mb-6 2xl:mb-8">
               <span className="font-space text-[clamp(12px,0.85vw,16px)] font-light tracking-[0.22em] uppercase text-[#d9d9d9]">Methodology</span>
             </Reveal>
