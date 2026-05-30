@@ -251,32 +251,32 @@ export default function Home() {
                 {/* Content Wrapper (Aligned perfectly left for an ultra-premium, high-end agency presentation) */}
                 <div className="hero-content-fade relative z-[1] md:flex-1 flex flex-col justify-center max-w-[1600px] mx-auto w-full px-[var(--pad)] pt-[140px] md:pt-[clamp(160px,18vh,220px)] pb-12 md:pb-16 hero-title-scroll">
                   <div className="flex flex-col items-start gap-6 md:gap-7 lg:gap-8 max-w-[1000px] md:px-[4vw] lg:px-[6vw] xl:px-[8vw] w-full">
-                    
+
                     <Reveal>
-                      <h1 id="hero-h" className="text-[clamp(32px,6.8vw,96px)] md:text-[clamp(42px,4.5vw,90px)] lg:text-[62px] xl:text-[76px] 2xl:text-[clamp(42px,4.5vw,90px)] leading-[1.08] font-sans font-extrabold text-[#fcfcfc] tracking-[-0.03em]">
+                      <h1 id="hero-h" className="text-[clamp(32px,6.8vw,96px)] md:text-[clamp(42px,4.5vw,90px)] lg:text-[62px] xl:text-[76px] 2xl:text-[clamp(42px,4.5vw,90px)] leading-[1.08] font-sans !font-light text-[#fcfcfc] tracking-[-0.03em]">
                         <span className="whitespace-nowrap block">Behind every meaningful</span>
                         <span className="whitespace-nowrap block">brand is a perspective.</span>
                       </h1>
                     </Reveal>
 
                     <Reveal delay={0.12}>
-                      <div className="flex flex-col gap-1.5 md:gap-2">
-                        <p className="text-[clamp(20px,2.5vw,40px)] md:text-[clamp(22px,1.8vw,34px)] lg:text-[26px] xl:text-[30px] 2xl:text-[clamp(22px,1.8vw,34px)] leading-[1.25] font-sans font-bold text-[#fcfcfc] tracking-[-0.01em] whitespace-nowrap">
+                      <div className="flex flex-col gap-0.5 md:gap-1">
+                        <p className="text-[clamp(17px,1.3vw,25px)] md:text-[clamp(19px,1.1vw,23px)] xl:text-[22px] 2xl:text-[clamp(20px,1.15vw,24px)] leading-[1.65] font-sans font-light text-[#fcfcfc] tracking-[-0.01em] whitespace-nowrap">
                           A founder&apos;s conviction.
                         </p>
-                        <p className="text-[clamp(20px,2.5vw,40px)] md:text-[clamp(22px,1.8vw,34px)] lg:text-[26px] xl:text-[30px] 2xl:text-[clamp(22px,1.8vw,34px)] leading-[1.25] font-sans font-bold text-[#fcfcfc] tracking-[-0.01em] whitespace-nowrap">
+                        <p className="text-[clamp(17px,1.3vw,25px)] md:text-[clamp(19px,1.1vw,23px)] xl:text-[22px] 2xl:text-[clamp(20px,1.15vw,24px)] leading-[1.65] font-sans font-light text-[#fcfcfc] tracking-[-0.01em] whitespace-nowrap">
                           A point of view worth building around.
                         </p>
                       </div>
                     </Reveal>
 
                     <Reveal delay={0.24}>
-                      <div className="flex flex-col gap-4 max-w-[700px]">
-                        <p className="text-[clamp(15px,1.15vw,21px)] md:text-[clamp(16px,0.95vw,19px)] xl:text-[18px] 2xl:text-[clamp(17px,1.0vw,20px)] leading-[1.65] text-[#C9C9CE] font-light">
-                          At Pragyan, we transform that conviction into strategy, identity, communication, and growth.
+                      <div className="flex flex-col gap-4 max-w-[800px]">
+                        <p className="text-[clamp(17px,1.3vw,25px)] md:text-[clamp(19px,1.1vw,23px)] xl:text-[22px] 2xl:text-[clamp(20px,1.15vw,24px)] leading-[1.65] text-[#C9C9CE] font-sans font-light">
+                          <span className="sm:whitespace-nowrap">At Pragyan, we transform that conviction into strategy, identity,</span><br className="hidden sm:inline" /> communication, and growth.
                         </p>
-                        <p className="text-[clamp(15px,1.15vw,21px)] md:text-[clamp(16px,0.95vw,19px)] xl:text-[18px] 2xl:text-[clamp(17px,1.0vw,20px)] leading-[1.65] text-[#C9C9CE] font-light">
-                          We partner with founders and teams to shape ideas into brands, stories, and experiences that build connection, trust, and lasting impact.
+                        <p className="text-[clamp(17px,1.3vw,25px)] md:text-[clamp(19px,1.1vw,23px)] xl:text-[22px] 2xl:text-[clamp(20px,1.15vw,24px)] leading-[1.65] text-[#C9C9CE] font-sans font-light">
+                          <span className="sm:whitespace-nowrap">We partner with founders and teams to shape ideas into brands,</span><br className="hidden sm:inline" /> stories, and experiences that build connection, trust, and lasting impact.
                         </p>
                       </div>
                     </Reveal>
@@ -306,13 +306,13 @@ export default function Home() {
                       Core Philosophy
                     </span>
                     <div className="relative max-w-[1300px] mx-auto text-center flex flex-col items-center gap-1.5 md:gap-2">
-                      
+
                       {/* Line 1 */}
                       <div className="relative block w-fit select-none pointer-events-none">
                         <span className="block text-[clamp(18px,1.4vw,28px)] md:text-[16px] xl:text-[19px] 2xl:text-[clamp(20px,1.3vw,26px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] whitespace-nowrap">
                           From emerging ventures to growing businesses, we help meaningful
                         </span>
-                        <span 
+                        <span
                           className="text-sweep-line-1 absolute top-0 left-0 right-0 block text-[clamp(18px,1.4vw,28px)] md:text-[16px] xl:text-[19px] 2xl:text-[clamp(20px,1.3vw,26px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] w-full h-full pointer-events-none select-none whitespace-nowrap overflow-hidden text-center"
                           style={{ clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' }}
                         >
@@ -325,7 +325,7 @@ export default function Home() {
                         <span className="block text-[clamp(18px,1.4vw,28px)] md:text-[16px] xl:text-[19px] 2xl:text-[clamp(20px,1.3vw,26px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] whitespace-nowrap">
                           ideas find their voice, earn attention, and create lasting impact.
                         </span>
-                        <span 
+                        <span
                           className="text-sweep-line-2 absolute top-0 left-0 right-0 block text-[clamp(18px,1.4vw,28px)] md:text-[16px] xl:text-[19px] 2xl:text-[clamp(20px,1.3vw,26px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] w-full h-full pointer-events-none select-none whitespace-nowrap overflow-hidden text-center"
                           style={{ clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' }}
                         >
@@ -335,13 +335,13 @@ export default function Home() {
                     </div>
 
                     <div className="relative max-w-[1300px] mx-auto text-center flex flex-col items-center gap-1.5 md:gap-2 mt-6 md:mt-[clamp(12px,2vh,24px)]">
-                      
+
                       {/* Line 3 */}
                       <div className="relative block w-fit select-none pointer-events-none">
                         <span className="block text-[clamp(18px,1.4vw,28px)] md:text-[16px] xl:text-[19px] 2xl:text-[clamp(20px,1.3vw,26px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] whitespace-nowrap">
                           We&apos;re a young team of strategists and creators who believe the
                         </span>
-                        <span 
+                        <span
                           className="text-sweep-line-3 absolute top-0 left-0 right-0 block text-[clamp(18px,1.4vw,28px)] md:text-[16px] xl:text-[19px] 2xl:text-[clamp(20px,1.3vw,26px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] w-full h-full pointer-events-none select-none whitespace-nowrap overflow-hidden text-center"
                           style={{ clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' }}
                         >
@@ -354,7 +354,7 @@ export default function Home() {
                         <span className="block text-[clamp(18px,1.4vw,28px)] md:text-[16px] xl:text-[19px] 2xl:text-[clamp(20px,1.3vw,26px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] whitespace-nowrap">
                           best brands are built from human insight.
                         </span>
-                        <span 
+                        <span
                           className="text-sweep-line-4 absolute top-0 left-0 right-0 block text-[clamp(18px,1.4vw,28px)] md:text-[16px] xl:text-[19px] 2xl:text-[clamp(20px,1.3vw,26px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] w-full h-full pointer-events-none select-none whitespace-nowrap overflow-hidden text-center"
                           style={{ clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' }}
                         >
@@ -364,13 +364,13 @@ export default function Home() {
                     </div>
 
                     <div className="relative max-w-[1300px] mx-auto text-center flex flex-col items-center gap-1.5 md:gap-2 mt-6 md:mt-[clamp(12px,2vh,24px)]">
-                      
+
                       {/* Line 5 */}
                       <div className="relative block w-fit select-none pointer-events-none">
                         <span className="block text-[clamp(18px,1.4vw,28px)] md:text-[16px] xl:text-[19px] 2xl:text-[clamp(20px,1.3vw,26px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] font-medium whitespace-nowrap">
                           We value curiosity, intellectual honesty, and long-term thinking.
                         </span>
-                        <span 
+                        <span
                           className="text-sweep-line-5 absolute top-0 left-0 right-0 block text-[clamp(18px,1.4vw,28px)] md:text-[16px] xl:text-[19px] 2xl:text-[clamp(20px,1.3vw,26px)] leading-[1.5] md:leading-[1.4] text-[#FFD111] font-sans tracking-[-0.01em] font-medium w-full h-full pointer-events-none select-none whitespace-nowrap overflow-hidden text-center"
                           style={{ clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' }}
                         >
@@ -379,11 +379,11 @@ export default function Home() {
                       </div>
 
                       {/* Line 6 */}
-                      <div className="relative block w-fit select-none pointer-events-none mt-2">
+                      <div className="relative block w-fit select-none pointer-events-none">
                         <span className="block text-[clamp(18px,1.4vw,28px)] md:text-[16px] xl:text-[19px] 2xl:text-[clamp(20px,1.3vw,26px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] whitespace-nowrap">
                           We aren&apos;t for everyone &mdash; and we&apos;re okay with that.
                         </span>
-                        <span 
+                        <span
                           className="text-sweep-line-6 absolute top-0 left-0 right-0 block text-[clamp(18px,1.4vw,28px)] md:text-[16px] xl:text-[19px] 2xl:text-[clamp(20px,1.3vw,26px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] w-full h-full pointer-events-none select-none whitespace-nowrap overflow-hidden text-center"
                           style={{ clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' }}
                         >
