@@ -286,7 +286,7 @@ export default function Home() {
                     <Reveal delay={0.36} className="mt-2">
                       <Button
                         href="/services"
-                        className="!bg-transparent !border !border-white/20 hover:!border-white/60 !text-white font-space text-[17px] md:text-[18px] px-8 py-4 tracking-[0.15em] font-semibold uppercase rounded-none transition-all duration-300 w-fit inline-flex items-center justify-center whitespace-nowrap"
+                        className="!bg-transparent !border !border-white/20 hover:!border-white/60 !text-white font-space text-[17px] md:text-[18px] px-8 py-4 tracking-[0.15em] !font-light uppercase rounded-none transition-all duration-300 w-fit inline-flex items-center justify-center whitespace-nowrap"
                       >
                         VIEW SERVICES
                       </Button>
