@@ -255,16 +255,18 @@ export default function Home() {
                     <Reveal>
                       <h1 id="hero-h" className="text-[clamp(32px,6.8vw,96px)] md:text-[clamp(42px,4.5vw,90px)] lg:text-[62px] xl:text-[76px] 2xl:text-[clamp(42px,4.5vw,90px)] leading-[1.08] font-sans !font-light text-[#fcfcfc] tracking-[-0.03em]">
                         <span className="whitespace-nowrap block">Behind every meaningful</span>
-                        <span className="whitespace-nowrap block">brand is a perspective.</span>
+                        <span className="whitespace-nowrap block">
+                          brand is a <span className="bg-gradient-to-r from-[#1E1F65] via-[#4E54D4] to-[#7678ED] bg-clip-text text-transparent inline-block">perspective.</span>
+                        </span>
                       </h1>
                     </Reveal>
 
                     <Reveal delay={0.12}>
                       <div className="flex flex-col gap-0.5 md:gap-1">
-                        <p className="text-[clamp(17px,1.3vw,25px)] md:text-[clamp(19px,1.1vw,23px)] xl:text-[22px] 2xl:text-[clamp(20px,1.15vw,24px)] leading-[1.65] font-sans font-light text-[#fcfcfc] tracking-[-0.01em] whitespace-nowrap">
+                        <p className="text-[clamp(17px,1.3vw,25px)] md:text-[clamp(19px,1.1vw,23px)] xl:text-[22px] 2xl:text-[clamp(20px,1.15vw,24px)] leading-[1.65] font-sans font-light text-[#C9C9CE] tracking-[-0.01em] whitespace-nowrap">
                           A founder&apos;s conviction.
                         </p>
-                        <p className="text-[clamp(17px,1.3vw,25px)] md:text-[clamp(19px,1.1vw,23px)] xl:text-[22px] 2xl:text-[clamp(20px,1.15vw,24px)] leading-[1.65] font-sans font-light text-[#fcfcfc] tracking-[-0.01em] whitespace-nowrap">
+                        <p className="text-[clamp(17px,1.3vw,25px)] md:text-[clamp(19px,1.1vw,23px)] xl:text-[22px] 2xl:text-[clamp(20px,1.15vw,24px)] leading-[1.65] font-sans font-light text-[#C9C9CE] tracking-[-0.01em] whitespace-nowrap">
                           A point of view worth building around.
                         </p>
                       </div>
