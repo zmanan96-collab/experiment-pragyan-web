@@ -102,7 +102,7 @@ export default function Services() {
         </div>
 
         {/* water.svg ("g" watermark) absolutely positioned and slightly lower down (Visible on all devices) */}
-        <div className="absolute right-[-8%] max-[768px]:right-auto max-[768px]:left-1/2 max-[768px]:-translate-x-1/2 bottom-[-60px] max-[768px]:bottom-[0px] md:right-[-5%] lg:right-[-5%] xl:right-[-8%] 2xl:right-[0%] md:bottom-[-35px] lg:bottom-[-50px] xl:bottom-[-65px] 2xl:bottom-[-90px] [@media(display-mode:fullscreen)]:md:right-[-10%] [@media(display-mode:fullscreen)]:lg:right-[-10%] [@media(display-mode:fullscreen)]:xl:right-[-12%] md:top-auto md:translate-y-0 pointer-events-none select-none z-10 transition-all duration-700 ease-out">
+        <div className="absolute right-[-8%] max-[768px]:right-auto max-[768px]:left-1/2 max-[768px]:-translate-x-1/2 bottom-[-60px] max-[768px]:bottom-[0px] md:right-[-5%] lg:right-[-5%] xl:right-[-8%] 2xl:right-[0%] md:bottom-[-50px] lg:bottom-[-70px] xl:bottom-[-90px] 2xl:bottom-[-120px] [@media(display-mode:fullscreen)]:md:right-[-10%] [@media(display-mode:fullscreen)]:lg:right-[-10%] [@media(display-mode:fullscreen)]:xl:right-[-12%] md:top-auto md:translate-y-0 pointer-events-none select-none z-10 transition-all duration-700 ease-out">
           <Reveal delay={0.15}>
             <div className="w-[290px] md:w-[350px] lg:w-[420px] xl:w-[540px] 2xl:w-[760px] [@media(display-mode:fullscreen)]:md:w-[480px] [@media(display-mode:fullscreen)]:lg:w-[590px] [@media(display-mode:fullscreen)]:xl:w-[760px] transition-all duration-700 ease-out aspect-square relative">
               <img
