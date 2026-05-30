@@ -102,7 +102,7 @@ export default function Services() {
         </div>
 
         {/* water.svg ("g" watermark) absolutely positioned and slightly lower down (Visible on all devices) */}
-        <div className="absolute right-[-8%] max-[768px]:right-auto max-[768px]:left-1/2 max-[768px]:-translate-x-1/2 bottom-[-60px] max-[768px]:bottom-[0px] md:right-[-5%] lg:right-[-5%] xl:right-[-8%] 2xl:right-[0%] md:bottom-[-50px] lg:bottom-[-70px] xl:bottom-[-90px] 2xl:bottom-[-120px] [@media(display-mode:fullscreen)]:md:right-[-10%] [@media(display-mode:fullscreen)]:lg:right-[-10%] [@media(display-mode:fullscreen)]:xl:right-[-12%] md:top-auto md:translate-y-0 pointer-events-none select-none z-10 transition-all duration-700 ease-out">
+        <div className="absolute right-[-8%] max-[768px]:right-auto max-[768px]:left-1/2 max-[768px]:-translate-x-1/2 bottom-[-60px] max-[768px]:bottom-[0px] md:right-[-1%] lg:right-[-1%] xl:right-[-3%] 2xl:right-[4%] md:bottom-[-50px] lg:bottom-[-70px] xl:bottom-[-90px] 2xl:bottom-[-120px] [@media(display-mode:fullscreen)]:md:right-[-10%] [@media(display-mode:fullscreen)]:lg:right-[-10%] [@media(display-mode:fullscreen)]:xl:right-[-12%] md:top-auto md:translate-y-0 pointer-events-none select-none z-10 transition-all duration-700 ease-out">
           <Reveal delay={0.15}>
             <div className="w-[290px] md:w-[350px] lg:w-[420px] xl:w-[540px] 2xl:w-[760px] [@media(display-mode:fullscreen)]:md:w-[480px] [@media(display-mode:fullscreen)]:lg:w-[590px] [@media(display-mode:fullscreen)]:xl:w-[760px] transition-all duration-700 ease-out aspect-square relative">
               <img
@@ -115,7 +115,7 @@ export default function Services() {
         </div>
 
         {/* Bottom Solid Black Transition Bar (Desktop only) */}
-        <div className="hidden md:block absolute bottom-[-15px] md:bottom-[-20px] lg:bottom-[-28px] xl:bottom-[-35px] 2xl:bottom-[-40px] left-0 w-full h-[40px] lg:h-[60px] xl:h-[120px] [@media(display-mode:fullscreen)]:h-[80px] [@media(display-mode:fullscreen)]:lg:h-[120px] [@media(display-mode:fullscreen)]:xl:h-[180px] transition-all duration-700 ease-out bg-black z-30" />      </section>
+        <div className="hidden md:block absolute bottom-[-20px] md:bottom-[-30px] lg:bottom-[-40px] xl:bottom-[-50px] 2xl:bottom-[-60px] left-0 w-full h-[40px] lg:h-[55px] xl:h-[90px] [@media(display-mode:fullscreen)]:h-[80px] [@media(display-mode:fullscreen)]:lg:h-[120px] [@media(display-mode:fullscreen)]:xl:h-[180px] transition-all duration-700 ease-out bg-black z-30" />      </section>
 
 
       {/* Services List - Vertical Timeline Staggered UI */}
