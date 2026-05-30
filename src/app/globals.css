@@ -243,3 +243,37 @@ button,
     transform: translateY(40px) !important;
   }
 }
+
+/* MacBook / macOS ONLY: Shift Services bottom black bar and watermark lower down to perfect the layout balance */
+@media (min-width: 768px) {
+  html.is-mac .services-bottom-black-bar {
+    bottom: -45px !important;
+  }
+  html.is-mac .services-watermark-container {
+    bottom: -75px !important;
+  }
+}
+@media (min-width: 1024px) {
+  html.is-mac .services-bottom-black-bar {
+    bottom: -60px !important;
+  }
+  html.is-mac .services-watermark-container {
+    bottom: -95px !important;
+  }
+}
+@media (min-width: 1280px) {
+  html.is-mac .services-bottom-black-bar {
+    bottom: -75px !important;
+  }
+  html.is-mac .services-watermark-container {
+    bottom: -125px !important;
+  }
+}
+@media (min-width: 1536px) {
+  html.is-mac .services-bottom-black-bar {
+    bottom: -95px !important;
+  }
+  html.is-mac .services-watermark-container {
+    bottom: -160px !important;
+  }
+}
