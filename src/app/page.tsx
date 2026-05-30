@@ -130,14 +130,14 @@ export default function Home() {
             <span className="font-space text-[clamp(12px,0.85vw,16px)] font-light tracking-[0.22em] uppercase text-[#d9d9d9] inline-block mb-4 md:mb-[clamp(10px,2vh,20px)]" id="man-h">
               Core Philosophy
             </span>
-            <p className="text-[clamp(18px,1.4vw,28px)] md:text-[14px] xl:text-[17px] 2xl:text-[clamp(18px,1.2vw,24px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em]">
+            <p className="text-[clamp(18px,1.4vw,28px)] md:text-[16px] xl:text-[19px] 2xl:text-[clamp(20px,1.3vw,26px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em]">
               Pragyan is a 360° branding and marketing agency that works as<br />
               <em className="italic">an extension of the founder&apos;s mind.</em><br />
               We&apos;re a young, sharp team of strategists and creators<br />
               who take your raw, human spark<br />
               and give it the professional gravity it deserves.
             </p>
-            <p className="text-[clamp(18px,1.4vw,28px)] md:text-[14px] xl:text-[17px] 2xl:text-[clamp(18px,1.2vw,24px)] leading-[1.5] md:leading-[1.4] font-sans tracking-[-0.01em] mt-6 md:mt-[clamp(12px,2vh,24px)]">
+            <p className="text-[clamp(18px,1.4vw,28px)] md:text-[16px] xl:text-[19px] 2xl:text-[clamp(20px,1.3vw,26px)] leading-[1.5] md:leading-[1.4] font-sans tracking-[-0.01em] mt-6 md:mt-[clamp(12px,2vh,24px)]">
               <span className="text-[#FFD111] font-medium block">
                 We believe in building long-term partnerships with intellectual honesty.
               </span>
