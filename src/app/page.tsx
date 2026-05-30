@@ -127,7 +127,7 @@ export default function Home() {
       <section className="bg-black px-[var(--pad)] pt-[100px] pb-[60px] md:pt-[120px] md:pb-[40px] md:h-[100svh] flex flex-col justify-center relative overflow-hidden" aria-labelledby="man-h">
         <div className="wrap w-full manifesto-wrap">
           <Reveal className="max-w-[1300px] mx-auto text-center">
-            <span className="font-space text-[clamp(12px,0.85vw,16px)] font-light tracking-[0.22em] uppercase text-[#d9d9d9] inline-block mb-4 md:mb-[clamp(10px,2vh,20px)]" id="man-h">
+            <span className="font-space text-[clamp(12px,0.85vw,16px)] font-light tracking-[0.22em] uppercase !text-[#d9d9d9] inline-block mb-4 md:mb-[clamp(10px,2vh,20px)]" id="man-h" style={{ color: '#d9d9d9' }}>
               Core Philosophy
             </span>
             <p className="text-[clamp(18px,1.4vw,28px)] md:text-[16px] xl:text-[19px] 2xl:text-[clamp(20px,1.3vw,26px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em]">
@@ -146,11 +146,11 @@ export default function Home() {
               </span>
             </p>
           </Reveal>
-
+ 
           {/* Methodology Cards Section */}
           <div className="methodology-section mt-10 md:mt-[clamp(10px,2vh,50px)] max-w-[1100px] md:max-w-[760px] xl:max-w-[920px] 2xl:max-w-[1100px] mx-auto">
             <Reveal className="text-center mb-6 md:mb-4 lg:mb-5 xl:mb-6 2xl:mb-8">
-              <span className="font-space text-[clamp(12px,0.85vw,16px)] font-light tracking-[0.22em] uppercase text-[#d9d9d9]">Methodology</span>
+              <span className="font-space text-[clamp(12px,0.85vw,16px)] font-light tracking-[0.22em] uppercase !text-[#d9d9d9]" style={{ color: '#d9d9d9' }}>Methodology</span>
             </Reveal>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-3 xl:gap-4 2xl:gap-6">
               {[
