@@ -170,20 +170,7 @@ button,
   }
 }
 
-/* Premium Desktop/Laptop Scroll Snapping */
-@media (min-width: 768px) {
-  html {
-    scroll-snap-type: y mandatory;
-    scroll-behavior: auto;
-  }
-  
-  /* Snaps each main homepage section and footer exactly to screen */
-  article[aria-label="Home"] section,
-  body:has(article[aria-label="Home"]) footer {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-  }
-}
+
 
 /* --- Manifesto Section Spacing (Dynamic Windows/HP vs Mac) --- */
 .manifesto-wrap {

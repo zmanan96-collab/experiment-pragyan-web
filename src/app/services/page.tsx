@@ -102,9 +102,9 @@ export default function Services() {
         </div>
 
         {/* water.svg ("g" watermark) absolutely positioned and slightly lower down (Visible on all devices) */}
-        <div className="absolute right-[-8%] max-[768px]:right-auto max-[768px]:left-1/2 max-[768px]:-translate-x-1/2 bottom-[-60px] max-[768px]:bottom-[0px] md:right-[-5%] lg:right-[-5%] xl:right-[-8%] 2xl:right-[0%] md:bottom-[-20px] lg:bottom-[-30px] xl:bottom-[-40px] 2xl:bottom-[-60px] [@media(display-mode:fullscreen)]:md:right-[-10%] [@media(display-mode:fullscreen)]:lg:right-[-10%] [@media(display-mode:fullscreen)]:xl:right-[-12%] md:top-auto md:translate-y-0 pointer-events-none select-none z-10 transition-all duration-700 ease-out">
+        <div className="absolute right-[-8%] max-[768px]:right-auto max-[768px]:left-1/2 max-[768px]:-translate-x-1/2 bottom-[-60px] max-[768px]:bottom-[0px] md:right-[-5%] lg:right-[-5%] xl:right-[-8%] 2xl:right-[0%] md:bottom-[-35px] lg:bottom-[-50px] xl:bottom-[-65px] 2xl:bottom-[-90px] [@media(display-mode:fullscreen)]:md:right-[-10%] [@media(display-mode:fullscreen)]:lg:right-[-10%] [@media(display-mode:fullscreen)]:xl:right-[-12%] md:top-auto md:translate-y-0 pointer-events-none select-none z-10 transition-all duration-700 ease-out">
           <Reveal delay={0.15}>
-            <div className="w-[290px] md:w-[320px] lg:w-[380px] xl:w-[480px] 2xl:w-[700px] [@media(display-mode:fullscreen)]:md:w-[450px] [@media(display-mode:fullscreen)]:lg:w-[550px] [@media(display-mode:fullscreen)]:xl:w-[700px] transition-all duration-700 ease-out aspect-square relative">
+            <div className="w-[290px] md:w-[350px] lg:w-[420px] xl:w-[540px] 2xl:w-[760px] [@media(display-mode:fullscreen)]:md:w-[480px] [@media(display-mode:fullscreen)]:lg:w-[590px] [@media(display-mode:fullscreen)]:xl:w-[760px] transition-all duration-700 ease-out aspect-square relative">
               <img
                 src="/assets/img/water.svg"
                 alt="Water ripples vector illustration"
@@ -115,7 +115,7 @@ export default function Services() {
         </div>
 
         {/* Bottom Solid Black Transition Bar (Desktop only) */}
-        <div className="hidden md:block absolute bottom-0 left-0 w-full h-[40px] lg:h-[60px] xl:h-[120px] [@media(display-mode:fullscreen)]:h-[80px] [@media(display-mode:fullscreen)]:lg:h-[120px] [@media(display-mode:fullscreen)]:xl:h-[180px] transition-all duration-700 ease-out bg-black z-30" />      </section>
+        <div className="hidden md:block absolute bottom-[-15px] md:bottom-[-20px] lg:bottom-[-28px] xl:bottom-[-35px] 2xl:bottom-[-40px] left-0 w-full h-[40px] lg:h-[60px] xl:h-[120px] [@media(display-mode:fullscreen)]:h-[80px] [@media(display-mode:fullscreen)]:lg:h-[120px] [@media(display-mode:fullscreen)]:xl:h-[180px] transition-all duration-700 ease-out bg-black z-30" />      </section>
 
 
       {/* Services List - Vertical Timeline Staggered UI */}
@@ -158,7 +158,7 @@ export default function Services() {
                         style={{ '--padding-left': `${offset}px` } as React.CSSProperties}
                       >
                         <div className="relative shrink-0 mr-3 md:mr-4 z-0">
-                          <span className="text-[65px] md:text-[85px] leading-none text-[#6a6a6a] font-space font-light transition-colors group-hover:text-[#4B3FD4]/30 select-none">
+                          <span className="text-[65px] md:text-[85px] leading-none text-[#6a6a6a] font-space font-light select-none">
                             {String(idx + 1).padStart(2, '0')}
                           </span>
                         </div>
