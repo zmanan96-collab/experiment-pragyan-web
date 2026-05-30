@@ -132,19 +132,18 @@ export default function Home() {
             </span>
             <p className="text-[clamp(18px,1.4vw,28px)] md:text-[14px] xl:text-[17px] 2xl:text-[clamp(18px,1.2vw,24px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em]">
               Pragyan is a 360° branding and marketing agency that works as<br />
-              <em className="italic">an extension of the founder&apos;s mind.</em>
-            </p>
-
-            <p className="text-[clamp(18px,1.4vw,28px)] md:text-[14px] xl:text-[17px] 2xl:text-[clamp(18px,1.2vw,24px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] mt-3 md:mt-[clamp(8px,1.5vh,16px)]">
+              <em className="italic">an extension of the founder&apos;s mind.</em><br />
               We&apos;re a young, sharp team of strategists and creators<br />
               who take your raw, human spark<br />
               and give it the professional gravity it deserves.
             </p>
-            <p className="text-[clamp(18px,1.4vw,28px)] md:text-[14px] xl:text-[17px] 2xl:text-[clamp(18px,1.2vw,24px)] leading-[1.5] md:leading-[1.4] text-[#FFD111] font-sans font-medium tracking-[-0.01em] mt-6 md:mt-[clamp(12px,2vh,24px)]">
-              We believe in building long-term partnerships with intellectual honesty.
-            </p>
-            <p className="text-[clamp(18px,1.4vw,28px)] md:text-[14px] xl:text-[17px] 2xl:text-[clamp(18px,1.2vw,24px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] mt-3 md:mt-[clamp(8px,1.5vh,16px)]">
-              We aren&apos;t for everyone — and we&apos;re okay with that.
+            <p className="text-[clamp(18px,1.4vw,28px)] md:text-[14px] xl:text-[17px] 2xl:text-[clamp(18px,1.2vw,24px)] leading-[1.5] md:leading-[1.4] font-sans tracking-[-0.01em] mt-6 md:mt-[clamp(12px,2vh,24px)]">
+              <span className="text-[#FFD111] font-medium block">
+                We believe in building long-term partnerships with intellectual honesty.
+              </span>
+              <span className="text-[#E3E3E3] block">
+                We aren&apos;t for everyone — and we&apos;re okay with that.
+              </span>
             </p>
           </Reveal>
 
