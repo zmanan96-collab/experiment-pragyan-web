@@ -303,11 +303,11 @@ button,
   bottom: -50%;
   width: 200%;
   height: 200%;
-  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 150 150' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.99' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  1.5 0 0 0 -0.85'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 150 150' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.99' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  2.2 0 0 0 -0.92'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   background-size: 200px 200px;
   /* Crisp CRT TV static grain */
-  opacity: 0.75;
-  /* Higher opacity to make the individual white sparkling dots extremely bright, while the background remains 100% pure black */
+  opacity: 0.22;
+  /* Extremely subtle, faint film grain sparkles that blend elegantly into the deep black background */
   pointer-events: none;
   z-index: 9999;
   /* Overlays everything */
@@ -324,7 +324,7 @@ button,
   height: 100%;
   pointer-events: none;
   z-index: 1;
-  background: radial-gradient(circle at 50% 50%, transparent 0%, rgba(6, 7, 10, 0.84) 40%);
+  background: radial-gradient(circle at 50% 50%, transparent 0%, rgba(0, 0, 0, 1.0) 40%);
 }
 
 /* Premium Gradient Scroll Sweep Reveal (Retains original fonts completely) */

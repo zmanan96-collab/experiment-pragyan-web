@@ -207,7 +207,7 @@ export default function Home() {
         const rect = hero.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-        mouseLight.style.background = `radial-gradient(circle at ${x}px ${y}px, transparent 0%, rgba(6, 7, 10, 0.84) 40%)`;
+        mouseLight.style.background = `radial-gradient(circle at ${x}px ${y}px, transparent 0%, rgba(0, 0, 0, 1.0) 40%)`;
       };
       hero.addEventListener('mousemove', handleMouseMove);
     }
