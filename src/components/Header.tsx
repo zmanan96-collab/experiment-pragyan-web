@@ -22,7 +22,7 @@ export default function Header() {
       <div className="wrap">
         <nav className="flex items-center justify-between h-[76px]" aria-label="Primary">
           <Link href="/" className="inline-flex items-center" aria-label="Pragyan — home">
-            <img src="/assets/img/pglogo.svg" alt="Pragyan — Wisdom. Action. Growth." className="h-[280px] w-auto" />
+            <img src="/assets/img/prg.svg" alt="Pragyan" className="h-[34px] sm:h-[40px] md:h-[44px] w-auto object-contain transition-all duration-300" />
           </Link>
 
           <ul className={`

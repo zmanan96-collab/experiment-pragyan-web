@@ -305,12 +305,12 @@ export default function Home() {
                     <div className="relative max-w-[1300px] mx-auto text-center flex flex-col items-center gap-1.5 md:gap-2">
 
                       {/* Line 1 */}
-                      <div className="relative block w-fit select-none pointer-events-none">
-                        <span className="block text-[clamp(20px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] whitespace-nowrap">
+                      <div className="relative block w-full max-w-[90vw] md:w-fit select-none pointer-events-none">
+                        <span className="block text-[clamp(17px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] whitespace-normal md:whitespace-nowrap text-center">
                           From emerging ventures to growing businesses, we help meaningful
                         </span>
                         <span
-                          className="text-sweep-line-1 absolute top-0 left-0 right-0 block text-[clamp(20px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] w-full h-full pointer-events-none select-none whitespace-nowrap overflow-hidden text-center"
+                          className="text-sweep-line-1 absolute top-0 left-0 right-0 block text-[clamp(17px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] w-full h-full pointer-events-none select-none whitespace-normal md:whitespace-nowrap overflow-hidden text-center"
                           style={{ clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' }}
                         >
                           From emerging ventures to growing businesses, we help meaningful
@@ -318,12 +318,12 @@ export default function Home() {
                       </div>
 
                       {/* Line 2 */}
-                      <div className="relative block w-fit select-none pointer-events-none">
-                        <span className="block text-[clamp(20px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] whitespace-nowrap">
+                      <div className="relative block w-full max-w-[90vw] md:w-fit select-none pointer-events-none">
+                        <span className="block text-[clamp(17px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] whitespace-normal md:whitespace-nowrap text-center">
                           ideas find their voice, earn attention, and create lasting impact.
                         </span>
                         <span
-                          className="text-sweep-line-2 absolute top-0 left-0 right-0 block text-[clamp(20px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] w-full h-full pointer-events-none select-none whitespace-nowrap overflow-hidden text-center"
+                          className="text-sweep-line-2 absolute top-0 left-0 right-0 block text-[clamp(17px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] w-full h-full pointer-events-none select-none whitespace-normal md:whitespace-nowrap overflow-hidden text-center"
                           style={{ clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' }}
                         >
                           ideas find their voice, earn attention, and create lasting impact.
@@ -334,12 +334,12 @@ export default function Home() {
                     <div className="relative max-w-[1300px] mx-auto text-center flex flex-col items-center gap-1.5 md:gap-2 mt-6 md:mt-[clamp(12px,2vh,24px)]">
 
                       {/* Line 3 */}
-                      <div className="relative block w-fit select-none pointer-events-none">
-                        <span className="block text-[clamp(20px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] whitespace-nowrap">
+                      <div className="relative block w-full max-w-[90vw] md:w-fit select-none pointer-events-none">
+                        <span className="block text-[clamp(17px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] whitespace-normal md:whitespace-nowrap text-center">
                           We&apos;re a young team of strategists and creators who believe the
                         </span>
                         <span
-                          className="text-sweep-line-3 absolute top-0 left-0 right-0 block text-[clamp(20px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] w-full h-full pointer-events-none select-none whitespace-nowrap overflow-hidden text-center"
+                          className="text-sweep-line-3 absolute top-0 left-0 right-0 block text-[clamp(17px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] w-full h-full pointer-events-none select-none whitespace-normal md:whitespace-nowrap overflow-hidden text-center"
                           style={{ clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' }}
                         >
                           We&apos;re a young team of strategists and creators who believe the
@@ -347,12 +347,12 @@ export default function Home() {
                       </div>
 
                       {/* Line 4 */}
-                      <div className="relative block w-fit select-none pointer-events-none">
-                        <span className="block text-[clamp(20px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] whitespace-nowrap">
+                      <div className="relative block w-full max-w-[90vw] md:w-fit select-none pointer-events-none">
+                        <span className="block text-[clamp(17px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] whitespace-normal md:whitespace-nowrap text-center">
                           best brands are built from human insight.
                         </span>
                         <span
-                          className="text-sweep-line-4 absolute top-0 left-0 right-0 block text-[clamp(20px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] w-full h-full pointer-events-none select-none whitespace-nowrap overflow-hidden text-center"
+                          className="text-sweep-line-4 absolute top-0 left-0 right-0 block text-[clamp(17px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] w-full h-full pointer-events-none select-none whitespace-normal md:whitespace-nowrap overflow-hidden text-center"
                           style={{ clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' }}
                         >
                           best brands are built from human insight.
@@ -363,12 +363,12 @@ export default function Home() {
                     <div className="relative max-w-[1300px] mx-auto text-center flex flex-col items-center gap-1.5 md:gap-2 mt-6 md:mt-[clamp(12px,2vh,24px)]">
 
                       {/* Line 5 */}
-                      <div className="relative block w-fit select-none pointer-events-none">
-                        <span className="block text-[clamp(20px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] font-medium whitespace-nowrap">
+                      <div className="relative block w-full max-w-[90vw] md:w-fit select-none pointer-events-none">
+                        <span className="block text-[clamp(17px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] font-medium whitespace-normal md:whitespace-nowrap text-center">
                           We value curiosity, intellectual honesty, and long-term thinking.
                         </span>
                         <span
-                          className="text-sweep-line-5 absolute top-0 left-0 right-0 block text-[clamp(20px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] bg-gradient-to-r from-[#1E1F65] via-[#4B3FD4] to-[#7678ED] bg-clip-text text-transparent animate-gradient-flow font-sans tracking-[-0.01em] font-medium w-full h-full pointer-events-none select-none whitespace-nowrap overflow-hidden text-center"
+                          className="text-sweep-line-5 absolute top-0 left-0 right-0 block text-[clamp(17px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] bg-gradient-to-r from-[#1E1F65] via-[#4B3FD4] to-[#7678ED] bg-clip-text text-transparent animate-gradient-flow font-sans tracking-[-0.01em] font-medium w-full h-full pointer-events-none select-none whitespace-normal md:whitespace-nowrap overflow-hidden text-center"
                           style={{ clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' }}
                         >
                           We value curiosity, intellectual honesty, and long-term thinking.
@@ -376,12 +376,12 @@ export default function Home() {
                       </div>
 
                       {/* Line 6 */}
-                      <div className="relative block w-fit select-none pointer-events-none">
-                        <span className="block text-[clamp(20px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] whitespace-nowrap">
+                      <div className="relative block w-full max-w-[90vw] md:w-fit select-none pointer-events-none">
+                        <span className="block text-[clamp(17px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] whitespace-normal md:whitespace-nowrap text-center">
                           We aren&apos;t for everyone &mdash; and we&apos;re okay with that.
                         </span>
                         <span
-                          className="text-sweep-line-6 absolute top-0 left-0 right-0 block text-[clamp(20px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] w-full h-full pointer-events-none select-none whitespace-nowrap overflow-hidden text-center"
+                          className="text-sweep-line-6 absolute top-0 left-0 right-0 block text-[clamp(17px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] w-full h-full pointer-events-none select-none whitespace-normal md:whitespace-nowrap overflow-hidden text-center"
                           style={{ clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' }}
                         >
                           We aren&apos;t for everyone &mdash; and we&apos;re okay with that.
