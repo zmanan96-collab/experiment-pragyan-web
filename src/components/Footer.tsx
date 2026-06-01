@@ -39,7 +39,7 @@ export default function Footer() {
               </p>
               <Link
                 href="/inquiry"
-                className="inline-flex items-center justify-center bg-transparent border border-white/10 text-white/40 hover:border-white hover:text-white px-10 py-[15px] font-space font-normal uppercase tracking-[0.2em] text-[clamp(11px,0.75vw,14px)] transition-all duration-300 rounded-none"
+                className="inline-flex items-center justify-center bg-white text-black hover:bg-black hover:text-white hover:border-white border border-transparent px-10 py-[15px] font-space font-medium uppercase tracking-[0.2em] text-[clamp(11px,0.75vw,14px)] transition-all duration-300 rounded-none"
               >
                 Start a project
               </Link>

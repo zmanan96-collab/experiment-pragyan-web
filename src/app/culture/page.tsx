@@ -10,37 +10,28 @@ export default function Culture() {
       {/* Hero Section - matches reference image */}
       <section className="bg-white text-black pt-[clamp(160px,18vw,220px)] pb-[clamp(80px,12vw,140px)] md:py-0 md:min-h-screen md:flex md:flex-col md:justify-center relative overflow-x-hidden" aria-labelledby="culture-h">
         <div className="wrap">
-          <div className="grid grid-cols-[1.1fr_0.9fr] gap-[clamp(30px,5vw,70px)] items-center max-[880px]:grid-cols-1">
-
-            {/* Left: Text */}
-            <div className="max-w-[900px] max-[880px]:text-center max-[880px]:mx-auto flex flex-col items-start max-[880px]:items-center md:translate-x-[3vw]">
-              <Reveal>
-                <span className="font-space text-[clamp(12px,0.85vw,16px)] font-light tracking-[0.22em] uppercase text-[#6a6a6a] block mb-6 md:mb-4">Careers</span>
-                <h1 id="culture-h" className="text-black font-sans text-[clamp(48px,6.2vw,84px)] md:text-[clamp(42px,5.5vw,66px)] leading-[1.05] font-extrabold tracking-[-0.025em] mb-10 md:mb-6">
-                  <span className="block md:inline md:whitespace-nowrap">Good at what you do?</span>
-                  <br className="hidden md:block" />
-                  <span className="block md:inline md:whitespace-nowrap">Let&apos;s make it <span className="inline-block bg-gradient-to-r from-[#161245] via-[#4B3FD4] to-[#786CF0] bg-clip-text text-transparent font-extrabold pb-2 px-1">better.</span></span>
-                </h1>
-              </Reveal>
-              <Reveal delay={0.1}>
-                <div className="font-sans font-light text-[clamp(20px,1.6vw,26px)] md:text-[clamp(18px,1.8vw,23px)] leading-[1.7] text-[#6a6a6a]">
-                  <p className="md:whitespace-nowrap">We believe that how we work matters as much as what we create.</p>
-                  <p>Curiosity drives us to explore beyond the obvious.</p>
-                  <p>Openness keeps us looking for new ideas.</p>
-                  <p>Action ensures insights turn into outcomes.</p>
-                </div>
-              </Reveal>
-            </div>
-
-            {/* Right: CTA */}
-            <div className="flex flex-col items-center justify-center w-full relative">
-              <div className="relative z-10 max-[880px]:mt-6 max-[880px]:mb-8">
-                <Button href="/inquiry" className="!bg-[#434b9f] hover:!bg-[#161245] !text-white min-w-[245px] md:min-w-[200px] justify-center text-[15px] md:text-[13px] tracking-[0.2em] !py-[15px] md:!py-[12px] font-space font-light uppercase transition-colors duration-300">
-                  JOIN THE TEAM
-                </Button>
+          <div className="max-w-[1000px] max-[880px]:text-center max-[880px]:mx-auto flex flex-col items-start max-[880px]:items-center md:translate-x-[3vw]">
+            <Reveal>
+              <span className="font-space text-[clamp(12px,0.85vw,16px)] font-light tracking-[0.22em] uppercase text-[#6a6a6a] block mb-6 md:mb-4">Careers</span>
+              <h1 id="culture-h" className="text-black font-sans text-[clamp(48px,6.2vw,84px)] md:text-[clamp(42px,5.5vw,66px)] leading-[1.05] font-extrabold tracking-[-0.025em] mb-10 md:mb-6">
+                <span className="block md:inline md:whitespace-nowrap">Good at what you do?</span>
+                <br className="hidden md:block" />
+                <span className="block md:inline md:whitespace-nowrap">Let&apos;s make it <span className="inline-block bg-gradient-to-r from-[#161245] via-[#4B3FD4] to-[#786CF0] bg-clip-text text-transparent font-extrabold pb-2 px-1">better.</span></span>
+              </h1>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <div className="font-sans font-light text-[clamp(20px,1.6vw,26px)] md:text-[clamp(18px,1.8vw,23px)] leading-[1.7] text-[#6a6a6a] mb-10 md:mb-8">
+                <p className="md:whitespace-nowrap">We believe that how we work matters as much as what we create.</p>
+                <p>Curiosity drives us to explore beyond the obvious.</p>
+                <p>Openness keeps us looking for new ideas.</p>
+                <p>Action ensures insights turn into outcomes.</p>
               </div>
-            </div>
-
+            </Reveal>
+            <Reveal delay={0.2} className="relative z-10">
+              <Button href="/inquiry" className="!bg-[#434b9f] hover:!bg-[#161245] !text-white min-w-[245px] md:min-w-[200px] justify-center text-[15px] md:text-[13px] tracking-[0.2em] !py-[15px] md:!py-[12px] font-space font-light uppercase transition-colors duration-300">
+                JOIN THE TEAM
+              </Button>
+            </Reveal>
           </div>
         </div>
       </section>
