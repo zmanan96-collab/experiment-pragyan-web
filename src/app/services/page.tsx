@@ -120,6 +120,9 @@ export default function Services() {
 
       {/* Services List - Vertical Timeline Staggered UI */}
       <section ref={sectionRef} className="bg-black pt-[clamp(60px,8vw,100px)] pb-[clamp(100px,12vw,160px)] relative overflow-hidden">
+        {/* Shimmering film grain noise overlay */}
+        <div className="section-noise-effect" />
+
         {/* Responsive Background Image with Dark Cinematic Overlay */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
           <img

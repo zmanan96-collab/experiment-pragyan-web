@@ -60,11 +60,6 @@ export default function Home() {
         ease: 'none',
       }, 0);
 
-      tl.to('.hero-facts-scroll', {
-        y: 100,
-        ease: 'none',
-      }, 0);
-
       // ── TRANSITION 2: Manifesto -> Process ──
       // Process slides up cleanly from the bottom and stacks over Manifesto
       tl.fromTo('#process-section',
@@ -256,7 +251,7 @@ export default function Home() {
                       <h1 id="hero-h" className="text-[clamp(32px,6.8vw,96px)] md:text-[clamp(42px,4.5vw,90px)] lg:text-[62px] xl:text-[76px] 2xl:text-[clamp(42px,4.5vw,90px)] leading-[1.08] font-sans !font-light text-[#fcfcfc] tracking-[-0.03em]">
                         <span className="whitespace-nowrap block">Behind every meaningful</span>
                         <span className="whitespace-nowrap block">
-                          brand is a <span className="bg-gradient-to-r from-[#1E1F65] via-[#4E54D4] to-[#7678ED] bg-clip-text text-transparent inline-block">perspective.</span>
+                          brand is a <span className="bg-gradient-to-r from-[#1E1F65] via-[#4E54D4] to-[#7678ED] bg-clip-text text-transparent inline-block animate-gradient-flow">perspective.</span>
                         </span>
                       </h1>
                     </Reveal>
@@ -286,7 +281,7 @@ export default function Home() {
                     <Reveal delay={0.36} className="mt-2">
                       <Button
                         href="/services"
-                        className="!bg-transparent !border !border-white/20 hover:!border-white/60 !text-white font-space text-[17px] md:text-[18px] px-8 py-4 tracking-[0.15em] !font-light uppercase rounded-none transition-all duration-300 w-fit inline-flex items-center justify-center whitespace-nowrap"
+                        className="!bg-transparent !border !border-white/10 hover:!border-white !text-white/40 hover:!text-white font-space text-[17px] md:text-[18px] px-8 py-4 tracking-[0.15em] !font-light uppercase rounded-none transition-all duration-300 w-fit inline-flex items-center justify-center whitespace-nowrap"
                       >
                         VIEW SERVICES
                       </Button>
@@ -311,11 +306,11 @@ export default function Home() {
 
                       {/* Line 1 */}
                       <div className="relative block w-fit select-none pointer-events-none">
-                        <span className="block text-[clamp(18px,1.4vw,28px)] md:text-[16px] xl:text-[19px] 2xl:text-[clamp(20px,1.3vw,26px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] whitespace-nowrap">
+                        <span className="block text-[clamp(20px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] whitespace-nowrap">
                           From emerging ventures to growing businesses, we help meaningful
                         </span>
                         <span
-                          className="text-sweep-line-1 absolute top-0 left-0 right-0 block text-[clamp(18px,1.4vw,28px)] md:text-[16px] xl:text-[19px] 2xl:text-[clamp(20px,1.3vw,26px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] w-full h-full pointer-events-none select-none whitespace-nowrap overflow-hidden text-center"
+                          className="text-sweep-line-1 absolute top-0 left-0 right-0 block text-[clamp(20px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] w-full h-full pointer-events-none select-none whitespace-nowrap overflow-hidden text-center"
                           style={{ clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' }}
                         >
                           From emerging ventures to growing businesses, we help meaningful
@@ -324,11 +319,11 @@ export default function Home() {
 
                       {/* Line 2 */}
                       <div className="relative block w-fit select-none pointer-events-none">
-                        <span className="block text-[clamp(18px,1.4vw,28px)] md:text-[16px] xl:text-[19px] 2xl:text-[clamp(20px,1.3vw,26px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] whitespace-nowrap">
+                        <span className="block text-[clamp(20px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] whitespace-nowrap">
                           ideas find their voice, earn attention, and create lasting impact.
                         </span>
                         <span
-                          className="text-sweep-line-2 absolute top-0 left-0 right-0 block text-[clamp(18px,1.4vw,28px)] md:text-[16px] xl:text-[19px] 2xl:text-[clamp(20px,1.3vw,26px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] w-full h-full pointer-events-none select-none whitespace-nowrap overflow-hidden text-center"
+                          className="text-sweep-line-2 absolute top-0 left-0 right-0 block text-[clamp(20px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] w-full h-full pointer-events-none select-none whitespace-nowrap overflow-hidden text-center"
                           style={{ clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' }}
                         >
                           ideas find their voice, earn attention, and create lasting impact.
@@ -340,11 +335,11 @@ export default function Home() {
 
                       {/* Line 3 */}
                       <div className="relative block w-fit select-none pointer-events-none">
-                        <span className="block text-[clamp(18px,1.4vw,28px)] md:text-[16px] xl:text-[19px] 2xl:text-[clamp(20px,1.3vw,26px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] whitespace-nowrap">
+                        <span className="block text-[clamp(20px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] whitespace-nowrap">
                           We&apos;re a young team of strategists and creators who believe the
                         </span>
                         <span
-                          className="text-sweep-line-3 absolute top-0 left-0 right-0 block text-[clamp(18px,1.4vw,28px)] md:text-[16px] xl:text-[19px] 2xl:text-[clamp(20px,1.3vw,26px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] w-full h-full pointer-events-none select-none whitespace-nowrap overflow-hidden text-center"
+                          className="text-sweep-line-3 absolute top-0 left-0 right-0 block text-[clamp(20px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] w-full h-full pointer-events-none select-none whitespace-nowrap overflow-hidden text-center"
                           style={{ clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' }}
                         >
                           We&apos;re a young team of strategists and creators who believe the
@@ -353,11 +348,11 @@ export default function Home() {
 
                       {/* Line 4 */}
                       <div className="relative block w-fit select-none pointer-events-none">
-                        <span className="block text-[clamp(18px,1.4vw,28px)] md:text-[16px] xl:text-[19px] 2xl:text-[clamp(20px,1.3vw,26px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] whitespace-nowrap">
+                        <span className="block text-[clamp(20px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] whitespace-nowrap">
                           best brands are built from human insight.
                         </span>
                         <span
-                          className="text-sweep-line-4 absolute top-0 left-0 right-0 block text-[clamp(18px,1.4vw,28px)] md:text-[16px] xl:text-[19px] 2xl:text-[clamp(20px,1.3vw,26px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] w-full h-full pointer-events-none select-none whitespace-nowrap overflow-hidden text-center"
+                          className="text-sweep-line-4 absolute top-0 left-0 right-0 block text-[clamp(20px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] w-full h-full pointer-events-none select-none whitespace-nowrap overflow-hidden text-center"
                           style={{ clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' }}
                         >
                           best brands are built from human insight.
@@ -369,11 +364,11 @@ export default function Home() {
 
                       {/* Line 5 */}
                       <div className="relative block w-fit select-none pointer-events-none">
-                        <span className="block text-[clamp(18px,1.4vw,28px)] md:text-[16px] xl:text-[19px] 2xl:text-[clamp(20px,1.3vw,26px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] font-medium whitespace-nowrap">
+                        <span className="block text-[clamp(20px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] font-medium whitespace-nowrap">
                           We value curiosity, intellectual honesty, and long-term thinking.
                         </span>
                         <span
-                          className="text-sweep-line-5 absolute top-0 left-0 right-0 block text-[clamp(18px,1.4vw,28px)] md:text-[16px] xl:text-[19px] 2xl:text-[clamp(20px,1.3vw,26px)] leading-[1.5] md:leading-[1.4] text-[#FFD111] font-sans tracking-[-0.01em] font-medium w-full h-full pointer-events-none select-none whitespace-nowrap overflow-hidden text-center"
+                          className="text-sweep-line-5 absolute top-0 left-0 right-0 block text-[clamp(20px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] bg-gradient-to-r from-[#1E1F65] via-[#4B3FD4] to-[#7678ED] bg-clip-text text-transparent animate-gradient-flow font-sans tracking-[-0.01em] font-medium w-full h-full pointer-events-none select-none whitespace-nowrap overflow-hidden text-center"
                           style={{ clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' }}
                         >
                           We value curiosity, intellectual honesty, and long-term thinking.
@@ -382,11 +377,11 @@ export default function Home() {
 
                       {/* Line 6 */}
                       <div className="relative block w-fit select-none pointer-events-none">
-                        <span className="block text-[clamp(18px,1.4vw,28px)] md:text-[16px] xl:text-[19px] 2xl:text-[clamp(20px,1.3vw,26px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] whitespace-nowrap">
+                        <span className="block text-[clamp(20px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] whitespace-nowrap">
                           We aren&apos;t for everyone &mdash; and we&apos;re okay with that.
                         </span>
                         <span
-                          className="text-sweep-line-6 absolute top-0 left-0 right-0 block text-[clamp(18px,1.4vw,28px)] md:text-[16px] xl:text-[19px] 2xl:text-[clamp(20px,1.3vw,26px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] w-full h-full pointer-events-none select-none whitespace-nowrap overflow-hidden text-center"
+                          className="text-sweep-line-6 absolute top-0 left-0 right-0 block text-[clamp(20px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] w-full h-full pointer-events-none select-none whitespace-nowrap overflow-hidden text-center"
                           style={{ clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' }}
                         >
                           We aren&apos;t for everyone &mdash; and we&apos;re okay with that.
@@ -401,32 +396,22 @@ export default function Home() {
                     <Reveal className="text-center mb-6 md:mb-4 lg:mb-5 xl:mb-6 2xl:mb-8">
                       <span className="font-space text-[clamp(12px,0.85vw,16px)] font-light tracking-[0.22em] uppercase !text-[#a6a6a6]" style={{ color: '#a6a6a6' }}>Methodology</span>
                     </Reveal>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-3 xl:gap-4 2xl:gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-3 xl:gap-4 2xl:gap-6">
                       {[
                         {
-                          img: "/assets/img/h1.jpeg",
                           text: <>We discuss before <br className="hidden md:block" /> we design.</>
                         },
                         {
-                          img: "/assets/img/h2.jpeg",
                           text: <>We plan before <br className="hidden md:block" /> we build.</>
                         },
                         {
-                          img: "/assets/img/h3.jpeg",
                           text: <>We work with you to turn <br className="hidden md:block" /> curiosity into creativity.</>
                         }
                       ].map((card, i) => (
                         <Reveal key={i} delay={i * 0.1} className="methodology-card-scroll">
-                          <div className="bg-surface border border-border-strong rounded-none overflow-hidden transition-all duration-500 hover:border-violet hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] h-full flex flex-col cursor-pointer">
-                            <div className="aspect-[4/3] md:aspect-[1.9/1] lg:aspect-[2.1/1] xl:aspect-[2.1/1] 2xl:aspect-[2/1] overflow-hidden bg-ink group">
-                              <img
-                                src={card.img}
-                                alt=""
-                                className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0"
-                              />
-                            </div>
-                            <div className="p-7 md:p-3 xl:p-4 2xl:p-5 flex-grow text-center md:text-left">
-                              <p className="text-[#C9C9CE] text-[clamp(17px,1.2vw,21px)] md:text-[13px] xl:text-[15px] 2xl:text-[17px] leading-[1.4] font-medium">
+                          <div className="card-gradient-flow border border-border-strong rounded-none overflow-hidden transition-all duration-500 hover:border-violet hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] h-full flex flex-col cursor-pointer">
+                            <div className="p-8 md:p-6 xl:p-8 2xl:p-10 min-h-[140px] md:min-h-[120px] lg:min-h-[130px] xl:min-h-[140px] 2xl:min-h-[160px] flex items-center justify-center text-center flex-grow">
+                              <p className="text-[#C9C9CE] text-[clamp(21px,1.5vw,26px)] md:text-[17px] xl:text-[20px] 2xl:text-[22px] leading-[1.45] font-light">
                                 {card.text}
                               </p>
                             </div>

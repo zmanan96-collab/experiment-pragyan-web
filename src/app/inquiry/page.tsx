@@ -53,10 +53,11 @@ export default function Inquiry() {
           <div className="flex md:min-h-[430px] [@media(display-mode:fullscreen)]:md:min-h-[550px] max-[920px]:flex-col overflow-hidden transition-all duration-700" role="region" aria-labelledby="inquiry-h">
 
             {/* Left Side: Solid Black (Top) & Radiating Texture (Bottom) */}
-            <div className="w-[44%] bg-black flex flex-col max-[920px]:w-full">
+            <div className="w-[44%] bg-black flex flex-col max-[920px]:w-full relative">
+              <div className="section-noise-effect" />
               {/* Top Half: Yellow bold text in sentence case */}
               <div className="h-1/2 flex items-center p-4 md:p-6 [@media(display-mode:fullscreen)]:md:p-8 bg-black py-6 max-[920px]:py-6">
-                <h2 id="inquiry-h" className="text-[clamp(22px,3vw,45px)] [@media(display-mode:fullscreen)]:text-[clamp(28px,3.8vw,56px)] leading-[1.1] font-extrabold text-[#FFD111] tracking-[-0.02em] font-sans transition-all duration-700">
+                <h2 id="inquiry-h" className="text-[clamp(22px,3vw,45px)] [@media(display-mode:fullscreen)]:text-[clamp(28px,3.8vw,56px)] leading-[1.1] font-extrabold text-white tracking-[-0.02em] font-sans transition-all duration-700">
                   <span className="block whitespace-nowrap">Got a project,</span>
                   <span className="block whitespace-nowrap">a question, or</span>
                   <span className="block whitespace-nowrap">an idea about</span>
@@ -176,12 +177,12 @@ export default function Inquiry() {
                     <button
                       type="submit"
                       disabled={status === 'submitting'}
-                      className="w-full bg-[#FFD111] text-black py-2 [@media(display-mode:fullscreen)]:py-3 px-8 font-space font-light text-[clamp(14px,1vw,16px)] [@media(display-mode:fullscreen)]:text-[clamp(15px,1.1vw,18px)] tracking-[0.1em] uppercase rounded-[8px] hover:brightness-105 active:scale-[0.99] disabled:opacity-50 transition-all duration-700 shadow-lg shadow-[#FFD111]/10"
+                      className="w-full bg-[#244996] text-white py-2 [@media(display-mode:fullscreen)]:py-3 px-8 font-space font-light text-[clamp(14px,1vw,16px)] [@media(display-mode:fullscreen)]:text-[clamp(15px,1.1vw,18px)] tracking-[0.1em] uppercase rounded-[8px] hover:brightness-110 active:scale-[0.99] disabled:opacity-50 transition-all duration-700 shadow-lg shadow-[#244996]/10"
                     >
                       {status === 'submitting' ? 'Submitting...' : 'Submit'}
                     </button>
                     <p className="text-[15px] font-sans font-semibold text-center mt-4 bg-gradient-to-r from-[#0a065c] via-[#4b3fd4] to-[#60a5fa] bg-[length:200%_auto] bg-clip-text text-transparent inquiry-shimmer">
-                      We will give you a callback within 24 hours. Never submit passwords.
+                      We will give you a callback within 24 hours.
                     </p>
                     <style>{`
                       @keyframes moveGradient {

@@ -32,24 +32,9 @@ export default function Culture() {
               </Reveal>
             </div>
 
-            {/* Right: Halftone quarter-circle + CTA */}
-            <div className="flex flex-col-reverse md:flex-col items-center justify-center w-full overflow-visible gap-4 relative md:translate-y-[55px] lg:translate-y-[65px]">
-
-              <Reveal delay={0.15} className="w-full overflow-visible max-[880px]:mt-6 max-[880px]:translate-y-[50px]">
-                <div className="w-[80vw] max-w-[280px] md:max-w-none md:w-[380px] lg:w-[450px] aspect-square ml-auto max-[880px]:mx-auto relative overflow-visible md:translate-y-[80px] lg:translate-y-[100px] xl:translate-y-[120px]">
-                  {/* REPLACE THE SRC BELOW WITH YOUR IMAGE PATH */}
-                  <img
-                    src="/assets/img/5.png"
-                    alt="Pragyan Culture"
-                    className="w-full h-full object-contain scale-[1.6] md:scale-[1.4] lg:scale-[1.5] xl:scale-[1.6] 2xl:scale-[1.4] md:translate-x-[160px] lg:translate-x-[190px] xl:translate-x-[220px] 2xl:translate-x-[180px] max-[880px]:rotate-90 md:rotate-[10deg] lg:rotate-[12deg] xl:rotate-[15deg] 2xl:rotate-[10deg] origin-center md:origin-bottom mix-blend-multiply border-none outline-none"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800';
-                    }}
-                  />
-                </div>
-              </Reveal>
-
-              <div className="relative z-10 mt-6 max-[880px]:mt-6 max-[880px]:mb-8 md:-translate-x-[60px] md:-translate-y-[15px]">
+            {/* Right: CTA */}
+            <div className="flex flex-col items-center justify-center w-full relative">
+              <div className="relative z-10 max-[880px]:mt-6 max-[880px]:mb-8">
                 <Button href="/inquiry" className="!bg-[#434b9f] hover:!bg-[#161245] !text-white min-w-[245px] md:min-w-[200px] justify-center text-[15px] md:text-[13px] tracking-[0.2em] !py-[15px] md:!py-[12px] font-space font-light uppercase transition-colors duration-300">
                   JOIN THE TEAM
                 </Button>
@@ -169,6 +154,7 @@ export default function Culture() {
 
       {/* Benefits Section - matches black/blue grid reference */}
       <section className="bg-black text-white py-[clamp(100px,12vw,160px)] md:py-0 md:h-screen md:min-h-[550px] md:flex md:flex-col md:justify-center relative overflow-hidden" aria-labelledby="benefits-h">
+        <div className="section-noise-effect" />
         <div className="wrap">
           <div className="text-center mb-16 md:mb-8">
             <Reveal>
@@ -280,19 +266,7 @@ export default function Culture() {
 
 
       <section className="bg-black border-t border-white/5 relative overflow-hidden py-[clamp(60px,10vw,120px)] md:py-0 md:h-screen md:min-h-[500px] md:flex md:flex-col md:justify-center" aria-labelledby="culture-cta-h">
-
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/assets/img/culture.jpeg"
-            alt=""
-            className="w-full h-full object-cover"
-            onError={(e) => {
-              (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1600';
-            }}
-          />
-          <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
-        </div>
+        <div className="section-noise-effect" />
 
         <div className="wrap relative z-[1]">
           <Reveal className="relative z-[1] max-w-[1200px] mx-auto p-[clamp(20px,3vw,35px)_clamp(50px,8vw,120px)] md:p-[25px_80px] bg-[#fcfcfc]/80 border border-white/20 text-center shadow-2xl">

@@ -10,7 +10,7 @@ interface MarqueeProps {
 }
 
 const Marquee = ({ text, speed, className, bg = '#FFFFFF' }: MarqueeProps) => {
-  const words = text ? [text] : ['GROWTH.', 'WISDOM.', 'ACTION.'];
+  const words = text ? [text] : ['Growth.', 'Wisdom.', 'Action.'];
 
   return (
     <div
@@ -20,14 +20,14 @@ const Marquee = ({ text, speed, className, bg = '#FFFFFF' }: MarqueeProps) => {
       <div className="flex whitespace-nowrap overflow-hidden">
         <div className="flex animate-marquee shrink-0">
           {[...Array(12)].map((_, i) => (
-            <span key={i} className="text-[clamp(14px,1.05vw,19px)] font-sans font-semibold tracking-[0.4em] uppercase text-black px-16 leading-none">
+            <span key={i} className="text-[clamp(14px,1.05vw,19px)] font-sans font-semibold tracking-[0.4em] text-black px-16 leading-none">
               {words[i % words.length]}
             </span>
           ))}
         </div>
         <div className="flex animate-marquee shrink-0" aria-hidden="true">
           {[...Array(12)].map((_, i) => (
-            <span key={i} className="text-[clamp(14px,1.05vw,19px)] font-sans font-semibold tracking-[0.4em] uppercase text-black px-16 leading-none">
+            <span key={i} className="text-[clamp(14px,1.05vw,19px)] font-sans font-semibold tracking-[0.4em] text-black px-16 leading-none">
               {words[i % words.length]}
             </span>
           ))}

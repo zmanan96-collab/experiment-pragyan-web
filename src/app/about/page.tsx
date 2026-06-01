@@ -48,6 +48,7 @@ export default function About() {
       </section>
 
       <section className="bg-black text-white pt-[80px] pb-[60px] md:pt-[120px] md:pb-[40px] md:h-[100svh] md:flex md:flex-col md:justify-center relative overflow-hidden" aria-labelledby="values-h">
+        <div className="section-noise-effect" />
         <div className="wrap">
           <Reveal className="max-w-[1000px] mb-[clamp(56px,7vw,88px)] md:mb-4 lg:mb-6 xl:mb-10 2xl:mb-12">
             <div className="md:-ml-48 xl:-ml-64">
