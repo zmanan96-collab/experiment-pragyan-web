@@ -101,14 +101,7 @@ export default function About() {
             </Reveal>
           </div>
 
-          {/* Halftone Pattern at bottom of the yellow band */}
-          <div className="absolute bottom-0 left-0 w-full overflow-hidden h-[210px] opacity-100 pointer-events-none">
-            <img
-              src="/assets/img/zeros.png"
-              alt=""
-              className="w-full h-full object-contain object-bottom scale-x-[1.3] mix-blend-multiply"
-            />
-          </div>
+
 
         </div>
 

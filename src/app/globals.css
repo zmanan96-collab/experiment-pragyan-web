@@ -431,19 +431,13 @@ button,
   animation: noise-shimmer 0.22s infinite steps(6);
 }
 
-/* Animated dark gray background gradient for methodology cards */
+/* Animated dark blue background gradient for methodology cards using #4b3fd4 */
 @keyframes card-gradient {
   0% {
     background-position: 0% 50%;
   }
-  25% {
-    background-position: 50% 100%;
-  }
   50% {
     background-position: 100% 50%;
-  }
-  75% {
-    background-position: 50% 0%;
   }
   100% {
     background-position: 0% 50%;
@@ -453,12 +447,13 @@ button,
 .card-gradient-flow {
   background: linear-gradient(
     135deg,
-    #0c0c0e 0%,
-    #16161c 25%,
-    #4b4b5c 50%,
-    #16161c 75%,
-    #0c0c0e 100%
+    #02020a 0%,
+    #100d36 20%,
+    #4b3fd4 45%,
+    #8f85ff 70%,
+    #0c0a2b 90%,
+    #02020a 100%
   ) !important;
-  background-size: 300% 300% !important;
-  animation: card-gradient 4s ease-in-out infinite !important;
+  background-size: 400% 400% !important;
+  animation: card-gradient 4s ease infinite !important;
 }
