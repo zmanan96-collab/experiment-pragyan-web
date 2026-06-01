@@ -10,7 +10,7 @@ export default function Culture() {
       {/* Hero Section - matches reference image */}
       <section className="bg-white text-black pt-[clamp(160px,18vw,220px)] pb-[clamp(80px,12vw,140px)] md:py-0 md:min-h-screen md:flex md:flex-col md:justify-center relative overflow-x-hidden" aria-labelledby="culture-h">
         <div className="wrap">
-          <div className="max-w-[1000px] max-[880px]:text-center max-[880px]:mx-auto flex flex-col items-start max-[880px]:items-center md:translate-x-[3vw]">
+          <div className="max-w-[1000px] max-[880px]:text-center max-[880px]:mx-auto flex flex-col items-start max-[880px]:items-center md:translate-x-0">
             <Reveal>
               <span className="font-space text-[clamp(12px,0.85vw,16px)] font-light tracking-[0.22em] uppercase text-[#6a6a6a] block mb-6 md:mb-4">Careers</span>
               <h1 id="culture-h" className="text-black font-sans text-[clamp(48px,6.2vw,84px)] md:text-[clamp(42px,5.5vw,66px)] leading-[1.05] font-extrabold tracking-[-0.025em] mb-10 md:mb-6">

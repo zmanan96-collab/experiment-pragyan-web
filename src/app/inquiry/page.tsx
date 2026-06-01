@@ -177,7 +177,7 @@ export default function Inquiry() {
                     <button
                       type="submit"
                       disabled={status === 'submitting'}
-                      className="w-full bg-[#244996] text-white py-2 [@media(display-mode:fullscreen)]:py-3 px-8 font-space font-light text-[clamp(14px,1vw,16px)] [@media(display-mode:fullscreen)]:text-[clamp(15px,1.1vw,18px)] tracking-[0.1em] uppercase rounded-[8px] hover:brightness-110 active:scale-[0.99] disabled:opacity-50 transition-all duration-700 shadow-lg shadow-[#244996]/10"
+                      className="w-full submit-btn-gradient text-white py-2 [@media(display-mode:fullscreen)]:py-3 px-8 font-space font-light text-[clamp(14px,1vw,16px)] [@media(display-mode:fullscreen)]:text-[clamp(15px,1.1vw,18px)] tracking-[0.1em] uppercase rounded-[8px] active:scale-[0.99] disabled:opacity-50"
                     >
                       {status === 'submitting' ? 'Submitting...' : 'Submit'}
                     </button>

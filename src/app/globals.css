@@ -431,29 +431,119 @@ button,
   animation: noise-shimmer 0.22s infinite steps(6);
 }
 
-/* Animated dark blue background gradient for methodology cards using #4b3fd4 */
-@keyframes card-gradient {
+/* Redefined card background for high-end floating liquid-light blobs */
+.card-gradient-flow {
+  background: #050508 !important;
+}
+
+@keyframes blob-move-1 {
   0% {
-    background-position: 0% 50%;
+    transform: translate(-10%, -10%) scale(1);
   }
-  50% {
-    background-position: 100% 50%;
+  33% {
+    transform: translate(45%, 35%) scale(1.15);
+  }
+  66% {
+    transform: translate(15%, 55%) scale(0.9);
   }
   100% {
-    background-position: 0% 50%;
+    transform: translate(-10%, -10%) scale(1);
   }
 }
 
-.card-gradient-flow {
+@keyframes blob-move-2 {
+  0% {
+    transform: translate(45%, 45%) scale(1);
+  }
+  33% {
+    transform: translate(-15%, 15%) scale(0.85);
+  }
+  66% {
+    transform: translate(25%, -15%) scale(1.2);
+  }
+  100% {
+    transform: translate(45%, 45%) scale(1);
+  }
+}
+
+@keyframes blob-move-3 {
+  0% {
+    transform: translate(20%, -15%) scale(1);
+  }
+  50% {
+    transform: translate(-5%, 45%) scale(1.1);
+  }
+  100% {
+    transform: translate(20%, -15%) scale(1);
+  }
+}
+
+.animate-blob-1 {
+  top: -40px;
+  left: -40px;
+  animation: blob-move-1 9s ease-in-out infinite;
+}
+
+.animate-blob-2 {
+  bottom: -40px;
+  right: -40px;
+  animation: blob-move-2 11s ease-in-out infinite;
+}
+
+.animate-blob-3 {
+  top: 35%;
+  left: 35%;
+  animation: blob-move-3 8s ease-in-out infinite;
+}
+
+.animation-delay-1s {
+  animation-delay: -1s !important;
+}
+.animation-delay-2s {
+  animation-delay: -2s !important;
+}
+.animation-delay-3s {
+  animation-delay: -3s !important;
+}
+.animation-delay-4s {
+  animation-delay: -4s !important;
+}
+.animation-delay-5s {
+  animation-delay: -5s !important;
+}
+
+/* Global Submit Button Shimmer & Hue-Rotation Animation - Bypasses React scoping */
+@keyframes submit-button-shimmer {
+  0% {
+    background-position: 0% 50%;
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    background-position: 100% 50%;
+    filter: hue-rotate(80deg);
+  }
+  100% {
+    background-position: 0% 50%;
+    filter: hue-rotate(0deg);
+  }
+}
+
+.submit-btn-gradient {
   background: linear-gradient(
-    135deg,
-    #02020a 0%,
-    #100d36 20%,
-    #4b3fd4 45%,
-    #8f85ff 70%,
-    #0c0a2b 90%,
-    #02020a 100%
+    90deg,
+    #0b1633 0%,
+    #1e3a8a 25%,
+    #4b3fd4 50%,
+    #1e3a8a 75%,
+    #0b1633 100%
   ) !important;
-  background-size: 400% 400% !important;
-  animation: card-gradient 4s ease infinite !important;
+  background-size: 200% 100% !important;
+  animation: submit-button-shimmer 3s ease-in-out infinite !important;
+  box-shadow: 0 4px 20px rgba(75, 63, 212, 0.15) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.submit-btn-gradient:hover {
+  box-shadow: 0 10px 25px rgba(75, 63, 212, 0.45) !important;
+  transform: scale(1.01) !important;
 }

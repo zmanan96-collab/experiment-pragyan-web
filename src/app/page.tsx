@@ -409,8 +409,16 @@ export default function Home() {
                         }
                       ].map((card, i) => (
                         <Reveal key={i} delay={i * 0.1} className="methodology-card-scroll">
-                          <div className="card-gradient-flow border border-border-strong rounded-none overflow-hidden transition-all duration-500 hover:border-violet hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] h-full flex flex-col cursor-pointer">
-                            <div className="p-8 md:p-6 xl:p-8 2xl:p-10 min-h-[140px] md:min-h-[120px] lg:min-h-[130px] xl:min-h-[140px] 2xl:min-h-[160px] flex items-center justify-center text-center flex-grow">
+                          <div className="card-gradient-flow border border-border-strong rounded-none overflow-hidden transition-all duration-500 hover:border-violet hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] h-full flex flex-col cursor-pointer relative">
+                            {/* Animated Ambient Glowing Liquid-Light Blobs */}
+                            <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+                              <div className={`absolute w-[220px] h-[220px] rounded-full bg-[#4b3fd4] blur-[55px] opacity-[0.38] animate-blob-1 ${i === 1 ? 'animation-delay-2s' : i === 2 ? 'animation-delay-4s' : ''}`}></div>
+                              <div className={`absolute w-[180px] h-[180px] rounded-full bg-[#7621c2] blur-[50px] opacity-[0.32] animate-blob-2 ${i === 1 ? 'animation-delay-3s' : i === 2 ? 'animation-delay-5s' : ''}`}></div>
+                              <div className={`absolute w-[160px] h-[160px] rounded-full bg-[#0b68a8] blur-[45px] opacity-[0.30] animate-blob-3 ${i === 1 ? 'animation-delay-1s' : i === 2 ? 'animation-delay-3s' : ''}`}></div>
+                            </div>
+                            
+                            {/* Content Layer on Top */}
+                            <div className="p-8 md:p-6 xl:p-8 2xl:p-10 min-h-[140px] md:min-h-[120px] lg:min-h-[130px] xl:min-h-[140px] 2xl:min-h-[160px] flex items-center justify-center text-center flex-grow relative z-10">
                               <p className="text-[#C9C9CE] text-[clamp(21px,1.5vw,26px)] md:text-[17px] xl:text-[20px] 2xl:text-[22px] leading-[1.45] font-light">
                                 {card.text}
                               </p>
