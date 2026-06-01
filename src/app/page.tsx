@@ -399,28 +399,112 @@ export default function Home() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-3 xl:gap-4 2xl:gap-6">
                       {[
                         {
-                          text: <>We discuss before <br className="hidden md:block" /> we design.</>
+                          title: "We discuss",
+                          desc: "before we design.",
+                          illustration: (
+                            <svg className="w-full h-full bg-[#050505] absolute inset-0">
+                              <g className="animate-grid-shimmer">
+                                {Array.from({ length: 13 }).map((_, r) =>
+                                  Array.from({ length: 20 }).map((_, c) => {
+                                    const factor = (r / 13 + c / 20) / 2;
+                                    const radius = 1 + factor * 5;
+                                    return (
+                                      <circle
+                                        key={`${r}-${c}`}
+                                        cx={`${5 + c * 4.7}%`}
+                                        cy={`${6 + r * 7.5}%`}
+                                        r={radius}
+                                        fill="#ffffff"
+                                        className="animate-dot-blink"
+                                        style={{ animationDelay: `${(r * 0.15 + c * 0.08).toFixed(2)}s` }}
+                                      />
+                                    );
+                                  })
+                                )}
+                              </g>
+                            </svg>
+                          )
                         },
                         {
-                          text: <>We plan before <br className="hidden md:block" /> we build.</>
+                          title: "We plan",
+                          desc: "before we build.",
+                          illustration: (
+                            <svg className="w-full h-full bg-[#050505] absolute inset-0">
+                              <g className="animate-wave-ripple">
+                                {Array.from({ length: 28 }).map((_, c) => {
+                                  const waveHeight = Math.sin(c * 0.3) * 3 + 5;
+                                  return Array.from({ length: 12 }).map((_, r) => {
+                                    if (r > waveHeight) return null;
+                                    const distFromTop = waveHeight - r;
+                                    const radius = Math.max(1, 4 - distFromTop * 0.7);
+                                    return (
+                                      <circle
+                                        key={`${c}-${r}`}
+                                        cx={`${3.5 + c * 3.4}%`}
+                                        cy={`${92 - r * 7.5}%`}
+                                        r={radius}
+                                        fill="#3b82f6"
+                                        className="animate-dot-blink"
+                                        style={{ animationDelay: `${(c * 0.1 + r * 0.05).toFixed(2)}s` }}
+                                      />
+                                    );
+                                  });
+                                })}
+                              </g>
+                            </svg>
+                          )
                         },
                         {
-                          text: <>We work with you to turn <br className="hidden md:block" /> curiosity into creativity.</>
+                          title: "We work with you",
+                          desc: "to turn curiosity into creativity.",
+                          illustration: (
+                            <svg className="w-full h-full bg-[#050505] absolute inset-0">
+                              <g className="animate-spiral-spin" style={{ transformOrigin: '50% 50%', transformBox: 'fill-box' }}>
+                                {Array.from({ length: 3 }).map((_, arm) => {
+                                  const armOffset = (arm * 2 * Math.PI) / 3;
+                                  return Array.from({ length: 45 }).map((_, i) => {
+                                    const t = i / 45;
+                                    const angle = t * 2.8 * Math.PI + armOffset;
+                                    const r = t * 38;
+                                    const cx = 50 + r * Math.cos(angle);
+                                    const cy = 50 + r * Math.sin(angle);
+                                    const radius = 1 + t * 4;
+                                    return (
+                                      <circle
+                                        key={`${arm}-${i}`}
+                                        cx={`${cx}%`}
+                                        cy={`${cy}%`}
+                                        r={radius}
+                                        fill="#8f85ff"
+                                        className="animate-dot-blink"
+                                        style={{ animationDelay: `${(arm * 0.5 + i * 0.04).toFixed(2)}s` }}
+                                      />
+                                    );
+                                  });
+                                })}
+                              </g>
+                            </svg>
+                          )
                         }
                       ].map((card, i) => (
                         <Reveal key={i} delay={i * 0.1} className="methodology-card-scroll">
-                          <div className="card-gradient-flow border border-border-strong rounded-none overflow-hidden transition-all duration-500 hover:border-violet hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] h-full flex flex-col cursor-pointer relative">
-                            {/* Animated Ambient Glowing Liquid-Light Blobs */}
-                            <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-                              <div className={`absolute w-[220px] h-[220px] rounded-full bg-[#4b3fd4] blur-[55px] opacity-[0.38] animate-blob-1 ${i === 1 ? 'animation-delay-2s' : i === 2 ? 'animation-delay-4s' : ''}`}></div>
-                              <div className={`absolute w-[180px] h-[180px] rounded-full bg-[#7621c2] blur-[50px] opacity-[0.32] animate-blob-2 ${i === 1 ? 'animation-delay-3s' : i === 2 ? 'animation-delay-5s' : ''}`}></div>
-                              <div className={`absolute w-[160px] h-[160px] rounded-full bg-[#0b68a8] blur-[45px] opacity-[0.30] animate-blob-3 ${i === 1 ? 'animation-delay-1s' : i === 2 ? 'animation-delay-3s' : ''}`}></div>
+                          <div className="bg-[#0b0b0f] border border-white/10 rounded-[12px] overflow-hidden transition-all duration-500 hover:border-[#4b3fd4]/45 hover:shadow-[0_20px_40px_rgba(75,63,212,0.15)] h-full flex flex-col cursor-pointer relative p-4 pb-5 group">
+                            
+                            {/* Top Illustration Area */}
+                            <div className="w-full aspect-[1.7/1] rounded-[8px] overflow-hidden border border-white/5 bg-[#050505] relative mb-5 flex items-center justify-center pointer-events-none">
+                              {card.illustration}
+                              
+                              {/* Overlay Gradient for depth */}
+                              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none z-10"></div>
                             </div>
                             
-                            {/* Content Layer on Top */}
-                            <div className="p-8 md:p-6 xl:p-8 2xl:p-10 min-h-[140px] md:min-h-[120px] lg:min-h-[130px] xl:min-h-[140px] 2xl:min-h-[160px] flex items-center justify-center text-center flex-grow relative z-10">
-                              <p className="text-[#C9C9CE] text-[clamp(21px,1.5vw,26px)] md:text-[17px] xl:text-[20px] 2xl:text-[22px] leading-[1.45] font-light">
-                                {card.text}
+                            {/* Bottom Text Area */}
+                            <div className="px-1 flex flex-col text-left flex-grow">
+                              <h3 className="font-space font-medium text-white text-[16px] xl:text-[17px] 2xl:text-[18px] tracking-wide mb-1 transition-colors duration-300 group-hover:text-[#4b3fd4]">
+                                {card.title}
+                              </h3>
+                              <p className="font-sans text-[13px] xl:text-[13.5px] 2xl:text-[14px] text-[#A1A1AA] font-light leading-relaxed">
+                                {card.desc}
                               </p>
                             </div>
                           </div>

@@ -179,7 +179,7 @@ export default function Inquiry() {
                       disabled={status === 'submitting'}
                       className="w-full submit-btn-gradient text-white py-2 [@media(display-mode:fullscreen)]:py-3 px-8 font-space font-light text-[clamp(14px,1vw,16px)] [@media(display-mode:fullscreen)]:text-[clamp(15px,1.1vw,18px)] tracking-[0.1em] uppercase rounded-[8px] active:scale-[0.99] disabled:opacity-50"
                     >
-                      {status === 'submitting' ? 'Submitting...' : 'Submit'}
+                      <span>{status === 'submitting' ? 'Submitting...' : 'Submit'}</span>
                     </button>
                     <p className="text-[15px] font-sans font-semibold text-center mt-4 bg-gradient-to-r from-[#0a065c] via-[#4b3fd4] to-[#60a5fa] bg-[length:200%_auto] bg-clip-text text-transparent inquiry-shimmer">
                       We will give you a callback within 24 hours.

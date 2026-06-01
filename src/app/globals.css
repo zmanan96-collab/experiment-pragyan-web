@@ -400,9 +400,11 @@ button,
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -440,12 +442,15 @@ button,
   0% {
     transform: translate(-10%, -10%) scale(1);
   }
+
   33% {
     transform: translate(45%, 35%) scale(1.15);
   }
+
   66% {
     transform: translate(15%, 55%) scale(0.9);
   }
+
   100% {
     transform: translate(-10%, -10%) scale(1);
   }
@@ -455,12 +460,15 @@ button,
   0% {
     transform: translate(45%, 45%) scale(1);
   }
+
   33% {
     transform: translate(-15%, 15%) scale(0.85);
   }
+
   66% {
     transform: translate(25%, -15%) scale(1.2);
   }
+
   100% {
     transform: translate(45%, 45%) scale(1);
   }
@@ -470,9 +478,11 @@ button,
   0% {
     transform: translate(20%, -15%) scale(1);
   }
+
   50% {
     transform: translate(-5%, 45%) scale(1.1);
   }
+
   100% {
     transform: translate(20%, -15%) scale(1);
   }
@@ -499,44 +509,109 @@ button,
 .animation-delay-1s {
   animation-delay: -1s !important;
 }
+
 .animation-delay-2s {
   animation-delay: -2s !important;
 }
+
 .animation-delay-3s {
   animation-delay: -3s !important;
 }
+
+/* --- Card 1: White Halftone Grid Scrolling Animation --- */
+@keyframes grid-scroll {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 0px 40px;
+  }
+}
+
+.halftone-grid-overlay {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1.2px, transparent 1.2px) !important;
+  background-size: 20px 20px !important;
+  animation: grid-scroll 3s linear infinite !important;
+}
+
+/* --- Card 2: Blue Halftone Wave Undulate Animation --- */
+@keyframes wave-undulate {
+  0% {
+    background-position: 0% 50%;
+    transform: translateY(0) scaleY(1);
+  }
+  50% {
+    background-position: 100% 50%;
+    transform: translateY(-8px) scaleY(1.08);
+  }
+  100% {
+    background-position: 0% 50%;
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+.halftone-wave-overlay {
+  background-image: 
+    radial-gradient(circle at 50% 100%, rgba(75, 63, 212, 0.28) 0%, transparent 60%),
+    radial-gradient(rgba(75, 63, 212, 0.22) 1.8px, transparent 1.8px) !important;
+  background-size: 100% 100%, 16px 16px !important;
+  animation: wave-undulate 6s ease-in-out infinite !important;
+}
+
+/* --- Card 3: Purple Halftone Arcs Morph Animation --- */
+@keyframes arcs-morph {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.15);
+    opacity: 0.95;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 0.7;
+  }
+}
+
+.halftone-arcs-overlay {
+  background-image: 
+    radial-gradient(circle at 0% 0%, transparent 50%, rgba(118, 33, 194, 0.2) 50%, rgba(118, 33, 194, 0.2) 60%, transparent 60%),
+    radial-gradient(circle at 100% 100%, transparent 40%, rgba(143, 133, 255, 0.18) 40%, rgba(143, 133, 255, 0.18) 52%, transparent 52%),
+    radial-gradient(rgba(143, 133, 255, 0.15) 1.5px, transparent 1.5px) !important;
+  background-size: 100% 100%, 100% 100%, 24px 24px !important;
+  transform-origin: center center !important;
+  animation: arcs-morph 12s ease-in-out infinite !important;
+}
+
 .animation-delay-4s {
   animation-delay: -4s !important;
 }
+
 .animation-delay-5s {
   animation-delay: -5s !important;
 }
 
-/* Global Submit Button Shimmer & Hue-Rotation Animation - Bypasses React scoping */
+/* Global Submit Button Shimmer Animation - Bypasses React scoping */
 @keyframes submit-button-shimmer {
   0% {
     background-position: 0% 50%;
-    filter: hue-rotate(0deg);
   }
   50% {
     background-position: 100% 50%;
-    filter: hue-rotate(80deg);
   }
   100% {
     background-position: 0% 50%;
-    filter: hue-rotate(0deg);
   }
 }
 
 .submit-btn-gradient {
-  background: linear-gradient(
-    90deg,
-    #0b1633 0%,
-    #1e3a8a 25%,
-    #4b3fd4 50%,
-    #1e3a8a 75%,
-    #0b1633 100%
-  ) !important;
+  background: linear-gradient(90deg,
+      #0b1633 0%,
+      #1e3a8a 25%,
+      #4b3fd4 50%,
+      #1e3a8a 75%,
+      #0b1633 100%) !important;
   background-size: 200% 100% !important;
   animation: submit-button-shimmer 3s ease-in-out infinite !important;
   box-shadow: 0 4px 20px rgba(75, 63, 212, 0.15) !important;
@@ -546,4 +621,67 @@ button,
 .submit-btn-gradient:hover {
   box-shadow: 0 10px 25px rgba(75, 63, 212, 0.45) !important;
   transform: scale(1.01) !important;
+}
+
+/* --- Card Animations: Halftone Blinking & Round-and-Round Rotating --- */
+@keyframes halftone-blink {
+  0%, 100% {
+    opacity: 0.18;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+.animate-dot-blink {
+  animation: halftone-blink 2.4s ease-in-out infinite;
+  transform-origin: center center;
+  transform-box: fill-box;
+}
+
+@keyframes spiral-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spiral-spin {
+  animation: spiral-spin 18s linear infinite !important;
+  transform-origin: center center !important;
+  transform-box: fill-box !important;
+}
+
+@keyframes wave-ripple {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-4px) rotate(2deg);
+  }
+}
+
+.animate-wave-ripple {
+  animation: wave-ripple 4s ease-in-out infinite !important;
+  transform-origin: center center !important;
+  transform-box: fill-box !important;
+}
+
+@keyframes grid-shimmer {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(-2px, -2px) rotate(0.8deg);
+  }
+}
+
+.animate-grid-shimmer {
+  animation: grid-shimmer 5s ease-in-out infinite !important;
+  transform-origin: center center !important;
+  transform-box: fill-box !important;
 }
