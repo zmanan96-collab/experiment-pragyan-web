@@ -524,88 +524,42 @@ export default function Home() {
                           title: "We discuss",
                           desc: "before we design.",
                           illustration: (
-                            <svg className="w-full h-full bg-[#050505] absolute inset-0">
-                              <g className="animate-grid-shimmer">
-                                {Array.from({ length: 13 }).map((_, r) =>
-                                  Array.from({ length: 20 }).map((_, c) => {
-                                    const factor = (r / 13 + c / 20) / 2;
-                                    const radius = 1 + factor * 5;
-                                    return (
-                                      <circle
-                                        key={`${r}-${c}`}
-                                        cx={`${(5 + c * 4.7).toFixed(3)}%`}
-                                        cy={`${(6 + r * 7.5).toFixed(3)}%`}
-                                        r={parseFloat(radius.toFixed(3))}
-                                        fill="#ffffff"
-                                        className="animate-dot-blink"
-                                        style={{ animationDelay: `${(r * 0.15 + c * 0.08).toFixed(2)}s` }}
-                                      />
-                                    );
-                                  })
-                                )}
-                              </g>
-                            </svg>
+                            <video
+                              src="/V1.mp4"
+                              autoPlay
+                              loop
+                              muted
+                              playsInline
+                              className="w-full h-full object-cover"
+                            />
                           )
                         },
                         {
                           title: "We plan",
                           desc: "before we build.",
                           illustration: (
-                            <svg className="w-full h-full bg-[#050505] absolute inset-0">
-                              <g className="animate-wave-ripple">
-                                {Array.from({ length: 28 }).map((_, c) => {
-                                  const waveHeight = Math.sin(c * 0.3) * 3 + 5;
-                                  return Array.from({ length: 12 }).map((_, r) => {
-                                    if (r > waveHeight) return null;
-                                    const distFromTop = waveHeight - r;
-                                    const radius = Math.max(1, 4 - distFromTop * 0.7);
-                                    return (
-                                      <circle
-                                        key={`${c}-${r}`}
-                                        cx={`${(3.5 + c * 3.4).toFixed(3)}%`}
-                                        cy={`${(92 - r * 7.5).toFixed(3)}%`}
-                                        r={parseFloat(radius.toFixed(3))}
-                                        fill="#3b82f6"
-                                        className="animate-dot-blink"
-                                        style={{ animationDelay: `${(c * 0.1 + r * 0.05).toFixed(2)}s` }}
-                                      />
-                                    );
-                                  });
-                                })}
-                              </g>
-                            </svg>
+                            <video
+                              src="/V2.mp4"
+                              autoPlay
+                              loop
+                              muted
+                              playsInline
+                              className="w-full h-full object-cover"
+                            />
                           )
                         },
                         {
                           title: "We work with you",
                           desc: "to turn curiosity into creativity.",
                           illustration: (
-                            <svg className="w-full h-full bg-[#050505] absolute inset-0">
-                              <g className="animate-spiral-spin" style={{ transformOrigin: '50% 50%', transformBox: 'fill-box' }}>
-                                {Array.from({ length: 3 }).map((_, arm) => {
-                                  const armOffset = (arm * 2 * Math.PI) / 3;
-                                  return Array.from({ length: 45 }).map((_, i) => {
-                                    const t = i / 45;
-                                    const angle = t * 2.8 * Math.PI + armOffset;
-                                    const r = t * 38;
-                                    const cx = 50 + r * Math.cos(angle);
-                                    const cy = 50 + r * Math.sin(angle);
-                                    const radius = 1 + t * 4;
-                                    return (
-                                      <circle
-                                        key={`${arm}-${i}`}
-                                        cx={`${cx.toFixed(3)}%`}
-                                        cy={`${cy.toFixed(3)}%`}
-                                        r={parseFloat(radius.toFixed(3))}
-                                        fill="#8f85ff"
-                                        className="animate-dot-blink"
-                                        style={{ animationDelay: `${(arm * 0.5 + i * 0.04).toFixed(2)}s` }}
-                                      />
-                                    );
-                                  });
-                                })}
-                              </g>
-                            </svg>
+                            <video
+                              src="/V3.mp4"
+                              autoPlay
+                              loop
+                              muted
+                              playsInline
+                              className="w-full h-full object-cover"
+                            />
                           )
                         }
                       ].map((card, i) => (
@@ -613,7 +567,7 @@ export default function Home() {
                           <div className="bg-[#0b0b0f] border border-white/10 rounded-[12px] overflow-hidden transition-all duration-500 hover:border-[#4b3fd4]/45 hover:shadow-[0_20px_40px_rgba(75,63,212,0.15)] h-full flex flex-col cursor-pointer relative p-4 pb-5 group">
 
                             {/* Top Illustration Area */}
-                            <div className="w-full aspect-[1.7/1] rounded-[8px] overflow-hidden border border-white/5 bg-[#050505] relative mb-5 flex items-center justify-center pointer-events-none">
+                            <div className="w-full aspect-[4/3] rounded-[8px] overflow-hidden border border-white/5 bg-[#050505] relative mb-5 flex items-center justify-center pointer-events-none">
                               {mounted ? card.illustration : <div className="absolute inset-0 bg-[#050505]" />}
 
                               {/* Overlay Gradient for depth */}
@@ -689,7 +643,7 @@ export default function Home() {
               {/* SECTION 4: BREATHE / PROJECTS */}
               <section
                 id="breathe-section"
-                className="md:absolute md:top-0 md:left-0 md:h-[100vh] h-auto bg-black border-t border-border shadow-[0_-30px_60px_rgba(0,0,0,0.95)] py-20 md:py-0 flex flex-col justify-center relative overflow-hidden z-40 w-full"
+                className="md:absolute md:top-0 md:left-0 md:h-[100vh] h-auto bg-black border-t border-border py-20 md:py-0 flex flex-col justify-center relative overflow-hidden z-40 w-full"
                 aria-labelledby="breathe-h"
               >
                 <div className="wrap w-full px-[var(--pad)]">
@@ -697,7 +651,7 @@ export default function Home() {
                     <span className="text-nav-label tracking-[0.22em] uppercase text-[#6A6A6A] mb-3 md:mb-[clamp(8px,1.5vh,16px)] block">Our Projects</span>
                     <h2 id="breathe-h" className="text-section-heading text-white">
                       Work that started with<br />
-                      a point of <em className="italic font-light">view.</em>
+                      <em className="italic font-light">a point of view.</em>
                     </h2>
 
                   </Reveal>
@@ -722,7 +676,7 @@ export default function Home() {
                             className="w-[80vw] md:w-[32vw] lg:w-[28vw] shrink-0 snap-center md:snap-align-none rounded-[20px] overflow-hidden aspect-[4/3] md:aspect-[16/11] relative bg-[#121212] hover:bg-[#1a1a1a] transition-all duration-500 flex flex-col items-center justify-center border border-white/5 group cursor-pointer"
                           >
                             <span className="text-[16px] md:text-[20px] text-white font-bold tracking-[0.2em] uppercase transition-all duration-500 group-hover:scale-105 flex items-center gap-3 group-hover:text-[#4b3fd4]">
-                              View Work
+                              View All Projects
                               <svg className="w-5 h-5 transition-transform duration-500 group-hover:translate-x-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                                 <line x1="5" y1="12" x2="19" y2="12" />
                                 <polyline points="12 5 19 12 12 19" />
