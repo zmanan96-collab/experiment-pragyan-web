@@ -45,7 +45,7 @@ export default function AboutClient() {
   return (
     <article aria-label="About">
       <section className="bg-white text-black pt-[clamp(140px,18vw,200px)] pb-[80px] md:pt-[130px] md:pb-[20px] md:h-[100svh] md:flex md:flex-col md:justify-center relative overflow-hidden" aria-labelledby="about-h">
-        <div className="wrap text-center">
+        <div className="wrap text-center md:translate-y-[45px] lg:translate-y-[55px] transition-transform duration-500">
           <Reveal>
             <span className="text-nav-label tracking-[0.22em] uppercase text-[#6a6a6a] block mb-2">About Us</span>
           </Reveal>

@@ -42,7 +42,7 @@ export default function Header() {
                     onClick={() => setIsOpen(false)}
                     className={`
                       relative py-2 transition-colors duration-150 ease-[cubic-bezier(0.22,1,0.36,1)]
-                      ${isActive ? 'text-[#4b3fd4]' : 'text-grey hover:text-white'}
+                      text-grey hover:text-white
                       after:content-[''] after:absolute after:left-0 after:right-0 after:bottom-0 
                       after:h-[1.5px] after:bg-[#4b3fd4] after:origin-left after:transition-transform 
                       after:duration-250 after:ease-[cubic-bezier(0.22,1,0.36,1)]

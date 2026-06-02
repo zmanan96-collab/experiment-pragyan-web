@@ -703,10 +703,62 @@ button,
 }
 
 .btn-grey:hover {
-  background: #2d2d2d !important;
+  background: #ffffff !important;
+  color: #0b0b0f !important;
+  transform: translateY(-1.5px) !important;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Submit button: dark default, #6a6a6a grey on hover */
+.btn-submit {
+  background: #1e1e1e !important;
+  color: #ffffff !important;
+  border: 1px solid transparent !important;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.btn-submit:hover {
+  background: #6a6a6a !important;
   color: #ffffff !important;
   transform: translateY(-1.5px) !important;
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Animated gradient button for Submit / CTA on white bg */
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.btn-gradient {
+  background: linear-gradient(270deg, #0a065c, #1E1F65, #4B3FD4, #2b2a8a, #0a065c) !important;
+  background-size: 300% 300% !important;
+  animation: gradientShift 4s ease infinite !important;
+  color: #ffffff !important;
+  border: none !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease !important;
+}
+
+.btn-gradient:hover {
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow: 0 6px 28px rgba(75, 63, 212, 0.45) !important;
+  opacity: 0.92 !important;
+}
+
+/* Button for white-background sections: transparent by default, dark grey on hover */
+.btn-on-white {
+  background: transparent !important;
+  color: #1e1e1e !important;
+  border: 1.5px solid #1e1e1e !important;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.btn-on-white:hover {
+  background: #1e1e1e !important;
+  color: #ffffff !important;
+  transform: translateY(-1.5px) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12) !important;
 }
 
 /* --- Card Animations: Halftone Blinking & Round-and-Round Rotating --- */

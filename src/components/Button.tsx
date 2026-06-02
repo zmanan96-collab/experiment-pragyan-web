@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 interface ButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string;
-  variant?: 'primary' | 'ghost';
+  variant?: 'primary' | 'ghost' | 'on-white';
   children: React.ReactNode;
 }
 
@@ -12,6 +12,7 @@ export default function Button({ href, variant = 'primary', children, className 
   const variants = {
     primary: "btn-grey",
     ghost: "bg-transparent text-white border-border-strong hover:border-white hover:bg-white/5",
+    'on-white': "btn-on-white",
   };
 
   return (

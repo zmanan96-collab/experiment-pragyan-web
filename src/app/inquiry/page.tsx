@@ -1,49 +1,53 @@
 'use client';
 
 import Reveal from '../../components/Reveal';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Marquee from '@/components/Marquee';
 
 export default function Inquiry() {
-  const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [errorMsg, setErrorMsg] = useState<string>('');
+  const formRef = useRef<HTMLFormElement>(null);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form = e.currentTarget;
-    const action = form.action;
+    if (status === 'submitting') return; // prevent duplicate submissions
 
-    // Mailto fallback if action is not replaced
-    if (action.includes('REPLACE_ME')) {
-      const formData = new FormData(form);
-      const subject = encodeURIComponent('New inquiry from ' + (formData.get('name') || 'website'));
-      const body = encodeURIComponent(
-        'Name: ' + (formData.get('name') || '') + '\n' +
-        'Email: ' + (formData.get('email') || '') + '\n\n' +
-        (formData.get('message') || '')
-      );
-      window.location.href = 'mailto:hello@pragyaan.in?subject=' + subject + '&body=' + body;
-      return;
-    }
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    const payload = {
+      name: (data.get('name') as string)?.trim(),
+      email: (data.get('email') as string)?.trim(),
+      phone: (data.get('phone') as string)?.trim(),
+      countryCode: (data.get('countryCode') as string) || '+91',
+      service: (data.get('service') as string)?.trim(),
+      message: (data.get('message') as string)?.trim(),
+    };
 
     setStatus('submitting');
-    fetch(action, {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
-    })
-      .then((res) => {
-        if (res.ok) {
-          form.reset();
-          setStatus('success');
-        } else {
-          alert('Something went wrong. Please email hello@pragyaan.in.');
-          setStatus('idle');
-        }
-      })
-      .catch(() => {
-        alert('Network error. Please email hello@pragyaan.in.');
-        setStatus('idle');
+    setErrorMsg('');
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
       });
+
+      const json = await res.json();
+
+      if (res.ok && json.success) {
+        form.reset();
+        setStatus('success');
+      } else {
+        setErrorMsg(json.error || 'Something went wrong. Please try again.');
+        setStatus('error');
+      }
+    } catch {
+      setErrorMsg('Network error. Please check your connection and try again.');
+      setStatus('error');
+    }
   };
 
   return (
@@ -90,8 +94,6 @@ export default function Inquiry() {
                 </p>
 
                 <form
-                  action="https://formspree.io/f/REPLACE_ME"
-                  method="POST"
                   onSubmit={handleSubmit}
                   className="space-y-1.5 [@media(display-mode:fullscreen)]:space-y-3 transition-all duration-700"
                 >
@@ -177,7 +179,7 @@ export default function Inquiry() {
                     <button
                       type="submit"
                       disabled={status === 'submitting'}
-                      className="w-full btn-grey py-2 [@media(display-mode:fullscreen)]:py-3 px-8 text-nav-label tracking-[0.15em] uppercase rounded-full active:scale-[0.99] disabled:opacity-50"
+                      className="w-full btn-submit py-2 [@media(display-mode:fullscreen)]:py-3 px-8 text-nav-label tracking-[0.15em] uppercase rounded-full active:scale-[0.99] disabled:opacity-50"
                     >
                       <span>{status === 'submitting' ? 'Submitting...' : 'Submit'}</span>
                     </button>
@@ -199,6 +201,12 @@ export default function Inquiry() {
                   {status === 'success' && (
                     <div className="p-3 bg-[#FFD111]/10 border border-[#FFD111] text-black text-center mt-4 text-nav-label rounded-[4px] animate-in fade-in slide-in-from-top-2 duration-500">
                       Thanks &mdash; we&apos;ve got it. You&apos;ll hear back from us soon.
+                    </div>
+                  )}
+
+                  {status === 'error' && errorMsg && (
+                    <div className="p-3 bg-red-50 border border-red-300 text-red-700 text-center mt-4 text-nav-label rounded-[4px] animate-in fade-in slide-in-from-top-2 duration-500">
+                      {errorMsg}
                     </div>
                   )}
                 </form>

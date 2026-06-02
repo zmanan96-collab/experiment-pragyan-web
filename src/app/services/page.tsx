@@ -38,37 +38,37 @@ export default function Services() {
       title: "Identity & Expression",
       tagline: "How you look and sound when no one is paying attention.",
       copy: "Identity is the entire sensory experience of encountering your brand — the typeface, the palette, the\ntone, the way your email lands in a crowded inbox. We build identities rooted in your strategy, shaped by\nyour perspective, and designed to hold up across formats, contexts, and years. A visual and verbal\nlanguage that feels unmistakably yours. Coherent enough to be consistent. Alive enough to be\ninteresting.",
-      deliverables: ["Logo & visual identity", "Brand guidelines", "Typography & colour system", "Verbal identity", "Brand collateral"]
+      deliverables: ["Logo & visual identity", "Brand guidelines", "Typography & colour system", "Brand collateral"]
     },
     {
       title: "Content & Communication",
       tagline: "Your thinking, made readable. Your voice, made consistent.",
       copy: "Good content earns its place. It carries a perspective, respects the reader's intelligence, and sounds like\na specific human wrote it — because one did. We write from the inside out. Starting with what you believe,\nwhat your audience actually cares about, and where those two things create genuine tension or\nresonance. Website copy, brand stories, pitch decks, long-form essays — whatever the format, the\nstandard holds. It has to say something. And it has to sound alive.",
-      deliverables: ["Website copywriting", "Brand storytelling", "Pitch decks", "Email sequences", "Campaign messaging"]
+      deliverables: ["Website copywriting", "Brand storytelling", "Pitch decks", "Campaign messaging"]
     },
     {
       title: "Digital Marketing",
       tagline: "Your work, in front of the right people. With intention.",
       copy: "Reach is a result of clarity. When a brand knows exactly what it stands for and who it is speaking to, getting\nseen becomes a strategy — and strategy compounds. We plan digital marketing from the brand outward.\nThe channels, campaigns, and content we build are anchored in something real. The kind of marketing\nthat builds trust gradually, earns attention honestly, and produces results that hold up quarter after\nquarter.",
-      deliverables: ["Paid media strategy", "SEO & content marketing", "Performance campaigns", "Analytics & reporting", "Funnel design"]
+      deliverables: ["Paid media strategy", "SEO & content marketing", "Performance campaigns", "Analytics"]
     },
     {
       title: "Social & Community",
       tagline: "Showing up with intent — because you actually have something to say.",
       copy: "Consistency on social media is easy when you know exactly what you believe. The brands that build real\ncommunities online are the ones willing to have a genuine point of view — and say it out loud, repeatedly,\nwithout flinching. We help you build that kind of presence. Rooted in your values. Tuned to your audience.\nSharp enough to cut through the scroll. Fewer posts. More meaning. The kind of community that grows\nbecause people actually want to be part of it.",
-      deliverables: ["Content strategy", "Community building", "Platform-specific content", "Engagement frameworks", "Monthly content planning"]
+      deliverables: ["Content strategy", "Platform-specific content", "Monthly content planning"]
     },
     {
       title: "Personal Branding & LinkedIn",
       tagline: "The founder is the brand. Time to act like it.",
       copy: "People trust people before they trust companies. A founder with a clear, consistent voice on LinkedIn\nbuilds authority that advertising cannot buy — and a pipeline that compounds over time. We work directly\nwith founders and senior professionals to surface their real perspective, shape it into a personal brand\nwith edges and depth, and show up on LinkedIn in a way that earns genuine respect. Well-crafted\nthinking, in your voice, about things you actually care about. The presence that makes the right people\nreach out first.",
-      deliverables: ["LinkedIn profile audit & rewrite", "Personal brand positioning", "Content strategy & voice guide", "Monthly post creation", "Thought leadership content", "LinkedIn page management", "Analytics & growth tracking"]
+      deliverables: ["LinkedIn profile audit & rewrite", "Personal brand positioning", "Content strategy & voice guide", "LinkedIn page management"]
     },
     {
       title: "OOH Advertising",
       tagline: "Your brand, at the scale of the city.",
       copy: "A billboard is not a social media post made larger. It is a different discipline entirely — one that rewards\nsimplicity, demands confidence, and punishes hesitation. Out-of-home advertising works when the idea\nis strong enough to land in three seconds on a moving highway or a crowded street corner. We plan and\ncreate OOH campaigns from the idea inward — finding the one line, the one image, the one moment of\nclarity that earns a second look. Placed with precision. Designed to be remembered.",
-      deliverables: ["Campaign concept & creative", "Copywriting & art direction", "Media planning & placement", "Format adaptation (billboards, transit, retail)", "Production coordination"]
+      deliverables: ["Campaign concept & creative", "Copywriting & art direction", "Format adaptation (billboards, transit, retail)"]
     }
   ];
 
@@ -101,18 +101,7 @@ export default function Services() {
 
         </div>
 
-        {/* water.svg ("g" watermark) absolutely positioned and slightly lower down (Visible on all devices) */}
-        <div className="services-watermark-container absolute right-[-8%] max-[768px]:right-auto max-[768px]:left-1/2 max-[768px]:-translate-x-1/2 bottom-[-60px] max-[768px]:bottom-[0px] md:right-[-1%] lg:right-[-1%] xl:right-[-3%] 2xl:right-[4%] md:bottom-[-50px] lg:bottom-[-70px] xl:bottom-[-90px] 2xl:bottom-[-120px] [@media(display-mode:fullscreen)]:md:right-[-10%] [@media(display-mode:fullscreen)]:lg:right-[-10%] [@media(display-mode:fullscreen)]:xl:right-[-12%] md:top-auto md:translate-y-0 pointer-events-none select-none z-10 transition-all duration-700 ease-out">
-          <Reveal delay={0.15}>
-            <div className="w-[290px] md:w-[350px] lg:w-[420px] xl:w-[540px] 2xl:w-[760px] [@media(display-mode:fullscreen)]:md:w-[480px] [@media(display-mode:fullscreen)]:lg:w-[590px] [@media(display-mode:fullscreen)]:xl:w-[760px] transition-all duration-700 ease-out aspect-square relative">
-              <img
-                src="/assets/img/water.svg"
-                alt="Water ripples vector illustration"
-                className="w-full h-full object-contain opacity-80 md:mix-blend-multiply md:drop-shadow-[-12px_16px_24px_rgba(0,0,0,0.38)] max-[768px]:opacity-100 max-[768px]:mix-blend-normal max-[768px]:drop-shadow-[0_8px_16px_rgba(0,0,0,0.5)]"
-              />
-            </div>
-          </Reveal>
-        </div>
+
 
         {/* Bottom Solid Black Transition Bar (Desktop only) */}
         <div className="services-bottom-black-bar hidden md:block absolute bottom-[-20px] md:bottom-[-30px] lg:bottom-[-40px] xl:bottom-[-50px] 2xl:bottom-[-60px] left-0 w-full h-[40px] lg:h-[55px] xl:h-[90px] [@media(display-mode:fullscreen)]:h-[80px] [@media(display-mode:fullscreen)]:lg:h-[120px] [@media(display-mode:fullscreen)]:xl:h-[180px] transition-all duration-700 ease-out bg-black z-30" />      </section>
@@ -152,12 +141,12 @@ export default function Services() {
                       onClick={() => setOpenIndex(isOpen ? null : idx)}
                     >
                       <div
-                        className="absolute w-[2px] bg-gradient-to-b from-[#d9d9d9] via-[#d9d9d9]/70 to-transparent pointer-events-none z-0 hidden md:block top-[30px] md:top-[45px]"
+                        className="absolute w-[2px] bg-gradient-to-b from-[#6a6a6a] via-[#6a6a6a]/70 to-transparent pointer-events-none z-0 hidden md:block top-[30px] md:top-[45px]"
                         style={{ left: `${offset + 8}px`, bottom: `-${(services.length - 1 - idx) * 110 + 420}px` }}
                       />
 
                       <div
-                        className="flex items-start py-3 md:py-4 transition-all duration-300 group-hover:translate-x-1 relative z-10 md:[padding-left:var(--padding-left)]"
+                        className="flex items-start py-3 md:py-4 relative z-10 md:[padding-left:var(--padding-left)]"
                         style={{ '--padding-left': `${offset}px` } as React.CSSProperties}
                       >
                         <div className="relative shrink-0 mr-3 md:mr-4 z-0">
@@ -166,7 +155,7 @@ export default function Services() {
                           </span>
                         </div>
 
-                        <div className="pt-2 relative z-20">
+                        <div className="pt-2 relative z-20 transition-all duration-300 ease-out group-hover:translate-x-2.5">
                           <h3 className="text-card-title mb-2 group-hover:text-[#4B3FD4] transition-colors duration-300">{service.title}</h3>
                           <p className="text-main-desc text-[#d9d9d9] max-w-none transition-colors">{service.tagline}</p>
 
@@ -177,49 +166,13 @@ export default function Services() {
                               </p>
 
                               <div className="pt-6 border-t border-white/5">
-                                {service.title === 'Personal Branding & LinkedIn' ? (
-                                  <div className="flex flex-col gap-3">
-                                    <div className="flex flex-wrap gap-3">
-                                      {service.deliverables.slice(0, 5).map(d => (
-                                        <div key={d} className="flex items-center gap-3 px-5 py-2.5 bg-white/[0.02] border border-white/10 rounded-none text-nav-label text-white/70 hover:text-white hover:border-[#4B3FD4]/40 hover:bg-white/[0.04] transition-all duration-300 select-none md:whitespace-nowrap">
-                                          {d}
-                                        </div>
-                                      ))}
+                                <div className="flex flex-nowrap gap-3 overflow-x-auto scrollbar-hide pb-1">
+                                  {service.deliverables.map(d => (
+                                    <div key={d} className="flex items-center gap-3 px-5 py-2.5 bg-white/[0.02] border border-white/10 rounded-none text-nav-label text-white/70 hover:text-white hover:border-[#4B3FD4]/40 hover:bg-white/[0.04] transition-all duration-300 select-none whitespace-nowrap">
+                                      {d}
                                     </div>
-                                    <div className="flex flex-wrap gap-3">
-                                      {service.deliverables.slice(5).map(d => (
-                                        <div key={d} className="flex items-center gap-3 px-5 py-2.5 bg-white/[0.02] border border-white/10 rounded-none text-nav-label text-white/70 hover:text-white hover:border-[#4B3FD4]/40 hover:bg-white/[0.04] transition-all duration-300 select-none md:whitespace-nowrap">
-                                          {d}
-                                        </div>
-                                      ))}
-                                    </div>
-                                  </div>
-                                ) : service.title === 'OOH Advertising' ? (
-                                  <div className="flex flex-col gap-3">
-                                    <div className="flex flex-wrap gap-3">
-                                      {service.deliverables.slice(0, 4).map(d => (
-                                        <div key={d} className="flex items-center gap-3 px-5 py-2.5 bg-white/[0.02] border border-white/10 rounded-none text-nav-label text-white/70 hover:text-white hover:border-[#4B3FD4]/40 hover:bg-white/[0.04] transition-all duration-300 select-none md:whitespace-nowrap">
-                                          {d}
-                                        </div>
-                                      ))}
-                                    </div>
-                                    <div className="flex flex-wrap gap-3">
-                                      {service.deliverables.slice(4).map(d => (
-                                        <div key={d} className="flex items-center gap-3 px-5 py-2.5 bg-white/[0.02] border border-white/10 rounded-none text-nav-label text-white/70 hover:text-white hover:border-[#4B3FD4]/40 hover:bg-white/[0.04] transition-all duration-300 select-none md:whitespace-nowrap">
-                                          {d}
-                                        </div>
-                                      ))}
-                                    </div>
-                                  </div>
-                                ) : (
-                                  <div className="flex flex-wrap gap-3">
-                                    {service.deliverables.map(d => (
-                                      <div key={d} className="flex items-center gap-3 px-5 py-2.5 bg-white/[0.02] border border-white/10 rounded-none text-nav-label text-white/70 hover:text-white hover:border-[#4B3FD4]/40 hover:bg-white/[0.04] transition-all duration-300 select-none md:whitespace-nowrap">
-                                        {d}
-                                      </div>
-                                    ))}
-                                  </div>
-                                )}
+                                  ))}
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -234,8 +187,8 @@ export default function Services() {
 
           <div className="mt-20 md:mt-32 relative">
             <Reveal className="flex items-center justify-end gap-12 max-[760px]:flex-col max-[760px]:items-center">
-              <p className="text-right max-[760px]:text-center text-card-title italic text-white leading-[1.5] max-w-[620px]">
-                We don&rsquo;t believe in one-size-fits-all thinking.<br />
+              <p className="text-right max-[760px]:text-center text-card-title italic text-white leading-[1.5] max-w-[720px]">
+                <span className="md:whitespace-nowrap">We don&rsquo;t believe in one-size-fits-all thinking.</span><br />
                 If you&rsquo;re ready to stop being an echo and<br />
                 start being original, let&rsquo;s talk.
               </p>

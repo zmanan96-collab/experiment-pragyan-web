@@ -564,7 +564,7 @@ export default function Home() {
                         }
                       ].map((card, i) => (
                         <Reveal key={i} delay={i * 0.1} className="methodology-card-scroll">
-                          <div className="bg-[#0b0b0f] border border-white/10 rounded-[12px] overflow-hidden transition-all duration-500 hover:border-[#4b3fd4]/45 hover:shadow-[0_20px_40px_rgba(75,63,212,0.15)] h-full flex flex-col cursor-pointer relative p-4 pb-5 group">
+                          <div className="bg-[#0b0b0f] border border-white/10 rounded-[12px] overflow-hidden transition-all duration-500 hover:border-white/60 hover:shadow-[0_20px_40px_rgba(255,255,255,0.07)] h-full flex flex-col cursor-pointer relative p-4 pb-5 group">
 
                             {/* Top Illustration Area */}
                             <div className="w-full aspect-[4/3] rounded-[8px] overflow-hidden border border-white/5 bg-[#050505] relative mb-5 flex items-center justify-center pointer-events-none">
@@ -576,7 +576,7 @@ export default function Home() {
 
                             {/* Bottom Text Area */}
                             <div className="px-1 flex flex-col text-left flex-grow">
-                              <h3 className="text-card-title text-white mb-1 transition-colors duration-300 group-hover:text-[#4b3fd4]">
+                              <h3 className="text-card-title text-white mb-1 transition-colors duration-300 group-hover:text-white">
                                 {card.title}
                               </h3>
                               <p className="text-small-desc text-[#A1A1AA] font-light leading-relaxed">
@@ -673,9 +673,9 @@ export default function Home() {
                           <Link
                             key={idx}
                             href="/work"
-                            className="w-[80vw] md:w-[32vw] lg:w-[28vw] shrink-0 snap-center md:snap-align-none rounded-[20px] overflow-hidden aspect-[4/3] md:aspect-[16/11] relative bg-[#121212] hover:bg-[#1a1a1a] transition-all duration-500 flex flex-col items-center justify-center border border-white/5 group cursor-pointer"
+                            className="w-[80vw] md:w-[32vw] lg:w-[28vw] shrink-0 snap-center md:snap-align-none rounded-[20px] overflow-hidden aspect-[4/3] md:aspect-[16/11] relative bg-[#121212] hover:bg-white hover:border-white transition-all duration-500 flex flex-col items-center justify-center border border-white/5 group cursor-pointer"
                           >
-                            <span className="text-[16px] md:text-[20px] text-white font-bold tracking-[0.2em] uppercase transition-all duration-500 group-hover:scale-105 flex items-center gap-3 group-hover:text-[#4b3fd4]">
+                            <span className="text-[16px] md:text-[20px] text-white font-bold tracking-[0.2em] uppercase transition-all duration-500 group-hover:scale-105 flex items-center gap-3 group-hover:text-black">
                               View All Projects
                               <svg className="w-5 h-5 transition-transform duration-500 group-hover:translate-x-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                                 <line x1="5" y1="12" x2="19" y2="12" />

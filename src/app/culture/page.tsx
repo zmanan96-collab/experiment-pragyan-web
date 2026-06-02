@@ -10,7 +10,7 @@ export default function Culture() {
       {/* Hero Section - matches reference image */}
       <section className="bg-white text-black pt-[clamp(160px,18vw,220px)] pb-[clamp(80px,12vw,140px)] md:py-0 md:min-h-screen md:flex md:flex-col md:justify-center relative overflow-x-hidden" aria-labelledby="culture-h">
         <div className="wrap">
-          <div className="max-w-[1000px] max-[880px]:text-center max-[880px]:mx-auto flex flex-col items-start max-[880px]:items-center md:translate-x-0">
+          <div className="max-w-[1000px] max-[880px]:text-center max-[880px]:mx-auto flex flex-col items-start max-[880px]:items-center md:-translate-x-[4vw] lg:-translate-x-[5vw] transition-transform duration-500">
             <Reveal>
               <span className="text-nav-label tracking-[0.22em] uppercase text-[#6a6a6a] block mb-6 md:mb-4">Careers</span>
               <h1 id="culture-h" className="text-hero text-black mb-10 md:mb-6">
@@ -28,7 +28,7 @@ export default function Culture() {
               </div>
             </Reveal>
             <Reveal delay={0.2} className="relative z-10">
-              <Button href="/inquiry" className="min-w-[245px] md:min-w-[200px] justify-center text-nav-label tracking-[0.2em] !py-[15px] md:!py-[12px] uppercase">
+              <Button href="/inquiry" variant="on-white" className="min-w-[245px] md:min-w-[200px] justify-center text-nav-label tracking-[0.2em] !py-[15px] md:!py-[12px] uppercase">
                 JOIN THE TEAM
               </Button>
             </Reveal>
@@ -149,100 +149,48 @@ export default function Culture() {
         <div className="wrap">
           <div className="text-center mb-16 md:mb-8">
             <Reveal>
-              <span className="text-nav-label tracking-[0.22em] uppercase text-[#FFD111] block">Life at Pragyan</span>
+              <span className="text-nav-label tracking-[0.22em] uppercase text-[#6a6a6a] block">Life at Pragyan</span>
             </Reveal>
           </div>
 
           <Reveal>
-            <div className="grid grid-cols-2 max-w-[1000px] mx-auto overflow-hidden max-[768px]:grid-cols-1">
+            <div className="grid grid-cols-2 gap-6 max-w-[1000px] mx-auto max-[768px]:grid-cols-1">
 
-              <div className="p-10 md:p-8 lg:p-10 min-h-[240px] md:min-h-[230px] relative group overflow-hidden transition-all duration-500 ease-out cursor-default bg-black">
-                {/* Background Image */}
-                <div className="absolute inset-0 z-0">
-                  <img
-                    src="/assets/img/a.jpeg"
-                    alt=""
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1454165833767-027ff33027ef?auto=format&fit=crop&q=80&w=800';
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-[#261e7d]/65 group-hover:bg-[#261e7d]/45 transition-colors duration-500" />
-                </div>
-                {/* Scanline pattern overlay */}
-                <div className="absolute inset-0 opacity-[0.15] pointer-events-none bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,rgba(255,255,255,0.3)_2px,rgba(255,255,255,0.3)_3px)] group-hover:opacity-[0.35] transition-opacity duration-500 z-[1]" />
-                <div className="relative z-[2]">
-                  <h4 className="text-card-title tracking-[0.1em] uppercase mb-5 md:mb-3 text-white group-hover:!text-[#FFD111] transition-colors duration-500">Market-Aligned Salary</h4>
-                  <p className="text-small-desc text-[#fefefe] max-w-[380px] transition-colors duration-500">
+              {/* Card 1 */}
+              <div className="p-10 md:p-8 lg:p-10 min-h-[240px] md:min-h-[230px] rounded-[12px] border border-white/10 relative group transition-all duration-500 ease-out cursor-default bg-[#121212] hover:bg-white hover:border-white hover:shadow-[0_20px_40px_rgba(255,255,255,0.06)] flex flex-col justify-center">
+                <div className="relative z-10">
+                  <h4 className="text-card-title tracking-[0.1em] uppercase mb-5 md:mb-3 text-white group-hover:text-black transition-colors duration-500">Market-Aligned Salary</h4>
+                  <p className="text-small-desc text-[#A1A1AA] max-w-[380px] group-hover:text-[#27272A] transition-colors duration-500">
                     Compensation built around your <br className="hidden md:block" />role, your responsibilities, and the <br className="hidden md:block" />impact you create. Fair, transparent, <br className="hidden md:block" />and built to grow with you.
                   </p>
                 </div>
               </div>
 
-              <div className="p-10 md:p-8 lg:p-10 min-h-[240px] md:min-h-[230px] relative group overflow-hidden transition-all duration-500 ease-out cursor-default bg-black">
-                {/* Background Image */}
-                <div className="absolute inset-0 z-0">
-                  <img
-                    src="/assets/img/b.jpeg"
-                    alt=""
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&q=80&w=800';
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-[#261e7d]/65 group-hover:bg-[#261e7d]/45 transition-colors duration-500" />
-                </div>
-                {/* Scanline pattern overlay */}
-                <div className="absolute inset-0 opacity-[0.15] pointer-events-none bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,rgba(255,255,255,0.3)_2px,rgba(255,255,255,0.3)_3px)] group-hover:opacity-[0.35] transition-opacity duration-500 z-[1]" />
-                <div className="relative z-[2]">
-                  <h4 className="text-card-title tracking-[0.1em] uppercase mb-5 md:mb-3 text-white group-hover:!text-[#FFD111] transition-colors duration-500">The Festive Reset</h4>
-                  <p className="text-small-desc text-[#fefefe] max-w-[380px] transition-colors duration-500">
+              {/* Card 2 */}
+              <div className="p-10 md:p-8 lg:p-10 min-h-[240px] md:min-h-[230px] rounded-[12px] border border-white/10 relative group transition-all duration-500 ease-out cursor-default bg-[#121212] hover:bg-white hover:border-white hover:shadow-[0_20px_40px_rgba(255,255,255,0.06)] flex flex-col justify-center">
+                <div className="relative z-10">
+                  <h4 className="text-card-title tracking-[0.1em] uppercase mb-5 md:mb-3 text-white group-hover:text-black transition-colors duration-500">The Festive Reset</h4>
+                  <p className="text-small-desc text-[#A1A1AA] max-w-[380px] group-hover:text-[#27272A] transition-colors duration-500">
                     Dedicated days off during the <br className="hidden md:block" />festive season to rest, <br className="hidden md:block" />reconnect, and come back <br className="hidden md:block" />with renewed perspective.
                   </p>
                 </div>
               </div>
 
-              <div className="p-10 md:p-8 lg:p-10 min-h-[240px] md:min-h-[230px] relative group overflow-hidden transition-all duration-500 ease-out cursor-default bg-black">
-                {/* Background Image */}
-                <div className="absolute inset-0 z-0">
-                  <img
-                    src="/assets/img/c.jpeg"
-                    alt=""
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1508962914676-134849a727f0?auto=format&fit=crop&q=80&w=800';
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-[#261e7d]/65 group-hover:bg-[#261e7d]/45 transition-colors duration-500" />
-                </div>
-                {/* Scanline pattern overlay */}
-                <div className="absolute inset-0 opacity-[0.15] pointer-events-none bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,rgba(255,255,255,0.3)_2px,rgba(255,255,255,0.3)_3px)] group-hover:opacity-[0.35] transition-opacity duration-500 z-[1]" />
-                <div className="relative z-[2]">
-                  <h4 className="text-card-title tracking-[0.1em] uppercase mb-5 md:mb-3 text-white group-hover:!text-[#FFD111] transition-colors duration-500">Time-Back Policy</h4>
-                  <p className="text-small-desc text-[#fefefe] max-w-[380px] transition-colors duration-500">
+              {/* Card 3 */}
+              <div className="p-10 md:p-8 lg:p-10 min-h-[240px] md:min-h-[230px] rounded-[12px] border border-white/10 relative group transition-all duration-500 ease-out cursor-default bg-[#121212] hover:bg-white hover:border-white hover:shadow-[0_20px_40px_rgba(255,255,255,0.06)] flex flex-col justify-center">
+                <div className="relative z-10">
+                  <h4 className="text-card-title tracking-[0.1em] uppercase mb-5 md:mb-3 text-white group-hover:text-black transition-colors duration-500">Time-Back Policy</h4>
+                  <p className="text-small-desc text-[#A1A1AA] max-w-[380px] group-hover:text-[#27272A] transition-colors duration-500">
                     Go beyond when the work <br className="hidden md:block" />demands it — and we make sure <br className="hidden md:block" />you&apos;re fairly compensated for it. <br className="hidden md:block" />Your time is yours.
                   </p>
                 </div>
               </div>
 
-              <div className="p-10 md:p-8 lg:p-10 min-h-[240px] md:min-h-[230px] relative group overflow-hidden transition-all duration-500 ease-out cursor-default bg-black">
-                {/* Background Image */}
-                <div className="absolute inset-0 z-0">
-                  <img
-                    src="/assets/img/d.jpeg"
-                    alt=""
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800';
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-[#261e7d]/65 group-hover:bg-[#261e7d]/45 transition-colors duration-500" />
-                </div>
-                {/* Scanline pattern overlay */}
-                <div className="absolute inset-0 opacity-[0.15] pointer-events-none bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,rgba(255,255,255,0.3)_2px,rgba(255,255,255,0.3)_3px)] group-hover:opacity-[0.35] transition-opacity duration-500 z-[1]" />
-                <div className="relative z-[2]">
-                  <h4 className="text-card-title tracking-[0.1em] uppercase mb-5 md:mb-3 text-white group-hover:!text-[#FFD111] transition-colors duration-500">Paid Vacation</h4>
-                  <p className="text-small-desc text-[#fefefe] max-w-[380px] transition-colors duration-500">
+              {/* Card 4 */}
+              <div className="p-10 md:p-8 lg:p-10 min-h-[240px] md:min-h-[230px] rounded-[12px] border border-white/10 relative group transition-all duration-500 ease-out cursor-default bg-[#121212] hover:bg-white hover:border-white hover:shadow-[0_20px_40px_rgba(255,255,255,0.06)] flex flex-col justify-center">
+                <div className="relative z-10">
+                  <h4 className="text-card-title tracking-[0.1em] uppercase mb-5 md:mb-3 text-white group-hover:text-black transition-colors duration-500">Paid Vacation</h4>
+                  <p className="text-small-desc text-[#A1A1AA] max-w-[380px] group-hover:text-[#27272A] transition-colors duration-500">
                     Fresh thinking comes from real <br className="hidden md:block" />living. Paid time off each year <br className="hidden md:block" />to step away, recharge, and <br className="hidden md:block" />experience life beyond work — <br className="hidden md:block" />whenever you choose.
                   </p>
                 </div>
@@ -272,7 +220,7 @@ export default function Culture() {
             </h2>
 
             <div className="mt-12 md:mt-8 flex justify-center">
-              <Button href="/inquiry" className="!py-[18px] md:!py-[14px] !px-12 md:!px-8 text-nav-label tracking-[0.15em] uppercase">
+              <Button href="/inquiry" variant="on-white" className="!py-[18px] md:!py-[14px] !px-12 md:!px-8 text-nav-label tracking-[0.15em] uppercase">
                 JOIN THE TEAM
               </Button>
             </div>
