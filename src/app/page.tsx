@@ -1,13 +1,108 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState, useRef } from 'react';
+import Link from 'next/link';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Reveal from '../components/Reveal';
 import Button from '../components/Button';
 import HomeSmoothScroll from '../components/HomeSmoothScroll';
 
+const projects = [
+  {
+    title: "Vogue Italia",
+    tags: ["ILLUSTRATION", "MARKETING DESIGN"],
+    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    title: "Nowness Asia",
+    tags: ["BRANDING", "DIGITAL EXPERIENCE"],
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    title: "Kinfolk Studio",
+    tags: ["STRATEGY", "EDITORIAL"],
+    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    title: "Cereal Magazine",
+    tags: ["ART DIRECTION", "CONTENT"],
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    title: "Minimalissimo",
+    tags: ["IDENTITY", "PACKAGING"],
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    title: "Apartamento",
+    tags: ["PHOTOGRAPHY", "CREATIVE"],
+    image: "https://images.unsplash.com/photo-1542241647-9cbb2225278b?auto=format&fit=crop&q=80&w=800"
+  }
+];
+
 export default function Home() {
+  const [mounted, setMounted] = useState(false);
+  const [activeSlide, setActiveSlide] = useState(0);
+  const sliderRef = useRef<HTMLDivElement>(null);
+
+  const handleScroll = () => {
+    if (!sliderRef.current) return;
+    const container = sliderRef.current;
+    const children = container.children;
+    if (children.length === 0) return;
+
+    let closestIndex = 0;
+    let closestDistance = Infinity;
+    const containerCenter = container.getBoundingClientRect().left + container.clientWidth / 2;
+
+    for (let i = 0; i < children.length; i++) {
+      const child = children[i] as HTMLElement;
+      const rect = child.getBoundingClientRect();
+      const childCenter = rect.left + rect.width / 2;
+      const distance = Math.abs(childCenter - containerCenter);
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestIndex = i;
+      }
+    }
+    setActiveSlide(closestIndex);
+  };
+
+  const scrollToSlide = (index: number) => {
+    if (typeof window !== 'undefined' && window.innerWidth >= 768) {
+      const trigger = ScrollTrigger.getById('deck-trigger');
+      if (trigger) {
+        const start = trigger.start;
+        const end = trigger.end;
+        const totalHeight = end - start;
+        const horizontalProgress = index / (projects.length - 1);
+        const timelineProgress = (3.0 + horizontalProgress * 1.5) / 4.5;
+        const targetScroll = start + timelineProgress * totalHeight;
+        window.scrollTo({
+          top: targetScroll,
+          behavior: 'smooth'
+        });
+      }
+    } else {
+      if (!sliderRef.current) return;
+      const container = sliderRef.current;
+      const children = container.children;
+      if (children[index]) {
+        children[index].scrollIntoView({
+          behavior: 'smooth',
+          block: 'nearest',
+          inline: 'center'
+        });
+        setActiveSlide(index);
+      }
+    }
+  };
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
@@ -27,12 +122,27 @@ export default function Home() {
       // Create a master pinned timeline for the deck container
       const tl = gsap.timeline({
         scrollTrigger: {
+          id: 'deck-trigger',
           trigger: '#deck-container',
           start: 'top top',
-          end: '+=300%', // Scroll for 3 full screen heights to stack all sections
+          end: '+=450%', // Scroll for 4.5 full screen heights to stack sections and horizontal scroll projects
           pin: true,
           pinSpacing: true,
           scrub: 1.2, // Beautiful smooth inertia lag/delay matching Interract
+          onUpdate: (self) => {
+            // Mapping timeline progress to active slide index during horizontal scroll portion (time 3.0 to 4.5)
+            const time = self.progress * 4.5;
+            if (time < 3.0) {
+              setActiveSlide(0);
+            } else if (time >= 3.0 && time <= 4.5) {
+              const horizontalProgress = (time - 3.0) / 1.5;
+              const index = Math.min(
+                projects.length - 1,
+                Math.max(0, Math.round(horizontalProgress * (projects.length - 1)))
+              );
+              setActiveSlide(index);
+            }
+          }
         }
       });
 
@@ -75,6 +185,18 @@ export default function Home() {
         { yPercent: 0, ease: 'none' },
         2
       );
+
+      // ── TRANSITION 4: Horizontal scroll of projects-track ──
+      // Driven by vertical scroll from time 3 to 4.5
+      tl.to('#projects-track', {
+        x: () => {
+          const track = document.getElementById('projects-track');
+          if (!track) return 0;
+          const trackWidth = track.offsetWidth || track.scrollWidth;
+          return -(trackWidth - window.innerWidth);
+        },
+        ease: 'none'
+      }, 3);
     });
 
     // ── MOBILE TRANSITIONS (< 768px) ──
@@ -248,7 +370,7 @@ export default function Home() {
                   <div className="flex flex-col items-start gap-6 md:gap-7 lg:gap-8 max-w-[1000px] md:px-[4vw] lg:px-[6vw] xl:px-[8vw] w-full">
 
                     <Reveal>
-                      <h1 id="hero-h" className="text-[clamp(32px,6.8vw,96px)] md:text-[clamp(42px,4.5vw,90px)] lg:text-[62px] xl:text-[76px] 2xl:text-[clamp(42px,4.5vw,90px)] leading-[1.08] font-sans !font-light text-[#fcfcfc] tracking-[-0.03em]">
+                      <h1 id="hero-h" className="text-hero text-[#fcfcfc]">
                         <span className="whitespace-nowrap block">Behind every meaningful</span>
                         <span className="whitespace-nowrap block">
                           brand is a <span className="bg-gradient-to-r from-[#1E1F65] via-[#4E54D4] to-[#7678ED] bg-clip-text text-transparent inline-block animate-gradient-flow">perspective.</span>
@@ -258,10 +380,10 @@ export default function Home() {
 
                     <Reveal delay={0.12}>
                       <div className="flex flex-col gap-0.5 md:gap-1">
-                        <p className="text-[clamp(17px,1.3vw,25px)] md:text-[clamp(19px,1.1vw,23px)] xl:text-[22px] 2xl:text-[clamp(20px,1.15vw,24px)] leading-[1.65] font-sans font-light text-[#C9C9CE] tracking-[-0.01em] whitespace-nowrap">
+                        <p className="text-main-desc text-[#C9C9CE] whitespace-nowrap">
                           A founder&apos;s conviction.
                         </p>
-                        <p className="text-[clamp(17px,1.3vw,25px)] md:text-[clamp(19px,1.1vw,23px)] xl:text-[22px] 2xl:text-[clamp(20px,1.15vw,24px)] leading-[1.65] font-sans font-light text-[#C9C9CE] tracking-[-0.01em] whitespace-nowrap">
+                        <p className="text-main-desc text-[#C9C9CE] whitespace-nowrap">
                           A point of view worth building around.
                         </p>
                       </div>
@@ -269,10 +391,10 @@ export default function Home() {
 
                     <Reveal delay={0.24}>
                       <div className="flex flex-col gap-4 max-w-[800px]">
-                        <p className="text-[clamp(17px,1.3vw,25px)] md:text-[clamp(19px,1.1vw,23px)] xl:text-[22px] 2xl:text-[clamp(20px,1.15vw,24px)] leading-[1.65] text-[#C9C9CE] font-sans font-light">
+                        <p className="text-main-desc text-[#C9C9CE]">
                           <span className="sm:whitespace-nowrap">At Pragyan, we transform that conviction into strategy, identity,</span><br className="hidden sm:inline" /> communication, and growth.
                         </p>
-                        <p className="text-[clamp(17px,1.3vw,25px)] md:text-[clamp(19px,1.1vw,23px)] xl:text-[22px] 2xl:text-[clamp(20px,1.15vw,24px)] leading-[1.65] text-[#C9C9CE] font-sans font-light">
+                        <p className="text-main-desc text-[#C9C9CE]">
                           <span className="sm:whitespace-nowrap">We partner with founders and teams to shape ideas into brands,</span><br className="hidden sm:inline" /> stories, and experiences that build connection, trust, and lasting impact.
                         </p>
                       </div>
@@ -281,7 +403,7 @@ export default function Home() {
                     <Reveal delay={0.36} className="mt-2">
                       <Button
                         href="/services"
-                        className="!bg-transparent !border !border-white/10 hover:!border-white !text-white/40 hover:!text-white font-space text-[17px] md:text-[18px] px-8 py-4 tracking-[0.15em] !font-light uppercase rounded-none transition-all duration-300 w-fit inline-flex items-center justify-center whitespace-nowrap"
+                        className="uppercase w-fit inline-flex items-center justify-center whitespace-nowrap"
                       >
                         VIEW SERVICES
                       </Button>
@@ -299,18 +421,18 @@ export default function Home() {
               >
                 <div className="wrap w-full manifesto-wrap">
                   <Reveal className="max-w-[1300px] mx-auto text-center">
-                    <span className="font-space text-[clamp(12px,0.85vw,16px)] font-light tracking-[0.22em] uppercase !text-[#a6a6a6] inline-block mb-4 md:mb-[clamp(10px,2vh,20px)]" id="man-h">
+                    <span className="text-nav-label tracking-[0.22em] !text-[#a6a6a6] inline-block mb-4 md:mb-[clamp(10px,2vh,20px)]" id="man-h">
                       Core Philosophy
                     </span>
                     <div className="relative max-w-[1300px] mx-auto text-center flex flex-col items-center gap-1.5 md:gap-2">
 
                       {/* Line 1 */}
                       <div className="relative block w-full max-w-[90vw] md:w-fit select-none pointer-events-none">
-                        <span className="block text-[clamp(17px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] whitespace-normal md:whitespace-nowrap text-center">
+                        <span className="block text-main-desc text-[#4A4A4D] whitespace-normal md:whitespace-nowrap text-center">
                           From emerging ventures to growing businesses, we help meaningful
                         </span>
                         <span
-                          className="text-sweep-line-1 absolute top-0 left-0 right-0 block text-[clamp(17px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] w-full h-full pointer-events-none select-none whitespace-normal md:whitespace-nowrap overflow-hidden text-center"
+                          className="text-sweep-line-1 absolute top-0 left-0 right-0 block text-main-desc text-[#E3E3E3] w-full h-full pointer-events-none select-none whitespace-normal md:whitespace-nowrap overflow-hidden text-center"
                           style={{ clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' }}
                         >
                           From emerging ventures to growing businesses, we help meaningful
@@ -319,11 +441,11 @@ export default function Home() {
 
                       {/* Line 2 */}
                       <div className="relative block w-full max-w-[90vw] md:w-fit select-none pointer-events-none">
-                        <span className="block text-[clamp(17px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] whitespace-normal md:whitespace-nowrap text-center">
+                        <span className="block text-main-desc text-[#4A4A4D] whitespace-normal md:whitespace-nowrap text-center">
                           ideas find their voice, earn attention, and create lasting impact.
                         </span>
                         <span
-                          className="text-sweep-line-2 absolute top-0 left-0 right-0 block text-[clamp(17px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] w-full h-full pointer-events-none select-none whitespace-normal md:whitespace-nowrap overflow-hidden text-center"
+                          className="text-sweep-line-2 absolute top-0 left-0 right-0 block text-main-desc text-[#E3E3E3] w-full h-full pointer-events-none select-none whitespace-normal md:whitespace-nowrap overflow-hidden text-center"
                           style={{ clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' }}
                         >
                           ideas find their voice, earn attention, and create lasting impact.
@@ -335,11 +457,11 @@ export default function Home() {
 
                       {/* Line 3 */}
                       <div className="relative block w-full max-w-[90vw] md:w-fit select-none pointer-events-none">
-                        <span className="block text-[clamp(17px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] whitespace-normal md:whitespace-nowrap text-center">
+                        <span className="block text-main-desc text-[#4A4A4D] whitespace-normal md:whitespace-nowrap text-center">
                           We&apos;re a young team of strategists and creators who believe the
                         </span>
                         <span
-                          className="text-sweep-line-3 absolute top-0 left-0 right-0 block text-[clamp(17px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] w-full h-full pointer-events-none select-none whitespace-normal md:whitespace-nowrap overflow-hidden text-center"
+                          className="text-sweep-line-3 absolute top-0 left-0 right-0 block text-main-desc text-[#E3E3E3] w-full h-full pointer-events-none select-none whitespace-normal md:whitespace-nowrap overflow-hidden text-center"
                           style={{ clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' }}
                         >
                           We&apos;re a young team of strategists and creators who believe the
@@ -348,11 +470,11 @@ export default function Home() {
 
                       {/* Line 4 */}
                       <div className="relative block w-full max-w-[90vw] md:w-fit select-none pointer-events-none">
-                        <span className="block text-[clamp(17px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] whitespace-normal md:whitespace-nowrap text-center">
+                        <span className="block text-main-desc text-[#4A4A4D] whitespace-normal md:whitespace-nowrap text-center">
                           best brands are built from human insight.
                         </span>
                         <span
-                          className="text-sweep-line-4 absolute top-0 left-0 right-0 block text-[clamp(17px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] w-full h-full pointer-events-none select-none whitespace-normal md:whitespace-nowrap overflow-hidden text-center"
+                          className="text-sweep-line-4 absolute top-0 left-0 right-0 block text-main-desc text-[#E3E3E3] w-full h-full pointer-events-none select-none whitespace-normal md:whitespace-nowrap overflow-hidden text-center"
                           style={{ clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' }}
                         >
                           best brands are built from human insight.
@@ -364,11 +486,11 @@ export default function Home() {
 
                       {/* Line 5 */}
                       <div className="relative block w-full max-w-[90vw] md:w-fit select-none pointer-events-none">
-                        <span className="block text-[clamp(17px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] font-medium whitespace-normal md:whitespace-nowrap text-center">
+                        <span className="block text-main-desc text-[#4A4A4D] whitespace-normal md:whitespace-nowrap text-center">
                           We value curiosity, intellectual honesty, and long-term thinking.
                         </span>
                         <span
-                          className="text-sweep-line-5 absolute top-0 left-0 right-0 block text-[clamp(17px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] bg-gradient-to-r from-[#1E1F65] via-[#4B3FD4] to-[#7678ED] bg-clip-text text-transparent animate-gradient-flow font-sans tracking-[-0.01em] font-medium w-full h-full pointer-events-none select-none whitespace-normal md:whitespace-nowrap overflow-hidden text-center"
+                          className="text-sweep-line-5 absolute top-0 left-0 right-0 block text-main-desc font-medium bg-gradient-to-r from-[#1E1F65] via-[#4B3FD4] to-[#7678ED] bg-clip-text text-transparent animate-gradient-flow w-full h-full pointer-events-none select-none whitespace-normal md:whitespace-nowrap overflow-hidden text-center"
                           style={{ clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' }}
                         >
                           We value curiosity, intellectual honesty, and long-term thinking.
@@ -377,11 +499,11 @@ export default function Home() {
 
                       {/* Line 6 */}
                       <div className="relative block w-full max-w-[90vw] md:w-fit select-none pointer-events-none">
-                        <span className="block text-[clamp(17px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#4A4A4D] font-sans tracking-[-0.01em] whitespace-normal md:whitespace-nowrap text-center">
+                        <span className="block text-main-desc text-[#4A4A4D] whitespace-normal md:whitespace-nowrap text-center">
                           We aren&apos;t for everyone &mdash; and we&apos;re okay with that.
                         </span>
                         <span
-                          className="text-sweep-line-6 absolute top-0 left-0 right-0 block text-[clamp(17px,1.6vw,28px)] md:text-[18px] xl:text-[21px] 2xl:text-[clamp(22px,1.4vw,28px)] leading-[1.5] md:leading-[1.4] text-[#E3E3E3] font-sans tracking-[-0.01em] w-full h-full pointer-events-none select-none whitespace-normal md:whitespace-nowrap overflow-hidden text-center"
+                          className="text-sweep-line-6 absolute top-0 left-0 right-0 block text-main-desc text-[#E3E3E3] w-full h-full pointer-events-none select-none whitespace-normal md:whitespace-nowrap overflow-hidden text-center"
                           style={{ clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' }}
                         >
                           We aren&apos;t for everyone &mdash; and we&apos;re okay with that.
@@ -394,7 +516,7 @@ export default function Home() {
                   {/* Methodology Cards Section */}
                   <div className="methodology-section mt-10 md:mt-[clamp(10px,2vh,50px)] max-w-[1100px] md:max-w-[760px] xl:max-w-[920px] 2xl:max-w-[1100px] mx-auto">
                     <Reveal className="text-center mb-6 md:mb-4 lg:mb-5 xl:mb-6 2xl:mb-8">
-                      <span className="font-space text-[clamp(12px,0.85vw,16px)] font-light tracking-[0.22em] uppercase !text-[#a6a6a6]" style={{ color: '#a6a6a6' }}>Methodology</span>
+                      <span className="text-nav-label tracking-[0.22em] !text-[#a6a6a6]" style={{ color: '#a6a6a6' }}>Methodology</span>
                     </Reveal>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-3 xl:gap-4 2xl:gap-6">
                       {[
@@ -411,9 +533,9 @@ export default function Home() {
                                     return (
                                       <circle
                                         key={`${r}-${c}`}
-                                        cx={`${5 + c * 4.7}%`}
-                                        cy={`${6 + r * 7.5}%`}
-                                        r={radius}
+                                        cx={`${(5 + c * 4.7).toFixed(3)}%`}
+                                        cy={`${(6 + r * 7.5).toFixed(3)}%`}
+                                        r={parseFloat(radius.toFixed(3))}
                                         fill="#ffffff"
                                         className="animate-dot-blink"
                                         style={{ animationDelay: `${(r * 0.15 + c * 0.08).toFixed(2)}s` }}
@@ -440,9 +562,9 @@ export default function Home() {
                                     return (
                                       <circle
                                         key={`${c}-${r}`}
-                                        cx={`${3.5 + c * 3.4}%`}
-                                        cy={`${92 - r * 7.5}%`}
-                                        r={radius}
+                                        cx={`${(3.5 + c * 3.4).toFixed(3)}%`}
+                                        cy={`${(92 - r * 7.5).toFixed(3)}%`}
+                                        r={parseFloat(radius.toFixed(3))}
                                         fill="#3b82f6"
                                         className="animate-dot-blink"
                                         style={{ animationDelay: `${(c * 0.1 + r * 0.05).toFixed(2)}s` }}
@@ -472,9 +594,9 @@ export default function Home() {
                                     return (
                                       <circle
                                         key={`${arm}-${i}`}
-                                        cx={`${cx}%`}
-                                        cy={`${cy}%`}
-                                        r={radius}
+                                        cx={`${cx.toFixed(3)}%`}
+                                        cy={`${cy.toFixed(3)}%`}
+                                        r={parseFloat(radius.toFixed(3))}
                                         fill="#8f85ff"
                                         className="animate-dot-blink"
                                         style={{ animationDelay: `${(arm * 0.5 + i * 0.04).toFixed(2)}s` }}
@@ -489,21 +611,21 @@ export default function Home() {
                       ].map((card, i) => (
                         <Reveal key={i} delay={i * 0.1} className="methodology-card-scroll">
                           <div className="bg-[#0b0b0f] border border-white/10 rounded-[12px] overflow-hidden transition-all duration-500 hover:border-[#4b3fd4]/45 hover:shadow-[0_20px_40px_rgba(75,63,212,0.15)] h-full flex flex-col cursor-pointer relative p-4 pb-5 group">
-                            
+
                             {/* Top Illustration Area */}
                             <div className="w-full aspect-[1.7/1] rounded-[8px] overflow-hidden border border-white/5 bg-[#050505] relative mb-5 flex items-center justify-center pointer-events-none">
-                              {card.illustration}
-                              
+                              {mounted ? card.illustration : <div className="absolute inset-0 bg-[#050505]" />}
+
                               {/* Overlay Gradient for depth */}
                               <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none z-10"></div>
                             </div>
-                            
+
                             {/* Bottom Text Area */}
                             <div className="px-1 flex flex-col text-left flex-grow">
-                              <h3 className="font-space font-medium text-white text-[16px] xl:text-[17px] 2xl:text-[18px] tracking-wide mb-1 transition-colors duration-300 group-hover:text-[#4b3fd4]">
+                              <h3 className="text-card-title text-white mb-1 transition-colors duration-300 group-hover:text-[#4b3fd4]">
                                 {card.title}
                               </h3>
-                              <p className="font-sans text-[13px] xl:text-[13.5px] 2xl:text-[14px] text-[#A1A1AA] font-light leading-relaxed">
+                              <p className="text-small-desc text-[#A1A1AA] font-light leading-relaxed">
                                 {card.desc}
                               </p>
                             </div>
@@ -529,9 +651,9 @@ export default function Home() {
                   <div className="w-full md:w-[90%] lg:w-[85%] md:pl-[4vw] lg:pl-[6vw]">
                     <div className="mb-[clamp(30px,5vh,64px)] md:mb-[clamp(16px,2.5vh,32px)] lg:mb-[clamp(20px,3.5vh,40px)] xl:mb-[clamp(24px,4.5vh,48px)] 2xl:mb-[clamp(32px,5.5vh,64px)] text-left">
                       <Reveal>
-                        <span className="font-space font-light text-[clamp(12px,0.85vw,16px)] tracking-[0.22em] uppercase text-[#a6a6a6] block mb-2 md:mb-0.5">Process Index</span>
-                        <h2 id="process-h" className="mt-4 md:mt-1 text-[#1b1b1b] tracking-[-0.03em] !text-[clamp(32px,3.5vw,56px)] md:!text-[28px] lg:!text-[34px] xl:!text-[42px] 2xl:!text-[clamp(34px,3.5vw,56px)]">
-                          <span className="font-bold">How we</span> <em className="italic font-light">work.</em>
+                        <span className="text-nav-label tracking-[0.22em] uppercase text-[#a6a6a6] block mb-2 md:mb-0.5">Process Index</span>
+                        <h2 id="process-h" className="mt-4 md:mt-1 text-section-heading text-[#1b1b1b]">
+                          <span>How we</span> <em className="italic font-light">work.</em>
                         </h2>
                       </Reveal>
                     </div>
@@ -551,8 +673,8 @@ export default function Home() {
                             <div className="grid grid-cols-[44px_1fr] sm:grid-cols-[52px_300px_1fr] lg:grid-cols-[52px_200px_1fr] xl:grid-cols-[64px_300px_1fr] 2xl:grid-cols-[80px_460px_1fr] gap-x-8 md:gap-x-4 2xl:gap-x-8 items-center text-left py-[clamp(20px,2.5vw,36px)] md:py-[clamp(12px,2vh,24px)] lg:py-[clamp(16px,2.5vh,28px)] xl:py-[clamp(20px,3vh,32px)] 2xl:py-[clamp(24px,3.5vh,36px)] hover:pl-2 transition-all duration-300">
                               <div className="font-space text-[clamp(36px,3.5vw,52px)] md:text-[28px] lg:text-[36px] xl:text-[42px] 2xl:text-[clamp(36px,3.5vw,52px)] text-[#E0E0E0] font-normal leading-none self-start pt-1 sm:pt-0 sm:self-auto">{step.num}</div>
                               <div className="flex flex-col gap-3 sm:contents">
-                                <div className="font-sans text-[clamp(28px,3.5vw,52px)] md:text-[22px] lg:text-[28px] xl:text-[34px] 2xl:text-[clamp(30px,3.5vw,52px)] font-extrabold tracking-[-0.02em] text-black leading-none">{step.title}</div>
-                                <div className="font-sans font-light text-[#6a6a6a] text-[clamp(15px,1.4vw,22px)] md:text-[13px] lg:text-[14px] xl:text-[16px] 2xl:text-[clamp(16px,1.4vw,24px)] leading-[1.6]">{step.desc}</div>
+                                <div className="text-card-title text-black leading-none">{step.title}</div>
+                                <div className="text-small-desc text-[#6a6a6a]">{step.desc}</div>
                               </div>
                             </div>
                             <div className={`absolute bottom-0 left-0 h-px bg-[#d9d9d9] w-full ${step.lineWidth} process-divider-line`} />
@@ -572,74 +694,90 @@ export default function Home() {
               >
                 <div className="wrap w-full px-[var(--pad)]">
                   <Reveal className="mb-[clamp(20px,3vh,48px)] max-w-[820px] text-center md:text-left mx-auto md:mx-0 lg:-translate-y-[15px] xl:-translate-y-[25px] 2xl:translate-y-0">
-                    <span className="font-space text-[clamp(12px,0.85vw,16px)] font-light tracking-[0.22em] uppercase text-[#6A6A6A] mb-3 md:mb-[clamp(8px,1.5vh,16px)] block">Our Projects</span>
-                    <h2 id="breathe-h" className="font-sans font-bold leading-[1.1] tracking-[-0.04em] text-white text-[clamp(28px,2.8vw,48px)] md:text-[clamp(26px,3vw,38px)] xl:text-[clamp(32px,3vw,48px)]">
-                      Great ideas<br />
-                      need room to <em className="italic font-light">breathe.</em>
+                    <span className="text-nav-label tracking-[0.22em] uppercase text-[#6A6A6A] mb-3 md:mb-[clamp(8px,1.5vh,16px)] block">Our Projects</span>
+                    <h2 id="breathe-h" className="text-section-heading text-white">
+                      Work that started with<br />
+                      a point of <em className="italic font-light">view.</em>
                     </h2>
-                    <p className="text-[#a5a5a5] text-[clamp(16px,1.5vw,26px)] md:text-[clamp(13px,1.2vw,16px)] xl:text-[clamp(15px,1.2vw,20px)] font-light leading-[1.6] mt-3 md:mt-[clamp(10px,2vh,24px)] italic max-w-[720px] mx-auto md:mx-0">
-                      We&apos;re fine-tuning this section &mdash;<br />
-                      come back soon to see the work we&apos;re excited to share.
-                    </p>
+
                   </Reveal>
+                </div>
 
-                  {/* Staggered Grid — 6 Columns with premium varying parallax speeds */}
-                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 md:gap-3 xl:gap-4 items-start max-w-[1200px] md:max-w-[min(90%,140vh)] lg:max-w-[min(95%,150vh)] xl:max-w-[min(95%,160vh)] 2xl:max-w-[1200px] mx-auto w-full mt-[100px] md:mt-[150px] lg:mt-[180px]">
-                    {/* 1. Project 1 */}
-                    <div className="space-y-0 pt-0 breathe-grid-col">
-                      <Reveal delay={0.1}>
-                        <div className="rounded-none overflow-hidden aspect-[4/5] bg-ink border border-border transition-all duration-500 hover:scale-[1.03] hover:border-violet group cursor-pointer w-full">
-                          <img src="/assets/img/g1.png" alt="" className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0" />
-                        </div>
-                      </Reveal>
-                    </div>
+                {/* Draggable portfolio carousel section (Full bleed, padded internally) */}
+                <div className="w-full mt-6 md:mt-8 overflow-hidden select-none">
+                  {/* Draggable/scrollable container */}
+                  <div
+                    ref={sliderRef}
+                    id="projects-track"
+                    onScroll={handleScroll}
+                    className="flex w-full md:w-max shrink-0 overflow-x-auto md:overflow-visible scrollbar-hide py-4 gap-6 px-6 md:px-[var(--pad)]"
+                  >
+                    {projects.map((project, idx) => {
+                      const isLast = idx === projects.length - 1;
+                      if (isLast) {
+                        return (
+                          <Link
+                            key={idx}
+                            href="/work"
+                            className="w-[80vw] md:w-[32vw] lg:w-[28vw] shrink-0 snap-center md:snap-align-none rounded-[20px] overflow-hidden aspect-[4/3] md:aspect-[16/11] relative bg-[#121212] hover:bg-[#1a1a1a] transition-all duration-500 flex flex-col items-center justify-center border border-white/5 group cursor-pointer"
+                          >
+                            <span className="text-[16px] md:text-[20px] text-white font-bold tracking-[0.2em] uppercase transition-all duration-500 group-hover:scale-105 flex items-center gap-3 group-hover:text-[#4b3fd4]">
+                              View Work
+                              <svg className="w-5 h-5 transition-transform duration-500 group-hover:translate-x-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                                <polyline points="12 5 19 12 12 19" />
+                              </svg>
+                            </span>
+                          </Link>
+                        );
+                      }
+                      return (
+                        <div
+                          key={idx}
+                          className="w-[80vw] md:w-[32vw] lg:w-[28vw] shrink-0 snap-center md:snap-align-none rounded-[20px] overflow-hidden aspect-[4/3] md:aspect-[16/11] relative bg-[#121212] group border border-white/5"
+                        >
+                          {/* Nested Image Container that shrinks on hover to keep all corners rounded */}
+                          <div className="absolute top-0 left-0 right-0 bottom-[75px] md:bottom-0 rounded-[20px] md:rounded-b-none overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] md:group-hover:bottom-[95px] md:group-hover:rounded-b-[20px]">
+                            <img
+                              src={project.image}
+                              alt={project.title}
+                              className="w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-105 select-none pointer-events-none"
+                            />
+                          </div>
 
-                    {/* 2. Project 2 */}
-                    <div className="space-y-0 pt-0 md:pt-4 2xl:pt-8 breathe-grid-col">
-                      <Reveal delay={0.2}>
-                        <div className="rounded-none overflow-hidden aspect-[3/4] bg-ink border border-border transition-all duration-500 hover:scale-[1.03] hover:border-violet group cursor-pointer w-full">
-                          <img src="/assets/img/g2.png" alt="" className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0" />
+                          {/* Details panel - Revealed in the bottom area on hover on desktop, always visible on mobile */}
+                          <div className="absolute bottom-0 left-0 right-0 h-[75px] md:h-[95px] px-5 py-3 md:py-4 flex flex-col justify-center translate-y-0 md:translate-y-2 opacity-100 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] select-none pointer-events-none z-10">
+                            <h4 className="text-[14px] md:text-[18px] text-white font-semibold mb-1.5 md:mb-2.5 tracking-tight">
+                              {project.title}
+                            </h4>
+                            <div className="flex flex-wrap gap-1.5">
+                              {project.tags.map((tag) => (
+                                <span
+                                  key={tag}
+                                  className="px-2 py-0.5 md:px-2.5 md:py-1 bg-black text-[8px] md:text-[10px] font-bold text-white/60 tracking-[0.05em] rounded-full border border-white/5 uppercase"
+                                >
+                                  {tag}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
                         </div>
-                      </Reveal>
-                    </div>
-
-                    {/* 3. Project 3 */}
-                    <div className="space-y-0 pt-0 md:pt-2 2xl:pt-4 breathe-grid-col">
-                      <Reveal delay={0.3}>
-                        <div className="rounded-none overflow-hidden aspect-square bg-ink border border-border transition-all duration-500 hover:scale-[1.03] hover:border-violet group cursor-pointer w-full">
-                          <img src="/assets/img/g3.png" alt="" className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0" />
-                        </div>
-                      </Reveal>
-                    </div>
-
-                    {/* 4. Project 4 */}
-                    <div className="space-y-0 pt-0 md:pt-6 2xl:pt-12 breathe-grid-col">
-                      <Reveal delay={0.4}>
-                        <div className="rounded-none overflow-hidden aspect-[4/3] bg-ink border border-border transition-all duration-500 hover:scale-[1.03] hover:border-violet group cursor-pointer w-full">
-                          <img src="/assets/img/g4.png" alt="" className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0" />
-                        </div>
-                      </Reveal>
-                    </div>
-
-                    {/* 5. Project 5 */}
-                    <div className="space-y-0 pt-0 md:pt-1 2xl:pt-3 breathe-grid-col">
-                      <Reveal delay={0.5}>
-                        <div className="rounded-none overflow-hidden aspect-[3/4] md:aspect-[3/4.2] 2xl:aspect-[3/5] bg-ink border border-border transition-all duration-500 hover:scale-[1.03] hover:border-violet group cursor-pointer w-full">
-                          <img src="/assets/img/g5.png" alt="" className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0" />
-                        </div>
-                      </Reveal>
-                    </div>
-
-                    {/* 6. Project 6 */}
-                    <div className="space-y-0 pt-0 md:pt-5 2xl:pt-10 breathe-grid-col">
-                      <Reveal delay={0.6}>
-                        <div className="rounded-none overflow-hidden aspect-[4/5] bg-ink border border-border transition-all duration-500 hover:scale-[1.03] hover:border-violet group cursor-pointer w-full">
-                          <img src="/assets/img/g6.png" alt="" className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0" />
-                        </div>
-                      </Reveal>
-                    </div>
+                      );
+                    })}
                   </div>
+                </div>
 
+                {/* Pagination Dots (Inside a container with same padding to align cleanly) */}
+                <div className="flex justify-center items-center gap-3 mt-6 relative z-30 w-full px-[var(--pad)]">
+                  {projects.map((_, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => scrollToSlide(idx)}
+                      className={`h-2.5 rounded-full transition-all duration-300 ${activeSlide === idx ? 'w-8 bg-white' : 'w-2.5 bg-white/30 hover:bg-white/50'
+                        }`}
+                      aria-label={`Go to slide ${idx + 1}`}
+                    />
+                  ))}
                 </div>
               </section>
 

@@ -57,7 +57,7 @@ export default function Inquiry() {
               <div className="section-noise-effect" />
               {/* Top Half: Yellow bold text in sentence case */}
               <div className="h-1/2 flex items-center p-4 md:p-6 [@media(display-mode:fullscreen)]:md:p-8 bg-black py-6 max-[920px]:py-6">
-                <h2 id="inquiry-h" className="text-[clamp(22px,3vw,45px)] [@media(display-mode:fullscreen)]:text-[clamp(28px,3.8vw,56px)] leading-[1.1] font-extrabold text-white tracking-[-0.02em] font-sans transition-all duration-700">
+                <h2 id="inquiry-h" className="text-section-heading !font-extrabold text-white transition-all duration-700">
                   <span className="block whitespace-nowrap">Got a project,</span>
                   <span className="block whitespace-nowrap">a question, or</span>
                   <span className="block whitespace-nowrap">an idea about</span>
@@ -85,7 +85,7 @@ export default function Inquiry() {
             {/* Right Side: Clean Form with Black Border Outer Box */}
             <div className="flex-1 bg-white flex items-center justify-center p-3 md:p-5 [@media(display-mode:fullscreen)]:md:p-8 transition-all duration-700">
               <div className="w-full max-w-[720px] border-[1.5px] border-black p-4 md:p-5 [@media(display-mode:fullscreen)]:md:p-6 bg-white transition-all duration-700">
-                <p className="text-[clamp(14px,0.9vw,16px)] [@media(display-mode:fullscreen)]:text-[clamp(16px,1.1vw,18px)] leading-[1.4] [@media(display-mode:fullscreen)]:leading-[1.5] text-black font-sans font-light mb-2 md:mb-3 [@media(display-mode:fullscreen)]:md:mb-4 transition-all duration-700">
+                <p className="text-small-desc text-black mb-2 md:mb-3 [@media(display-mode:fullscreen)]:md:mb-4 transition-all duration-700">
                   Whether it&apos;s strategy, storytelling, or exploring how we can bring your brand to life &mdash; reach out, and we&apos;ll figure it out together.
                 </p>
 
@@ -96,34 +96,34 @@ export default function Inquiry() {
                   className="space-y-1.5 [@media(display-mode:fullscreen)]:space-y-3 transition-all duration-700"
                 >
                   <div>
-                    <label htmlFor="f-name" className="block text-[13px] [@media(display-mode:fullscreen)]:text-[15px] font-sans font-medium text-black mb-0.5 [@media(display-mode:fullscreen)]:mb-1.5 transition-all duration-700">Name</label>
+                    <label htmlFor="f-name" className="block text-nav-label text-black mb-0.5 [@media(display-mode:fullscreen)]:mb-1.5 transition-all duration-700">Name</label>
                     <input
                       id="f-name"
                       name="name"
                       type="text"
                       required
-                      className="w-full p-1.5 [@media(display-mode:fullscreen)]:p-2.5 border border-black/30 bg-transparent text-black text-[13px] [@media(display-mode:fullscreen)]:text-[14px] rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
+                      className="w-full p-1.5 [@media(display-mode:fullscreen)]:p-2.5 border border-black/30 bg-transparent text-black text-nav-label rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
                     />
                   </div>
 
                   <div className="grid grid-cols-2 gap-2 [@media(display-mode:fullscreen)]:gap-3 max-[480px]:grid-cols-1 transition-all duration-700">
                     <div>
-                      <label htmlFor="f-email" className="block text-[13px] [@media(display-mode:fullscreen)]:text-[15px] font-sans font-medium text-black mb-0.5 [@media(display-mode:fullscreen)]:mb-1.5 transition-all duration-700">Email address</label>
+                      <label htmlFor="f-email" className="block text-nav-label text-black mb-0.5 [@media(display-mode:fullscreen)]:mb-1.5 transition-all duration-700">Email address</label>
                       <input
                         id="f-email"
                         name="email"
                         type="email"
                         required
-                        className="w-full p-1.5 [@media(display-mode:fullscreen)]:p-2.5 border border-black/30 bg-transparent text-black text-[13px] [@media(display-mode:fullscreen)]:text-[14px] rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
+                        className="w-full p-1.5 [@media(display-mode:fullscreen)]:p-2.5 border border-black/30 bg-transparent text-black text-nav-label rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="f-phone" className="block text-[13px] [@media(display-mode:fullscreen)]:text-[15px] font-sans font-medium text-black mb-0.5 [@media(display-mode:fullscreen)]:mb-1.5 transition-all duration-700">Mobile Number</label>
+                      <label htmlFor="f-phone" className="block text-nav-label text-black mb-0.5 [@media(display-mode:fullscreen)]:mb-1.5 transition-all duration-700">Mobile Number</label>
                       <div className="flex gap-2">
                         <select
                           name="countryCode"
-                          className="w-[75px] [@media(display-mode:fullscreen)]:w-[80px] p-1.5 [@media(display-mode:fullscreen)]:p-2.5 border border-black/30 bg-transparent text-black text-[12px] [@media(display-mode:fullscreen)]:text-[13px] rounded-[4px] focus:outline-none focus:border-[#FFD111] appearance-none cursor-pointer transition-all duration-700"
+                          className="w-[75px] [@media(display-mode:fullscreen)]:w-[80px] p-1.5 [@media(display-mode:fullscreen)]:p-2.5 border border-black/30 bg-transparent text-black text-nav-label rounded-[4px] focus:outline-none focus:border-[#FFD111] appearance-none cursor-pointer transition-all duration-700"
                         >
                           <option value="+91">IN +91</option>
                           <option value="+1">US +1</option>
@@ -138,19 +138,19 @@ export default function Inquiry() {
                           type="tel"
                           placeholder="99980 81399"
                           required
-                          className="flex-1 p-1.5 [@media(display-mode:fullscreen)]:p-2.5 border border-black/30 bg-transparent text-black text-[13px] [@media(display-mode:fullscreen)]:text-[14px] rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
+                          className="flex-1 p-1.5 [@media(display-mode:fullscreen)]:p-2.5 border border-black/30 bg-transparent text-black text-nav-label rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
                         />
                       </div>
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-[13px] [@media(display-mode:fullscreen)]:text-[15px] font-sans font-medium text-black mb-0.5 [@media(display-mode:fullscreen)]:mb-1.5 transition-all duration-700">Service Interested In</label>
+                    <label className="block text-nav-label text-black mb-0.5 [@media(display-mode:fullscreen)]:mb-1.5 transition-all duration-700">Service Interested In</label>
                     <select
                       name="service"
                       required
                       defaultValue=""
-                      className="w-full p-1.5 [@media(display-mode:fullscreen)]:p-2.5 border border-black/30 bg-transparent text-black text-[13px] [@media(display-mode:fullscreen)]:text-[14px] rounded-[4px] focus:outline-none focus:border-[#FFD111] appearance-none cursor-pointer transition-all duration-700"
+                      className="w-full p-1.5 [@media(display-mode:fullscreen)]:p-2.5 border border-black/30 bg-transparent text-black text-nav-label rounded-[4px] focus:outline-none focus:border-[#FFD111] appearance-none cursor-pointer transition-all duration-700"
                     >
                       <option value="" disabled>Select a service</option>
                       <option value="Branding Strategy">Branding Strategy</option>
@@ -164,12 +164,12 @@ export default function Inquiry() {
                   </div>
 
                   <div>
-                    <label htmlFor="f-message" className="block text-[13px] [@media(display-mode:fullscreen)]:text-[15px] font-sans font-medium text-black mb-0.5 [@media(display-mode:fullscreen)]:mb-1.5 transition-all duration-700">Leave a message</label>
+                    <label htmlFor="f-message" className="block text-nav-label text-black mb-0.5 [@media(display-mode:fullscreen)]:mb-1.5 transition-all duration-700">Leave a message</label>
                     <textarea
                       id="f-message"
                       name="message"
                       required
-                      className="w-full min-h-[50px] [@media(display-mode:fullscreen)]:min-h-[70px] p-1.5 [@media(display-mode:fullscreen)]:p-2.5 border border-black/30 bg-transparent text-black text-[13px] [@media(display-mode:fullscreen)]:text-[14px] rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111] resize-none"
+                      className="w-full min-h-[50px] [@media(display-mode:fullscreen)]:min-h-[70px] p-1.5 [@media(display-mode:fullscreen)]:p-2.5 border border-black/30 bg-transparent text-black text-nav-label rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111] resize-none"
                     ></textarea>
                   </div>
 
@@ -177,11 +177,11 @@ export default function Inquiry() {
                     <button
                       type="submit"
                       disabled={status === 'submitting'}
-                      className="w-full submit-btn-gradient text-white py-2 [@media(display-mode:fullscreen)]:py-3 px-8 font-space font-light text-[clamp(14px,1vw,16px)] [@media(display-mode:fullscreen)]:text-[clamp(15px,1.1vw,18px)] tracking-[0.1em] uppercase rounded-[8px] active:scale-[0.99] disabled:opacity-50"
+                      className="w-full btn-grey py-2 [@media(display-mode:fullscreen)]:py-3 px-8 text-nav-label tracking-[0.15em] uppercase rounded-full active:scale-[0.99] disabled:opacity-50"
                     >
                       <span>{status === 'submitting' ? 'Submitting...' : 'Submit'}</span>
                     </button>
-                    <p className="text-[15px] font-sans font-semibold text-center mt-4 bg-gradient-to-r from-[#0a065c] via-[#4b3fd4] to-[#60a5fa] bg-[length:200%_auto] bg-clip-text text-transparent inquiry-shimmer">
+                    <p className="text-small-desc text-center mt-4 bg-gradient-to-r from-[#0a065c] via-[#4b3fd4] to-[#60a5fa] bg-[length:200%_auto] bg-clip-text text-transparent inquiry-shimmer">
                       We will give you a callback within 24 hours.
                     </p>
                     <style>{`
@@ -197,7 +197,7 @@ export default function Inquiry() {
                   </div>
 
                   {status === 'success' && (
-                    <div className="p-3 bg-[#FFD111]/10 border border-[#FFD111] text-black text-center mt-4 text-[14px] font-medium rounded-[4px] animate-in fade-in slide-in-from-top-2 duration-500 font-sans">
+                    <div className="p-3 bg-[#FFD111]/10 border border-[#FFD111] text-black text-center mt-4 text-nav-label rounded-[4px] animate-in fade-in slide-in-from-top-2 duration-500">
                       Thanks &mdash; we&apos;ve got it. You&apos;ll hear back from us soon.
                     </div>
                   )}

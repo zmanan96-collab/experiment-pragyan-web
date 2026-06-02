@@ -79,8 +79,8 @@ export default function Services() {
         <div className="wrap relative z-20 md:-translate-y-4 lg:-translate-y-6 xl:-translate-y-8 2xl:-translate-y-4 2xl:-translate-x-[14vw]">
 
           <Reveal className="mb-4 lg:mb-6 max-w-[700px] lg:max-w-[850px] 2xl:max-w-[1000px] md:-translate-x-[7vw] lg:-translate-x-[9vw] xl:-translate-x-[11vw] 2xl:translate-x-0 [@media(display-mode:fullscreen)]:md:-translate-x-[8vw] [@media(display-mode:fullscreen)]:xl:-translate-x-[12vw] transition-transform duration-700 ease-out">
-            <span className="text-[clamp(12px,0.85vw,16px)] font-space font-light tracking-[0.22em] uppercase text-[#6a6a6a] block mb-3">Services</span>
-            <h2 className="font-sans text-[clamp(32px,5vw,75px)] md:text-[clamp(30px,4vw,55px)] 2xl:text-[68px] [@media(display-mode:fullscreen)]:md:text-[clamp(38px,4.5vw,75px)] transition-all duration-700 ease-out font-bold leading-[1.05] tracking-[-0.03em] text-black">
+            <span className="text-nav-label tracking-[0.22em] uppercase text-[#6a6a6a] block mb-3">Services</span>
+            <h2 className="text-hero text-black transition-all duration-700 ease-out pb-2">
               <span className="block">What we do &ndash;</span>
               <span className="block">and what</span>
               <span className="inline-block bg-gradient-to-r from-[#161245] via-[#4B3FD4] to-[#786CF0] bg-clip-text text-transparent pb-2">we don&apos;t</span>
@@ -90,7 +90,7 @@ export default function Services() {
           {/* Paragraph spans full original width with zero grid constraints */}
           <Reveal delay={0.1} className="md:-translate-x-[7vw] lg:-translate-x-[9vw] xl:-translate-x-[11vw] 2xl:translate-x-0 [@media(display-mode:fullscreen)]:md:-translate-x-[8vw] [@media(display-mode:fullscreen)]:xl:-translate-x-[12vw] transition-transform duration-700 ease-out">
 
-            <p className="font-sans text-[#6A6A6A] text-[clamp(16px,1.3vw,20px)] md:text-[clamp(15px,1.2vw,18px)] 2xl:text-[20px] 2xl:max-w-[750px] 2xl:leading-[1.7] [@media(display-mode:fullscreen)]:md:text-[clamp(18px,1.4vw,24px)] md:leading-[1.6] font-light leading-[1.6] max-w-[750px] md:max-w-[650px] [@media(display-mode:fullscreen)]:md:max-w-[800px] text-left transition-all duration-700 ease-out">
+            <p className="text-main-desc text-[#6A6A6A] text-left transition-all duration-700 ease-out max-w-[750px] md:max-w-[650px] [@media(display-mode:fullscreen)]:md:max-w-[800px]">
               Pragyan is for founders who are tired of the same old<br className="hidden md:inline" /><span className="md:hidden">&nbsp;</span>
               and want to build something that actually carries weight.<br className="hidden md:inline" /><span className="md:hidden">&nbsp;</span>
               We&apos;re obsessed with the work we do &mdash;<br className="hidden md:inline" /><span className="md:hidden">&nbsp;</span>
@@ -136,7 +136,7 @@ export default function Services() {
 
         <div className="wrap relative z-10 text-white">
           <Reveal className="mb-16 md:mb-20 md:ml-[5vw] lg:ml-[8vw] xl:ml-[10vw]">
-            <span className="text-[clamp(12px,0.85vw,16px)] font-space font-light tracking-[0.22em] uppercase text-[#d9d9d9] block">Our Services</span>
+            <span className="text-nav-label tracking-[0.22em] uppercase text-[#d9d9d9] block">Our Services</span>
           </Reveal>
 
           <div className="max-w-[1200px] relative md:ml-[5vw] lg:ml-[8vw] xl:ml-[10vw]">
@@ -152,7 +152,7 @@ export default function Services() {
                       onClick={() => setOpenIndex(isOpen ? null : idx)}
                     >
                       <div
-                        className="absolute w-[2px] bg-gradient-to-b from-[#4B3FD4] via-[#4B3FD4]/70 to-transparent pointer-events-none z-0 hidden md:block top-[30px] md:top-[45px]"
+                        className="absolute w-[2px] bg-gradient-to-b from-[#d9d9d9] via-[#d9d9d9]/70 to-transparent pointer-events-none z-0 hidden md:block top-[30px] md:top-[45px]"
                         style={{ left: `${offset + 8}px`, bottom: `-${(services.length - 1 - idx) * 110 + 420}px` }}
                       />
 
@@ -167,12 +167,12 @@ export default function Services() {
                         </div>
 
                         <div className="pt-2 relative z-20">
-                          <h3 className="text-[clamp(24px,2.8vw,38px)] font-sans font-semibold mb-2 tracking-[0.02em] group-hover:text-[#4B3FD4] transition-colors duration-300">{service.title}</h3>
-                          <p className="text-[clamp(16px,1.2vw,19px)] text-[#d9d9d9] font-sans font-light tracking-wide max-w-none transition-colors">{service.tagline}</p>
+                          <h3 className="text-card-title mb-2 group-hover:text-[#4B3FD4] transition-colors duration-300">{service.title}</h3>
+                          <p className="text-main-desc text-[#d9d9d9] max-w-none transition-colors">{service.tagline}</p>
 
                           <div className={`overflow-hidden transition-all duration-700 ease-in-out ${isOpen ? 'max-h-[1400px] mt-12 opacity-100 border-t border-white/10 pt-12' : 'max-h-0 opacity-0'}`}>
                             <div className="flex flex-col gap-8 pb-8">
-                              <p className="text-grey text-[18.5px] leading-relaxed opacity-75 font-light text-left">
+                              <p className="text-main-desc text-grey opacity-75 text-left">
                                 {service.copy.replace(/\n/g, ' ')}
                               </p>
 
@@ -181,14 +181,14 @@ export default function Services() {
                                   <div className="flex flex-col gap-3">
                                     <div className="flex flex-wrap gap-3">
                                       {service.deliverables.slice(0, 5).map(d => (
-                                        <div key={d} className="flex items-center gap-3 px-5 py-2.5 bg-white/[0.02] border border-white/10 rounded-none text-[14px] font-sans font-light tracking-wide text-white/70 hover:text-white hover:border-[#4B3FD4]/40 hover:bg-white/[0.04] transition-all duration-300 select-none md:whitespace-nowrap">
+                                        <div key={d} className="flex items-center gap-3 px-5 py-2.5 bg-white/[0.02] border border-white/10 rounded-none text-nav-label text-white/70 hover:text-white hover:border-[#4B3FD4]/40 hover:bg-white/[0.04] transition-all duration-300 select-none md:whitespace-nowrap">
                                           {d}
                                         </div>
                                       ))}
                                     </div>
                                     <div className="flex flex-wrap gap-3">
                                       {service.deliverables.slice(5).map(d => (
-                                        <div key={d} className="flex items-center gap-3 px-5 py-2.5 bg-white/[0.02] border border-white/10 rounded-none text-[14px] font-sans font-light tracking-wide text-white/70 hover:text-white hover:border-[#4B3FD4]/40 hover:bg-white/[0.04] transition-all duration-300 select-none md:whitespace-nowrap">
+                                        <div key={d} className="flex items-center gap-3 px-5 py-2.5 bg-white/[0.02] border border-white/10 rounded-none text-nav-label text-white/70 hover:text-white hover:border-[#4B3FD4]/40 hover:bg-white/[0.04] transition-all duration-300 select-none md:whitespace-nowrap">
                                           {d}
                                         </div>
                                       ))}
@@ -198,14 +198,14 @@ export default function Services() {
                                   <div className="flex flex-col gap-3">
                                     <div className="flex flex-wrap gap-3">
                                       {service.deliverables.slice(0, 4).map(d => (
-                                        <div key={d} className="flex items-center gap-3 px-5 py-2.5 bg-white/[0.02] border border-white/10 rounded-none text-[14px] font-sans font-light tracking-wide text-white/70 hover:text-white hover:border-[#4B3FD4]/40 hover:bg-white/[0.04] transition-all duration-300 select-none md:whitespace-nowrap">
+                                        <div key={d} className="flex items-center gap-3 px-5 py-2.5 bg-white/[0.02] border border-white/10 rounded-none text-nav-label text-white/70 hover:text-white hover:border-[#4B3FD4]/40 hover:bg-white/[0.04] transition-all duration-300 select-none md:whitespace-nowrap">
                                           {d}
                                         </div>
                                       ))}
                                     </div>
                                     <div className="flex flex-wrap gap-3">
                                       {service.deliverables.slice(4).map(d => (
-                                        <div key={d} className="flex items-center gap-3 px-5 py-2.5 bg-white/[0.02] border border-white/10 rounded-none text-[14px] font-sans font-light tracking-wide text-white/70 hover:text-white hover:border-[#4B3FD4]/40 hover:bg-white/[0.04] transition-all duration-300 select-none md:whitespace-nowrap">
+                                        <div key={d} className="flex items-center gap-3 px-5 py-2.5 bg-white/[0.02] border border-white/10 rounded-none text-nav-label text-white/70 hover:text-white hover:border-[#4B3FD4]/40 hover:bg-white/[0.04] transition-all duration-300 select-none md:whitespace-nowrap">
                                           {d}
                                         </div>
                                       ))}
@@ -214,7 +214,7 @@ export default function Services() {
                                 ) : (
                                   <div className="flex flex-wrap gap-3">
                                     {service.deliverables.map(d => (
-                                      <div key={d} className="flex items-center gap-3 px-5 py-2.5 bg-white/[0.02] border border-white/10 rounded-none text-[14px] font-sans font-light tracking-wide text-white/70 hover:text-white hover:border-[#4B3FD4]/40 hover:bg-white/[0.04] transition-all duration-300 select-none md:whitespace-nowrap">
+                                      <div key={d} className="flex items-center gap-3 px-5 py-2.5 bg-white/[0.02] border border-white/10 rounded-none text-nav-label text-white/70 hover:text-white hover:border-[#4B3FD4]/40 hover:bg-white/[0.04] transition-all duration-300 select-none md:whitespace-nowrap">
                                         {d}
                                       </div>
                                     ))}
@@ -234,7 +234,7 @@ export default function Services() {
 
           <div className="mt-20 md:mt-32 relative">
             <Reveal className="flex items-center justify-end gap-12 max-[760px]:flex-col max-[760px]:items-center">
-              <p className="text-right max-[760px]:text-center text-[clamp(18px,1.5vw,26px)] italic text-white font-sans font-semibold leading-[1.5] max-w-[620px]">
+              <p className="text-right max-[760px]:text-center text-card-title italic text-white leading-[1.5] max-w-[620px]">
                 We don&rsquo;t believe in one-size-fits-all thinking.<br />
                 If you&rsquo;re ready to stop being an echo and<br />
                 start being original, let&rsquo;s talk.

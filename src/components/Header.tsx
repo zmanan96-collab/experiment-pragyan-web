@@ -11,6 +11,7 @@ export default function Header() {
 
   const navLinks = [
     { href: '/', label: 'Home' },
+    { href: '/work', label: 'Work' },
     { href: '/services', label: 'Services' },
     { href: '/about', label: 'About' },
     { href: '/culture', label: 'Culture' },
@@ -28,9 +29,9 @@ export default function Header() {
           <ul className={`
             max-[920px]:absolute max-[920px]:top-[76px] max-[920px]:left-0 max-[920px]:right-0 
             max-[920px]:bg-black max-[920px]:flex-col max-[920px]:p-[28px_var(--pad)] max-[920px]:gap-[22px] 
-            max-[920px]:border-b max-[920px]:border-border max-[920px]:text-[16px]
+            max-[920px]:border-b max-[920px]:border-border
             ${isOpen ? 'max-[920px]:flex' : 'max-[920px]:hidden'}
-            flex ml-auto mr-0 gap-[52px] list-none m-0 p-0 text-[clamp(14px,0.95vw,16px)] font-space font-light tracking-[0.16em] uppercase
+            flex ml-auto mr-0 gap-[52px] list-none m-0 p-0 text-nav-label uppercase
           `}>
             {navLinks.map((link) => {
               const isActive = pathname === link.href;

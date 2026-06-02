@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 @import "tailwindcss";
 
+html, body {
+  overflow-x: hidden;
+}
+
 @theme {
   --color-black: #000000;
   --color-night: #000000;
@@ -21,14 +25,14 @@
   --color-navy: #113553;
 
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  --font-heading: 'Nexa Light', 'Plus Jakarta Sans', sans-serif;
-  --font-nexa: 'Nexa Light', sans-serif;
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --font-nexa: 'Plus Jakarta Sans', sans-serif;
   --font-mono: 'Plus Jakarta Sans', monospace, sans-serif;
-  --font-space: var(--font-space-grotesk), sans-serif;
+  --font-space: 'Plus Jakarta Sans', sans-serif;
 
-  /* Global Overrides for Space Grotesk */
-  --font-btn: var(--font-space);
-  --font-label: var(--font-space);
+  /* Global Overrides */
+  --font-btn: var(--font-sans);
+  --font-label: var(--font-sans);
 
   /* Requested sizes converted to rem/px roughly */
   --text-heading: 1rem;
@@ -39,12 +43,57 @@
   /* 7pt approx */
 }
 
-/* Force Space Grotesk on all buttons and specific labels */
+/* Force Plus Jakarta Sans on all buttons and specific labels */
 button,
 .font-space,
 .btn,
 [class*="Button"] {
-  font-family: var(--font-space) !important;
+  font-family: var(--font-sans) !important;
+}
+
+/* Typography Utility Classes */
+.text-hero {
+  font-family: var(--font-sans) !important;
+  font-size: clamp(38px, 6.5vw, 80px) !important;
+  font-weight: 700 !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.04em !important;
+}
+
+.text-section-heading {
+  font-family: var(--font-sans) !important;
+  font-size: clamp(28px, 4vw, 48px) !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.02em !important;
+}
+
+.text-card-title {
+  font-family: var(--font-sans) !important;
+  font-size: clamp(22px, 2.2vw, 32px) !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+}
+
+.text-main-desc {
+  font-family: var(--font-sans) !important;
+  font-size: clamp(16px, 1.4vw, 18px) !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+}
+
+.text-small-desc {
+  font-family: var(--font-sans) !important;
+  font-size: clamp(14px, 1.2vw, 16px) !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+}
+
+.text-nav-label {
+  font-family: var(--font-sans) !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em !important;
 }
 
 @layer base {
@@ -523,6 +572,7 @@ button,
   0% {
     background-position: 0px 0px;
   }
+
   100% {
     background-position: 0px 40px;
   }
@@ -540,10 +590,12 @@ button,
     background-position: 0% 50%;
     transform: translateY(0) scaleY(1);
   }
+
   50% {
     background-position: 100% 50%;
     transform: translateY(-8px) scaleY(1.08);
   }
+
   100% {
     background-position: 0% 50%;
     transform: translateY(0) scaleY(1);
@@ -551,7 +603,7 @@ button,
 }
 
 .halftone-wave-overlay {
-  background-image: 
+  background-image:
     radial-gradient(circle at 50% 100%, rgba(75, 63, 212, 0.28) 0%, transparent 60%),
     radial-gradient(rgba(75, 63, 212, 0.22) 1.8px, transparent 1.8px) !important;
   background-size: 100% 100%, 16px 16px !important;
@@ -564,10 +616,12 @@ button,
     transform: rotate(0deg) scale(1);
     opacity: 0.7;
   }
+
   50% {
     transform: rotate(180deg) scale(1.15);
     opacity: 0.95;
   }
+
   100% {
     transform: rotate(360deg) scale(1);
     opacity: 0.7;
@@ -575,7 +629,7 @@ button,
 }
 
 .halftone-arcs-overlay {
-  background-image: 
+  background-image:
     radial-gradient(circle at 0% 0%, transparent 50%, rgba(118, 33, 194, 0.2) 50%, rgba(118, 33, 194, 0.2) 60%, transparent 60%),
     radial-gradient(circle at 100% 100%, transparent 40%, rgba(143, 133, 255, 0.18) 40%, rgba(143, 133, 255, 0.18) 52%, transparent 52%),
     radial-gradient(rgba(143, 133, 255, 0.15) 1.5px, transparent 1.5px) !important;
@@ -597,9 +651,11 @@ button,
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -623,12 +679,45 @@ button,
   transform: scale(1.01) !important;
 }
 
+.btn-gradient {
+  background: linear-gradient(90deg,
+      #1e1f65 0%,
+      #4b3fd4 50%,
+      #7678ed 100%) !important;
+  background-size: 200% 100% !important;
+  animation: submit-button-shimmer 3s ease-in-out infinite !important;
+  box-shadow: 0 4px 20px rgba(75, 63, 212, 0.15) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
+}
+
+.btn-gradient:hover {
+  box-shadow: 0 10px 25px rgba(75, 63, 212, 0.45) !important;
+  transform: translateY(-2px) scale(1.02) !important;
+}
+
+.btn-grey {
+  background: #1e1e1e !important;
+  color: #ffffff !important;
+  border: 1px solid transparent !important;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.btn-grey:hover {
+  background: #2d2d2d !important;
+  color: #ffffff !important;
+  transform: translateY(-1.5px) !important;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1) !important;
+}
+
 /* --- Card Animations: Halftone Blinking & Round-and-Round Rotating --- */
 @keyframes halftone-blink {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0.18;
     transform: scale(0.85);
   }
+
   50% {
     opacity: 1;
     transform: scale(1.1);
@@ -645,6 +734,7 @@ button,
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -657,9 +747,12 @@ button,
 }
 
 @keyframes wave-ripple {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0) rotate(0deg);
   }
+
   50% {
     transform: translateY(-4px) rotate(2deg);
   }
@@ -672,9 +765,12 @@ button,
 }
 
 @keyframes grid-shimmer {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate(0, 0) rotate(0deg);
   }
+
   50% {
     transform: translate(-2px, -2px) rotate(0.8deg);
   }
@@ -684,4 +780,14 @@ button,
   animation: grid-shimmer 5s ease-in-out infinite !important;
   transform-origin: center center !important;
   transform-box: fill-box !important;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }

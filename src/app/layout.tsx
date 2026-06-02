@@ -109,7 +109,7 @@ export default function RootLayout({
           }}
         />
         <ScrollSnapController />
-        <a href="#main" className="absolute -left-[9999px] top-0 p-3 bg-yellow text-black font-semibold text-sm rounded-br-md z-[100] focus:left-0 transition-all">Skip to content</a>
+        <a href="#main" className="absolute -left-[9999px] top-0 p-3 bg-yellow text-black text-nav-label rounded-br-md z-[100] focus:left-0 transition-all">Skip to content</a>
         <Header />
         <main id="main">
           {children}
