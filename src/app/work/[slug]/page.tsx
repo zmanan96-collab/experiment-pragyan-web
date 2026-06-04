@@ -427,7 +427,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
     >
       <main className="flex-grow">
         {/* Full-Screen Hero Image Section */}
-        <section data-header-theme={project.heroHeaderTheme || "dark"} className="w-full h-screen relative overflow-hidden bg-[#eeeeee]">
+        <section data-header-theme={project.heroHeaderTheme || "dark"} className="w-full aspect-[16/9] md:aspect-auto md:h-screen relative overflow-hidden bg-[#eeeeee]">
           <img
             alt={project.title}
             className="w-full h-full object-cover select-none pointer-events-none"
