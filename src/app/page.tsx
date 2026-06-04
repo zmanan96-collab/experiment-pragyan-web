@@ -10,29 +10,39 @@ import HomeSmoothScroll from '../components/HomeSmoothScroll';
 
 const projects = [
   {
-    title: "Vogue Italia",
-    tags: ["ILLUSTRATION", "MARKETING DESIGN"],
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=800"
+    title: "ATC CHAINS INDIA",
+    tags: ["MANUFACTURING", "CONVEYOR COMPONENTS", "FOOD & BEVERAGE"],
+    image: "/card-03.webp"
   },
   {
-    title: "Nowness Asia",
-    tags: ["BRANDING", "DIGITAL EXPERIENCE"],
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800"
+    title: "GLOBAL GUARDIANS SCHOOL",
+    tags: ["Industry: Education"],
+    image: "/card 01.webp"
   },
   {
-    title: "Kinfolk Studio",
-    tags: ["STRATEGY", "EDITORIAL"],
-    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800"
+    title: "BHAVYA SRISHTI UDYOG",
+    tags: ["Industry: Sustainable Manufacturing", "Bamboo"],
+    image: "/bsucard.jpg"
   },
   {
-    title: "Cereal Magazine",
-    tags: ["ART DIRECTION", "CONTENT"],
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800"
+    title: "SHREEJI ENTERPRISE",
+    tags: ["Industry: Engineered Roofing Solutions"],
+    image: "/card shree ji.webp"
   },
   {
-    title: "Minimalissimo",
-    tags: ["IDENTITY", "PACKAGING"],
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800"
+    title: "YASH ENGINEERS (INDIA) PVT. LTD.",
+    tags: ["Industry: Industrial Machinery"],
+    image: "/yashcard.svg"
+  },
+  {
+    title: "BHAKTINANDAN",
+    tags: ["Industry: Consumer Goods / Cold-Pressed Oils"],
+    image: "/bhakti.svg"
+  },
+  {
+    title: "GANESH VERMA",
+    tags: ["Personal Branding & LinkedIn"],
+    image: "/ganeshcard.svg"
   },
   {
     title: "Apartamento",
@@ -525,12 +535,13 @@ export default function Home() {
                           desc: "before we design.",
                           illustration: (
                             <video
-                              src="/V1.mp4"
+                              src="/We discuss.mp4"
                               autoPlay
                               loop
                               muted
                               playsInline
-                              className="w-full h-full object-cover"
+                              className="w-full h-full object-cover mix-blend-screen"
+                              style={{ transform: 'scale(1.5)', transformOrigin: 'center' }}
                             />
                           )
                         },
@@ -539,12 +550,13 @@ export default function Home() {
                           desc: "before we build.",
                           illustration: (
                             <video
-                              src="/V2.mp4"
+                              src="/We plan videos.mp4"
                               autoPlay
                               loop
                               muted
                               playsInline
-                              className="w-full h-full object-cover"
+                              className="w-full h-full object-cover mix-blend-screen"
+                              style={{ transform: 'scale(1.1)', transformOrigin: 'center' }}
                             />
                           )
                         },
@@ -553,29 +565,29 @@ export default function Home() {
                           desc: "to turn curiosity into creativity.",
                           illustration: (
                             <video
-                              src="/V3.mp4"
+                              src="/We plan videos reels.mp4"
                               autoPlay
                               loop
                               muted
                               playsInline
-                              className="w-full h-full object-cover"
+                              className="w-full h-full object-cover mix-blend-screen"
                             />
                           )
                         }
                       ].map((card, i) => (
                         <Reveal key={i} delay={i * 0.1} className="methodology-card-scroll">
-                          <div className="bg-[#0b0b0f] border border-white/10 rounded-[12px] overflow-hidden transition-all duration-500 hover:border-white/60 hover:shadow-[0_20px_40px_rgba(255,255,255,0.07)] h-full flex flex-col cursor-pointer relative p-4 pb-5 group">
+                          <div className="flex flex-col h-full cursor-pointer group text-left">
 
-                            {/* Top Illustration Area */}
-                            <div className="w-full aspect-[4/3] rounded-[8px] overflow-hidden border border-white/5 bg-[#050505] relative mb-5 flex items-center justify-center pointer-events-none">
+                            {/* Card Wrapper (contains ONLY the video/illustration, full width, no gaps) */}
+                            <div className="bg-[#0b0b0f] rounded-[12px] overflow-hidden transition-all duration-500 group-hover:shadow-[0_20px_40px_rgba(255,255,255,0.07)] w-full aspect-[4/4.5] relative mb-4 flex items-center justify-center pointer-events-none">
                               {mounted ? card.illustration : <div className="absolute inset-0 bg-[#050505]" />}
 
                               {/* Overlay Gradient for depth */}
                               <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none z-10"></div>
                             </div>
 
-                            {/* Bottom Text Area */}
-                            <div className="px-1 flex flex-col text-left flex-grow">
+                            {/* Bottom Text Area (rendered OUTSIDE the card container) */}
+                            <div className="px-1 flex flex-col">
                               <h3 className="text-card-title text-white mb-1 transition-colors duration-300 group-hover:text-white">
                                 {card.title}
                               </h3>
@@ -673,11 +685,11 @@ export default function Home() {
                           <Link
                             key={idx}
                             href="/work"
-                            className="w-[80vw] md:w-[32vw] lg:w-[28vw] shrink-0 snap-center md:snap-align-none rounded-[20px] overflow-hidden aspect-[4/3] md:aspect-[16/11] relative bg-[#121212] hover:bg-white hover:border-white transition-all duration-500 flex flex-col items-center justify-center border border-white/5 group cursor-pointer"
+                            className="w-[80vw] md:w-[32vw] lg:w-[28vw] shrink-0 snap-center md:snap-align-none rounded-[20px] overflow-hidden aspect-[4/3] md:aspect-[16/11] relative bg-[#121212] hover:bg-white hover:border-white transition-all duration-[1200ms] flex flex-col items-center justify-center border border-white/5 group cursor-pointer"
                           >
-                            <span className="text-[16px] md:text-[20px] text-white font-bold tracking-[0.2em] uppercase transition-all duration-500 group-hover:scale-105 flex items-center gap-3 group-hover:text-black">
+                            <span className="text-[16px] md:text-[20px] text-white font-bold tracking-[0.2em] uppercase transition-all duration-[1200ms] group-hover:scale-105 flex items-center gap-3 group-hover:text-black">
                               View All Projects
-                              <svg className="w-5 h-5 transition-transform duration-500 group-hover:translate-x-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                              <svg className="w-5 h-5 transition-transform duration-[1200ms] group-hover:translate-x-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                                 <line x1="5" y1="12" x2="19" y2="12" />
                                 <polyline points="12 5 19 12 12 19" />
                               </svg>
@@ -686,36 +698,37 @@ export default function Home() {
                         );
                       }
                       return (
-                        <div
+                        <Link
                           key={idx}
-                          className="w-[80vw] md:w-[32vw] lg:w-[28vw] shrink-0 snap-center md:snap-align-none rounded-[20px] overflow-hidden aspect-[4/3] md:aspect-[16/11] relative bg-[#121212] group border border-white/5"
+                          href={`/work/${project.title.toLowerCase().replace(/ /g, '-')}`}
+                          className="w-[80vw] md:w-[32vw] lg:w-[28vw] shrink-0 snap-center md:snap-align-none rounded-[20px] overflow-hidden aspect-[4/3] md:aspect-[16/11] relative bg-[#121212] group border border-white/5 block cursor-pointer"
                         >
                           {/* Nested Image Container that shrinks on hover to keep all corners rounded */}
-                          <div className="absolute top-0 left-0 right-0 bottom-[75px] md:bottom-0 rounded-[20px] md:rounded-b-none overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] md:group-hover:bottom-[95px] md:group-hover:rounded-b-[20px]">
+                          <div className="absolute top-0 left-0 right-0 bottom-[75px] md:bottom-0 rounded-[20px] md:rounded-b-none overflow-hidden transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] md:group-hover:bottom-[95px] md:group-hover:rounded-b-[20px]">
                             <img
                               src={project.image}
                               alt={project.title}
-                              className="w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-105 select-none pointer-events-none"
+                              className="w-full h-full object-cover object-top transition-transform duration-[1500ms] md:group-hover:scale-105 select-none pointer-events-none"
                             />
                           </div>
 
                           {/* Details panel - Revealed in the bottom area on hover on desktop, always visible on mobile */}
-                          <div className="absolute bottom-0 left-0 right-0 h-[75px] md:h-[95px] px-5 py-3 md:py-4 flex flex-col justify-center translate-y-0 md:translate-y-2 opacity-100 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] select-none pointer-events-none z-10">
-                            <h4 className="text-[14px] md:text-[18px] text-white font-semibold mb-1.5 md:mb-2.5 tracking-tight">
+                          <div className="absolute bottom-0 left-0 right-0 h-[75px] md:h-[95px] px-5 py-3 md:py-4 flex flex-col justify-center translate-y-0 md:translate-y-2 opacity-100 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] select-none pointer-events-none z-10">
+                            <h4 className="text-[14px] md:text-[18px] text-white font-bold mb-1.5 md:mb-2.5 tracking-tight uppercase">
                               {project.title}
                             </h4>
                             <div className="flex flex-wrap gap-1.5">
                               {project.tags.map((tag) => (
                                 <span
                                   key={tag}
-                                  className="px-2 py-0.5 md:px-2.5 md:py-1 bg-black text-[8px] md:text-[10px] font-bold text-white/60 tracking-[0.05em] rounded-full border border-white/5 uppercase"
+                                  className="px-2.5 py-1 md:px-3 md:py-1.5 bg-[#222] text-[8px] md:text-[10px] font-bold text-white tracking-[0.08em] rounded-[4px] border border-white/10 uppercase"
                                 >
                                   {tag}
                                 </span>
                               ))}
                             </div>
                           </div>
-                        </div>
+                        </Link>
                       );
                     })}
                   </div>

@@ -1,21 +1,11 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ScrollSnapController from "../components/ScrollSnapController";
 
-const plusJakartaSans = Plus_Jakarta_Sans({
-  variable: "--font-sans",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
-});
-
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
+const plusJakartaSans = { variable: "font-sans" };
+const spaceGrotesk = { variable: "font-space-grotesk" };
 
 export const metadata: Metadata = {
   title: "Pragyan — Wisdom. Action. Growth. | A 360° brand & marketing agency",

@@ -3,6 +3,7 @@
 import Reveal from '../../components/Reveal';
 import { useState, useRef } from 'react';
 import Marquee from '@/components/Marquee';
+import HomeSmoothScroll from '../../components/HomeSmoothScroll';
 
 export default function Inquiry() {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
@@ -51,17 +52,22 @@ export default function Inquiry() {
   };
 
   return (
-    <section aria-label="Inquiry" className="bg-[#FAFAFA] min-h-screen md:h-screen flex flex-col items-center justify-between pt-[100px] px-0 pb-0 md:pt-[45px] [@media(display-mode:fullscreen)]:md:pt-[60px] relative font-sans">
+    <>
+      <HomeSmoothScroll />
+      <div className="noise-effect" />
+      <div id="smooth-wrapper" className="smooth-wrapper w-full bg-[#FAFAFA]">
+        <div id="smooth-content" className="smooth-content w-full relative">
+          <section aria-label="Inquiry" className="bg-[#FAFAFA] min-h-screen md:h-screen flex flex-col items-center justify-between pt-[100px] px-0 pb-0 md:pt-[45px] [@media(display-mode:fullscreen)]:md:pt-[60px] relative font-sans">
       <div className="w-full flex-grow flex items-center justify-center p-4 py-8 md:py-0 md:px-10">
-        <Reveal className="w-full max-w-[1250px] shadow-[0_30px_100px_-20px_rgba(0,0,0,0.15)] bg-white [@media(display-mode:fullscreen)]:max-w-[1300px] transition-all duration-700">
-          <div className="flex md:min-h-[430px] [@media(display-mode:fullscreen)]:md:min-h-[550px] max-[920px]:flex-col overflow-hidden transition-all duration-700" role="region" aria-labelledby="inquiry-h">
+        <Reveal className="w-full max-w-[1250px] md:max-w-[1550px] shadow-[0_30px_100px_-20px_rgba(0,0,0,0.15)] bg-white [@media(display-mode:fullscreen)]:max-w-[1300px] transition-all duration-700">
+          <div className="flex md:min-h-[720px] [@media(display-mode:fullscreen)]:md:min-h-[550px] max-[920px]:flex-col overflow-hidden transition-all duration-700" role="region" aria-labelledby="inquiry-h">
 
             {/* Left Side: Solid Black (Top) & Radiating Texture (Bottom) */}
             <div className="w-[44%] bg-black flex flex-col max-[920px]:w-full relative">
               <div className="section-noise-effect" />
               {/* Top Half: Yellow bold text in sentence case */}
-              <div className="h-1/2 flex items-center p-4 md:p-6 [@media(display-mode:fullscreen)]:md:p-8 bg-black py-6 max-[920px]:py-6">
-                <h2 id="inquiry-h" className="text-section-heading !font-extrabold text-white transition-all duration-700">
+              <div className="h-1/2 flex items-center p-4 md:p-8 bg-black py-6 max-[920px]:py-6">
+                <h2 id="inquiry-h" className="text-section-heading !font-extrabold text-white transition-all duration-700 md:text-[54px] md:leading-[1.1]">
                   <span className="block whitespace-nowrap">Got a project,</span>
                   <span className="block whitespace-nowrap">a question, or</span>
                   <span className="block whitespace-nowrap">an idea about</span>
@@ -87,45 +93,45 @@ export default function Inquiry() {
             </div>
 
             {/* Right Side: Clean Form with Black Border Outer Box */}
-            <div className="flex-1 bg-white flex items-center justify-center p-3 md:p-5 [@media(display-mode:fullscreen)]:md:p-8 transition-all duration-700">
-              <div className="w-full max-w-[720px] border-[1.5px] border-black p-4 md:p-5 [@media(display-mode:fullscreen)]:md:p-6 bg-white transition-all duration-700">
-                <p className="text-small-desc text-black mb-2 md:mb-3 [@media(display-mode:fullscreen)]:md:mb-4 transition-all duration-700">
+            <div className="flex-1 bg-white flex items-center justify-center p-3 md:p-12 transition-all duration-700">
+              <div className="w-full max-w-[720px] md:max-w-[920px] border-[1.5px] border-black p-4 md:p-12 bg-white transition-all duration-700">
+                <p className="text-small-desc md:text-[20px] md:leading-[1.4] text-black mb-2 md:mb-6 transition-all duration-700">
                   Whether it&apos;s strategy, storytelling, or exploring how we can bring your brand to life &mdash; reach out, and we&apos;ll figure it out together.
                 </p>
 
                 <form
                   onSubmit={handleSubmit}
-                  className="space-y-1.5 [@media(display-mode:fullscreen)]:space-y-3 transition-all duration-700"
+                  className="space-y-1.5 md:space-y-6 transition-all duration-700"
                 >
                   <div>
-                    <label htmlFor="f-name" className="block text-nav-label text-black mb-0.5 [@media(display-mode:fullscreen)]:mb-1.5 transition-all duration-700">Name</label>
+                    <label htmlFor="f-name" className="block text-nav-label md:text-[18px] md:font-semibold text-black mb-0.5 md:mb-2 transition-all duration-700">Name</label>
                     <input
                       id="f-name"
                       name="name"
                       type="text"
                       required
-                      className="w-full p-1.5 [@media(display-mode:fullscreen)]:p-2.5 border border-black/30 bg-transparent text-black text-nav-label rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
+                      className="w-full p-1.5 md:p-4 md:text-[18px] border border-black/30 bg-transparent text-black rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
                     />
                   </div>
 
-                  <div className="grid grid-cols-2 gap-2 [@media(display-mode:fullscreen)]:gap-3 max-[480px]:grid-cols-1 transition-all duration-700">
+                  <div className="grid grid-cols-2 gap-2 md:gap-6 max-[480px]:grid-cols-1 transition-all duration-700">
                     <div>
-                      <label htmlFor="f-email" className="block text-nav-label text-black mb-0.5 [@media(display-mode:fullscreen)]:mb-1.5 transition-all duration-700">Email address</label>
+                      <label htmlFor="f-email" className="block text-nav-label md:text-[18px] md:font-semibold text-black mb-0.5 md:mb-2 transition-all duration-700">Email address</label>
                       <input
                         id="f-email"
                         name="email"
                         type="email"
                         required
-                        className="w-full p-1.5 [@media(display-mode:fullscreen)]:p-2.5 border border-black/30 bg-transparent text-black text-nav-label rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
+                        className="w-full p-1.5 md:p-4 md:text-[18px] border border-black/30 bg-transparent text-black rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="f-phone" className="block text-nav-label text-black mb-0.5 [@media(display-mode:fullscreen)]:mb-1.5 transition-all duration-700">Mobile Number</label>
+                      <label htmlFor="f-phone" className="block text-nav-label md:text-[18px] md:font-semibold text-black mb-0.5 md:mb-2 transition-all duration-700">Mobile Number</label>
                       <div className="flex gap-2">
                         <select
                           name="countryCode"
-                          className="w-[75px] [@media(display-mode:fullscreen)]:w-[80px] p-1.5 [@media(display-mode:fullscreen)]:p-2.5 border border-black/30 bg-transparent text-black text-nav-label rounded-[4px] focus:outline-none focus:border-[#FFD111] appearance-none cursor-pointer transition-all duration-700"
+                          className="w-[75px] md:w-[105px] p-1.5 md:p-4 md:text-[18px] border border-black/30 bg-transparent text-black rounded-[4px] focus:outline-none focus:border-[#FFD111] appearance-none cursor-pointer transition-all duration-700"
                         >
                           <option value="+91">IN +91</option>
                           <option value="+1">US +1</option>
@@ -140,19 +146,19 @@ export default function Inquiry() {
                           type="tel"
                           placeholder="99980 81399"
                           required
-                          className="flex-1 p-1.5 [@media(display-mode:fullscreen)]:p-2.5 border border-black/30 bg-transparent text-black text-nav-label rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
+                          className="flex-1 p-1.5 md:p-4 md:text-[18px] border border-black/30 bg-transparent text-black rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
                         />
                       </div>
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-nav-label text-black mb-0.5 [@media(display-mode:fullscreen)]:mb-1.5 transition-all duration-700">Service Interested In</label>
+                    <label className="block text-nav-label md:text-[18px] md:font-semibold text-black mb-0.5 md:mb-2 transition-all duration-700">Service Interested In</label>
                     <select
                       name="service"
                       required
                       defaultValue=""
-                      className="w-full p-1.5 [@media(display-mode:fullscreen)]:p-2.5 border border-black/30 bg-transparent text-black text-nav-label rounded-[4px] focus:outline-none focus:border-[#FFD111] appearance-none cursor-pointer transition-all duration-700"
+                      className="w-full p-1.5 md:p-4 md:text-[18px] border border-black/30 bg-transparent text-black rounded-[4px] focus:outline-none focus:border-[#FFD111] appearance-none cursor-pointer transition-all duration-700"
                     >
                       <option value="" disabled>Select a service</option>
                       <option value="Branding Strategy">Branding Strategy</option>
@@ -166,20 +172,20 @@ export default function Inquiry() {
                   </div>
 
                   <div>
-                    <label htmlFor="f-message" className="block text-nav-label text-black mb-0.5 [@media(display-mode:fullscreen)]:mb-1.5 transition-all duration-700">Leave a message</label>
+                    <label htmlFor="f-message" className="block text-nav-label md:text-[18px] md:font-semibold text-black mb-0.5 md:mb-2 transition-all duration-700">Leave a message</label>
                     <textarea
                       id="f-message"
                       name="message"
                       required
-                      className="w-full min-h-[50px] [@media(display-mode:fullscreen)]:min-h-[70px] p-1.5 [@media(display-mode:fullscreen)]:p-2.5 border border-black/30 bg-transparent text-black text-nav-label rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111] resize-none"
+                      className="w-full min-h-[50px] md:min-h-[140px] p-1.5 md:p-4 md:text-[18px] border border-black/30 bg-transparent text-black rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111] resize-none"
                     ></textarea>
                   </div>
 
-                  <div className="pt-1.5 [@media(display-mode:fullscreen)]:pt-2 transition-all duration-700">
+                  <div className="pt-1.5 md:pt-4 transition-all duration-700">
                     <button
                       type="submit"
                       disabled={status === 'submitting'}
-                      className="w-full btn-submit py-2 [@media(display-mode:fullscreen)]:py-3 px-8 text-nav-label tracking-[0.15em] uppercase rounded-full active:scale-[0.99] disabled:opacity-50"
+                      className="w-full btn-submit py-2 md:py-4.5 md:text-[18px] px-8 text-nav-label tracking-[0.15em] uppercase rounded-full active:scale-[0.99] disabled:opacity-50"
                     >
                       <span>{status === 'submitting' ? 'Submitting...' : 'Submit'}</span>
                     </button>
@@ -216,5 +222,8 @@ export default function Inquiry() {
         </Reveal>
       </div>
     </section>
+        </div>
+      </div>
+    </>
   );
 }

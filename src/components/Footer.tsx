@@ -1,17 +1,34 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import Marquee from './Marquee';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const pathname = usePathname();
+
+  // Set outer footer background color based on the page theme to prevent transparent body background showing as black
+  let footerBg = 'bg-black';
+  if (pathname === '/work') {
+    footerBg = 'bg-[#fcfcfc]';
+  } else if (pathname?.startsWith('/work/')) {
+    footerBg = 'bg-[#f9f9f9]';
+  } else if (pathname === '/about') {
+    footerBg = 'bg-[#d9d9d9]';
+  } else if (pathname === '/inquiry') {
+    footerBg = 'bg-[#FAFAFA]';
+  }
 
   return (
-    <footer className="relative z-[60] bg-black overflow-hidden border-t border-white/5 md:h-screen md:max-h-[100svh] md:flex md:flex-col md:justify-center pt-[120px] pb-8 md:py-2 md:pt-[130px] [@media(max-height:850px)]:md:pt-[100px]" role="contentinfo">
+    <footer className={`relative z-[60] ${footerBg} overflow-hidden md:h-screen md:max-h-[100svh] md:flex md:flex-col`} role="contentinfo">
       {/* Marquee integrated directly inside the footer at the very top */}
-      <div className="w-full z-20 absolute top-0 left-0">
+      <div className="w-full z-20">
         <Marquee />
       </div>
 
-      <div className="max-w-[1600px] mx-auto px-8 md:px-[4vw] lg:px-[6vw] xl:px-[8vw] relative z-10 w-full flex flex-col justify-start gap-4 md:gap-6 lg:gap-8">
+      <div className="w-full flex-1 bg-black flex flex-col justify-center pt-[60px] md:pt-[80px] [@media(max-height:850px)]:md:pt-[60px] pb-8 md:py-2">
+        <div className="max-w-[1600px] mx-auto px-8 md:px-[4vw] lg:px-[6vw] xl:px-[8vw] relative z-10 w-full flex flex-col justify-start gap-4 md:gap-6 lg:gap-8">
 
 
         {/* PRE-FOOTER CTA */}
@@ -105,6 +122,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
   );
 }
