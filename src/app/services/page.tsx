@@ -112,29 +112,29 @@ export default function Services() {
                 <div className="max-w-[1600px] mx-auto w-full px-[var(--pad)] pt-[140px] md:pt-[180px] lg:pt-[120px] pb-12 md:pb-16 flex flex-col justify-center md:flex-1 relative z-20 2xl:-translate-y-4">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-10 md:gap-12 lg:gap-16 w-full">
                     {/* Left Column: Text Content */}
-                    <div className="w-full md:w-[45%] lg:w-[40%] xl:w-[48%] flex flex-col justify-center text-left px-8 md:px-[4vw] lg:px-[6vw] xl:px-[8vw]">
+                    <div className="w-full md:w-[60%] lg:w-[65%] xl:w-[65%] flex flex-col justify-center text-left px-8 md:px-[4vw] lg:px-[6vw] xl:px-[8vw]">
                     <Reveal className="mb-4 lg:mb-6 max-w-[700px] lg:max-w-[850px] 2xl:max-w-[1000px] transition-transform duration-700 ease-out">
                       <span className="text-nav-label tracking-[0.22em] uppercase text-[#6a6a6a] block mb-3">Services</span>
                       <h2 className="text-hero text-black transition-all duration-700 ease-out pb-2">
-                        <span className="block">What we do &ndash;</span>
-                        <span className="block">and what</span>
-                        <span className="inline-block bg-gradient-to-r from-[#161245] via-[#4B3FD4] to-[#786CF0] bg-clip-text text-transparent pb-2">we don&apos;t</span>
+                        <span className="block whitespace-nowrap">What we do &ndash;</span>
+                        <span className="block whitespace-nowrap">and what</span>
+                        <span className="inline-block bg-gradient-to-r from-[#161245] via-[#4B3FD4] to-[#786CF0] bg-clip-text text-transparent pb-2 whitespace-nowrap">we don&apos;t</span>
                       </h2>
                     </Reveal>
 
                     <Reveal delay={0.1} className="transition-transform duration-700 ease-out">
-                      <p className="text-main-desc text-[#6A6A6A] text-left transition-all duration-700 ease-out max-w-[750px] md:max-w-[650px] [@media(display-mode:fullscreen)]:md:max-w-[800px]">
-                        Pragyan is for founders who are tired of the same old<br className="hidden md:inline" /><span className="md:hidden">&nbsp;</span>
-                        and want to build something that actually carries weight.<br className="hidden md:inline" /><span className="md:hidden">&nbsp;</span>
-                        We&apos;re obsessed with the work we do &mdash;<br className="hidden md:inline" /><span className="md:hidden">&nbsp;</span>
-                        but even more protective of the work we choose not to do.<br className="hidden md:inline" /><span className="md:hidden">&nbsp;</span>
-                        We only move when there&apos;s a point of view worth fighting for.
+                      <p className="text-main-desc text-[#6A6A6A] text-left transition-all duration-700 ease-out max-w-[750px] md:max-w-[850px] [@media(display-mode:fullscreen)]:md:max-w-[1000px]">
+                        <span className="block md:whitespace-nowrap">Pragyan is for founders who are tired of the same old</span>
+                        <span className="block md:whitespace-nowrap">and want to build something that actually carries weight.</span>
+                        <span className="block md:whitespace-nowrap">We&apos;re obsessed with the work we do &mdash;</span>
+                        <span className="block md:whitespace-nowrap">but even more protective of the work we choose not to do.</span>
+                        <span className="block md:whitespace-nowrap">We only move when there&apos;s a point of view worth fighting for.</span>
                       </p>
                     </Reveal>
                   </div>
 
                   {/* Right Column: Video */}
-                  <Reveal delay={0.2} className="w-full md:w-[45%] lg:w-[48%] xl:w-[48%] flex items-center justify-center md:justify-end xl:justify-center">
+                  <Reveal delay={0.2} className="w-full md:w-[30%] lg:w-[25%] xl:w-[25%] flex items-center justify-center md:justify-end xl:justify-center">
                     <div className="w-full relative group flex justify-end">
                       <video
                         src="/services.mp4"

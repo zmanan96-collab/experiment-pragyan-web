@@ -89,43 +89,47 @@ export default function Inquiry() {
                   {/* Right Side: Clean Form with Black Border Outer Box */}
                   <div className="flex-1 bg-white flex items-center justify-center p-3 md:py-6 lg:py-8 xl:py-12 md:px-5 transition-all duration-700">
                     <div className="w-full max-w-[720px] md:max-w-[1000px] p-4 md:py-6 lg:py-8 xl:py-12 md:px-6 xl:px-10 bg-white transition-all duration-700">
-                      <p className="text-small-desc md:text-[16px] lg:text-[18px] xl:text-[20px] md:leading-[1.4] text-black mb-2 md:mb-4 xl:mb-6 transition-all duration-700">
+                      <p className="text-small-desc md:text-[14px] lg:text-[15px] xl:text-[16px] md:leading-[1.4] text-[#6A6A6A] mb-2 md:mb-3 xl:mb-4 transition-all duration-700">
                         Whether it&apos;s strategy, storytelling, or exploring how we can bring your brand to life &mdash; reach out, and we&apos;ll figure it out together.
                       </p>
 
                       <form
                         onSubmit={handleSubmit}
-                        className="space-y-1.5 md:space-y-6 transition-all duration-700"
+                        className="flex flex-col gap-3 md:gap-4 transition-all duration-700"
                       >
-                        <div>
-                          <label htmlFor="f-name" className="block text-nav-label md:text-[18px] md:font-semibold text-black mb-0.5 md:mb-2 transition-all duration-700">Name</label>
-                          <input
-                            id="f-name"
-                            name="name"
-                            type="text"
-                            required
-                            className="w-full p-1.5 md:p-4 md:text-[18px] border border-black/30 bg-transparent text-black rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
-                          />
-                        </div>
-
-                        <div className="grid grid-cols-2 gap-2 md:gap-6 max-[480px]:grid-cols-1 transition-all duration-700">
+                        {/* Row 1: Name and Email */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                           <div>
-                            <label htmlFor="f-email" className="block text-nav-label md:text-[18px] md:font-semibold text-black mb-0.5 md:mb-2 transition-all duration-700">Email address</label>
+                            <label htmlFor="f-name" className="block text-[12px] md:text-[14px] font-semibold text-black mb-1 transition-all duration-700">Name</label>
+                            <input
+                              id="f-name"
+                              name="name"
+                              type="text"
+                              required
+                              className="w-full p-2 md:p-3 text-[14px] md:text-[15px] border border-black/30 bg-transparent text-black rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
+                            />
+                          </div>
+
+                          <div>
+                            <label htmlFor="f-email" className="block text-[12px] md:text-[14px] font-semibold text-black mb-1 transition-all duration-700">Email address</label>
                             <input
                               id="f-email"
                               name="email"
                               type="email"
                               required
-                              className="w-full p-1.5 md:p-4 md:text-[18px] border border-black/30 bg-transparent text-black rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
+                              className="w-full p-2 md:p-3 text-[14px] md:text-[15px] border border-black/30 bg-transparent text-black rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
                             />
                           </div>
+                        </div>
 
+                        {/* Row 2: Mobile and Service */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 transition-all duration-700">
                           <div>
-                            <label htmlFor="f-phone" className="block text-nav-label md:text-[18px] md:font-semibold text-black mb-0.5 md:mb-2 transition-all duration-700">Mobile Number</label>
+                            <label htmlFor="f-phone" className="block text-[12px] md:text-[14px] font-semibold text-black mb-1 transition-all duration-700">Mobile Number</label>
                             <div className="flex gap-2 w-full">
                               <select
                                 name="countryCode"
-                                className="w-[75px] md:w-[105px] p-1.5 md:p-4 md:text-[18px] border border-black/30 bg-transparent text-black rounded-[4px] focus:outline-none focus:border-[#FFD111] appearance-none cursor-pointer transition-all duration-700"
+                                className="w-[85px] md:w-[95px] p-2 md:p-3 text-[14px] md:text-[15px] border border-black/30 bg-transparent text-black rounded-[4px] focus:outline-none focus:border-[#FFD111] appearance-none cursor-pointer transition-all duration-700"
                               >
                                 <option value="+91">IN +91</option>
                                 <option value="+1">US +1</option>
@@ -140,46 +144,47 @@ export default function Inquiry() {
                                 type="tel"
                                 placeholder="99999 99999"
                                 required
-                                className="flex-1 min-w-0 p-1.5 md:p-4 md:text-[18px] border border-black/30 bg-transparent text-black rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
+                                className="flex-1 min-w-0 p-2 md:p-3 text-[14px] md:text-[15px] border border-black/30 bg-transparent text-black rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
                               />
                             </div>
                           </div>
+
+                          <div>
+                            <label className="block text-[12px] md:text-[14px] font-semibold text-black mb-1 transition-all duration-700">Service Interested In</label>
+                            <select
+                              name="service"
+                              required
+                              defaultValue=""
+                              className="w-full p-2 md:p-3 text-[14px] md:text-[15px] border border-black/30 bg-transparent text-black rounded-[4px] focus:outline-none focus:border-[#FFD111] appearance-none cursor-pointer transition-all duration-700"
+                            >
+                              <option value="" disabled>Select a service</option>
+                              <option value="Branding Strategy">Branding Strategy</option>
+                              <option value="Identity & Expression">Identity & Expression</option>
+                              <option value="Content & Communication">Content & Communication</option>
+                              <option value="Digital Marketing">Digital Marketing</option>
+                              <option value="Social Community">Social Community</option>
+                              <option value="Personal Branding & Linkedin">Personal Branding & Linkedin</option>
+                              <option value="OOH ADVERTISING">OOH ADVERTISING</option>
+                            </select>
+                          </div>
                         </div>
 
+                        {/* Row 3: Message */}
                         <div>
-                          <label className="block text-nav-label md:text-[18px] md:font-semibold text-black mb-0.5 md:mb-2 transition-all duration-700">Service Interested In</label>
-                          <select
-                            name="service"
-                            required
-                            defaultValue=""
-                            className="w-full p-1.5 md:p-4 md:text-[18px] border border-black/30 bg-transparent text-black rounded-[4px] focus:outline-none focus:border-[#FFD111] appearance-none cursor-pointer transition-all duration-700"
-                          >
-                            <option value="" disabled>Select a service</option>
-                            <option value="Branding Strategy">Branding Strategy</option>
-                            <option value="Identity & Expression">Identity & Expression</option>
-                            <option value="Content & Communication">Content & Communication</option>
-                            <option value="Digital Marketing">Digital Marketing</option>
-                            <option value="Social Community">Social Community</option>
-                            <option value="Personal Branding & Linkedin">Personal Branding & Linkedin</option>
-                            <option value="OOH ADVERTISING">OOH ADVERTISING</option>
-                          </select>
-                        </div>
-
-                        <div>
-                          <label htmlFor="f-message" className="block text-nav-label md:text-[18px] md:font-semibold text-black mb-0.5 md:mb-2 transition-all duration-700">Leave a message</label>
+                          <label htmlFor="f-message" className="block text-[12px] md:text-[14px] font-semibold text-black mb-1 transition-all duration-700">Leave a message</label>
                           <textarea
                             id="f-message"
                             name="message"
                             required
-                            className="w-full min-h-[50px] md:min-h-[140px] p-1.5 md:p-4 md:text-[18px] border border-black/30 bg-transparent text-black rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111] resize-none"
+                            className="w-full min-h-[50px] md:min-h-[65px] lg:min-h-[80px] p-2 md:p-3 text-[14px] md:text-[15px] border border-black/30 bg-transparent text-black rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111] resize-y"
                           ></textarea>
                         </div>
 
-                        <div className="pt-1.5 md:pt-4 transition-all duration-700">
+                        <div className="pt-2 md:pt-3 transition-all duration-700">
                           <button
                             type="submit"
                             disabled={status === 'submitting'}
-                            className="w-full btn-submit py-2 md:py-4.5 md:text-[18px] px-8 text-nav-label tracking-[0.15em] uppercase rounded-full active:scale-[0.99] disabled:opacity-50"
+                            className="w-full btn-submit py-2 md:py-3.5 md:text-[15px] px-8 text-nav-label tracking-[0.15em] uppercase rounded-full active:scale-[0.99] disabled:opacity-50"
                           >
                             <span>{status === 'submitting' ? 'Submitting...' : 'Submit'}</span>
                           </button>
