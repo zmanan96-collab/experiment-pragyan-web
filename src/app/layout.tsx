@@ -4,8 +4,19 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ScrollSnapController from "../components/ScrollSnapController";
 
-const plusJakartaSans = { variable: "font-sans" };
-const spaceGrotesk = { variable: "font-space-grotesk" };
+import { Plus_Jakarta_Sans, Space_Grotesk } from "next/font/google";
+
+const plusJakartaSans = Plus_Jakarta_Sans({ 
+  subsets: ["latin"],
+  variable: "--font-plus-jakarta",
+  display: "swap",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Pragyan — Wisdom. Action. Growth. | A 360° brand & marketing agency",

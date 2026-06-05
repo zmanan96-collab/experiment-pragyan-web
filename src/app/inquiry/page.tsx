@@ -58,15 +58,15 @@ export default function Inquiry() {
         <div id="smooth-content" className="smooth-content w-full relative">
           <section aria-label="Inquiry" className="bg-[#FAFAFA] min-h-screen md:h-screen flex flex-col items-center justify-between pt-[100px] px-0 pb-0 md:pt-[80px] lg:pt-[100px] xl:pt-[45px] [@media(display-mode:fullscreen)]:md:pt-[60px] relative font-sans">
             <div className="w-full max-w-[1650px] mx-auto px-[4vw] flex-grow flex items-center justify-center p-4 py-8 md:py-0">
-              <Reveal className="w-full max-w-[1250px] md:max-w-[1550px] shadow-[0_30px_100px_-20px_rgba(0,0,0,0.15)] bg-white rounded-[20px] transition-all duration-700">
-                <div className="flex md:min-h-[600px] lg:min-h-[650px] xl:min-h-[720px] [@media(display-mode:fullscreen)]:md:min-h-[550px] max-[920px]:flex-col overflow-hidden rounded-[20px] transition-all duration-700" role="region" aria-labelledby="inquiry-h">
+              <Reveal className="w-full max-w-[1250px] md:max-w-[1000px] lg:max-w-[1100px] xl:max-w-[1550px] shadow-[0_30px_100px_-20px_rgba(0,0,0,0.15)] bg-white rounded-[20px] transition-all duration-700 mx-auto">
+                <div className="flex md:min-h-[500px] lg:min-h-[550px] xl:min-h-[720px] [@media(display-mode:fullscreen)]:md:min-h-[480px] max-[920px]:flex-col overflow-hidden rounded-[20px] transition-all duration-700" role="region" aria-labelledby="inquiry-h">
 
                   {/* Left Side: Solid Black (Top) & Radiating Texture (Bottom) */}
                   <div className="w-[44%] bg-black flex flex-col max-[920px]:w-full relative">
                     <div className="section-noise-effect" />
                     {/* Top Half: Yellow bold text in sentence case */}
                     <div className="h-1/2 flex items-center p-4 md:p-8 bg-black py-6 max-[920px]:py-6">
-                      <h2 id="inquiry-h" className="text-section-heading !font-extrabold text-white transition-all duration-700 md:text-[40px] lg:text-[48px] xl:text-[54px] md:leading-[1.1]">
+                      <h2 id="inquiry-h" className="text-section-heading !font-extrabold text-white transition-all duration-700 md:text-[34px] lg:text-[40px] xl:text-[54px] md:leading-[1.1]">
                         <span className="block whitespace-nowrap">Got a project,</span>
                         <span className="block whitespace-nowrap">a question, or</span>
                         <span className="block whitespace-nowrap">an idea about</span>
@@ -87,9 +87,9 @@ export default function Inquiry() {
                   </div>
 
                   {/* Right Side: Clean Form with Black Border Outer Box */}
-                  <div className="flex-1 bg-white flex items-center justify-center p-3 md:py-12 md:px-5 transition-all duration-700">
-                    <div className="w-full max-w-[720px] md:max-w-[1000px] p-4 md:py-12 md:px-10 bg-white transition-all duration-700">
-                      <p className="text-small-desc md:text-[20px] md:leading-[1.4] text-black mb-2 md:mb-6 transition-all duration-700">
+                  <div className="flex-1 bg-white flex items-center justify-center p-3 md:py-6 lg:py-8 xl:py-12 md:px-5 transition-all duration-700">
+                    <div className="w-full max-w-[720px] md:max-w-[1000px] p-4 md:py-6 lg:py-8 xl:py-12 md:px-6 xl:px-10 bg-white transition-all duration-700">
+                      <p className="text-small-desc md:text-[16px] lg:text-[18px] xl:text-[20px] md:leading-[1.4] text-black mb-2 md:mb-4 xl:mb-6 transition-all duration-700">
                         Whether it&apos;s strategy, storytelling, or exploring how we can bring your brand to life &mdash; reach out, and we&apos;ll figure it out together.
                       </p>
 

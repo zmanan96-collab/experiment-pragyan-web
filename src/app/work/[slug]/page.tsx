@@ -223,8 +223,6 @@ Yet clients make judgements long before a project begins. A business card, a bro
 A coherent identity can communicate reliability before a single specification is reviewed.`,
     additionalSection2: `Shreeji had a clear positioning around engineered roofing solutions, but the brand lacked consistency and distinction across customer-facing touchpoints.`,
     heroImage: '/shreeji.webp',
-    showcaseImage2: '/shree1.jpg',
-    showcaseImage3: '/shree2.jpg',
     outcomesSection: {
       title: 'Outcomes',
       text: `The project provided Shreeji with a cohesive identity system capable of supporting sales conversations, quotations, presentations, and marketing materials with greater confidence and consistency.`
