@@ -66,11 +66,11 @@ export default function Culture() {
           <article aria-label="Culture">
             <div id="culture-deck-container" className="relative w-full bg-black">
               {/* Hero Section - matches reference image */}
-              <section id="culture-hero-section" className="bg-white text-black pt-[clamp(160px,18vw,220px)] pb-[clamp(80px,12vw,140px)] md:py-0 md:min-h-screen md:h-screen md:flex md:flex-col md:justify-center relative overflow-x-hidden z-10 w-full" aria-labelledby="culture-h">
-                <div className="wrap">
+              <section id="culture-hero-section" className="bg-white text-black relative overflow-x-hidden z-10 w-full md:min-h-screen md:h-screen md:flex md:flex-col" aria-labelledby="culture-h">
+                <div className="max-w-[1600px] mx-auto w-full px-[var(--pad)] pt-[140px] md:pt-[180px] lg:pt-[120px] pb-12 md:pb-16 flex flex-col justify-center md:flex-1 relative z-[1]">
                   <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-16 w-full transition-transform duration-500">
                     {/* Left content block */}
-                    <div className="w-full md:w-[65%] lg:w-[60%] xl:w-[70%] max-w-[750px] flex flex-col items-start max-[880px]:items-center max-[880px]:text-center transition-transform duration-700 md:-translate-x-[8vw] lg:-translate-x-[10vw] xl:-translate-x-[12vw]">
+                    <div className="w-full md:w-[65%] lg:w-[60%] xl:w-[70%] max-w-[750px] flex flex-col items-start max-[880px]:items-center max-[880px]:text-center transition-transform duration-700 px-8 md:px-[4vw] lg:px-[6vw] xl:px-[8vw]">
                       <Reveal>
                         <span className="text-nav-label tracking-[0.22em] uppercase text-[#6a6a6a] block mb-6 md:mb-4">Careers</span>
                         <h1 id="culture-h" className="text-hero text-black mb-10 md:mb-6">

@@ -108,10 +108,11 @@ export default function Services() {
           <article aria-label="Services">
             <div id="services-deck-container" className="relative w-full bg-black">
               {/* Main Intro Section */}
-              <section id="services-hero-section" className="bg-white text-black pt-[clamp(140px,18vw,200px)] pb-16 md:pb-[140px] md:pt-[80px] md:min-h-[100svh] md:h-[100svh] md:flex md:flex-col md:justify-center relative overflow-hidden z-10 w-full">
-                <div className="wrap relative z-20 flex flex-col md:flex-row md:items-center md:justify-between gap-10 md:gap-12 lg:gap-16 w-full 2xl:-translate-y-4">
-                  {/* Left Column: Text Content */}
-                  <div className="w-full md:w-[45%] lg:w-[40%] xl:w-[48%] flex flex-col justify-center text-left pl-6 md:pl-0 md:ml-[3vw] lg:ml-[5vw] xl:ml-0 md:translate-x-[3vw] lg:translate-x-[6vw] xl:translate-x-0 transition-transform duration-700">
+              <section id="services-hero-section" className="bg-white text-black relative overflow-hidden z-10 w-full md:min-h-[100svh] md:h-[100svh] md:flex md:flex-col" aria-labelledby="services-hero">
+                <div className="max-w-[1600px] mx-auto w-full px-[var(--pad)] pt-[140px] md:pt-[180px] lg:pt-[120px] pb-12 md:pb-16 flex flex-col justify-center md:flex-1 relative z-20 2xl:-translate-y-4">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-10 md:gap-12 lg:gap-16 w-full">
+                    {/* Left Column: Text Content */}
+                    <div className="w-full md:w-[45%] lg:w-[40%] xl:w-[48%] flex flex-col justify-center text-left px-8 md:px-[4vw] lg:px-[6vw] xl:px-[8vw]">
                     <Reveal className="mb-4 lg:mb-6 max-w-[700px] lg:max-w-[850px] 2xl:max-w-[1000px] transition-transform duration-700 ease-out">
                       <span className="text-nav-label tracking-[0.22em] uppercase text-[#6a6a6a] block mb-3">Services</span>
                       <h2 className="text-hero text-black transition-all duration-700 ease-out pb-2">
@@ -146,8 +147,9 @@ export default function Services() {
                     </div>
                   </Reveal>
                 </div>
+              </div>
 
-                {/* Bottom Solid Black Transition Bar (Desktop only) */}
+              {/* Bottom Solid Black Transition Bar (Desktop only) */}
                 <div className="services-bottom-black-bar hidden md:block absolute bottom-[-20px] md:bottom-[-30px] lg:bottom-[-40px] xl:bottom-[-50px] 2xl:bottom-[-60px] left-0 w-full h-[40px] lg:h-[55px] xl:h-[90px] [@media(display-mode:fullscreen)]:h-[80px] [@media(display-mode:fullscreen)]:lg:h-[120px] [@media(display-mode:fullscreen)]:xl:h-[180px] transition-all duration-700 ease-out bg-black z-30" />
               </section>
 
