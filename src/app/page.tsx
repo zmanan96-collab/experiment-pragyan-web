@@ -88,7 +88,7 @@ export default function Home() {
         const end = trigger.end;
         const totalHeight = end - start;
         const horizontalProgress = index / (projects.length - 1);
-        const timelineProgress = (3.0 + horizontalProgress * 1.5) / 4.5;
+        const timelineProgress = (4.0 + horizontalProgress * 1.5) / 5.5;
         const targetScroll = start + timelineProgress * totalHeight;
         window.scrollTo({
           top: targetScroll,
@@ -136,17 +136,17 @@ export default function Home() {
           id: 'deck-trigger',
           trigger: '#deck-container',
           start: 'top top',
-          end: '+=450%', // Scroll for 4.5 full screen heights to stack sections and horizontal scroll projects
+          end: '+=550%', // Scroll for 5.5 full screen heights to stack sections and horizontal scroll projects
           pin: true,
           pinSpacing: true,
           scrub: 1.2, // Beautiful smooth inertia lag/delay matching Interract
           onUpdate: (self) => {
-            // Mapping timeline progress to active slide index during horizontal scroll portion (time 3.0 to 4.5)
-            const time = self.progress * 4.5;
-            if (time < 3.0) {
+            // Mapping timeline progress to active slide index during horizontal scroll portion (time 4.0 to 5.5)
+            const time = self.progress * 5.5;
+            if (time < 4.0) {
               setActiveSlide(0);
-            } else if (time >= 3.0 && time <= 4.5) {
-              const horizontalProgress = (time - 3.0) / 1.5;
+            } else if (time >= 4.0 && time <= 5.5) {
+              const horizontalProgress = (time - 4.0) / 1.5;
               const index = Math.min(
                 projects.length - 1,
                 Math.max(0, Math.round(horizontalProgress * (projects.length - 1)))
@@ -157,7 +157,7 @@ export default function Home() {
         }
       });
 
-      // ── TRANSITION 1: Hero -> Manifesto ──
+      // ── TRANSITION 1: Hero -> Core Philosophy ──
       // Manifesto slides up cleanly from the bottom and stacks over Hero
       tl.fromTo('#manifesto-section',
         { yPercent: 100 },
@@ -181,24 +181,32 @@ export default function Home() {
         ease: 'none',
       }, 0);
 
-      // ── TRANSITION 2: Manifesto -> Process ──
-      // Process slides up cleanly from the bottom and stacks over Manifesto
-      tl.fromTo('#process-section',
+      // ── TRANSITION 2: Core Philosophy -> Methodology ──
+      // Methodology slides up cleanly from the bottom and stacks over Core Philosophy
+      tl.fromTo('#methodology-section',
         { yPercent: 100 },
         { yPercent: 0, ease: 'none' },
         1
       );
 
-      // ── TRANSITION 3: Process -> Breathe ──
-      // Breathe slides up cleanly from the bottom and stacks over Process
-      tl.fromTo('#breathe-section',
+      // ── TRANSITION 3: Methodology -> Process ──
+      // Process slides up cleanly from the bottom and stacks over Methodology
+      tl.fromTo('#process-section',
         { yPercent: 100 },
         { yPercent: 0, ease: 'none' },
         2
       );
 
-      // ── TRANSITION 4: Horizontal scroll of projects-track ──
-      // Driven by vertical scroll from time 3 to 4.5
+      // ── TRANSITION 4: Process -> Breathe ──
+      // Breathe slides up cleanly from the bottom and stacks over Process
+      tl.fromTo('#breathe-section',
+        { yPercent: 100 },
+        { yPercent: 0, ease: 'none' },
+        3
+      );
+
+      // ── TRANSITION 5: Horizontal scroll of projects-track ──
+      // Driven by vertical scroll from time 4 to 5.5
       tl.to('#projects-track', {
         x: () => {
           const track = document.getElementById('projects-track');
@@ -207,7 +215,7 @@ export default function Home() {
           return -(trackWidth - window.innerWidth);
         },
         ease: 'none'
-      }, 3);
+      }, 4);
     });
 
     // ── MOBILE TRANSITIONS (< 768px) ──
@@ -228,7 +236,7 @@ export default function Home() {
       mobileTl.to('.text-sweep-line-5', { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', ease: 'none' });
       mobileTl.to('.text-sweep-line-6', { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', ease: 'none' });
       // Simple viewport scroll-driven reveals for mobile
-      const reveals = ['.manifesto-wrap', '#process-section', '#breathe-section'];
+      const reveals = ['.manifesto-wrap', '.methodology-wrap', '#process-section', '#breathe-section'];
       reveals.forEach((sel) => {
         gsap.fromTo(sel,
           { opacity: 0.3, y: 30 },
@@ -378,53 +386,68 @@ export default function Home() {
 
                 {/* Content Wrapper (Aligned perfectly left for an ultra-premium, high-end agency presentation) */}
                 <div className="hero-content-fade relative z-[1] md:flex-1 flex flex-col justify-center max-w-[1600px] mx-auto w-full px-[var(--pad)] pt-[140px] md:pt-[clamp(160px,18vh,220px)] pb-12 md:pb-16 hero-title-scroll">
-                  <div className="flex flex-col items-start gap-6 md:gap-7 lg:gap-8 max-w-[1000px] px-8 md:px-[4vw] lg:px-[6vw] xl:px-[8vw] w-full">
+                  <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 lg:gap-16 w-full">
+                    
+                    {/* Left Column: Heading & Content */}
+                    <div className="flex flex-col items-start gap-6 md:gap-7 lg:gap-8 w-full md:w-[60%] max-w-[1000px] px-8 md:px-[4vw] lg:px-[6vw] xl:px-[8vw]">
+                      <Reveal>
+                        <h1 id="hero-h" className="text-hero text-[#fcfcfc]">
+                          <span className="whitespace-normal md:whitespace-nowrap block">Behind every meaningful</span>
+                          <span className="whitespace-normal md:whitespace-nowrap block">
+                            brand is a <span className="bg-gradient-to-r from-[#1E1F65] via-[#4E54D4] to-[#7678ED] bg-clip-text text-transparent inline-block animate-gradient-flow">perspective.</span>
+                          </span>
+                        </h1>
+                      </Reveal>
 
-                    <Reveal>
-                      <h1 id="hero-h" className="text-hero text-[#fcfcfc]">
-                        <span className="whitespace-normal md:whitespace-nowrap block">Behind every meaningful</span>
-                        <span className="whitespace-normal md:whitespace-nowrap block">
-                          brand is a <span className="bg-gradient-to-r from-[#1E1F65] via-[#4E54D4] to-[#7678ED] bg-clip-text text-transparent inline-block animate-gradient-flow">perspective.</span>
-                        </span>
-                      </h1>
-                    </Reveal>
+                      <Reveal delay={0.12}>
+                        <div className="flex flex-col gap-0.5 md:gap-1">
+                          <p className="text-main-desc text-[#C9C9CE] whitespace-normal md:whitespace-nowrap">
+                            A founder&apos;s conviction.
+                          </p>
+                          <p className="text-main-desc text-[#C9C9CE] whitespace-normal md:whitespace-nowrap">
+                            A point of view worth building around.
+                          </p>
+                        </div>
+                      </Reveal>
 
-                    <Reveal delay={0.12}>
-                      <div className="flex flex-col gap-0.5 md:gap-1">
-                        <p className="text-main-desc text-[#C9C9CE] whitespace-normal md:whitespace-nowrap">
-                          A founder&apos;s conviction.
-                        </p>
-                        <p className="text-main-desc text-[#C9C9CE] whitespace-normal md:whitespace-nowrap">
-                          A point of view worth building around.
-                        </p>
-                      </div>
-                    </Reveal>
+                      <Reveal delay={0.24}>
+                        <div className="flex flex-col gap-4 max-w-[800px]">
+                          <p className="text-main-desc text-[#C9C9CE]">
+                            <span className="sm:whitespace-nowrap">At Pragyan, we transform that conviction into strategy, identity,</span><br className="hidden sm:inline" /> communication, and growth.
+                          </p>
+                          <p className="text-main-desc text-[#C9C9CE]">
+                            <span className="sm:whitespace-nowrap">We partner with founders and teams to shape ideas into brands,</span><br className="hidden sm:inline" /> stories, and experiences that build connection, trust, and lasting impact.
+                          </p>
+                        </div>
+                      </Reveal>
 
-                    <Reveal delay={0.24}>
-                      <div className="flex flex-col gap-4 max-w-[800px]">
-                        <p className="text-main-desc text-[#C9C9CE]">
-                          <span className="sm:whitespace-nowrap">At Pragyan, we transform that conviction into strategy, identity,</span><br className="hidden sm:inline" /> communication, and growth.
-                        </p>
-                        <p className="text-main-desc text-[#C9C9CE]">
-                          <span className="sm:whitespace-nowrap">We partner with founders and teams to shape ideas into brands,</span><br className="hidden sm:inline" /> stories, and experiences that build connection, trust, and lasting impact.
-                        </p>
-                      </div>
-                    </Reveal>
+                      <Reveal delay={0.36} className="mt-2">
+                        <Button
+                          href="/services"
+                          className="uppercase w-fit inline-flex items-center justify-center whitespace-nowrap"
+                        >
+                          VIEW SERVICES
+                        </Button>
+                      </Reveal>
+                    </div>
 
-                    <Reveal delay={0.36} className="mt-2">
-                      <Button
-                        href="/services"
-                        className="uppercase w-fit inline-flex items-center justify-center whitespace-nowrap"
-                      >
-                        VIEW SERVICES
-                      </Button>
-                    </Reveal>
+                    {/* Right Column: Autoplay Video */}
+                    <div className="w-full md:w-[40%] max-w-[500px] px-8 md:px-0 flex justify-center md:justify-end relative z-10 select-none pointer-events-none md:translate-x-[2vw] lg:translate-x-[3vw] transition-all duration-700">
+                      <video
+                        src="/home page .mp4"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-auto object-contain pointer-events-none rounded-[12px]"
+                      />
+                    </div>
 
                   </div>
                 </div>
               </section>
 
-              {/* SECTION 2: MANIFESTO & CAPABILITIES */}
+              {/* SECTION 2: CORE PHILOSOPHY */}
               <section
                 id="manifesto-section"
                 className="md:absolute md:top-0 md:left-0 md:h-[100vh] h-auto bg-night border-t border-border shadow-[0_-30px_60px_rgba(0,0,0,0.85)] px-[var(--pad)] py-20 md:py-0 flex flex-col justify-center relative overflow-hidden z-20 w-full"
@@ -439,11 +462,11 @@ export default function Home() {
 
                       {/* Line 1 */}
                       <div className="relative block w-full max-w-[90vw] md:w-fit select-none pointer-events-none">
-                        <span className="block text-main-desc text-[#4A4A4D] whitespace-normal md:whitespace-nowrap text-center">
+                        <span className="block text-philosophy-desc text-[#4A4A4D] whitespace-normal md:whitespace-nowrap text-center">
                           From emerging ventures to growing businesses, we help meaningful
                         </span>
                         <span
-                          className="text-sweep-line-1 absolute top-0 left-0 right-0 block text-main-desc text-[#E3E3E3] w-full h-full pointer-events-none select-none whitespace-normal md:whitespace-nowrap overflow-hidden text-center"
+                          className="text-sweep-line-1 absolute top-0 left-0 right-0 block text-philosophy-desc text-[#E3E3E3] w-full h-full pointer-events-none select-none whitespace-normal md:whitespace-nowrap overflow-hidden text-center"
                           style={{ clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' }}
                         >
                           From emerging ventures to growing businesses, we help meaningful
@@ -452,11 +475,11 @@ export default function Home() {
 
                       {/* Line 2 */}
                       <div className="relative block w-full max-w-[90vw] md:w-fit select-none pointer-events-none">
-                        <span className="block text-main-desc text-[#4A4A4D] whitespace-normal md:whitespace-nowrap text-center">
+                        <span className="block text-philosophy-desc text-[#4A4A4D] whitespace-normal md:whitespace-nowrap text-center">
                           ideas find their voice, earn attention, and create lasting impact.
                         </span>
                         <span
-                          className="text-sweep-line-2 absolute top-0 left-0 right-0 block text-main-desc text-[#E3E3E3] w-full h-full pointer-events-none select-none whitespace-normal md:whitespace-nowrap overflow-hidden text-center"
+                          className="text-sweep-line-2 absolute top-0 left-0 right-0 block text-philosophy-desc text-[#E3E3E3] w-full h-full pointer-events-none select-none whitespace-normal md:whitespace-nowrap overflow-hidden text-center"
                           style={{ clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' }}
                         >
                           ideas find their voice, earn attention, and create lasting impact.
@@ -468,11 +491,11 @@ export default function Home() {
 
                       {/* Line 3 */}
                       <div className="relative block w-full max-w-[90vw] md:w-fit select-none pointer-events-none">
-                        <span className="block text-main-desc text-[#4A4A4D] whitespace-normal md:whitespace-nowrap text-center">
+                        <span className="block text-philosophy-desc text-[#4A4A4D] whitespace-normal md:whitespace-nowrap text-center">
                           We&apos;re a young team of strategists and creators who believe the
                         </span>
                         <span
-                          className="text-sweep-line-3 absolute top-0 left-0 right-0 block text-main-desc text-[#E3E3E3] w-full h-full pointer-events-none select-none whitespace-normal md:whitespace-nowrap overflow-hidden text-center"
+                          className="text-sweep-line-3 absolute top-0 left-0 right-0 block text-philosophy-desc text-[#E3E3E3] w-full h-full pointer-events-none select-none whitespace-normal md:whitespace-nowrap overflow-hidden text-center"
                           style={{ clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' }}
                         >
                           We&apos;re a young team of strategists and creators who believe the
@@ -481,11 +504,11 @@ export default function Home() {
 
                       {/* Line 4 */}
                       <div className="relative block w-full max-w-[90vw] md:w-fit select-none pointer-events-none">
-                        <span className="block text-main-desc text-[#4A4A4D] whitespace-normal md:whitespace-nowrap text-center">
+                        <span className="block text-philosophy-desc text-[#4A4A4D] whitespace-normal md:whitespace-nowrap text-center">
                           best brands are built from human insight.
                         </span>
                         <span
-                          className="text-sweep-line-4 absolute top-0 left-0 right-0 block text-main-desc text-[#E3E3E3] w-full h-full pointer-events-none select-none whitespace-normal md:whitespace-nowrap overflow-hidden text-center"
+                          className="text-sweep-line-4 absolute top-0 left-0 right-0 block text-philosophy-desc text-[#E3E3E3] w-full h-full pointer-events-none select-none whitespace-normal md:whitespace-nowrap overflow-hidden text-center"
                           style={{ clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' }}
                         >
                           best brands are built from human insight.
@@ -497,11 +520,11 @@ export default function Home() {
 
                       {/* Line 5 */}
                       <div className="relative block w-full max-w-[90vw] md:w-fit select-none pointer-events-none">
-                        <span className="block text-main-desc text-[#4A4A4D] whitespace-normal md:whitespace-nowrap text-center">
+                        <span className="block text-philosophy-desc text-[#4A4A4D] whitespace-normal md:whitespace-nowrap text-center">
                           We value curiosity, intellectual honesty, and long-term thinking.
                         </span>
                         <span
-                          className="text-sweep-line-5 absolute top-0 left-0 right-0 block text-main-desc font-medium bg-gradient-to-r from-[#1E1F65] via-[#4B3FD4] to-[#7678ED] bg-clip-text text-transparent animate-gradient-flow w-full h-full pointer-events-none select-none whitespace-normal md:whitespace-nowrap overflow-hidden text-center"
+                          className="text-sweep-line-5 absolute top-0 left-0 right-0 block text-philosophy-desc font-medium bg-gradient-to-r from-[#1E1F65] via-[#4B3FD4] to-[#7678ED] bg-clip-text text-transparent animate-gradient-flow w-full h-full pointer-events-none select-none whitespace-normal md:whitespace-nowrap overflow-hidden text-center"
                           style={{ clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' }}
                         >
                           We value curiosity, intellectual honesty, and long-term thinking.
@@ -510,11 +533,11 @@ export default function Home() {
 
                       {/* Line 6 */}
                       <div className="relative block w-full max-w-[90vw] md:w-fit select-none pointer-events-none">
-                        <span className="block text-main-desc text-[#4A4A4D] whitespace-normal md:whitespace-nowrap text-center">
+                        <span className="block text-philosophy-desc text-[#4A4A4D] whitespace-normal md:whitespace-nowrap text-center">
                           We aren&apos;t for everyone &mdash; and we&apos;re okay with that.
                         </span>
                         <span
-                          className="text-sweep-line-6 absolute top-0 left-0 right-0 block text-main-desc text-[#E3E3E3] w-full h-full pointer-events-none select-none whitespace-normal md:whitespace-nowrap overflow-hidden text-center"
+                          className="text-sweep-line-6 absolute top-0 left-0 right-0 block text-philosophy-desc text-[#E3E3E3] w-full h-full pointer-events-none select-none whitespace-normal md:whitespace-nowrap overflow-hidden text-center"
                           style={{ clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' }}
                         >
                           We aren&apos;t for everyone &mdash; and we&apos;re okay with that.
@@ -523,11 +546,20 @@ export default function Home() {
                     </div>
 
                   </Reveal>
+                </div>
+              </section>
 
+              {/* SECTION 3: METHODOLOGY */}
+              <section
+                id="methodology-section"
+                className="md:absolute md:top-0 md:left-0 md:h-[100vh] h-auto bg-night border-t border-border shadow-[0_-30px_60px_rgba(0,0,0,0.85)] px-[var(--pad)] py-20 md:py-0 flex flex-col justify-center relative overflow-hidden z-25 w-full"
+                aria-labelledby="methodology-h"
+              >
+                <div className="wrap w-full methodology-wrap">
                   {/* Methodology Cards Section */}
-                  <div className="methodology-section mt-10 md:mt-[clamp(10px,2vh,50px)] max-w-[1100px] md:max-w-[760px] xl:max-w-[920px] 2xl:max-w-[1100px] mx-auto">
+                  <div className="methodology-section max-w-[1100px] md:max-w-[760px] xl:max-w-[920px] 2xl:max-w-[1100px] mx-auto">
                     <Reveal className="text-center mb-6 md:mb-4 lg:mb-5 xl:mb-6 2xl:mb-8">
-                      <span className="text-nav-label tracking-[0.22em] !text-[#a6a6a6]" style={{ color: '#a6a6a6' }}>Methodology</span>
+                      <span id="methodology-h" className="text-nav-label tracking-[0.22em] !text-[#a6a6a6]" style={{ color: '#a6a6a6' }}>Methodology</span>
                     </Reveal>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-3 xl:gap-4 2xl:gap-6">
                       {[
@@ -708,7 +740,7 @@ export default function Home() {
                           className="w-[80vw] md:w-[32vw] lg:w-[28vw] shrink-0 snap-center md:snap-align-none rounded-[20px] overflow-hidden aspect-[4/3] md:aspect-[16/11] relative bg-[#121212] group border border-white/5 block cursor-pointer"
                         >
                           {/* Nested Image Container that shrinks on hover to keep all corners rounded */}
-                          <div className="absolute top-0 left-0 right-0 bottom-[75px] md:bottom-0 rounded-[20px] md:rounded-b-none overflow-hidden transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] md:group-hover:bottom-[95px] md:group-hover:rounded-b-[20px]">
+                          <div className="absolute top-0 left-0 right-0 bottom-[105px] md:bottom-0 rounded-[20px] md:rounded-b-none overflow-hidden transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] md:group-hover:bottom-[95px] md:group-hover:rounded-b-[20px]">
                             <img
                               src={project.image}
                               alt={project.title}
@@ -722,7 +754,7 @@ export default function Home() {
                           </div>
 
                           {/* Details panel - Revealed in the bottom area on hover on desktop, always visible on mobile */}
-                          <div className="absolute bottom-0 left-0 right-0 h-[75px] md:h-[95px] px-5 py-3 md:py-4 flex flex-col justify-center translate-y-0 md:translate-y-2 opacity-100 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] select-none pointer-events-none z-10">
+                          <div className="absolute bottom-0 left-0 right-0 h-[105px] md:h-[95px] px-5 py-3 md:py-4 flex flex-col justify-center translate-y-0 md:translate-y-2 opacity-100 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] select-none pointer-events-none z-10">
                             <h4 className="text-[14px] md:text-[18px] text-white font-bold mb-1.5 md:mb-2.5 tracking-tight uppercase">
                               {project.title}
                             </h4>

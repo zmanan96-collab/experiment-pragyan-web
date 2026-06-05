@@ -242,9 +242,6 @@ A coherent identity can communicate reliability before a single specification is
     Yet for many buyers, these materials become the reference point long after the first meeting ends.
     The quality of communication influences how the quality of the company is perceived.`,
     additionalSection2: `Existing materials did not fully communicate the sophistication, expertise, and professionalism behind the company's work.`,
-    additionalSection3: `In technical industries, communication doesn't need to be creative first.
-    It needs to be clear.
-    Precision builds confidence.`,
     heroImage: '/yashhero.svg',
     showcaseImage1: 'https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&q=80&w=800',
     showcaseImage2: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800',

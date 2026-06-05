@@ -57,8 +57,8 @@ export default function Inquiry() {
       <div id="smooth-wrapper" className="smooth-wrapper w-full bg-[#FAFAFA]">
         <div id="smooth-content" className="smooth-content w-full relative">
           <section aria-label="Inquiry" className="bg-[#FAFAFA] min-h-screen md:h-screen flex flex-col items-center justify-between pt-[100px] px-0 pb-0 md:pt-[45px] [@media(display-mode:fullscreen)]:md:pt-[60px] relative font-sans">
-            <div className="w-full flex-grow flex items-center justify-center p-4 py-8 md:py-0 md:px-10">
-              <Reveal className="w-full max-w-[1250px] md:max-w-[1550px] shadow-[0_30px_100px_-20px_rgba(0,0,0,0.15)] bg-white rounded-[20px] [@media(display-mode:fullscreen)]:max-w-[1300px] transition-all duration-700">
+            <div className="w-full max-w-[1650px] mx-auto px-[4vw] flex-grow flex items-center justify-center p-4 py-8 md:py-0">
+              <Reveal className="w-full max-w-[1250px] md:max-w-[1550px] shadow-[0_30px_100px_-20px_rgba(0,0,0,0.15)] bg-white rounded-[20px] transition-all duration-700">
                 <div className="flex md:min-h-[720px] [@media(display-mode:fullscreen)]:md:min-h-[550px] max-[920px]:flex-col overflow-hidden rounded-[20px] transition-all duration-700" role="region" aria-labelledby="inquiry-h">
 
                   {/* Left Side: Solid Black (Top) & Radiating Texture (Bottom) */}
@@ -122,7 +122,7 @@ export default function Inquiry() {
 
                           <div>
                             <label htmlFor="f-phone" className="block text-nav-label md:text-[18px] md:font-semibold text-black mb-0.5 md:mb-2 transition-all duration-700">Mobile Number</label>
-                            <div className="flex gap-2">
+                            <div className="flex gap-2 w-full">
                               <select
                                 name="countryCode"
                                 className="w-[75px] md:w-[105px] p-1.5 md:p-4 md:text-[18px] border border-black/30 bg-transparent text-black rounded-[4px] focus:outline-none focus:border-[#FFD111] appearance-none cursor-pointer transition-all duration-700"
@@ -140,7 +140,7 @@ export default function Inquiry() {
                                 type="tel"
                                 placeholder="99999 99999"
                                 required
-                                className="flex-1 p-1.5 md:p-4 md:text-[18px] border border-black/30 bg-transparent text-black rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
+                                className="flex-1 min-w-0 p-1.5 md:p-4 md:text-[18px] border border-black/30 bg-transparent text-black rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
                               />
                             </div>
                           </div>

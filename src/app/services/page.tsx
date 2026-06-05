@@ -112,7 +112,7 @@ export default function Services() {
                 <div className="wrap relative z-20 flex flex-col md:flex-row md:items-center md:justify-between gap-10 md:gap-12 lg:gap-16 w-full 2xl:-translate-y-4">
                   {/* Left Column: Text Content */}
                   <div className="w-full md:w-[52%] lg:w-[48%] flex flex-col justify-center text-left">
-                    <Reveal className="mb-4 lg:mb-6 max-w-[700px] lg:max-w-[850px] 2xl:max-w-[1000px] md:-translate-x-[4vw] lg:-translate-x-[6vw] xl:-translate-x-[7vw] 2xl:translate-x-0 [@media(display-mode:fullscreen)]:md:-translate-x-[4vw] [@media(display-mode:fullscreen)]:xl:-translate-x-[6vw] transition-transform duration-700 ease-out">
+                    <Reveal className="mb-4 lg:mb-6 max-w-[700px] lg:max-w-[850px] 2xl:max-w-[1000px] transition-transform duration-700 ease-out">
                       <span className="text-nav-label tracking-[0.22em] uppercase text-[#6a6a6a] block mb-3">Services</span>
                       <h2 className="text-hero text-black transition-all duration-700 ease-out pb-2">
                         <span className="block">What we do &ndash;</span>
@@ -121,7 +121,7 @@ export default function Services() {
                       </h2>
                     </Reveal>
 
-                    <Reveal delay={0.1} className="md:-translate-x-[4vw] lg:-translate-x-[6vw] xl:-translate-x-[7vw] 2xl:translate-x-0 [@media(display-mode:fullscreen)]:md:-translate-x-[4vw] [@media(display-mode:fullscreen)]:xl:-translate-x-[6vw] transition-transform duration-700 ease-out">
+                    <Reveal delay={0.1} className="transition-transform duration-700 ease-out">
                       <p className="text-main-desc text-[#6A6A6A] text-left transition-all duration-700 ease-out max-w-[750px] md:max-w-[650px] [@media(display-mode:fullscreen)]:md:max-w-[800px]">
                         Pragyan is for founders who are tired of the same old<br className="hidden md:inline" /><span className="md:hidden">&nbsp;</span>
                         and want to build something that actually carries weight.<br className="hidden md:inline" /><span className="md:hidden">&nbsp;</span>

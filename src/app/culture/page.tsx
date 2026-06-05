@@ -70,7 +70,7 @@ export default function Culture() {
                 <div className="wrap">
                   <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-12 md:gap-16 w-full transition-transform duration-500">
                     {/* Left content block */}
-                    <div className="w-full md:w-[50%] max-w-[600px] flex flex-col items-start max-[880px]:items-center max-[880px]:text-center md:-translate-x-[3vw] lg:-translate-x-[5vw] transition-transform duration-500">
+                    <div className="w-full md:w-[60%] max-w-[750px] flex flex-col items-start max-[880px]:items-center max-[880px]:text-center transition-transform duration-500">
                       <Reveal>
                         <span className="text-nav-label tracking-[0.22em] uppercase text-[#6a6a6a] block mb-6 md:mb-4">Careers</span>
                         <h1 id="culture-h" className="text-hero text-black mb-10 md:mb-6">
@@ -95,14 +95,14 @@ export default function Culture() {
                     </div>
 
                     {/* Right video block */}
-                    <Reveal delay={0.3} className="w-full md:w-[50%] max-w-[550px] md:translate-x-[3vw] lg:translate-x-[5vw] transition-transform duration-500">
+                    <Reveal delay={0.3} className="w-full md:w-[40%] max-w-[420px] md:translate-x-[3vw] lg:translate-x-[5vw] xl:translate-x-[7vw] md:ml-auto transition-transform duration-500">
                       <video
                         src="/animate%20(1).mp4"
                         autoPlay
                         loop
                         muted
                         playsInline
-                        className="w-full h-auto select-none pointer-events-none"
+                        className="w-full h-auto select-none pointer-events-none md:scale-115 lg:scale-120 origin-right transition-transform duration-500"
                       />
                     </Reveal>
                   </div>

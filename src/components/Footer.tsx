@@ -16,7 +16,7 @@ export default function Footer() {
   } else if (pathname === '/about') {
     footerBg = 'bg-[#d9d9d9]';
   } else if (pathname === '/inquiry') {
-    footerBg = 'bg-[#FAFAFA]';
+    return null;
   }
 
   return (

@@ -83,6 +83,13 @@ button,
   line-height: 1.6 !important;
 }
 
+.text-philosophy-desc {
+  font-family: var(--font-sans) !important;
+  font-size: clamp(20px, 1.8vw, 26px) !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+}
+
 .text-small-desc {
   font-family: var(--font-sans) !important;
   font-size: clamp(14px, 1.2vw, 16px) !important;
