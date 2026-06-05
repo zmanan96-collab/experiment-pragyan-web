@@ -54,6 +54,7 @@ const projects = [
 export default function Home() {
   const [mounted, setMounted] = useState(false);
   const [activeSlide, setActiveSlide] = useState(0);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const sliderRef = useRef<HTMLDivElement>(null);
 
   const handleScroll = () => {
@@ -550,13 +551,13 @@ export default function Home() {
                           desc: "before we build.",
                           illustration: (
                             <video
-                              src="/We plan videos.mp4"
+                              src="/We plan videos reels.mp4"
                               autoPlay
                               loop
                               muted
                               playsInline
                               className="w-full h-full object-cover mix-blend-screen"
-                              style={{ transform: 'scale(1.1)', transformOrigin: 'center' }}
+                              style={{ transform: 'scale(1.5)', transformOrigin: 'center' }}
                             />
                           )
                         },
@@ -565,12 +566,13 @@ export default function Home() {
                           desc: "to turn curiosity into creativity.",
                           illustration: (
                             <video
-                              src="/We plan videos reels.mp4"
+                              src="/3.mp4"
                               autoPlay
                               loop
                               muted
                               playsInline
                               className="w-full h-full object-cover mix-blend-screen"
+                              style={{ transform: 'scale(1.5)', transformOrigin: 'center' }}
                             />
                           )
                         }
@@ -701,6 +703,8 @@ export default function Home() {
                         <Link
                           key={idx}
                           href={`/work/${project.title.toLowerCase().replace(/ /g, '-')}`}
+                          onMouseEnter={() => setHoveredIndex(idx)}
+                          onMouseLeave={() => setHoveredIndex(null)}
                           className="w-[80vw] md:w-[32vw] lg:w-[28vw] shrink-0 snap-center md:snap-align-none rounded-[20px] overflow-hidden aspect-[4/3] md:aspect-[16/11] relative bg-[#121212] group border border-white/5 block cursor-pointer"
                         >
                           {/* Nested Image Container that shrinks on hover to keep all corners rounded */}
@@ -708,7 +712,12 @@ export default function Home() {
                             <img
                               src={project.image}
                               alt={project.title}
-                              className="w-full h-full object-cover object-top transition-transform duration-[1500ms] md:group-hover:scale-105 select-none pointer-events-none"
+                              style={{
+                                filter: hoveredIndex === idx ? 'grayscale(0%)' : 'grayscale(100%)',
+                                WebkitFilter: hoveredIndex === idx ? 'grayscale(0%)' : 'grayscale(100%)',
+                                transition: 'filter 0.7s cubic-bezier(0.16, 1, 0.3, 1), -webkit-filter 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 1.5s cubic-bezier(0.16, 1, 0.3, 1)',
+                              }}
+                              className="w-full h-full object-cover object-top md:group-hover:scale-105 select-none pointer-events-none"
                             />
                           </div>
 

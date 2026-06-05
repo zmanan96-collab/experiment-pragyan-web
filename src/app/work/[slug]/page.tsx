@@ -4,6 +4,43 @@ import StatsCounter, { AnimatedNumber } from '../../../components/StatsCounter';
 import InteractiveStatsDashboard from '../../../components/InteractiveStatsDashboard';
 import { getAtcChainsAnalyticsData } from '../../../lib/analyticsParser';
 
+function formatParagraphText(text: string | undefined): string {
+  if (!text) return '';
+  const lines = text.split('\n');
+  const formattedLines: string[] = [];
+
+  for (let i = 0; i < lines.length; i++) {
+    const currentLine = lines[i].trim();
+    if (currentLine === '') {
+      formattedLines.push('');
+      continue;
+    }
+
+    const startsWithBullet = currentLine.startsWith('•') || currentLine.startsWith('-') || currentLine.startsWith('*');
+
+    if (formattedLines.length > 0) {
+      const lastLineIndex = formattedLines.length - 1;
+      const lastLine = formattedLines[lastLineIndex];
+
+      if (
+        lastLine !== '' &&
+        !startsWithBullet &&
+        !lastLine.startsWith('•') &&
+        !lastLine.startsWith('-') &&
+        !lastLine.startsWith('*')
+      ) {
+        formattedLines[lastLineIndex] = lastLine + ' ' + currentLine;
+      } else {
+        formattedLines.push(currentLine);
+      }
+    } else {
+      formattedLines.push(currentLine);
+    }
+  }
+
+  return formattedLines.join('\n');
+}
+
 interface CaseStudyData {
   title: string;
   category: string;
@@ -18,10 +55,10 @@ interface CaseStudyData {
   additionalSection2?: string;
   additionalSection3?: string;
   heroImage: string;
-  showcaseImage1: string;
-  showcaseImage2: string;
-  showcaseImage3: string;
-  quote: string;
+  showcaseImage1?: string;
+  showcaseImage2?: string;
+  showcaseImage3?: string;
+  quote?: string;
   heroHeaderTheme?: 'light' | 'dark';
   stats?: {
     title: string;
@@ -74,9 +111,6 @@ Before buyers compare specifications, pricing, or capabilities, they make a quie
 Every decision that followed was guided by that question.`,
     heroImage: '/card-04.webp',
     showcaseImage1: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800',
-    showcaseImage2: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=800',
-    showcaseImage3: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800',
-    quote: 'Precision in product, precision in brand.',
     customTwoCards: {
       title: "Within a span of 8 months..",
       items: [
@@ -86,11 +120,6 @@ Every decision that followed was guided by that question.`,
       extraText: `Monthly reach grew from 2,663 impressions to 7,079 impressions
       
 Beyond the numbers, the company established a more consistent and credible presence across both digital and physical channels.`
-    },
-    reflectionSection: {
-      title: "Reflection",
-      text: `Expertise creates trust.
-But only when people can see it.`
     }
   },
   'global-guardians-school': {
@@ -128,16 +157,10 @@ Social media established an ongoing presence and helped communicate everyday mom
     showcaseImage1: 'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&q=80&w=800',
     showcaseImage2: '/GGS.webp',
     showcaseImage3: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=800',
-    quote: 'Education shapes more than careers.',
     outcomesSection: {
       title: 'Outcomes',
       text: `The project created a consistent identity system across admissions, communication, and public visibility.
 More importantly, it gave the school's philosophy a form that parents could engage with and understand.`
-    },
-    reflectionSection: {
-      title: 'Reflection',
-      text: `Education shapes more than careers.
-The challenge was creating a brand that reflected that belief.`
     }
   },
   'bhavya-srishti-udyog': {
@@ -152,15 +175,7 @@ The challenge was creating a brand that reflected that belief.`
 From there, we created industry materials, presentations, reports, social media content, exhibition assets, and communication support for business development activities.
 Alongside the company brand, we also supported founder visibility through LinkedIn and personal branding initiatives.
 Both the company and the people behind it needed to earn trust together.`,
-    descriptionRightOfLabel: `Bhavya Srishti Udyog is working to expand the role of bamboo within modern construction and manufacturing.
-
-The innovation was compelling.
-The challenge was communication.
-
-Many stakeholders—customers, institutions, government bodies, and industry professionals—were encountering the category for the first time.
-
-The company needed more than marketing.
-It needed clarity.`,
+    descriptionRightOfLabel: `Bhavya Srishti Udyog is working to expand the role of bamboo within modern construction and manufacturing.`,
     additionalSection: `Emerging categories often face a credibility gap.
 People are being asked to trust a product they may not fully understand, from a company they may have only recently discovered.
 In these situations, communication becomes part of the infrastructure required for growth.`,
@@ -170,10 +185,8 @@ The company also needed a system that could support multiple audiences, each wit
 The goal was not simply to generate visibility.
 The goal was to help people understand why the category mattered in the first place.`,
     heroImage: '/bsuhero.jpg',
-    showcaseImage1: 'https://images.unsplash.com/photo-1505761671935-60b3a7427bab?auto=format&fit=crop&q=80&w=800',
     showcaseImage2: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800',
     showcaseImage3: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800',
-    quote: "New ideas struggle when people don't understand them.",
     heroHeaderTheme: 'light',
     outcomesSection: {
       title: 'Outcomes',
@@ -186,12 +199,6 @@ LinkedIn (Organic)
 • 56 new followers
 
 The project established a foundation that helped BSU communicate more clearly across audiences while supporting visibility for both the company and its leadership.`
-    },
-    reflectionSection: {
-      title: 'Reflection',
-      text: `New ideas rarely fail because they're new.
-They struggle when people don't understand them.
-Communication helps bridge that gap.`
     }
   },
   'shreeji-enterprise': {
@@ -211,21 +218,12 @@ The challenge was to create a visual identity and communication system that refl
 Yet clients make judgements long before a project begins. A business card, a brochure, a quotation, or a first meeting often shapes confidence before technical discussions ever happen.
 A coherent identity can communicate reliability before a single specification is reviewed.`,
     additionalSection2: `Shreeji had a clear positioning around engineered roofing solutions, but the brand lacked consistency and distinction across customer-facing touchpoints.`,
-    additionalSection3: `We believed the objective wasn't to make the company look bigger.
-It was to make the company look as professional as the work it was already delivering.`,
     heroImage: '/shreeji.webp',
-    showcaseImage1: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800',
     showcaseImage2: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800',
     showcaseImage3: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=800',
-    quote: "Good branding helps people see it sooner.",
     outcomesSection: {
       title: 'Outcomes',
       text: `The project provided Shreeji with a cohesive identity system capable of supporting sales conversations, quotations, presentations, and marketing materials with greater confidence and consistency.`
-    },
-    reflectionSection: {
-      title: 'Reflection',
-      text: `Good products build trust.
-Good branding helps people see it sooner.`
     }
   },
   'yash-engineers-(india)-pvt.-ltd.': {
@@ -251,14 +249,9 @@ Good branding helps people see it sooner.`
     showcaseImage1: 'https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&q=80&w=800',
     showcaseImage2: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800',
     showcaseImage3: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=800',
-    quote: 'Clarity is often the most underrated form of credibility.',
     outcomesSection: {
       title: 'Outcomes',
       text: `The new materials provided prospects with clearer information and supported more confident conversations throughout the sales process.`
-    },
-    reflectionSection: {
-      title: 'Reflection',
-      text: `Clarity is often the most underrated form of credibility.`
     }
   },
   'bhaktinandan': {
@@ -271,27 +264,18 @@ Good branding helps people see it sooner.`
     deliverables: 'Rebranding<br/>Visual Identity<br/>Label Design<br/>Catalog Design<br/>Brand Consulting',
     description: 'We redesigned the identity, labels, and supporting brand materials around the ideas of purity, simplicity, and authenticity. The visual language was contemporary while remaining rooted in the product\'s heritage.',
     descriptionRightOfLabel: `Bhaktinandan produces wooden cold-pressed oils using traditional extraction methods.
-    The product reflected generations of knowledge and craftsmanship.
-    The packaging did not.
     Consumers are increasingly interested in where their food comes from and how it is made.
     At the same time, shelves have become crowded with brands making similar claims.
     Authenticity alone is no longer enough.
     It has to be communicated.`,
     additionalSection: `The brand needed an identity and packaging system capable of expressing quality, trust, and tradition without appearing outdated.`,
-    additionalSection2: `The goal wasn't to modernise the product.
-    The goal was to help the packaging communicate what had always been true about it.`,
     heroImage: '/bhaktihero.svg',
     showcaseImage1: 'https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&q=80&w=800',
     showcaseImage2: 'https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&q=80&w=800',
     showcaseImage3: 'https://images.unsplash.com/photo-1531353826977-0941b4779a1c?auto=format&fit=crop&q=80&w=800',
-    quote: 'Tradition remains relevant when people can recognise its value.',
     outcomesSection: {
       title: 'Outcomes',
       text: `The rebrand created a more cohesive and premium brand presence across packaging and communication materials.`
-    },
-    reflectionSection: {
-      title: 'Reflection',
-      text: `Tradition remains relevant when people can recognise its value.`
     }
   },
   'ganesh-verma': {
@@ -315,7 +299,6 @@ Good branding helps people see it sooner.`
     showcaseImage1: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=800',
     showcaseImage2: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&q=80&w=800',
     showcaseImage3: 'https://images.unsplash.com/photo-1526947425960-945c6e72858f?auto=format&fit=crop&q=80&w=800',
-    quote: 'Before people believe in a business, they often believe in the people building it.',
     heroHeaderTheme: 'light',
     outcomesSection: {
       title: 'Outcomes',
@@ -324,10 +307,6 @@ Good branding helps people see it sooner.`
       • 299 new followers
       • 4.7% engagement rate
       • Audience including owners, directors, senior professionals, and CXOs`
-    },
-    reflectionSection: {
-      title: 'Reflection',
-      text: `Before people believe in a business, they often believe in the people building it.`
     }
   },
   'nails-our-way': {
@@ -436,7 +415,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
         </section>
 
         {/* Headline Section */}
-        <section className="max-w-[1440px] mx-auto px-4 md:px-16 pt-20 pb-8">
+        <section className="max-w-[1440px] mx-auto px-10 md:px-16 pt-20 pb-8">
           <div className="grid grid-cols-4 md:grid-cols-12 gap-6">
             <div className="col-span-4 md:col-span-9 md:col-start-4">
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black leading-tight tracking-tight">
@@ -447,7 +426,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
         </section>
 
         {/* Metadata Grid */}
-        <section className="max-w-[1440px] mx-auto px-4 md:px-16 py-8">
+        <section className="max-w-[1440px] mx-auto px-10 md:px-16 py-8">
           <div className="border-y border-[#76777b]/30 py-8 grid grid-cols-4 md:grid-cols-12 gap-6">
             <div className="col-span-4 md:col-span-3">
               <p
@@ -460,38 +439,37 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 <p
                   className="text-base md:text-lg font-light text-black leading-relaxed max-w-[850px] whitespace-pre-line"
                   style={{ textAlign: 'justify' }}
-                  dangerouslySetInnerHTML={{ __html: project.descriptionRightOfLabel }}
+                  dangerouslySetInnerHTML={{ __html: formatParagraphText(project.descriptionRightOfLabel) }}
                 />
               </div>
             )}
           </div>
         </section>
 
-        {/* Additional Section */}
-        {project.additionalSection && (
-          <section className="max-w-[1440px] mx-auto px-4 md:px-16 py-8">
+        {/* Additional Section (combined 1 and 2) */}
+        {(project.additionalSection || project.additionalSection2) && (
+          <section className="max-w-[1440px] mx-auto px-10 md:px-16 py-8">
             <div className="border-b border-[#76777b]/30 pb-8 grid grid-cols-4 md:grid-cols-12 gap-6">
-              <div className="col-span-4 md:col-span-9 md:col-start-4">
-                <p
-                  className="text-base md:text-lg font-light text-black leading-relaxed max-w-[850px] whitespace-pre-line"
-                  style={{ textAlign: 'justify' }}
-                  dangerouslySetInnerHTML={{ __html: project.additionalSection }}
-                />
+              <div className="col-span-4 md:col-span-3">
+                <p className="text-sm text-black font-semibold leading-relaxed">
+                  CONTEXT
+                </p>
               </div>
-            </div>
-          </section>
-        )}
-
-        {/* Additional Section 2 */}
-        {project.additionalSection2 && (
-          <section className="max-w-[1440px] mx-auto px-4 md:px-16 py-8">
-            <div className="border-b border-[#76777b]/30 pb-8 grid grid-cols-4 md:grid-cols-12 gap-6">
-              <div className="col-span-4 md:col-span-9 md:col-start-4">
-                <p
-                  className="text-base md:text-lg font-light text-black leading-relaxed max-w-[850px] whitespace-pre-line"
-                  style={{ textAlign: 'justify' }}
-                  dangerouslySetInnerHTML={{ __html: project.additionalSection2 }}
-                />
+              <div className="col-span-4 md:col-span-9 flex flex-col gap-6">
+                {project.additionalSection && (
+                  <p
+                    className="text-base md:text-lg font-light text-black leading-relaxed max-w-[850px] whitespace-pre-line"
+                    style={{ textAlign: 'justify' }}
+                    dangerouslySetInnerHTML={{ __html: formatParagraphText(project.additionalSection) }}
+                  />
+                )}
+                {project.additionalSection2 && (
+                  <p
+                    className="text-base md:text-lg font-light text-black leading-relaxed max-w-[850px] whitespace-pre-line"
+                    style={{ textAlign: 'justify' }}
+                    dangerouslySetInnerHTML={{ __html: formatParagraphText(project.additionalSection2) }}
+                  />
+                )}
               </div>
             </div>
           </section>
@@ -499,13 +477,18 @@ export default async function CaseStudyPage({ params }: PageProps) {
 
         {/* Additional Section 3 */}
         {project.additionalSection3 && (
-          <section className="max-w-[1440px] mx-auto px-4 md:px-16 py-8">
+          <section className="max-w-[1440px] mx-auto px-10 md:px-16 py-8">
             <div className="border-b border-[#76777b]/30 pb-8 grid grid-cols-4 md:grid-cols-12 gap-6">
-              <div className="col-span-4 md:col-span-9 md:col-start-4">
+              <div className="col-span-4 md:col-span-3">
+                <p className="text-sm text-black font-semibold leading-relaxed">
+                  PROCESS
+                </p>
+              </div>
+              <div className="col-span-4 md:col-span-9">
                 <p
                   className="text-base md:text-lg font-light text-black leading-relaxed max-w-[850px] whitespace-pre-line"
                   style={{ textAlign: 'justify' }}
-                  dangerouslySetInnerHTML={{ __html: project.additionalSection3 }}
+                  dangerouslySetInnerHTML={{ __html: formatParagraphText(project.additionalSection3) }}
                 />
               </div>
             </div>
@@ -513,14 +496,14 @@ export default async function CaseStudyPage({ params }: PageProps) {
         )}
 
         {/* The Work Section */}
-        <section className="max-w-[1440px] mx-auto px-4 md:px-16 py-16">
+        <section className="max-w-[1440px] mx-auto px-10 md:px-16 py-16">
           <div className="grid grid-cols-4 md:grid-cols-12 gap-6">
             <div className="col-span-4 md:col-span-9 md:col-start-4">
               <p
                 className="text-base md:text-lg font-light text-black leading-relaxed max-w-[850px] whitespace-pre-line"
                 style={{ textAlign: 'justify' }}
               >
-                {project.description}
+                {formatParagraphText(project.description)}
               </p>
             </div>
           </div>
@@ -528,7 +511,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
 
         {/* Custom Two Cards Section */}
         {project.customTwoCards && (
-          <section className="max-w-[1440px] mx-auto px-4 md:px-16 py-12 border-t border-[#76777b]/20">
+          <section className="max-w-[1440px] mx-auto px-10 md:px-16 py-12 border-t border-[#76777b]/20">
             <div className="grid grid-cols-4 md:grid-cols-12 gap-6">
               <div className="col-span-4 md:col-span-9 md:col-start-4 mb-2">
                 <h3 className="text-[11px] md:text-xs font-bold tracking-wider text-black uppercase">
@@ -581,7 +564,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
 
         {/* Outcomes Section */}
         {project.outcomesSection && (
-          <section className="max-w-[1440px] mx-auto px-4 md:px-16 py-16 border-t border-[#76777b]/20">
+          <section className="max-w-[1440px] mx-auto px-10 md:px-16 py-16 border-t border-[#76777b]/20">
             <div className="grid grid-cols-4 md:grid-cols-12 gap-6">
               <div className="col-span-4 md:col-span-9 md:col-start-4">
                 <p
@@ -597,7 +580,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
 
         {/* Reflection Section */}
         {project.reflectionSection && (
-          <section className="max-w-[1440px] mx-auto px-4 md:px-16 py-16 border-t border-[#76777b]/20">
+          <section className="max-w-[1440px] mx-auto px-10 md:px-16 py-16 border-t border-[#76777b]/20">
             <div className="grid grid-cols-4 md:grid-cols-12 gap-6">
               <div className="col-span-4 md:col-span-9 md:col-start-4">
                 <p
@@ -612,38 +595,46 @@ export default async function CaseStudyPage({ params }: PageProps) {
         )}
 
         {/* Visuals Showcase */}
-        <section className="max-w-[1440px] mx-auto px-4 md:px-16 py-8 space-y-12">
-          <div className="w-full border border-[#76777b]/30 overflow-hidden rounded-lg">
-            <img
-              alt={`${project.title} Showcase 1`}
-              className="w-full h-auto object-cover select-none pointer-events-none"
-              src={project.showcaseImage1}
-            />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="border border-[#76777b]/30 overflow-hidden rounded-lg">
-              <img
-                alt={`${project.title} Showcase 2`}
-                className="w-full h-auto object-cover select-none pointer-events-none"
-                src={project.showcaseImage2}
-              />
-            </div>
-            <div className="border border-[#76777b]/30 overflow-hidden rounded-lg">
-              <img
-                alt={`${project.title} Showcase 3`}
-                className="w-full h-auto object-cover select-none pointer-events-none"
-                src={project.showcaseImage3}
-              />
-            </div>
-          </div>
-        </section>
+        {(project.showcaseImage1 || project.showcaseImage2 || project.showcaseImage3) && (
+          <section className="max-w-[1440px] mx-auto px-4 md:px-16 py-8 space-y-12">
+            {project.showcaseImage1 && (
+              <div className="w-full border border-[#76777b]/30 overflow-hidden rounded-lg">
+                <img
+                  alt={`${project.title} Showcase 1`}
+                  className="w-full h-auto object-cover select-none pointer-events-none"
+                  src={project.showcaseImage1}
+                />
+              </div>
+            )}
+            {project.showcaseImage2 && project.showcaseImage3 && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="border border-[#76777b]/30 overflow-hidden rounded-lg">
+                  <img
+                    alt={`${project.title} Showcase 2`}
+                    className="w-full h-auto object-cover select-none pointer-events-none"
+                    src={project.showcaseImage2}
+                  />
+                </div>
+                <div className="border border-[#76777b]/30 overflow-hidden rounded-lg">
+                  <img
+                    alt={`${project.title} Showcase 3`}
+                    className="w-full h-auto object-cover select-none pointer-events-none"
+                    src={project.showcaseImage3}
+                  />
+                </div>
+              </div>
+            )}
+          </section>
+        )}
 
         {/* Closing Section */}
         <section className="max-w-[1440px] mx-auto px-4 md:px-16 py-24 text-center border-t border-[#76777b]/30">
-          <blockquote className="text-2xl md:text-4xl font-bold italic text-black max-w-[800px] mx-auto leading-normal">
-            &ldquo;{project.quote}&rdquo;
-          </blockquote>
-          <div className="mt-16 flex justify-center">
+          {project.quote && (
+            <blockquote className="text-2xl md:text-4xl font-bold italic text-black max-w-[800px] mx-auto leading-normal mb-16">
+              &ldquo;{project.quote}&rdquo;
+            </blockquote>
+          )}
+          <div className="flex justify-center">
             <Link
               href="/work"
               className="px-8 py-3.5 bg-black text-white hover:bg-white hover:text-black border border-black transition-all duration-300 text-xs uppercase tracking-widest rounded-full font-semibold"

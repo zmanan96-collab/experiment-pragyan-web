@@ -12,13 +12,11 @@ interface Project {
 
 const categories = [
   'ALL',
-  'DESIGN FOR GOOD',
+  'MANUFACTURING',
   'EDUCATION',
   'FASHION & BEAUTY',
-  'FOOD & BEVERAGE',
-  'HEALTH & WELLNESS',
-  'HOME & LIFESTYLE',
-  'TECH & FINANCE'
+  'PERSONAL BRANDING',
+  'HEALTH & WELLNESS'
 ];
 
 const projects: Project[] = [
@@ -39,17 +37,17 @@ const projects: Project[] = [
   },
   {
     title: 'SHREEJI ENTERPRISE',
-    category: 'Engineered Roofing Solutions',
+    category: 'Engineered Roofing Solutions / Manufacturing',
     image: '/card shree ji.webp'
   },
   {
     title: 'YASH ENGINEERS (INDIA) PVT. LTD.',
-    category: 'Industrial Machinery',
+    category: 'Industrial Machinery / Manufacturing',
     image: 'yashcard.svg'
   },
   {
     title: 'BHAKTINANDAN',
-    category: 'Consumer Goods / Cold-Pressed Oils',
+    category: 'Consumer Goods / Cold-Pressed Oils / Health & Wellness',
     image: '/bhakti.svg'
   },
   {
@@ -64,7 +62,9 @@ export default function Work() {
 
   const filteredProjects = activeCategory === 'ALL'
     ? projects
-    : projects.filter(project => project.category === activeCategory);
+    : projects.filter(project =>
+        project.category.toUpperCase().includes(activeCategory.toUpperCase())
+      );
 
   return (
     <article aria-label="Work Portfolio" className="bg-[#fcfcfc] min-h-screen text-black pt-[140px] pb-28">

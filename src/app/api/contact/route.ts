@@ -127,16 +127,16 @@ export async function POST(req: NextRequest) {
     if (error) {
       console.error('[Resend error]', error);
       return NextResponse.json(
-        { error: 'Failed to send email. Please try again.' },
+        { error: `Failed to send email: ${error.message || 'Unknown Resend error.'}` },
         { status: 500 }
       );
     }
 
     return NextResponse.json({ success: true }, { status: 200 });
-  } catch (err) {
+  } catch (err: any) {
     console.error('[API /contact error]', err);
     return NextResponse.json(
-      { error: 'Server error. Please try again later.' },
+      { error: `Server error: ${err.message || 'Please try again later.'}` },
       { status: 500 }
     );
   }

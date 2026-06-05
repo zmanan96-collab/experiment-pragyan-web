@@ -5,7 +5,6 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Reveal from '../../components/Reveal';
 import Button, { ButtonArrow } from '../../components/Button';
-import Marquee from '@/components/Marquee';
 import HomeSmoothScroll from '../../components/HomeSmoothScroll';
 
 export default function Culture() {
@@ -69,27 +68,42 @@ export default function Culture() {
               {/* Hero Section - matches reference image */}
               <section id="culture-hero-section" className="bg-white text-black pt-[clamp(160px,18vw,220px)] pb-[clamp(80px,12vw,140px)] md:py-0 md:min-h-screen md:h-screen md:flex md:flex-col md:justify-center relative overflow-x-hidden z-10 w-full" aria-labelledby="culture-h">
                 <div className="wrap">
-                  <div className="max-w-[1000px] max-[880px]:text-center max-[880px]:mx-auto flex flex-col items-start max-[880px]:items-center md:-translate-x-[4vw] lg:-translate-x-[5vw] transition-transform duration-500">
-                    <Reveal>
-                      <span className="text-nav-label tracking-[0.22em] uppercase text-[#6a6a6a] block mb-6 md:mb-4">Careers</span>
-                      <h1 id="culture-h" className="text-hero text-black mb-10 md:mb-6">
-                        <span className="block md:inline md:whitespace-nowrap">Good at what you do?</span>
-                        <br className="hidden md:block" />
-                        <span className="block md:inline md:whitespace-nowrap">Let&apos;s make it <span className="inline-block bg-gradient-to-r from-[#161245] via-[#4B3FD4] to-[#786CF0] bg-clip-text text-transparent pb-2 px-1">better.</span></span>
-                      </h1>
-                    </Reveal>
-                    <Reveal delay={0.1}>
-                      <div className="text-main-desc text-[#6a6a6a] mb-10 md:mb-8">
-                        <p className="md:whitespace-nowrap">We believe that how we work matters as much as what we create.</p>
-                        <p>Curiosity drives us to explore beyond the obvious.</p>
-                        <p>Openness keeps us looking for new ideas.</p>
-                        <p>Action ensures insights turn into outcomes.</p>
-                      </div>
-                    </Reveal>
-                    <Reveal delay={0.2} className="relative z-10">
-                      <Button href="/inquiry" variant="on-white" className="min-w-[245px] md:min-w-[200px] justify-center text-nav-label tracking-[0.2em] !py-[15px] md:!py-[12px] uppercase">
-                        JOIN THE TEAM
-                      </Button>
+                  <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-12 md:gap-16 w-full transition-transform duration-500">
+                    {/* Left content block */}
+                    <div className="w-full md:w-[50%] max-w-[600px] flex flex-col items-start max-[880px]:items-center max-[880px]:text-center md:-translate-x-[3vw] lg:-translate-x-[5vw] transition-transform duration-500">
+                      <Reveal>
+                        <span className="text-nav-label tracking-[0.22em] uppercase text-[#6a6a6a] block mb-6 md:mb-4">Careers</span>
+                        <h1 id="culture-h" className="text-hero text-black mb-10 md:mb-6">
+                          <span className="block md:inline md:whitespace-nowrap">Good at what you do?</span>
+                          <br className="hidden md:block" />
+                          <span className="block md:inline md:whitespace-nowrap">Let&apos;s make it <span className="inline-block bg-gradient-to-r from-[#161245] via-[#4B3FD4] to-[#786CF0] bg-clip-text text-transparent pb-2 px-1">better.</span></span>
+                        </h1>
+                      </Reveal>
+                      <Reveal delay={0.1}>
+                        <div className="text-main-desc text-[#6a6a6a] mb-10 md:mb-8">
+                          <p className="md:whitespace-nowrap">We believe that how we work matters as much as what we create.</p>
+                          <p>Curiosity drives us to explore beyond the obvious.</p>
+                          <p>Openness keeps us looking for new ideas.</p>
+                          <p>Action ensures insights turn into outcomes.</p>
+                        </div>
+                      </Reveal>
+                      <Reveal delay={0.2} className="relative z-10">
+                        <Button href="/inquiry" variant="on-white" className="min-w-[245px] md:min-w-[200px] justify-center text-nav-label tracking-[0.2em] !py-[15px] md:!py-[12px] uppercase">
+                          JOIN THE TEAM
+                        </Button>
+                      </Reveal>
+                    </div>
+
+                    {/* Right video block */}
+                    <Reveal delay={0.3} className="w-full md:w-[50%] max-w-[550px] md:translate-x-[3vw] lg:translate-x-[5vw] transition-transform duration-500">
+                      <video
+                        src="/animate%20(1).mp4"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-auto select-none pointer-events-none"
+                      />
                     </Reveal>
                   </div>
                 </div>

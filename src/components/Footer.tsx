@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import Marquee from './Marquee';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -22,11 +21,6 @@ export default function Footer() {
 
   return (
     <footer className={`relative z-[60] ${footerBg} overflow-hidden md:h-screen md:max-h-[100svh] md:flex md:flex-col`} role="contentinfo">
-      {/* Marquee integrated directly inside the footer at the very top */}
-      <div className="w-full z-20">
-        <Marquee />
-      </div>
-
       <div className="w-full flex-1 bg-black flex flex-col justify-center pt-[60px] md:pt-[80px] [@media(max-height:850px)]:md:pt-[60px] pb-8 md:py-2">
         <div className="max-w-[1600px] mx-auto px-8 md:px-[4vw] lg:px-[6vw] xl:px-[8vw] relative z-10 w-full flex flex-col justify-start gap-4 md:gap-6 lg:gap-8">
 

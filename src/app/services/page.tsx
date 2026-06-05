@@ -5,7 +5,6 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Reveal from '../../components/Reveal';
 import Link from 'next/link';
-import Marquee from '@/components/Marquee';
 import HomeSmoothScroll from '../../components/HomeSmoothScroll';
 
 export default function Services() {
