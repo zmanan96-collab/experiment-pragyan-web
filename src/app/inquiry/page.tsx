@@ -59,7 +59,7 @@ export default function Inquiry() {
           <section aria-label="Inquiry" className="bg-[#FAFAFA] min-h-screen md:h-screen flex flex-col items-center justify-between pt-[100px] px-0 pb-0 md:pt-[80px] lg:pt-[100px] xl:pt-[45px] [@media(display-mode:fullscreen)]:md:pt-[60px] relative font-sans">
             <div className="w-full max-w-[1650px] mx-auto px-[4vw] flex-grow flex items-center justify-center p-4 py-8 md:py-0">
               <Reveal className="w-full max-w-[1250px] md:max-w-[1000px] lg:max-w-[1100px] xl:max-w-[1550px] shadow-[0_30px_100px_-20px_rgba(0,0,0,0.15)] bg-white rounded-[20px] transition-all duration-700 mx-auto">
-                <div className="flex md:min-h-[500px] lg:min-h-[550px] xl:min-h-[720px] [@media(display-mode:fullscreen)]:md:min-h-[480px] max-[920px]:flex-col overflow-hidden rounded-[20px] transition-all duration-700" role="region" aria-labelledby="inquiry-h">
+                <div className="flex max-[920px]:min-h-[480px] md:h-[65vh] md:max-h-[650px] max-[920px]:flex-col overflow-hidden rounded-[20px] transition-all duration-700" role="region" aria-labelledby="inquiry-h">
 
                   {/* Left Side: Solid Black (Top) & Radiating Texture (Bottom) */}
                   <div className="w-[44%] bg-black flex flex-col max-[920px]:w-full relative">
@@ -87,49 +87,49 @@ export default function Inquiry() {
                   </div>
 
                   {/* Right Side: Clean Form with Black Border Outer Box */}
-                  <div className="flex-1 bg-white flex items-center justify-center p-3 md:py-6 lg:py-8 xl:py-12 md:px-5 transition-all duration-700">
-                    <div className="w-full max-w-[720px] md:max-w-[1000px] p-4 md:py-6 lg:py-8 xl:py-12 md:px-6 xl:px-10 bg-white transition-all duration-700">
-                      <p className="text-small-desc md:text-[14px] lg:text-[15px] xl:text-[16px] md:leading-[1.4] text-[#6A6A6A] mb-2 md:mb-3 xl:mb-4 transition-all duration-700">
+                  <div className="flex-1 bg-white flex items-center justify-center p-3 md:py-4 lg:py-6 xl:py-8 md:px-5 transition-all duration-700">
+                    <div className="w-full max-w-[720px] md:max-w-[1000px] p-4 md:py-4 lg:py-6 xl:py-8 md:px-6 xl:px-10 bg-white transition-all duration-700">
+                      <p className="text-small-desc md:text-[13px] lg:text-[14px] xl:text-[14px] md:leading-[1.3] text-[#6A6A6A] mb-2 md:mb-3 transition-all duration-700">
                         Whether it&apos;s strategy, storytelling, or exploring how we can bring your brand to life &mdash; reach out, and we&apos;ll figure it out together.
                       </p>
 
                       <form
                         onSubmit={handleSubmit}
-                        className="flex flex-col gap-3 md:gap-4 transition-all duration-700"
+                        className="flex flex-col gap-2.5 md:gap-3 transition-all duration-700"
                       >
                         {/* Row 1: Name and Email */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5 md:gap-3">
                           <div>
-                            <label htmlFor="f-name" className="block text-[12px] md:text-[14px] font-semibold text-black mb-1 transition-all duration-700">Name</label>
+                            <label htmlFor="f-name" className="block text-[11px] md:text-[12px] font-semibold text-black mb-1 transition-all duration-700">Name</label>
                             <input
                               id="f-name"
                               name="name"
                               type="text"
                               required
-                              className="w-full p-2 md:p-3 text-[14px] md:text-[15px] border border-black/30 bg-transparent text-black rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
+                              className="w-full h-[40px] px-3 py-1.5 text-[13px] md:text-[14px] border border-black/30 bg-transparent text-black rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
                             />
                           </div>
 
                           <div>
-                            <label htmlFor="f-email" className="block text-[12px] md:text-[14px] font-semibold text-black mb-1 transition-all duration-700">Email address</label>
+                            <label htmlFor="f-email" className="block text-[11px] md:text-[12px] font-semibold text-black mb-1 transition-all duration-700">Email address</label>
                             <input
                               id="f-email"
                               name="email"
                               type="email"
                               required
-                              className="w-full p-2 md:p-3 text-[14px] md:text-[15px] border border-black/30 bg-transparent text-black rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
+                              className="w-full h-[40px] px-3 py-1.5 text-[13px] md:text-[14px] border border-black/30 bg-transparent text-black rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
                             />
                           </div>
                         </div>
 
                         {/* Row 2: Mobile and Service */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 transition-all duration-700">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5 md:gap-3 transition-all duration-700">
                           <div>
-                            <label htmlFor="f-phone" className="block text-[12px] md:text-[14px] font-semibold text-black mb-1 transition-all duration-700">Mobile Number</label>
+                            <label htmlFor="f-phone" className="block text-[11px] md:text-[12px] font-semibold text-black mb-1 transition-all duration-700">Mobile Number</label>
                             <div className="flex gap-2 w-full">
                               <select
                                 name="countryCode"
-                                className="w-[85px] md:w-[95px] p-2 md:p-3 text-[14px] md:text-[15px] border border-black/30 bg-transparent text-black rounded-[4px] focus:outline-none focus:border-[#FFD111] appearance-none cursor-pointer transition-all duration-700"
+                                className="w-[85px] h-[40px] px-3 py-1.5 text-[13px] md:text-[14px] border border-black/30 bg-transparent text-black rounded-[4px] focus:outline-none focus:border-[#FFD111] appearance-none cursor-pointer transition-all duration-700"
                               >
                                 <option value="+91">IN +91</option>
                                 <option value="+1">US +1</option>
@@ -144,18 +144,18 @@ export default function Inquiry() {
                                 type="tel"
                                 placeholder="99999 99999"
                                 required
-                                className="flex-1 min-w-0 p-2 md:p-3 text-[14px] md:text-[15px] border border-black/30 bg-transparent text-black rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
+                                className="flex-1 min-w-0 h-[40px] px-3 py-1.5 text-[13px] md:text-[14px] border border-black/30 bg-transparent text-black rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
                               />
                             </div>
                           </div>
 
                           <div>
-                            <label className="block text-[12px] md:text-[14px] font-semibold text-black mb-1 transition-all duration-700">Service Interested In</label>
+                            <label className="block text-[11px] md:text-[12px] font-semibold text-black mb-1 transition-all duration-700">Service Interested In</label>
                             <select
                               name="service"
                               required
                               defaultValue=""
-                              className="w-full p-2 md:p-3 text-[14px] md:text-[15px] border border-black/30 bg-transparent text-black rounded-[4px] focus:outline-none focus:border-[#FFD111] appearance-none cursor-pointer transition-all duration-700"
+                              className="w-full h-[40px] px-3 py-1.5 text-[13px] md:text-[14px] border border-black/30 bg-transparent text-black rounded-[4px] focus:outline-none focus:border-[#FFD111] appearance-none cursor-pointer transition-all duration-700"
                             >
                               <option value="" disabled>Select a service</option>
                               <option value="Branding Strategy">Branding Strategy</option>
@@ -171,20 +171,20 @@ export default function Inquiry() {
 
                         {/* Row 3: Message */}
                         <div>
-                          <label htmlFor="f-message" className="block text-[12px] md:text-[14px] font-semibold text-black mb-1 transition-all duration-700">Leave a message</label>
+                          <label htmlFor="f-message" className="block text-[11px] md:text-[12px] font-semibold text-black mb-1 transition-all duration-700">Leave a message</label>
                           <textarea
                             id="f-message"
                             name="message"
                             required
-                            className="w-full min-h-[50px] md:min-h-[65px] lg:min-h-[80px] p-2 md:p-3 text-[14px] md:text-[15px] border border-black/30 bg-transparent text-black rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111] resize-y"
+                            className="w-full h-[60px] min-h-[60px] max-h-[80px] px-3 py-2 text-[13px] md:text-[14px] border border-black/30 bg-transparent text-black rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111] resize-y"
                           ></textarea>
                         </div>
 
-                        <div className="pt-2 md:pt-3 transition-all duration-700">
+                        <div className="pt-1.5 transition-all duration-700">
                           <button
                             type="submit"
                             disabled={status === 'submitting'}
-                            className="w-full btn-submit py-2 md:py-3.5 md:text-[15px] px-8 text-nav-label tracking-[0.15em] uppercase rounded-full active:scale-[0.99] disabled:opacity-50"
+                            className="w-full btn-submit py-2 md:py-2.5 md:text-[14px] px-8 text-nav-label tracking-[0.15em] uppercase rounded-full active:scale-[0.99] disabled:opacity-50"
                           >
                             <span>{status === 'submitting' ? 'Submitting...' : 'Submit'}</span>
                           </button>

@@ -113,43 +113,43 @@ export default function Services() {
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-10 md:gap-12 lg:gap-16 w-full">
                     {/* Left Column: Text Content */}
                     <div className="w-full md:w-[60%] lg:w-[65%] xl:w-[65%] flex flex-col justify-center text-left px-8 md:px-[4vw] lg:px-[6vw] xl:px-[8vw]">
-                    <Reveal className="mb-4 lg:mb-6 max-w-[700px] lg:max-w-[850px] 2xl:max-w-[1000px] transition-transform duration-700 ease-out">
-                      <span className="text-nav-label tracking-[0.22em] uppercase text-[#6a6a6a] block mb-3">Services</span>
-                      <h2 className="text-hero text-black transition-all duration-700 ease-out pb-2">
-                        <span className="block whitespace-nowrap">What we do &ndash;</span>
-                        <span className="block whitespace-nowrap">and what</span>
-                        <span className="inline-block bg-gradient-to-r from-[#161245] via-[#4B3FD4] to-[#786CF0] bg-clip-text text-transparent pb-2 whitespace-nowrap">we don&apos;t</span>
-                      </h2>
-                    </Reveal>
+                      <Reveal className="mb-4 lg:mb-6 max-w-[700px] lg:max-w-[850px] 2xl:max-w-[1000px] transition-transform duration-700 ease-out">
+                        <span className="text-nav-label tracking-[0.22em] uppercase text-[#6a6a6a] block mb-3">Services</span>
+                        <h2 className="text-hero text-black transition-all duration-700 ease-out pb-2">
+                          <span className="block whitespace-nowrap">What we do &ndash;</span>
+                          <span className="block whitespace-nowrap">and what</span>
+                          <span className="inline-block bg-gradient-to-r from-[#161245] via-[#4B3FD4] to-[#786CF0] bg-clip-text text-transparent pb-2 whitespace-nowrap">we don&apos;t</span>
+                        </h2>
+                      </Reveal>
 
-                    <Reveal delay={0.1} className="transition-transform duration-700 ease-out">
-                      <p className="text-main-desc text-[#6A6A6A] text-left transition-all duration-700 ease-out max-w-[750px] md:max-w-[850px] [@media(display-mode:fullscreen)]:md:max-w-[1000px]">
-                        <span className="block md:whitespace-nowrap">Pragyan is for founders who are tired of the same old</span>
-                        <span className="block md:whitespace-nowrap">and want to build something that actually carries weight.</span>
-                        <span className="block md:whitespace-nowrap">We&apos;re obsessed with the work we do &mdash;</span>
-                        <span className="block md:whitespace-nowrap">but even more protective of the work we choose not to do.</span>
-                        <span className="block md:whitespace-nowrap">We only move when there&apos;s a point of view worth fighting for.</span>
-                      </p>
+                      <Reveal delay={0.1} className="transition-transform duration-700 ease-out">
+                        <p className="text-main-desc text-[#6A6A6A] text-left transition-all duration-700 ease-out max-w-[750px] md:max-w-[850px] [@media(display-mode:fullscreen)]:md:max-w-[1000px]">
+                          <span className="block md:whitespace-nowrap">Pragyan is for founders who are tired of the same old</span>
+                          <span className="block md:whitespace-nowrap">and want to build something that actually carries weight.</span>
+                          <span className="block md:whitespace-nowrap">We&apos;re obsessed with the work we do &mdash;</span>
+                          <span className="block md:whitespace-nowrap">but even more protective of the work we choose not to do.</span>
+                          <span className="block md:whitespace-nowrap">We only move when there&apos;s a point of view worth fighting for.</span>
+                        </p>
+                      </Reveal>
+                    </div>
+
+                    {/* Right Column: Video */}
+                    <Reveal delay={0.2} className="w-full md:w-[30%] lg:w-[25%] xl:w-[25%] flex items-center justify-center md:justify-end xl:justify-center">
+                      <div className="w-full relative group flex justify-end">
+                        <video
+                          src="/services.mp4"
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          className="w-full h-auto max-h-[50vh] md:max-h-[65vh] object-contain select-none pointer-events-none"
+                        />
+                      </div>
                     </Reveal>
                   </div>
-
-                  {/* Right Column: Video */}
-                  <Reveal delay={0.2} className="w-full md:w-[30%] lg:w-[25%] xl:w-[25%] flex items-center justify-center md:justify-end xl:justify-center">
-                    <div className="w-full relative group flex justify-end">
-                      <video
-                        src="/services.mp4"
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="w-full h-auto max-h-[50vh] md:max-h-[65vh] object-contain select-none pointer-events-none"
-                      />
-                    </div>
-                  </Reveal>
                 </div>
-              </div>
 
-              {/* Bottom Solid Black Transition Bar (Desktop only) */}
+                {/* Bottom Solid Black Transition Bar (Desktop only) */}
                 <div className="services-bottom-black-bar hidden md:block absolute bottom-[-20px] md:bottom-[-30px] lg:bottom-[-40px] xl:bottom-[-50px] 2xl:bottom-[-60px] left-0 w-full h-[40px] lg:h-[55px] xl:h-[90px] [@media(display-mode:fullscreen)]:h-[80px] [@media(display-mode:fullscreen)]:lg:h-[120px] [@media(display-mode:fullscreen)]:xl:h-[180px] transition-all duration-700 ease-out bg-black z-30" />
               </section>
 
@@ -207,12 +207,12 @@ export default function Services() {
 
                                   <div className={`overflow-hidden transition-all duration-700 ease-in-out ${isOpen ? 'max-h-[1400px] mt-12 opacity-100 border-t border-white/10 pt-12' : 'max-h-0 opacity-0'}`}>
                                     <div className="flex flex-col gap-8 pb-8">
-                                      <p className="text-main-desc text-grey opacity-75 text-justify md:text-left">
+                                      <p className="text-main-desc text-[#d9d9d9] text-left max-w-[850px] xl:max-w-[950px] 2xl:max-w-[1050px]">
                                         {service.copy.replace(/\n/g, ' ')}
                                       </p>
 
                                       <div className="pt-6 border-t border-white/5">
-                                        <div className="flex flex-wrap md:flex-nowrap gap-3 overflow-x-visible md:overflow-x-auto scrollbar-hide pb-1">
+                                        <div className="flex flex-wrap gap-3 pb-1">
                                           {service.deliverables.map(d => (
                                             <div key={d} className="flex items-center gap-3 px-5 py-2.5 bg-white/[0.02] border border-white/10 rounded-none text-nav-label text-white/70 hover:text-white hover:border-white/60 hover:bg-white/[0.04] transition-all duration-300 select-none whitespace-nowrap">
                                               {d}

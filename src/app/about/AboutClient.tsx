@@ -99,10 +99,10 @@ export default function AboutClient() {
                   </Reveal>
 
                   <Reveal delay={0.1}>
-                    <h1 id="about-h" className="text-hero text-black mb-4 md:mb-1">
-                      At Pragyan,<br />
-                      the human lens is<br />
-                      <span className="inline-block bg-gradient-to-r from-[#161245] via-[#4B3FD4] to-[#786CF0] bg-clip-text text-transparent pb-2">
+                    <h1 id="about-h" className="text-hero text-black mb-4 md:mb-1 leading-[1.1em]">
+                      <span className="block whitespace-nowrap">At Pragyan,</span>
+                      <span className="block whitespace-nowrap">the human lens is</span>
+                      <span className="block whitespace-nowrap bg-gradient-to-r from-[#161245] via-[#4B3FD4] to-[#786CF0] bg-clip-text text-transparent pb-2">
                         our sharpest tool.
                       </span>
                     </h1>
