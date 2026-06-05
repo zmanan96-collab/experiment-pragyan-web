@@ -95,7 +95,7 @@ export default function Culture() {
                     </div>
 
                     {/* Right video block */}
-                    <Reveal delay={0.3} className="w-full md:w-[40%] max-w-[420px] md:translate-x-[3vw] lg:translate-x-[5vw] xl:translate-x-[7vw] md:ml-auto transition-transform duration-500">
+                    {/* <Reveal delay={0.3} className="w-full md:w-[40%] max-w-[420px] md:translate-x-[3vw] lg:translate-x-[5vw] xl:translate-x-[7vw] md:ml-auto transition-transform duration-500">
                       <video
                         src="/animate%20(1).mp4"
                         autoPlay
@@ -104,7 +104,7 @@ export default function Culture() {
                         playsInline
                         className="w-full h-auto select-none pointer-events-none md:scale-115 lg:scale-120 origin-right transition-transform duration-500"
                       />
-                    </Reveal>
+                    </Reveal> */}
                   </div>
                 </div>
               </section>

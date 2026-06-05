@@ -133,8 +133,8 @@ export default function Services() {
                   </div>
 
                   {/* Right Column: Video */}
-                  <Reveal delay={0.2} className="w-full md:w-[45%] lg:w-[42%] xl:w-[48%] flex items-center justify-center">
-                    <div className="w-full relative group">
+                  <Reveal delay={0.2} className="w-full md:w-[45%] lg:w-[48%] xl:w-[48%] flex items-center justify-center md:justify-end xl:justify-center">
+                    <div className="w-full relative group flex justify-end">
                       <video
                         src="/services.mp4"
                         autoPlay

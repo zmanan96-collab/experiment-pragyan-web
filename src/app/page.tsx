@@ -432,13 +432,13 @@ export default function Home() {
                     </div>
 
                     {/* Right Column: Autoplay GIF */}
-                    <div className="w-full md:w-[35%] max-w-[380px] px-8 md:px-0 flex justify-center md:justify-end relative z-10 select-none pointer-events-none md:translate-x-[2vw] lg:translate-x-[3vw] xl:translate-x-[4vw] transition-all duration-700">
+                    {/* <div className="w-full md:w-[35%] max-w-[380px] px-8 md:px-0 flex justify-center md:justify-end relative z-10 select-none pointer-events-none md:translate-x-[2vw] lg:translate-x-[3vw] xl:translate-x-[4vw] transition-all duration-700">
                       <img
                         src="/home page .gif"
                         alt="Pragyan Hero Animation"
                         className="w-full h-auto object-contain pointer-events-none rounded-[12px]"
                       />
-                    </div>
+                    </div> */}
 
                   </div>
                 </div>
