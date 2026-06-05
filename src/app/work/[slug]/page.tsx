@@ -58,6 +58,8 @@ interface CaseStudyData {
   showcaseImage1?: string;
   showcaseImage2?: string;
   showcaseImage3?: string;
+  showcaseImage4?: string;
+  showcaseImage5?: string;
   quote?: string;
   heroHeaderTheme?: 'light' | 'dark';
   stats?: {
@@ -110,7 +112,6 @@ We believed credibility was the more important challenge.
 Before buyers compare specifications, pricing, or capabilities, they make a quieter judgement: does this company feel trustworthy enough to consider?
 Every decision that followed was guided by that question.`,
     heroImage: '/card-04.webp',
-    showcaseImage1: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800',
     customTwoCards: {
       title: "Within a span of 8 months..",
       items: [
@@ -154,9 +155,11 @@ A complete admissions communication system followed, including brochures, flyers
 To build awareness, the communication extended into outdoor advertising across Visnagar, creating visibility beyond the immediate school community.
 Social media established an ongoing presence and helped communicate everyday moments, culture, and learning experiences.`,
     heroImage: '/card.webp',
-    showcaseImage1: 'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&q=80&w=800',
+    showcaseImage1: '/gsslogo.jpg',
     showcaseImage2: '/GGS.webp',
-    showcaseImage3: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=800',
+    showcaseImage3: '/ggs3.jpg',
+    showcaseImage4: '/ggs1.jpg',
+    showcaseImage5: '/ggs2.jpg',
     outcomesSection: {
       title: 'Outcomes',
       text: `The project created a consistent identity system across admissions, communication, and public visibility.
@@ -185,8 +188,9 @@ The company also needed a system that could support multiple audiences, each wit
 The goal was not simply to generate visibility.
 The goal was to help people understand why the category mattered in the first place.`,
     heroImage: '/bsuhero.jpg',
-    showcaseImage2: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800',
-    showcaseImage3: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800',
+    showcaseImage1: '/billboard BSU.jpg',
+    showcaseImage2: '/bsuphone.jpg',
+    showcaseImage3: '/mockups.jpg',
     heroHeaderTheme: 'light',
     outcomesSection: {
       title: 'Outcomes',
@@ -219,8 +223,8 @@ Yet clients make judgements long before a project begins. A business card, a bro
 A coherent identity can communicate reliability before a single specification is reviewed.`,
     additionalSection2: `Shreeji had a clear positioning around engineered roofing solutions, but the brand lacked consistency and distinction across customer-facing touchpoints.`,
     heroImage: '/shreeji.webp',
-    showcaseImage2: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800',
-    showcaseImage3: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=800',
+    showcaseImage2: '/shree1.jpg',
+    showcaseImage3: '/shree2.jpg',
     outcomesSection: {
       title: 'Outcomes',
       text: `The project provided Shreeji with a cohesive identity system capable of supporting sales conversations, quotations, presentations, and marketing materials with greater confidence and consistency.`
@@ -243,9 +247,6 @@ A coherent identity can communicate reliability before a single specification is
     The quality of communication influences how the quality of the company is perceived.`,
     additionalSection2: `Existing materials did not fully communicate the sophistication, expertise, and professionalism behind the company's work.`,
     heroImage: '/yashhero.svg',
-    showcaseImage1: 'https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&q=80&w=800',
-    showcaseImage2: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800',
-    showcaseImage3: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=800',
     outcomesSection: {
       title: 'Outcomes',
       text: `The new materials provided prospects with clearer information and supported more confident conversations throughout the sales process.`
@@ -267,9 +268,9 @@ A coherent identity can communicate reliability before a single specification is
     It has to be communicated.`,
     additionalSection: `The brand needed an identity and packaging system capable of expressing quality, trust, and tradition without appearing outdated.`,
     heroImage: '/bhaktihero.svg',
-    showcaseImage1: 'https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&q=80&w=800',
-    showcaseImage2: 'https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&q=80&w=800',
-    showcaseImage3: 'https://images.unsplash.com/photo-1531353826977-0941b4779a1c?auto=format&fit=crop&q=80&w=800',
+    showcaseImage1: '/bottel.png',
+    showcaseImage2: '/B1.svg',
+    showcaseImage3: '/B2.svg',
     outcomesSection: {
       title: 'Outcomes',
       text: `The rebrand created a more cohesive and premium brand presence across packaging and communication materials.`
@@ -293,9 +294,6 @@ A coherent identity can communicate reliability before a single specification is
     The goal was not visibility alone.
     It was meaningful visibility.`,
     heroImage: '/ganeshhero.svg',
-    showcaseImage1: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=800',
-    showcaseImage2: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&q=80&w=800',
-    showcaseImage3: 'https://images.unsplash.com/photo-1526947425960-945c6e72858f?auto=format&fit=crop&q=80&w=800',
     heroHeaderTheme: 'light',
     outcomesSection: {
       title: 'Outcomes',
@@ -584,7 +582,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
         )}
 
         {/* Visuals Showcase */}
-        {(project.showcaseImage1 || project.showcaseImage2 || project.showcaseImage3) && (
+        {(project.showcaseImage1 || project.showcaseImage2 || project.showcaseImage3 || project.showcaseImage4) && (
           <section className="max-w-[1440px] mx-auto px-4 md:px-16 py-8 space-y-12">
             {project.showcaseImage1 && (
               <div className="w-full border border-[#76777b]/30 overflow-hidden rounded-lg">
@@ -597,20 +595,42 @@ export default async function CaseStudyPage({ params }: PageProps) {
             )}
             {project.showcaseImage2 && project.showcaseImage3 && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="border border-[#76777b]/30 overflow-hidden rounded-lg">
+                <div className="border border-[#76777b]/30 overflow-hidden rounded-lg h-full">
                   <img
                     alt={`${project.title} Showcase 2`}
-                    className="w-full h-auto object-cover select-none pointer-events-none"
+                    className="w-full h-full object-cover select-none pointer-events-none"
                     src={project.showcaseImage2}
                   />
                 </div>
-                <div className="border border-[#76777b]/30 overflow-hidden rounded-lg">
+                <div className="border border-[#76777b]/30 overflow-hidden rounded-lg h-full">
                   <img
                     alt={`${project.title} Showcase 3`}
-                    className="w-full h-auto object-cover select-none pointer-events-none"
+                    className="w-full h-full object-cover select-none pointer-events-none"
                     src={project.showcaseImage3}
                   />
                 </div>
+              </div>
+            )}
+            {(project.showcaseImage4 || project.showcaseImage5) && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {project.showcaseImage4 && (
+                  <div className="border border-[#76777b]/30 overflow-hidden rounded-lg h-full">
+                    <img
+                      alt={`${project.title} Showcase 4`}
+                      className="w-full h-full object-cover select-none pointer-events-none"
+                      src={project.showcaseImage4}
+                    />
+                  </div>
+                )}
+                {project.showcaseImage5 && (
+                  <div className="border border-[#76777b]/30 overflow-hidden rounded-lg h-full">
+                    <img
+                      alt={`${project.title} Showcase 5`}
+                      className="w-full h-full object-cover select-none pointer-events-none"
+                      src={project.showcaseImage5}
+                    />
+                  </div>
+                )}
               </div>
             )}
           </section>

@@ -63,8 +63,8 @@ export default function Work() {
   const filteredProjects = activeCategory === 'ALL'
     ? projects
     : projects.filter(project =>
-        project.category.toUpperCase().includes(activeCategory.toUpperCase())
-      );
+      project.category.toUpperCase().includes(activeCategory.toUpperCase())
+    );
 
   return (
     <article aria-label="Work Portfolio" className="bg-[#fcfcfc] min-h-screen text-black pt-[140px] pb-28">
@@ -108,7 +108,7 @@ export default function Work() {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 select-none pointer-events-none"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 select-none pointer-events-none"
                   />
                 </div>
                 <h3 className="text-[15px] md:text-[17px] font-bold text-black uppercase mt-4.5 tracking-wider transition-colors duration-300 group-hover:text-[#4b3fd4]">

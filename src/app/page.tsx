@@ -385,9 +385,9 @@ export default function Home() {
                 <div id="mouse-light" className="mouse-light hidden md:block" />
 
                 {/* Content Wrapper (Aligned perfectly left for an ultra-premium, high-end agency presentation) */}
-                <div className="hero-content-fade relative z-[1] md:flex-1 flex flex-col justify-center max-w-[1600px] mx-auto w-full px-[var(--pad)] pt-[140px] md:pt-[clamp(160px,18vh,220px)] pb-12 md:pb-16 hero-title-scroll">
+                <div className="hero-content-fade relative z-[1] md:flex-1 flex flex-col justify-center max-w-[1600px] mx-auto w-full px-[var(--pad)] pt-[140px] md:pt-[100px] lg:pt-[120px] pb-12 md:pb-16 hero-title-scroll">
                   <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 lg:gap-16 w-full">
-                    
+
                     {/* Left Column: Heading & Content */}
                     <div className="flex flex-col items-start gap-6 md:gap-7 lg:gap-8 w-full md:w-[60%] max-w-[1000px] px-8 md:px-[4vw] lg:px-[6vw] xl:px-[8vw]">
                       <Reveal>
@@ -431,14 +431,11 @@ export default function Home() {
                       </Reveal>
                     </div>
 
-                    {/* Right Column: Autoplay Video */}
-                    <div className="w-full md:w-[40%] max-w-[500px] px-8 md:px-0 flex justify-center md:justify-end relative z-10 select-none pointer-events-none md:translate-x-[2vw] lg:translate-x-[3vw] transition-all duration-700">
-                      <video
-                        src="/home page .mp4"
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
+                    {/* Right Column: Autoplay GIF */}
+                    <div className="w-full md:w-[35%] max-w-[380px] px-8 md:px-0 flex justify-center md:justify-end relative z-10 select-none pointer-events-none md:translate-x-[2vw] lg:translate-x-[3vw] xl:translate-x-[4vw] transition-all duration-700">
+                      <img
+                        src="/home page .gif"
+                        alt="Pragyan Hero Animation"
                         className="w-full h-auto object-contain pointer-events-none rounded-[12px]"
                       />
                     </div>

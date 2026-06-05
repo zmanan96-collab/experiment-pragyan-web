@@ -70,7 +70,7 @@ export default function Culture() {
                 <div className="wrap">
                   <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-12 md:gap-16 w-full transition-transform duration-500">
                     {/* Left content block */}
-                    <div className="w-full md:w-[60%] max-w-[750px] flex flex-col items-start max-[880px]:items-center max-[880px]:text-center transition-transform duration-500">
+                    <div className="w-full md:w-[55%] lg:w-[50%] xl:w-[60%] max-w-[750px] flex flex-col items-start max-[880px]:items-center max-[880px]:text-center md:ml-[2vw] lg:ml-[4vw] xl:ml-0 transition-transform duration-500">
                       <Reveal>
                         <span className="text-nav-label tracking-[0.22em] uppercase text-[#6a6a6a] block mb-6 md:mb-4">Careers</span>
                         <h1 id="culture-h" className="text-hero text-black mb-10 md:mb-6">
