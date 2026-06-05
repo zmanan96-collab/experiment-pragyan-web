@@ -138,7 +138,7 @@ export default function Inquiry() {
                                 id="f-phone"
                                 name="phone"
                                 type="tel"
-                                placeholder="99980 81399"
+                                placeholder="99999 99999"
                                 required
                                 className="flex-1 p-1.5 md:p-4 md:text-[18px] border border-black/30 bg-transparent text-black rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
                               />

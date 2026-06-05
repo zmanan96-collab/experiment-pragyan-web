@@ -437,8 +437,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
             {project.descriptionRightOfLabel && (
               <div className="col-span-4 md:col-span-9 flex flex-col justify-start md:pt-1">
                 <p
-                  className="text-base md:text-lg font-light text-black leading-relaxed max-w-[850px] whitespace-pre-line"
-                  style={{ textAlign: 'justify' }}
+                  className="text-left md:text-justify text-base md:text-lg font-light text-black leading-relaxed max-w-[850px] whitespace-pre-line"
                   dangerouslySetInnerHTML={{ __html: formatParagraphText(project.descriptionRightOfLabel) }}
                 />
               </div>
@@ -458,15 +457,13 @@ export default async function CaseStudyPage({ params }: PageProps) {
               <div className="col-span-4 md:col-span-9 flex flex-col gap-6">
                 {project.additionalSection && (
                   <p
-                    className="text-base md:text-lg font-light text-black leading-relaxed max-w-[850px] whitespace-pre-line"
-                    style={{ textAlign: 'justify' }}
+                    className="text-left md:text-justify text-base md:text-lg font-light text-black leading-relaxed max-w-[850px] whitespace-pre-line"
                     dangerouslySetInnerHTML={{ __html: formatParagraphText(project.additionalSection) }}
                   />
                 )}
                 {project.additionalSection2 && (
                   <p
-                    className="text-base md:text-lg font-light text-black leading-relaxed max-w-[850px] whitespace-pre-line"
-                    style={{ textAlign: 'justify' }}
+                    className="text-left md:text-justify text-base md:text-lg font-light text-black leading-relaxed max-w-[850px] whitespace-pre-line"
                     dangerouslySetInnerHTML={{ __html: formatParagraphText(project.additionalSection2) }}
                   />
                 )}
@@ -486,8 +483,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
               </div>
               <div className="col-span-4 md:col-span-9">
                 <p
-                  className="text-base md:text-lg font-light text-black leading-relaxed max-w-[850px] whitespace-pre-line"
-                  style={{ textAlign: 'justify' }}
+                  className="text-left md:text-justify text-base md:text-lg font-light text-black leading-relaxed max-w-[850px] whitespace-pre-line"
                   dangerouslySetInnerHTML={{ __html: formatParagraphText(project.additionalSection3) }}
                 />
               </div>
@@ -500,8 +496,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
           <div className="grid grid-cols-4 md:grid-cols-12 gap-6">
             <div className="col-span-4 md:col-span-9 md:col-start-4">
               <p
-                className="text-base md:text-lg font-light text-black leading-relaxed max-w-[850px] whitespace-pre-line"
-                style={{ textAlign: 'justify' }}
+                className="text-left md:text-justify text-base md:text-lg font-light text-black leading-relaxed max-w-[850px] whitespace-pre-line"
               >
                 {formatParagraphText(project.description)}
               </p>
@@ -549,8 +544,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 {project.customTwoCards.extraText && (
                   <div className="mt-8">
                     <p
-                      className="text-base md:text-lg font-light text-black leading-relaxed whitespace-pre-line"
-                      style={{ textAlign: 'justify' }}
+                      className="text-left md:text-justify text-base md:text-lg font-light text-black leading-relaxed whitespace-pre-line"
                     >
                       {project.customTwoCards.extraText}
                     </p>
@@ -568,8 +562,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
             <div className="grid grid-cols-4 md:grid-cols-12 gap-6">
               <div className="col-span-4 md:col-span-9 md:col-start-4">
                 <p
-                  className="text-base md:text-lg font-light text-black leading-relaxed max-w-[850px] whitespace-pre-line"
-                  style={{ textAlign: 'justify' }}
+                  className="text-left md:text-justify text-base md:text-lg font-light text-black leading-relaxed max-w-[850px] whitespace-pre-line"
                 >
                   {project.outcomesSection.text}
                 </p>
@@ -584,8 +577,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
             <div className="grid grid-cols-4 md:grid-cols-12 gap-6">
               <div className="col-span-4 md:col-span-9 md:col-start-4">
                 <p
-                  className="text-base md:text-lg font-light text-black leading-relaxed max-w-[850px] whitespace-pre-line"
-                  style={{ textAlign: 'justify' }}
+                  className="text-left md:text-justify text-base md:text-lg font-light text-black leading-relaxed max-w-[850px] whitespace-pre-line"
                 >
                   {project.reflectionSection.text}
                 </p>

@@ -215,9 +215,9 @@ export default function Home() {
       // Smooth viewport clipPath reveal for mobile (sequential line-by-line)
       const mobileTl = gsap.timeline({
         scrollTrigger: {
-          trigger: '#manifesto-section',
-          start: 'top 82%',
-          end: 'bottom 45%',
+          trigger: '.manifesto-wrap',
+          start: 'top 80%',
+          end: 'bottom 25%',
           scrub: true,
         }
       });
@@ -378,12 +378,12 @@ export default function Home() {
 
                 {/* Content Wrapper (Aligned perfectly left for an ultra-premium, high-end agency presentation) */}
                 <div className="hero-content-fade relative z-[1] md:flex-1 flex flex-col justify-center max-w-[1600px] mx-auto w-full px-[var(--pad)] pt-[140px] md:pt-[clamp(160px,18vh,220px)] pb-12 md:pb-16 hero-title-scroll">
-                  <div className="flex flex-col items-start gap-6 md:gap-7 lg:gap-8 max-w-[1000px] md:px-[4vw] lg:px-[6vw] xl:px-[8vw] w-full">
+                  <div className="flex flex-col items-start gap-6 md:gap-7 lg:gap-8 max-w-[1000px] px-8 md:px-[4vw] lg:px-[6vw] xl:px-[8vw] w-full">
 
                     <Reveal>
                       <h1 id="hero-h" className="text-hero text-[#fcfcfc]">
-                        <span className="whitespace-nowrap block">Behind every meaningful</span>
-                        <span className="whitespace-nowrap block">
+                        <span className="whitespace-normal md:whitespace-nowrap block">Behind every meaningful</span>
+                        <span className="whitespace-normal md:whitespace-nowrap block">
                           brand is a <span className="bg-gradient-to-r from-[#1E1F65] via-[#4E54D4] to-[#7678ED] bg-clip-text text-transparent inline-block animate-gradient-flow">perspective.</span>
                         </span>
                       </h1>
@@ -391,10 +391,10 @@ export default function Home() {
 
                     <Reveal delay={0.12}>
                       <div className="flex flex-col gap-0.5 md:gap-1">
-                        <p className="text-main-desc text-[#C9C9CE] whitespace-nowrap">
+                        <p className="text-main-desc text-[#C9C9CE] whitespace-normal md:whitespace-nowrap">
                           A founder&apos;s conviction.
                         </p>
-                        <p className="text-main-desc text-[#C9C9CE] whitespace-nowrap">
+                        <p className="text-main-desc text-[#C9C9CE] whitespace-normal md:whitespace-nowrap">
                           A point of view worth building around.
                         </p>
                       </div>

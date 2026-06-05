@@ -64,7 +64,7 @@ export default function AboutClient() {
     mm.add('(max-width: 767px)', () => {
       // Standard scale scroll animation for yellow bg on mobile
       gsap.fromTo(yellowBg,
-        { scaleY: 0.3 },
+        { scaleY: 0.55 },
         {
           scrollTrigger: {
             trigger: section,
@@ -170,7 +170,7 @@ export default function AboutClient() {
                 className="md:absolute md:top-0 md:left-0 md:h-[100vh] h-auto bg-black text-black md:py-0 md:h-[100svh] md:flex md:flex-col md:justify-center relative overflow-hidden z-30 w-full border-t border-[#333]"
                 aria-labelledby="fewer-h"
               >
-                <div className="w-full relative h-[70vh] md:h-[60vh] md:min-h-[400px] md:flex md:flex-col md:justify-center overflow-hidden">
+                <div className="w-full relative h-[70vh] md:h-[60vh] md:min-h-[400px] flex flex-col justify-center overflow-hidden">
                   {/* Animated Background Band */}
                   <div
                     ref={yellowBgRef}

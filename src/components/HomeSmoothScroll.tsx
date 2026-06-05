@@ -14,12 +14,12 @@ export default function HomeSmoothScroll() {
 
     // Initialize Lenis with optimized settings for buttery smooth Windows scrolling
     const lenis = new Lenis({
-      duration: 1.1, // Sligthly faster for punchy response
+      duration: 1.4, // Slightly slower for relaxed, premium feel
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // smooth exponential deceleration
       orientation: 'vertical',
       gestureOrientation: 'vertical',
       smoothWheel: true,
-      wheelMultiplier: 0.95, // Prevent overscrolling on high-resolution precision mouse wheels
+      wheelMultiplier: 0.85, // Prevent overscrolling on high-resolution precision mouse wheels
       touchMultiplier: 1.4,
     });
 
