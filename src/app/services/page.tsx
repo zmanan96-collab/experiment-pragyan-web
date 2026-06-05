@@ -134,7 +134,7 @@ export default function Services() {
                     </div>
 
                     {/* Right Column: Video */}
-                    <Reveal delay={0.2} className="w-full md:w-[30%] lg:w-[25%] xl:w-[25%] flex items-center justify-center md:justify-end xl:justify-center">
+                    <Reveal delay={0.2} className="w-full md:w-[30%] lg:w-[25%] xl:w-[25%] flex items-center justify-center md:justify-end xl:justify-center md:-translate-x-8 lg:-translate-x-16 xl:-translate-x-24">
                       <div className="w-full relative group flex justify-end">
                         <video
                           src="/services.mp4"
@@ -142,7 +142,7 @@ export default function Services() {
                           loop
                           muted
                           playsInline
-                          className="w-full h-auto max-h-[50vh] md:max-h-[65vh] object-contain select-none pointer-events-none"
+                          className="w-full h-auto aspect-square max-h-[50vh] md:max-h-[65vh] object-contain select-none pointer-events-none"
                         />
                       </div>
                     </Reveal>
