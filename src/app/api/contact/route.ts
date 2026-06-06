@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
     const { name, email, phone, countryCode, service, message } = body;
 
     // ── RATE LIMITING LOGIC ─────────────────────────────────────────────
-    const ip = req.headers.get('x-forwarded-for') || req.ip || 'unknown-ip';
+    const ip = req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || 'unknown-ip';
     const now = Date.now();
     const rateData = rateLimitMap.get(ip) || { count: 0, lastRequest: now };
 
