@@ -411,7 +411,7 @@ export default function Home() {
                       </Reveal>
 
                       <Reveal delay={0.12}>
-                        <div className="flex flex-col gap-0.5 md:gap-1">
+                        <div className="flex flex-col gap-0.5 md:gap-1 max-md:mt-[2vh]">
                           <p className="text-main-desc text-[#C9C9CE] whitespace-normal md:whitespace-nowrap">
                             A founder&apos;s conviction.
                           </p>

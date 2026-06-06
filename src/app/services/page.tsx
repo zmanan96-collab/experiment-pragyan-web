@@ -107,8 +107,8 @@ export default function Services() {
           <article aria-label="Services">
             <div id="services-deck-container" className="relative w-full bg-black">
               {/* Main Intro Section */}
-              <section id="services-hero-section" className="bg-white text-black relative overflow-hidden z-10 w-full md:min-h-[100svh] md:h-[100svh] md:flex md:flex-col" aria-labelledby="services-hero">
-                <div className="max-w-[1600px] mx-auto w-full px-[var(--pad)] pt-[140px] md:pt-[180px] lg:pt-[120px] pb-12 md:pb-16 flex flex-col justify-center md:flex-1 relative z-20 2xl:-translate-y-4">
+              <section id="services-hero-section" className="bg-white text-black relative overflow-hidden z-10 w-full min-h-[100svh] md:flex md:flex-col" aria-labelledby="services-hero">
+                <div className="max-w-[1600px] mx-auto w-full px-[var(--pad)] pt-[140px] md:pt-[180px] lg:pt-[120px] pb-16 md:pb-32 lg:pb-40 flex flex-col justify-center md:flex-1 relative z-20 2xl:-translate-y-4">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-10 md:gap-12 lg:gap-16 w-full">
                     {/* Left Column: Text Content */}
                     <div className="w-full md:w-[60%] lg:w-[65%] xl:w-[65%] flex flex-col justify-center text-left px-8 md:px-[4vw] lg:px-[6vw] xl:px-[8vw]">
