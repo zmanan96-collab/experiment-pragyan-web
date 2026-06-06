@@ -94,7 +94,7 @@ export default function Services() {
       title: "OOH Advertising",
       tagline: "Your brand, at the scale of the city.",
       copy: "A billboard is not a social media post made larger. It is a different discipline entirely — one that rewards\nsimplicity, demands confidence, and punishes hesitation. Out-of-home advertising works when the idea\nis strong enough to land in three seconds on a moving highway or a crowded street corner. We plan and\ncreate OOH campaigns from the idea inward — finding the one line, the one image, the one moment of\nclarity that earns a second look. Placed with precision. Designed to be remembered.",
-      deliverables: ["Campaign concept & creative", "Copywriting & art direction", "Format adaptation (billboards, transit, retail)"]
+      deliverables: ["Campaign concept & creative", "Copywriting & art direction"]
     }
   ];
 
@@ -123,8 +123,14 @@ export default function Services() {
 
                       <Reveal delay={0.1} className="transition-transform duration-700 ease-out">
                         <p className="text-main-desc text-[#6A6A6A] text-left transition-all duration-700 ease-out max-w-[750px] md:max-w-[850px] [@media(display-mode:fullscreen)]:md:max-w-[1000px]">
-                          <span className="block md:whitespace-nowrap">Pragyan is for founders who are tired of the same old</span>
-                          <span className="block md:whitespace-nowrap">and want to build something that actually carries weight.</span>
+                          {/* Mobile Version (Line 1-3) */}
+                          <span className="block md:hidden">Pragyan is for founders who are tired of</span>
+                          <span className="block md:hidden">the same old and want to build something</span>
+                          <span className="block md:hidden">that actually carries weight.</span>
+
+                          {/* Desktop Version */}
+                          <span className="hidden md:block md:whitespace-nowrap">Pragyan is for founders who are tired of the same old</span>
+                          <span className="hidden md:block md:whitespace-nowrap">and want to build something that actually carries weight.</span>
                           <span className="block md:whitespace-nowrap">We&apos;re obsessed with the work we do &mdash;</span>
                           <span className="block md:whitespace-nowrap">but even more protective of the work we choose not to do.</span>
                           <span className="block md:whitespace-nowrap">We only move when there&apos;s a point of view worth fighting for.</span>
@@ -133,15 +139,15 @@ export default function Services() {
                     </div>
 
                     {/* Right Column: Video */}
-                    <Reveal delay={0.2} className="w-full md:w-[30%] lg:w-[25%] xl:w-[25%] flex items-center justify-center md:justify-end xl:justify-center md:-translate-x-8 lg:-translate-x-16 xl:-translate-x-24">
+                    <Reveal delay={0.2} className="w-full md:w-[35%] lg:w-[30%] xl:w-[30%] flex items-center justify-center md:justify-end xl:justify-center md:-translate-x-[5vw] lg:-translate-x-[10vw] xl:-translate-x-[10vw]">
                       <div className="w-full relative group flex justify-end">
                         <video
-                          src="/services.mp4"
+                          src="/service-hero.webm"
                           autoPlay
                           loop
                           muted
                           playsInline
-                          className="w-full h-auto aspect-square max-h-[50vh] md:max-h-[65vh] object-contain select-none pointer-events-none"
+                          className="w-full h-auto aspect-square max-h-[50vh] md:max-h-[65vh] object-contain select-none pointer-events-none scale-[1.05]"
                         />
                       </div>
                     </Reveal>

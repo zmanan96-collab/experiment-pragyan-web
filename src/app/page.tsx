@@ -390,11 +390,24 @@ export default function Home() {
                     <div className="flex flex-col items-start gap-6 md:gap-7 lg:gap-8 w-full md:w-[60%] max-w-[1000px] px-8 md:px-[4vw] lg:px-[6vw] xl:px-[8vw]">
                       <Reveal>
                         <h1 id="hero-h" className="text-hero text-[#fcfcfc]">
-                          <span className="whitespace-normal md:whitespace-nowrap block">Behind every meaningful</span>
+                          <span className="whitespace-normal md:whitespace-nowrap block">Behind every</span>
+                          <span className="whitespace-normal md:whitespace-nowrap block">meaningful brand</span>
                           <span className="whitespace-normal md:whitespace-nowrap block">
-                            brand is a <span className="bg-gradient-to-r from-[#1E1F65] via-[#4E54D4] to-[#7678ED] bg-clip-text text-transparent inline-block animate-gradient-flow">perspective.</span>
+                            is a <span className="bg-gradient-to-r from-[#1E1F65] via-[#4E54D4] to-[#7678ED] bg-clip-text text-transparent inline-block animate-gradient-flow">perspective.</span>
                           </span>
                         </h1>
+                      </Reveal>
+
+                      {/* Mobile Video (Placed exactly after H1) */}
+                      <Reveal delay={0.1} className="w-full flex md:hidden justify-center relative z-10 select-none pointer-events-none mt-[5%] mb-2">
+                        <video
+                          src="/home-hero.webm"
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          className="w-full h-auto max-w-[400px] object-contain pointer-events-none mix-blend-screen scale-[1.20] translate-y-[5%]"
+                        />
                       </Reveal>
 
                       <Reveal delay={0.12}>
@@ -429,14 +442,19 @@ export default function Home() {
                       </Reveal>
                     </div>
 
-                    {/* Right Column: Autoplay GIF */}
-                    {/* <div className="w-full md:w-[35%] max-w-[380px] px-8 md:px-0 flex justify-center md:justify-end relative z-10 select-none pointer-events-none md:translate-x-[2vw] lg:translate-x-[3vw] xl:translate-x-[4vw] transition-all duration-700">
-                      <img
-                        src="/home page .gif"
-                        alt="Pragyan Hero Animation"
-                        className="w-full h-auto object-contain pointer-events-none rounded-[12px]"
-                      />
-                    </div> */}
+                    {/* Right Column: Video (Desktop) */}
+                    <div className="hidden md:flex w-full md:w-[40%] px-8 md:px-0 justify-center md:justify-end xl:justify-center relative z-10 select-none pointer-events-none">
+                      <Reveal delay={0.4} className="w-full flex justify-end">
+                        <video
+                          src="/home-hero.webm"
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          className="w-full h-auto max-w-[500px] object-contain pointer-events-none mix-blend-screen scale-[1.20]"
+                        />
+                      </Reveal>
+                    </div>
 
                   </div>
                 </div>
@@ -563,13 +581,13 @@ export default function Home() {
                           desc: "before we design.",
                           illustration: (
                             <video
-                              src="/We discuss.mp4"
+                              src="/Home%20We%20Discuss.webm"
                               autoPlay
                               loop
                               muted
                               playsInline
                               className="w-full h-full object-cover mix-blend-screen"
-                              style={{ transform: 'scale(1.5)', transformOrigin: 'center' }}
+                              style={{ transform: 'scale(1.30)', transformOrigin: 'center' }}
                             />
                           )
                         },
@@ -578,13 +596,13 @@ export default function Home() {
                           desc: "before we build.",
                           illustration: (
                             <video
-                              src="/We plan videos reels.mp4"
+                              src="/home-we-plan.webm"
                               autoPlay
                               loop
                               muted
                               playsInline
                               className="w-full h-full object-cover mix-blend-screen"
-                              style={{ transform: 'scale(1.5)', transformOrigin: 'center' }}
+                              style={{ transform: 'scale(1.30)', transformOrigin: 'center' }}
                             />
                           )
                         },
@@ -593,13 +611,13 @@ export default function Home() {
                           desc: "to turn curiosity into creativity.",
                           illustration: (
                             <video
-                              src="/3.mp4"
+                              src="/home-we-work-with-you.webm"
                               autoPlay
                               loop
                               muted
                               playsInline
                               className="w-full h-full object-cover mix-blend-screen"
-                              style={{ transform: 'scale(1.5)', transformOrigin: 'center' }}
+                              style={{ transform: 'scale(1.20)', transformOrigin: 'center' }}
                             />
                           )
                         }
@@ -732,31 +750,14 @@ export default function Home() {
                           href={`/work/${project.title.toLowerCase().replace(/ /g, '-')}`}
                           className="w-[80vw] md:w-[32vw] lg:w-[28vw] shrink-0 snap-center md:snap-align-none rounded-[20px] overflow-hidden aspect-[4/3] md:aspect-[16/11] relative bg-[#121212] group border border-white/5 block cursor-pointer"
                         >
-                          {/* Nested Image Container that shrinks on hover to keep all corners rounded */}
-                          <div className="absolute top-0 left-0 right-0 bottom-[105px] md:bottom-0 rounded-[20px] md:rounded-b-none overflow-hidden transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] md:group-hover:bottom-[95px] md:group-hover:rounded-b-[20px]">
+                          {/* Nested Image Container */}
+                          <div className="absolute inset-0 rounded-[20px] overflow-hidden transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)]">
                             <img
                               src={project.image}
                               alt={project.title}
                               loading="lazy"
                               className="w-full h-full object-cover object-top md:group-hover:scale-105 select-none pointer-events-none grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-[filter,transform] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
                             />
-                          </div>
-
-                          {/* Details panel - Revealed in the bottom area on hover on desktop, always visible on mobile */}
-                          <div className="absolute bottom-0 left-0 right-0 h-[105px] md:h-[95px] px-5 py-3 md:py-4 flex flex-col justify-center translate-y-0 md:translate-y-2 opacity-100 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] select-none pointer-events-none z-10">
-                            <h4 className="text-[14px] md:text-[18px] text-white font-bold mb-1.5 md:mb-2.5 tracking-tight uppercase">
-                              {project.title}
-                            </h4>
-                            <div className="flex flex-wrap gap-1.5">
-                              {project.tags.map((tag) => (
-                                <span
-                                  key={tag}
-                                  className="px-2.5 py-1 md:px-3 md:py-1.5 bg-[#222] text-[8px] md:text-[10px] font-bold text-white tracking-[0.08em] rounded-[4px] border border-white/10 uppercase"
-                                >
-                                  {tag}
-                                </span>
-                              ))}
-                            </div>
                           </div>
                         </Link>
                       );
