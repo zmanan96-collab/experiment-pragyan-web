@@ -6,14 +6,16 @@ export default function ScrollSnapController() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       try {
-        const platform = window.navigator?.platform || '';
         const userAgent = window.navigator?.userAgent || '';
-        if (platform.indexOf('Mac') !== -1 || userAgent.indexOf('Macintosh') !== -1) {
+        const isMac = /Mac|iPhone|iPad|iPod/.test(userAgent);
+        if (isMac) {
           document.documentElement.classList.add('is-mac');
         } else {
           document.documentElement.classList.add('is-not-mac');
         }
-      } catch (e) {}
+      } catch (e) {
+        console.warn('Platform detection failed:', e);
+      }
     }
   }, []);
 

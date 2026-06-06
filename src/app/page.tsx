@@ -54,7 +54,6 @@ const projects = [
 export default function Home() {
   const [mounted, setMounted] = useState(false);
   const [activeSlide, setActiveSlide] = useState(0);
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const sliderRef = useRef<HTMLDivElement>(null);
 
   const handleScroll = () => {
@@ -351,7 +350,6 @@ export default function Home() {
     return () => {
       // Clean up all matchMedia and ScrollTrigger instances on unmount
       mm.revert();
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
       if (hero && handleMouseMove) {
         hero.removeEventListener('mousemove', handleMouseMove);
       }
@@ -641,7 +639,7 @@ export default function Home() {
                 aria-labelledby="process-h"
               >
                 <div className="absolute right-0 top-0 w-[50%] h-full pointer-events-none hidden md:block z-[0]">
-                  <img src="/assets/img/1.png" alt="" className="w-full h-full object-cover object-right" />
+                  <img src="/assets/img/1.png" alt="" role="presentation" className="w-full h-full object-cover object-right" />
                 </div>
 
                 <div className="wrap relative z-[1] flex justify-start w-full px-[var(--pad)]">
@@ -732,8 +730,6 @@ export default function Home() {
                         <Link
                           key={idx}
                           href={`/work/${project.title.toLowerCase().replace(/ /g, '-')}`}
-                          onMouseEnter={() => setHoveredIndex(idx)}
-                          onMouseLeave={() => setHoveredIndex(null)}
                           className="w-[80vw] md:w-[32vw] lg:w-[28vw] shrink-0 snap-center md:snap-align-none rounded-[20px] overflow-hidden aspect-[4/3] md:aspect-[16/11] relative bg-[#121212] group border border-white/5 block cursor-pointer"
                         >
                           {/* Nested Image Container that shrinks on hover to keep all corners rounded */}
@@ -741,12 +737,8 @@ export default function Home() {
                             <img
                               src={project.image}
                               alt={project.title}
-                              style={{
-                                filter: hoveredIndex === idx ? 'grayscale(0%)' : 'grayscale(100%)',
-                                WebkitFilter: hoveredIndex === idx ? 'grayscale(0%)' : 'grayscale(100%)',
-                                transition: 'filter 0.7s cubic-bezier(0.16, 1, 0.3, 1), -webkit-filter 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 1.5s cubic-bezier(0.16, 1, 0.3, 1)',
-                              }}
-                              className="w-full h-full object-cover object-top md:group-hover:scale-105 select-none pointer-events-none"
+                              loading="lazy"
+                              className="w-full h-full object-cover object-top md:group-hover:scale-105 select-none pointer-events-none grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-[filter,transform] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
                             />
                           </div>
 
@@ -778,10 +770,11 @@ export default function Home() {
                     <button
                       key={idx}
                       onClick={() => scrollToSlide(idx)}
-                      className={`h-2.5 rounded-full transition-all duration-300 ${activeSlide === idx ? 'w-8 bg-white' : 'w-2.5 bg-white/30 hover:bg-white/50'
-                        }`}
+                      className="p-2 -m-2 group outline-none"
                       aria-label={`Go to slide ${idx + 1}`}
-                    />
+                    >
+                      <div className={`h-2.5 rounded-full transition-all duration-300 ${activeSlide === idx ? 'w-8 bg-white' : 'w-2.5 bg-white/30 group-hover:bg-white/50'}`} />
+                    </button>
                   ))}
                 </div>
               </section>

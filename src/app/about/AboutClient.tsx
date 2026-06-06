@@ -80,7 +80,6 @@ export default function AboutClient() {
 
     return () => {
       mm.revert();
-      ScrollTrigger.getAll().forEach(t => t.kill());
     };
   }, []);
 

@@ -4,12 +4,11 @@ import React from 'react';
 
 interface MarqueeProps {
   text?: string;
-  speed?: number;
   className?: string;
   bg?: string;
 }
 
-const Marquee = ({ text, speed, className, bg = '#FFFFFF' }: MarqueeProps) => {
+const Marquee = ({ text, className, bg = '#FFFFFF' }: MarqueeProps) => {
   const words = text ? [text] : ['Growth.', 'Wisdom.', 'Action.'];
 
   return (

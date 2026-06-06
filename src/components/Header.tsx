@@ -1,9 +1,8 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import Button, { ButtonArrow } from './Button';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,8 +17,10 @@ export default function Header() {
     { href: '/inquiry', label: 'Inquiry' },
   ];
 
+  const rafId = useRef<number | null>(null);
+
   useEffect(() => {
-    const handleScroll = () => {
+    const detectTheme = () => {
       // Find the active section at the header level (y = 38px)
       const headerEl = document.querySelector('header');
       if (headerEl) {
@@ -75,14 +76,24 @@ export default function Header() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    // Throttle scroll handler via requestAnimationFrame to avoid 60+/sec calls
+    const handleScroll = () => {
+      if (rafId.current !== null) return;
+      rafId.current = requestAnimationFrame(() => {
+        detectTheme();
+        rafId.current = null;
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
     
     // Check initial state after DOM renders
-    const timer = setTimeout(handleScroll, 100);
+    const timer = setTimeout(detectTheme, 100);
     
     return () => {
       window.removeEventListener('scroll', handleScroll);
       clearTimeout(timer);
+      if (rafId.current !== null) cancelAnimationFrame(rafId.current);
     };
   }, [pathname]);
 
@@ -114,7 +125,7 @@ export default function Header() {
                     href={link.href}
                     onClick={() => setIsOpen(false)}
                     className={`
-                      relative py-2 transition-colors duration-150 ease-[cubic-bezier(0.22,1,0.36,1)]
+                      relative py-2 max-[920px]:py-4 max-[920px]:block transition-colors duration-150 ease-[cubic-bezier(0.22,1,0.36,1)]
                       after:content-[''] after:absolute after:left-0 after:right-0 after:bottom-0 
                       after:h-[1.5px] after:bg-[#4b3fd4] after:origin-left after:transition-transform 
                       after:duration-250 after:ease-[cubic-bezier(0.22,1,0.36,1)]

@@ -3,6 +3,16 @@ import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+/** Escape user input to prevent XSS in HTML email templates */
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
 // Admin email that receives all inquiry notifications
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'hello@pragyaan.in';
 // The "from" address - must use a verified Resend domain
@@ -79,31 +89,31 @@ export async function POST(req: NextRequest) {
 
       <div class="field">
         <div class="label">Name</div>
-        <div class="value">${name}</div>
+        <div class="value">${escapeHtml(name)}</div>
       </div>
       <hr class="divider" />
 
       <div class="field">
         <div class="label">Email</div>
-        <div class="value"><a href="mailto:${email}" style="color:#4B3FD4;text-decoration:none;">${email}</a></div>
+        <div class="value"><a href="mailto:${escapeHtml(email)}" style="color:#4B3FD4;text-decoration:none;">${escapeHtml(email)}</a></div>
       </div>
       <hr class="divider" />
 
       <div class="field">
         <div class="label">Phone</div>
-        <div class="value">${fullPhone}</div>
+        <div class="value">${escapeHtml(fullPhone)}</div>
       </div>
       <hr class="divider" />
 
       <div class="field">
         <div class="label">Service Interested In</div>
-        <div class="value"><span class="service-badge">${service}</span></div>
+        <div class="value"><span class="service-badge">${escapeHtml(service)}</span></div>
       </div>
       <hr class="divider" />
 
       <div class="field">
         <div class="label">Message</div>
-        <div class="message-box">${message}</div>
+        <div class="message-box">${escapeHtml(message)}</div>
       </div>
     </div>
     <div class="footer">
@@ -127,16 +137,16 @@ export async function POST(req: NextRequest) {
     if (error) {
       console.error('[Resend error]', error);
       return NextResponse.json(
-        { error: `Failed to send email: ${error.message || 'Unknown Resend error.'}` },
+        { error: 'Failed to send your inquiry. Please try again later.' },
         { status: 500 }
       );
     }
 
     return NextResponse.json({ success: true }, { status: 200 });
-  } catch (err: any) {
-    console.error('[API /contact error]', err);
+  } catch (err: unknown) {
+    console.error('[API /contact error]', err instanceof Error ? err.message : err);
     return NextResponse.json(
-      { error: `Server error: ${err.message || 'Please try again later.'}` },
+      { error: 'Server error. Please try again later.' },
       { status: 500 }
     );
   }

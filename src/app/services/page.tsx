@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, Fragment, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Reveal from '../../components/Reveal';
@@ -50,7 +50,6 @@ export default function Services() {
 
     return () => {
       mm.revert();
-      ScrollTrigger.getAll().forEach(t => t.kill());
     };
   }, []);
 

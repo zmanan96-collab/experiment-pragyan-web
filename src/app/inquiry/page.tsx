@@ -1,13 +1,12 @@
 'use client';
 
 import Reveal from '../../components/Reveal';
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import HomeSmoothScroll from '../../components/HomeSmoothScroll';
 
 export default function Inquiry() {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState<string>('');
-  const formRef = useRef<HTMLFormElement>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

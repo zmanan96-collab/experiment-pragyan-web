@@ -1,10 +1,11 @@
 'use client';
 
+import { useMemo } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
+  const currentYear = useMemo(() => new Date().getFullYear(), []);
   const pathname = usePathname();
 
   // Set outer footer background color based on the page theme to prevent transparent body background showing as black
@@ -111,9 +112,6 @@ export default function Footer() {
           <p className="text-small-desc text-white/40 text-center md:text-left md:whitespace-nowrap">
             © {currentYear} Pragyan Branding & Marketing. All Rights Reserved.
           </p>
-          <div className="flex gap-4 text-small-desc text-white/40 justify-center md:justify-end">
-            <Link href="/sitemap" className="hover:text-[#4b3fd4] transition-colors">Sitemap</Link>
-          </div>
         </div>
       </div>
     </div>

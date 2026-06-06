@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Reveal from '../../components/Reveal';
-import Button, { ButtonArrow } from '../../components/Button';
+import Button from '../../components/Button';
 import HomeSmoothScroll from '../../components/HomeSmoothScroll';
 
 export default function Culture() {
@@ -53,7 +53,6 @@ export default function Culture() {
 
     return () => {
       mm.revert();
-      ScrollTrigger.getAll().forEach(t => t.kill());
     };
   }, []);
 
@@ -270,7 +269,7 @@ export default function Culture() {
               </section>
 
               {/* Ecosystem/CTA section */}
-              <section id="culture-cta-section" className="md:absolute md:top-0 md:left-0 md:h-[100vh] h-auto bg-black border-t border-white/5 relative overflow-hidden py-[clamp(60px,10vw,120px)] md:py-0 md:flex md:flex-col md:justify-center z-40 w-full border-t border-white/5" aria-labelledby="culture-cta-h">
+              <section id="culture-cta-section" className="md:absolute md:top-0 md:left-0 md:h-[100vh] h-auto bg-black border-t border-white/5 relative overflow-hidden py-[clamp(60px,10vw,120px)] md:py-0 md:flex md:flex-col md:justify-center z-40 w-full" aria-labelledby="culture-cta-h">
                 <div className="section-noise-effect" />
                 <div className="wrap relative z-[1]">
                   <Reveal className="relative z-[1] max-w-[1200px] mx-auto p-[clamp(20px,3vw,35px)_clamp(50px,8vw,120px)] md:p-[25px_80px] bg-[#fcfcfc]/80 border border-white/20 text-center shadow-2xl rounded-[20px]">

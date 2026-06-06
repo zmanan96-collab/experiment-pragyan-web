@@ -586,6 +586,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
               <div className="w-full border border-[#76777b]/30 overflow-hidden rounded-lg">
                 <img
                   alt={`${project.title} Showcase 1`}
+                  loading="lazy"
                   className="w-full h-auto object-cover select-none pointer-events-none"
                   src={project.showcaseImage1}
                 />
@@ -596,6 +597,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 <div className="border border-[#76777b]/30 overflow-hidden rounded-lg h-full">
                   <img
                     alt={`${project.title} Showcase 2`}
+                    loading="lazy"
                     className="w-full h-full object-cover select-none pointer-events-none"
                     src={project.showcaseImage2}
                   />
@@ -603,6 +605,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 <div className="border border-[#76777b]/30 overflow-hidden rounded-lg h-full">
                   <img
                     alt={`${project.title} Showcase 3`}
+                    loading="lazy"
                     className="w-full h-full object-cover select-none pointer-events-none"
                     src={project.showcaseImage3}
                   />
@@ -615,6 +618,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                   <div className="border border-[#76777b]/30 overflow-hidden rounded-lg h-full">
                     <img
                       alt={`${project.title} Showcase 4`}
+                      loading="lazy"
                       className="w-full h-full object-cover select-none pointer-events-none"
                       src={project.showcaseImage4}
                     />
@@ -624,6 +628,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                   <div className="border border-[#76777b]/30 overflow-hidden rounded-lg h-full">
                     <img
                       alt={`${project.title} Showcase 5`}
+                      loading="lazy"
                       className="w-full h-full object-cover select-none pointer-events-none"
                       src={project.showcaseImage5}
                     />

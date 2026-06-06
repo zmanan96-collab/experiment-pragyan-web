@@ -38,7 +38,7 @@ export default function InteractiveStatsDashboard({
     { id: 'engagementRate' as keyof DataPoint, label: 'Engagement Rate', total: overallEngagementRate, suffix: '%', color: '#F59E0B', gradient: ['#F59E0B', '#FBBF24'] }
   ];
 
-  const activeMetricConfig = METRICS.find(m => m.id === activeMetric)!;
+  const activeMetricConfig = METRICS.find(m => m.id === activeMetric) ?? METRICS[0];
 
   // Chart bounds & scales configuration
   const svgWidth = 800;
