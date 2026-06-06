@@ -105,6 +105,7 @@ export default function Inquiry() {
                               name="name"
                               type="text"
                               required
+                              maxLength={100}
                               className="w-full h-[40px] px-3 py-1.5 text-[13px] md:text-[14px] border border-black/30 bg-transparent text-black rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
                             />
                           </div>
@@ -116,6 +117,7 @@ export default function Inquiry() {
                               name="email"
                               type="email"
                               required
+                              maxLength={100}
                               className="w-full h-[40px] px-3 py-1.5 text-[13px] md:text-[14px] border border-black/30 bg-transparent text-black rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
                             />
                           </div>
@@ -143,6 +145,7 @@ export default function Inquiry() {
                                 type="tel"
                                 placeholder="99999 99999"
                                 required
+                                maxLength={20}
                                 className="flex-1 min-w-0 h-[40px] px-3 py-1.5 text-[13px] md:text-[14px] border border-black/30 bg-transparent text-black rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111]"
                               />
                             </div>
@@ -175,6 +178,7 @@ export default function Inquiry() {
                             id="f-message"
                             name="message"
                             required
+                            maxLength={2000}
                             className="w-full h-[60px] min-h-[60px] max-h-[80px] px-3 py-2 text-[13px] md:text-[14px] border border-black/30 bg-transparent text-black rounded-[4px] transition-all duration-700 focus:outline-none focus:border-[#FFD111] resize-y"
                           ></textarea>
                         </div>

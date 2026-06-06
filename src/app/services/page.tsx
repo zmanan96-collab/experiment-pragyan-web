@@ -56,45 +56,45 @@ export default function Services() {
   const services = [
     {
       title: "Brand Strategy",
-      tagline: "The single idea your entire business stands on.",
-      copy: "Every strong brand is built around one clear idea — a perspective sharp enough to guide every decision,\nevery hire, every message. Brand Strategy is the work of finding that idea. We listen closely, ask the harder\nquestions, and dig past the obvious until we reach something real. Something that belongs to you and\nonly you. When that core is clear, the rest follows with uncommon ease. Positioning sharpens.\nCommunication tightens. The brand stops feeling scattered and starts feeling inevitable.",
-      deliverables: ["Brand positioning", "Audience definition", "Competitive mapping", "Core messaging pillars", "Brand narrative"]
+      tagline: "The idea everything else builds on.",
+      copy: "Every strong brand is built around a clear point of view. Brand strategy is the work of uncovering what makes your business distinct and translating it into direction. It creates the foundation for decisions, communication, and growth.",
+      deliverables: ["Positioning", "Research", "Communication Strategy"]
     },
     {
       title: "Identity & Expression",
-      tagline: "How you look and sound when no one is paying attention.",
-      copy: "Identity is the entire sensory experience of encountering your brand — the typeface, the palette, the\ntone, the way your email lands in a crowded inbox. We build identities rooted in your strategy, shaped by\nyour perspective, and designed to hold up across formats, contexts, and years. A visual and verbal\nlanguage that feels unmistakably yours. Coherent enough to be consistent. Alive enough to be\ninteresting.",
-      deliverables: ["Logo & visual identity", "Brand guidelines", "Typography & colour system", "Brand collateral"]
+      tagline: "How your brand looks, sounds, and feels.",
+      copy: "Identity is more than a logo. It's the complete experience of encountering your brand. We create visual and verbal systems that help businesses show up consistently, confidently, and recognisably across every touchpoint.",
+      deliverables: ["Visual Identity", "Verbal Identity", "Brand Guidelines", "Design Systems", "Marketing Collateral"]
     },
     {
       title: "Content & Communication",
-      tagline: "Your thinking, made readable. Your voice, made consistent.",
-      copy: "Good content earns its place. It carries a perspective, respects the reader's intelligence, and sounds like\na specific human wrote it — because one did. We write from the inside out. Starting with what you believe,\nwhat your audience actually cares about, and where those two things create genuine tension or\nresonance. Website copy, brand stories, pitch decks, long-form essays — whatever the format, the\nstandard holds. It has to say something. And it has to sound alive.",
-      deliverables: ["Website copywriting", "Brand storytelling", "Pitch decks", "Campaign messaging"]
+      tagline: "Your thinking, made clear.",
+      copy: "Good communication helps people understand who you are and why your work matters. We develop content that reflects your perspective, speaks to the right audience, and feels human in every format.",
+      deliverables: ["Website Copy", "Brand Stories", "Presentations", "Brochures", "Editorial & Long-form Content"]
     },
     {
       title: "Digital Marketing",
-      tagline: "Your work, in front of the right people. With intention.",
-      copy: "Reach is a result of clarity. When a brand knows exactly what it stands for and who it is speaking to, getting\nseen becomes a strategy — and strategy compounds. We plan digital marketing from the brand outward.\nThe channels, campaigns, and content we build are anchored in something real. The kind of marketing\nthat builds trust gradually, earns attention honestly, and produces results that hold up quarter after\nquarter.",
-      deliverables: ["Paid media strategy", "SEO & content marketing", "Performance campaigns", "Analytics"]
+      tagline: "Helping the right people find you.",
+      copy: "Marketing works best when it's built on clarity. We create campaigns and digital systems that connect your work with the people most likely to value it, building visibility that supports long-term growth.",
+      deliverables: ["Campaign Strategy", "Performance Marketing", "SEO", "Analytics"]
     },
     {
       title: "Social & Community",
-      tagline: "Showing up with intent — because you actually have something to say.",
-      copy: "Consistency on social media is easy when you know exactly what you believe. The brands that build real\ncommunities online are the ones willing to have a genuine point of view — and say it out loud, repeatedly,\nwithout flinching. We help you build that kind of presence. Rooted in your values. Tuned to your audience.\nSharp enough to cut through the scroll. Fewer posts. More meaning. The kind of community that grows\nbecause people actually want to be part of it.",
-      deliverables: ["Content strategy", "Platform-specific content", "Monthly content planning"]
+      tagline: "Showing up with consistency and intent.",
+      copy: "A meaningful social presence isn't built through volume alone. It's built through relevance, clarity, and a point of view people want to follow. We help brands create content and communities that strengthen relationships over time.",
+      deliverables: ["Content Strategy", "Social Media Management", "Community Building", "Reputation Management"]
     },
     {
       title: "Personal Branding & LinkedIn",
-      tagline: "The founder is the brand. Time to act like it.",
-      copy: "People trust people before they trust companies. A founder with a voice on LinkedIn\nbuilds authority that advertising cannot buy — and a pipeline that compounds over time. We work directly\nwith founders and senior professionals to surface their real perspective, shape it into a personal brand\nwith edges and depth, and show up on LinkedIn in a way that earns genuine respect. Well-crafted\nthinking, in your voice, about things you actually care about. The presence that makes the right people\nreach out first.",
-      deliverables: ["LinkedIn profile audit & rewrite", "Personal brand positioning", "Content strategy & voice guide", "LinkedIn page management"]
+      tagline: "Building trust through people.",
+      copy: "People often connect with founders before they connect with companies. We help founders and professionals articulate their expertise, develop a distinctive voice, and build credibility through thoughtful communication.",
+      deliverables: ["LinkedIn Strategy", "Personal Brand Positioning", "Profile Development"]
     },
     {
       title: "OOH Advertising",
-      tagline: "Your brand, at the scale of the city.",
-      copy: "A billboard is not a social media post made larger. It is a different discipline entirely — one that rewards\nsimplicity, demands confidence, and punishes hesitation. Out-of-home advertising works when the idea\nis strong enough to land in three seconds on a moving highway or a crowded street corner. We plan and\ncreate OOH campaigns from the idea inward — finding the one line, the one image, the one moment of\nclarity that earns a second look. Placed with precision. Designed to be remembered.",
-      deliverables: ["Campaign concept & creative", "Copywriting & art direction"]
+      tagline: "Built to be seen. Designed to be remembered.",
+      copy: "Outdoor advertising demands simplicity and confidence. We develop campaigns that communicate a clear idea quickly and effectively across public spaces, creating memorable brand moments beyond the screen.",
+      deliverables: ["Campaign Concepts", "Hoardings", "Media Planning"]
     }
   ];
 
@@ -113,27 +113,23 @@ export default function Services() {
                     {/* Left Column: Text Content */}
                     <div className="w-full md:w-[60%] lg:w-[65%] xl:w-[65%] flex flex-col justify-center text-left px-8 md:px-[4vw] lg:px-[6vw] xl:px-[8vw]">
                       <Reveal className="mb-4 lg:mb-6 max-w-[700px] lg:max-w-[850px] 2xl:max-w-[1000px] transition-transform duration-700 ease-out">
-                        <span className="text-nav-label tracking-[0.22em] uppercase text-[#6a6a6a] block mb-3">Services</span>
                         <h2 className="text-hero text-black transition-all duration-700 ease-out pb-2">
-                          <span className="block whitespace-nowrap">What we do &ndash;</span>
-                          <span className="block whitespace-nowrap">and what</span>
-                          <span className="inline-block bg-gradient-to-r from-[#161245] via-[#4B3FD4] to-[#786CF0] bg-clip-text text-transparent pb-2 whitespace-nowrap">we don&apos;t</span>
+                          <span className="block whitespace-nowrap">Turning ideas</span>
+                          <span className="block whitespace-nowrap">into brands,</span>
+                          <span className="block whitespace-nowrap">communication,</span>
+                          <span className="inline-block bg-gradient-to-r from-[#161245] via-[#4B3FD4] to-[#786CF0] bg-clip-text text-transparent pb-2 whitespace-nowrap">and growth.</span>
                         </h2>
                       </Reveal>
 
                       <Reveal delay={0.1} className="transition-transform duration-700 ease-out">
                         <p className="text-main-desc text-[#6A6A6A] text-left transition-all duration-700 ease-out max-w-[750px] md:max-w-[850px] [@media(display-mode:fullscreen)]:md:max-w-[1000px]">
-                          {/* Mobile Version (Line 1-3) */}
-                          <span className="block md:hidden">Pragyan is for founders who are tired of</span>
-                          <span className="block md:hidden">the same old and want to build something</span>
-                          <span className="block md:hidden">that actually carries weight.</span>
-
-                          {/* Desktop Version */}
-                          <span className="hidden md:block md:whitespace-nowrap">Pragyan is for founders who are tired of the same old</span>
-                          <span className="hidden md:block md:whitespace-nowrap">and want to build something that actually carries weight.</span>
-                          <span className="block md:whitespace-nowrap">We&apos;re obsessed with the work we do &mdash;</span>
-                          <span className="block md:whitespace-nowrap">but even more protective of the work we choose not to do.</span>
-                          <span className="block md:whitespace-nowrap">We only move when there&apos;s a point of view worth fighting for.</span>
+                          <span className="block">Every business needs different things at different stages.</span>
+                          <span className="block">Some need clarity.</span>
+                          <span className="block">Some need a stronger identity.</span>
+                          <span className="block">Some need better communication.</span>
+                          <span className="block">Some need help reaching the right people.</span>
+                          <br className="hidden md:block" />
+                          <span className="block md:mt-2">Our services span strategy, branding, communication, and marketing &mdash; tailored to what your business needs most.</span>
                         </p>
                       </Reveal>
                     </div>
@@ -147,7 +143,7 @@ export default function Services() {
                           loop
                           muted
                           playsInline
-                          className="w-full h-auto aspect-square max-h-[50vh] md:max-h-[65vh] object-contain select-none pointer-events-none scale-[1.05]"
+                          className="w-full h-auto aspect-square max-h-[50vh] md:max-h-[65vh] object-contain select-none pointer-events-none scale-[1.20] md:-translate-y-[20%] md:translate-x-[10%]"
                         />
                       </div>
                     </Reveal>
@@ -238,10 +234,10 @@ export default function Services() {
 
                   <div className="mt-20 md:mt-32 relative">
                     <Reveal className="flex items-center justify-end gap-12 max-[760px]:flex-col max-[760px]:items-center">
-                      <p className="text-right max-[760px]:text-center text-card-title italic text-white leading-[1.5] max-w-[720px]">
-                        <span className="md:whitespace-nowrap">We don&rsquo;t believe in one-size-fits-all thinking.</span><br />
-                        If you&rsquo;re ready to stop being an echo and<br />
-                        start being original, let&rsquo;s talk.
+                      <p className="text-right max-[760px]:text-center text-card-title italic text-white leading-[1.5] max-w-none xl:max-w-[900px]">
+                        Whether you&apos;re starting with a new idea, refining an existing brand,<br />
+                        or preparing for the next stage of growth,<br />
+                        we&apos;d love to hear you. Let&apos;s Talk.
                       </p>
                       <Link
                         href="/inquiry"

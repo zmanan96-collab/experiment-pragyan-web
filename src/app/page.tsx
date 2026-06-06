@@ -406,7 +406,7 @@ export default function Home() {
                           loop
                           muted
                           playsInline
-                          className="w-full h-auto max-w-[400px] object-contain pointer-events-none mix-blend-screen scale-[1.20] translate-y-[5%]"
+                          className="w-full aspect-square max-w-[400px] object-contain pointer-events-none mix-blend-screen scale-[1.20] translate-y-[5%]"
                         />
                       </Reveal>
 
@@ -451,7 +451,7 @@ export default function Home() {
                           loop
                           muted
                           playsInline
-                          className="w-full h-auto max-w-[500px] object-contain pointer-events-none mix-blend-screen scale-[1.20]"
+                          className="w-full aspect-square max-w-[500px] object-contain pointer-events-none mix-blend-screen scale-[1.20]"
                         />
                       </Reveal>
                     </div>
@@ -469,7 +469,7 @@ export default function Home() {
                 <div className="wrap w-full manifesto-wrap">
                   <Reveal className="max-w-[1300px] mx-auto text-center">
                     <span className="text-nav-label tracking-[0.22em] !text-[#a6a6a6] inline-block mb-4 md:mb-[clamp(10px,2vh,20px)]" id="man-h">
-                      Core Philosophy
+                      Why Pragyan
                     </span>
                     <div className="relative max-w-[1300px] mx-auto text-center flex flex-col items-center gap-1.5 md:gap-2">
 

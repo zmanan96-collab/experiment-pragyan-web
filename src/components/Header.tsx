@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [headerTheme, setHeaderTheme] = useState<'light' | 'dark'>('dark');
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
 
   const navLinks = [
@@ -78,6 +79,12 @@ export default function Header() {
 
     // Throttle scroll handler via requestAnimationFrame to avoid 60+/sec calls
     const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+
       if (rafId.current !== null) return;
       rafId.current = requestAnimationFrame(() => {
         detectTheme();
@@ -98,7 +105,11 @@ export default function Header() {
   }, [pathname]);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-[90] bg-transparent">
+    <header className={`fixed top-0 left-0 right-0 z-[90] transition-all duration-300 ${
+      isScrolled 
+        ? (headerTheme === 'light' ? 'bg-white/90 backdrop-blur-md border-b border-black/5 shadow-sm' : 'bg-black/80 backdrop-blur-md border-b border-white/5 shadow-sm')
+        : 'bg-transparent'
+    }`}>
       <div className="wrap">
         <nav className="flex items-center justify-between h-[76px]" aria-label="Primary">
           <Link href="/" className="inline-flex items-center" aria-label="Pragyan — home">

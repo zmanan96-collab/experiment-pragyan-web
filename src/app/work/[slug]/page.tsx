@@ -44,7 +44,7 @@ function formatParagraphText(text: string | undefined): string {
 interface CaseStudyData {
   title: string;
   category: string;
-  headline: string;
+  headline?: string;
   client: string;
   label: string;
   industry: string;
@@ -55,6 +55,7 @@ interface CaseStudyData {
   additionalSection2?: string;
   additionalSection3?: string;
   heroImage: string;
+  heroImagePosition?: string;
   showcaseImage1?: string;
   showcaseImage2?: string;
   showcaseImage3?: string;
@@ -87,7 +88,6 @@ const caseStudies: Record<string, CaseStudyData> = {
   'atc-chains-india': {
     title: 'ATC CHAINS INDIA',
     category: 'Manufacturing / Conveyor Components / Food & Beverage',
-    headline: 'Bringing forty years of expertise into the digital conversation.',
     client: 'ATC CHAINS INDIA',
     label: 'BRAND STRATEGY<br/>IDENTITY & EXPRESSION<br/>CONTENT & COMMUNICATION<br/>SOCIAL & COMMUNITY',
     industry: 'Manufacturing / Conveyor Components / Food & Beverage',
@@ -126,7 +126,6 @@ Beyond the numbers, the company established a more consistent and credible prese
   'global-guardians-school': {
     title: 'GLOBAL GUARDIANS SCHOOL',
     category: 'EDUCATION',
-    headline: 'Building a brand identity for a school shaped by a different idea of education.',
     client: 'GLOBAL GUARDIANS SCHOOL',
     label: 'BRAND STRATEGY<br/>IDENTITY & EXPRESSION<br/>CONTENT & COMMUNICATION<br/>SOCIAL & COMMUNITY<br/>OOH ADVERTISING',
     industry: 'Education',
@@ -169,7 +168,6 @@ More importantly, it gave the school's philosophy a form that parents could enga
   'bhavya-srishti-udyog': {
     title: 'BHAVYA SRISHTI UDYOG',
     category: 'Sustainable Manufacturing / Bamboo',
-    headline: 'Building trust around a new category and an emerging business.',
     client: 'BHAVYA SRISHTI UDYOG',
     label: 'BRAND STRATEGY<br/>IDENTITY & EXPRESSION<br/>CONTENT & COMMUNICATION<br/>SOCIAL & COMMUNITY<br/>LINKEDIN<br/>PR',
     industry: 'Sustainable Manufacturing / Bamboo',
@@ -208,7 +206,6 @@ The project established a foundation that helped BSU communicate more clearly ac
   'shreeji-enterprise': {
     title: 'SHREEJI ENTERPRISE',
     category: 'Engineered Roofing Solutions',
-    headline: 'Building a brand that reflected the quality behind the product.',
     client: 'SHREEJI ENTERPRISE',
     label: 'IDENTITY & EXPRESSION<br/>CONTENT & COMMUNICATION',
     industry: 'Engineered Roofing Solutions',
@@ -223,6 +220,7 @@ Yet clients make judgements long before a project begins. A business card, a bro
 A coherent identity can communicate reliability before a single specification is reviewed.`,
     additionalSection2: `Shreeji had a clear positioning around engineered roofing solutions, but the brand lacked consistency and distinction across customer-facing touchpoints.`,
     heroImage: '/shreeji.webp',
+    heroImagePosition: 'object-left',
     outcomesSection: {
       title: 'Outcomes',
       text: `The project provided Shreeji with a cohesive identity system capable of supporting sales conversations, quotations, presentations, and marketing materials with greater confidence and consistency.`
@@ -231,7 +229,6 @@ A coherent identity can communicate reliability before a single specification is
   'yash-engineers-(india)-pvt.-ltd.': {
     title: 'YASH ENGINEERS (INDIA) PVT. LTD.',
     category: 'Industrial Machinery',
-    headline: 'Communicating precision with the same care used to build it.',
     client: 'YASH ENGINEERS (INDIA) PVT. LTD.',
     label: 'Identity & Expression<br/>Content & Communication',
     industry: 'Industrial Machinery',
@@ -253,7 +250,6 @@ A coherent identity can communicate reliability before a single specification is
   'bhaktinandan': {
     title: 'BHAKTINANDAN',
     category: 'Consumer Goods / Cold-Pressed Oils',
-    headline: 'Giving a traditional product a contemporary expression.',
     client: 'BHAKTINANDAN',
     label: 'Identity & Expression<br/>Content & Communication',
     industry: 'Consumer Goods / Cold-Pressed Oils',
@@ -277,7 +273,6 @@ A coherent identity can communicate reliability before a single specification is
   'ganesh-verma': {
     title: 'GANESH VERMA',
     category: 'Personal Branding & LinkedIn',
-    headline: 'Building visibility around the person behind the idea.',
     client: 'GANESH VERMA',
     label: 'Personal Branding & LinkedIn',
     industry: 'Sustainable Manufacturing',
@@ -400,23 +395,26 @@ export default async function CaseStudyPage({ params }: PageProps) {
       <main className="flex-grow">
         {/* Full-Screen Hero Image Section */}
         <section data-header-theme={project.heroHeaderTheme || "dark"} className="w-full aspect-[16/9] md:aspect-auto md:h-screen relative overflow-hidden bg-[#eeeeee]">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-transparent z-10 pointer-events-none" />
           <img
             alt={project.title}
-            className="w-full h-full object-cover select-none pointer-events-none"
+            className={`w-full h-full object-cover select-none pointer-events-none relative z-0 ${project.heroImagePosition || 'object-center'}`}
             src={project.heroImage}
           />
         </section>
 
         {/* Headline Section */}
-        <section className="max-w-[1440px] mx-auto px-10 md:px-16 pt-20 pb-8">
-          <div className="grid grid-cols-4 md:grid-cols-12 gap-6">
-            <div className="col-span-4 md:col-span-9 md:col-start-4">
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black leading-tight tracking-tight">
-                {project.headline}
-              </h1>
+        {project.headline && (
+          <section className="max-w-[1440px] mx-auto px-10 md:px-16 pt-20 pb-8">
+            <div className="grid grid-cols-4 md:grid-cols-12 gap-6">
+              <div className="col-span-4 md:col-span-9 md:col-start-4">
+                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black leading-tight tracking-tight">
+                  {project.headline}
+                </h1>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
 
         {/* Metadata Grid */}
         <section className="max-w-[1440px] mx-auto px-10 md:px-16 py-8">

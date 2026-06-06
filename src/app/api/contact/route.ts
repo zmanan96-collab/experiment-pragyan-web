@@ -18,26 +18,68 @@ const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'hello@pragyaan.in';
 // The "from" address - must use a verified Resend domain
 const FROM_EMAIL = process.env.FROM_EMAIL || 'Pragyan Inquiry <onboarding@resend.dev>';
 
+// ── RATE LIMITING STATE ───────────────────────────────────────────────
+// Note: In-memory map for basic rate limiting. Resets on server restart.
+const rateLimitMap = new Map<string, { count: number; lastRequest: number }>();
+const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000; // 1 hour
+const MAX_REQUESTS = 5;
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
     const { name, email, phone, countryCode, service, message } = body;
 
+    // ── RATE LIMITING LOGIC ─────────────────────────────────────────────
+    const ip = req.headers.get('x-forwarded-for') || req.ip || 'unknown-ip';
+    const now = Date.now();
+    const rateData = rateLimitMap.get(ip) || { count: 0, lastRequest: now };
+
+    if (now - rateData.lastRequest > RATE_LIMIT_WINDOW_MS) {
+      rateData.count = 1;
+      rateData.lastRequest = now;
+    } else {
+      rateData.count++;
+    }
+    rateLimitMap.set(ip, rateData);
+
+    if (rateData.count > MAX_REQUESTS) {
+      return NextResponse.json({ error: 'Too many requests from this IP. Please try again in an hour.' }, { status: 429 });
+    }
+
     // ── SERVER-SIDE VALIDATION ──────────────────────────────────────────
     if (!name?.trim()) {
       return NextResponse.json({ error: 'Name is required.' }, { status: 400 });
     }
+    if (name.length > 100) {
+      return NextResponse.json({ error: 'Name is too long (max 100 chars).' }, { status: 400 });
+    }
+
     if (!email?.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json({ error: 'A valid email address is required.' }, { status: 400 });
     }
+    if (email.length > 100) {
+      return NextResponse.json({ error: 'Email is too long (max 100 chars).' }, { status: 400 });
+    }
+
     if (!phone?.trim()) {
       return NextResponse.json({ error: 'Phone number is required.' }, { status: 400 });
     }
+    if (phone.length > 20) {
+      return NextResponse.json({ error: 'Phone number is too long.' }, { status: 400 });
+    }
+
     if (!service?.trim()) {
       return NextResponse.json({ error: 'Please select a service.' }, { status: 400 });
     }
+    if (service.length > 50) {
+      return NextResponse.json({ error: 'Invalid service selection.' }, { status: 400 });
+    }
+
     if (!message?.trim()) {
       return NextResponse.json({ error: 'Message is required.' }, { status: 400 });
+    }
+    if (message.length > 2000) {
+      return NextResponse.json({ error: 'Message is too long (max 2000 characters).' }, { status: 400 });
     }
 
     const fullPhone = `${countryCode || '+91'} ${phone}`.trim();
