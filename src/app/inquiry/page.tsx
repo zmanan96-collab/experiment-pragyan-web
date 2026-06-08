@@ -76,7 +76,7 @@ export default function Inquiry() {
                     {/* Bottom Half: Radiating video background */}
                     <div className="h-1/2 flex-grow relative bg-black overflow-hidden max-[920px]:h-[200px]">
                       <img
-                        src="/assets/img/sun.jpeg"
+                        src="/assets/img/inquiry.webp"
                         alt="sun"
                         width={500}
                         height={500}

@@ -6,7 +6,7 @@ import ScrollSnapController from "../components/ScrollSnapController";
 
 import { Plus_Jakarta_Sans, Space_Grotesk } from "next/font/google";
 
-const plusJakartaSans = Plus_Jakarta_Sans({ 
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-plus-jakarta",
   display: "swap",
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
     images: ["/og.png"],
   },
   icons: {
-    icon: "/assets/img/icons.svg",
-    apple: "/assets/img/icons.svg",
+    icon: "/assets/img/Title-icons.svg",
+    apple: "/assets/img/Title-icons.svg",
   },
 };
 

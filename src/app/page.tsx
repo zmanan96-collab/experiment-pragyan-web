@@ -12,17 +12,17 @@ const projects = [
   {
     title: "ATC CHAINS INDIA",
     tags: ["MANUFACTURING", "CONVEYOR COMPONENTS", "FOOD & BEVERAGE"],
-    image: "/card-03.webp"
+    image: "/atc-card.webp"
   },
   {
     title: "GLOBAL GUARDIANS SCHOOL",
     tags: ["Industry: Education"],
-    image: "/card 01.webp"
+    image: "/ggs-card.webp"
   },
   {
     title: "BHAVYA SRISHTI UDYOG",
     tags: ["Industry: Sustainable Manufacturing", "Bamboo"],
-    image: "/bsucard.jpg"
+    image: "/bsu-card.webp"
   },
   {
     title: "SHREEJI ENTERPRISE",
@@ -32,17 +32,17 @@ const projects = [
   {
     title: "YASH ENGINEERS (INDIA) PVT. LTD.",
     tags: ["Industry: Industrial Machinery"],
-    image: "/yashcard.svg"
+    image: "/yash-card.webp"
   },
   {
     title: "BHAKTINANDAN",
     tags: ["Industry: Consumer Goods / Cold-Pressed Oils"],
-    image: "/bhakti.svg"
+    image: "/bhaktinandan-card.webp"
   },
   {
     title: "GANESH VERMA",
     tags: ["Personal Branding & LinkedIn"],
-    image: "/ganeshcard.svg"
+    image: "/ganesh-card.webp"
   },
   {
     title: "Apartamento",
@@ -657,7 +657,7 @@ export default function Home() {
                 aria-labelledby="process-h"
               >
                 <div className="absolute right-0 top-0 w-[50%] h-full pointer-events-none hidden md:block z-[0]">
-                  <img src="/assets/img/1.png" alt="" role="presentation" className="w-full h-full object-cover object-right" />
+                  <img src="/assets/img/Home-process.webp" alt="" role="presentation" className="w-full h-full object-cover object-right" />
                 </div>
 
                 <div className="wrap relative z-[1] flex justify-start w-full px-[var(--pad)]">

@@ -23,17 +23,17 @@ const projects: Project[] = [
   {
     title: 'ATC CHAINS INDIA',
     category: 'Manufacturing / Conveyor Components / Food & Beverage',
-    image: '/card-03.webp'
+    image: '/atc-card.webp'
   },
   {
     title: 'GLOBAL GUARDIANS SCHOOL',
     category: 'EDUCATION',
-    image: '/card 01.webp'
+    image: '/ggs-card.webp'
   },
   {
     title: 'BHAVYA SRISHTI UDYOG',
     category: 'Sustainable Manufacturing / Bamboo',
-    image: '/bsucard.jpg'
+    image: '/bsu-card.webp'
   },
   {
     title: 'SHREEJI ENTERPRISE',
@@ -43,17 +43,17 @@ const projects: Project[] = [
   {
     title: 'YASH ENGINEERS (INDIA) PVT. LTD.',
     category: 'Industrial Machinery / Manufacturing',
-    image: 'yashcard.svg'
+    image: 'yash-card.webp'
   },
   {
     title: 'BHAKTINANDAN',
     category: 'Consumer Goods / Cold-Pressed Oils / Health & Wellness',
-    image: '/bhakti.svg'
+    image: '/bhaktinandan-card.webp'
   },
   {
     title: 'GANESH VERMA',
     category: 'Personal Branding & LinkedIn',
-    image: '/ganeshcard.svg'
+    image: '/ganesh-card.webp'
   }
 ];
 

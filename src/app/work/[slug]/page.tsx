@@ -111,7 +111,7 @@ The business had decades of credibility, but very little of it was visible to po
 We believed credibility was the more important challenge.
 Before buyers compare specifications, pricing, or capabilities, they make a quieter judgement: does this company feel trustworthy enough to consider?
 Every decision that followed was guided by that question.`,
-    heroImage: '/card-04.webp',
+    heroImage: '/ATC-hero.webp',
     customTwoCards: {
       title: "Within a span of 8 months..",
       items: [
@@ -153,12 +153,12 @@ The circular emblem was designed around the school's core values, representing h
 A complete admissions communication system followed, including brochures, flyers, forms, stationery, and supporting materials.
 To build awareness, the communication extended into outdoor advertising across Visnagar, creating visibility beyond the immediate school community.
 Social media established an ongoing presence and helped communicate everyday moments, culture, and learning experiences.`,
-    heroImage: '/card.webp',
-    showcaseImage1: '/gsslogo.jpg',
+    heroImage: '/ggs-hero.webp',
+    showcaseImage1: '/gss-logo.webp',
     showcaseImage2: '/GGS.webp',
-    showcaseImage3: '/ggs3.jpg',
-    showcaseImage4: '/ggs1.jpg',
-    showcaseImage5: '/ggs2.jpg',
+    showcaseImage3: '/ggs-banner.webp',
+    showcaseImage4: '/ggs-inside.webp',
+    showcaseImage5: '/ggs-folder.webp',
     outcomesSection: {
       title: 'Outcomes',
       text: `The project created a consistent identity system across admissions, communication, and public visibility.
@@ -185,10 +185,10 @@ The company also needed a system that could support multiple audiences, each wit
     additionalSection3: `We believed education and credibility mattered more than promotion.
 The goal was not simply to generate visibility.
 The goal was to help people understand why the category mattered in the first place.`,
-    heroImage: '/bsuhero.jpg',
-    showcaseImage1: '/billboard BSU.jpg',
-    showcaseImage2: '/bsuphone.jpg',
-    showcaseImage3: '/mockups.jpg',
+    heroImage: '/bsu-hero.webp',
+    showcaseImage1: '/bsu-billboard.webp',
+    showcaseImage2: '/bsu-phone.webp',
+    showcaseImage3: '/bsu-mockups.webp',
     heroHeaderTheme: 'light',
     outcomesSection: {
       title: 'Outcomes',
@@ -241,7 +241,7 @@ A coherent identity can communicate reliability before a single specification is
     Yet for many buyers, these materials become the reference point long after the first meeting ends.
     The quality of communication influences how the quality of the company is perceived.`,
     additionalSection2: `Existing materials did not fully communicate the sophistication, expertise, and professionalism behind the company's work.`,
-    heroImage: '/yashhero.svg',
+    heroImage: '/yash-hero.webp',
     outcomesSection: {
       title: 'Outcomes',
       text: `The new materials provided prospects with clearer information and supported more confident conversations throughout the sales process.`
@@ -261,10 +261,10 @@ A coherent identity can communicate reliability before a single specification is
     Authenticity alone is no longer enough.
     It has to be communicated.`,
     additionalSection: `The brand needed an identity and packaging system capable of expressing quality, trust, and tradition without appearing outdated.`,
-    heroImage: '/bhaktihero.svg',
-    showcaseImage1: '/bottel.png',
-    showcaseImage2: '/B1.svg',
-    showcaseImage3: '/B2.svg',
+    heroImage: '/bhaktinandan-hero.webp',
+    showcaseImage1: '/bhaktinandan-oil.webp',
+    showcaseImage2: '/bhaktinandan-mood.webp',
+    showcaseImage3: '/bhaktinandan-logo.webp',
     outcomesSection: {
       title: 'Outcomes',
       text: `The rebrand created a more cohesive and premium brand presence across packaging and communication materials.`
@@ -286,7 +286,7 @@ A coherent identity can communicate reliability before a single specification is
     additionalSection2: `Personal branding works best when it is rooted in genuine experience rather than performance.
     The goal was not visibility alone.
     It was meaningful visibility.`,
-    heroImage: '/ganeshhero.svg',
+    heroImage: '/ganesh-hero.webp',
     heroHeaderTheme: 'light',
     outcomesSection: {
       title: 'Outcomes',

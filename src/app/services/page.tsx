@@ -162,7 +162,7 @@ export default function Services() {
                 {/* Responsive Background Image with Dark Cinematic Overlay */}
                 <div className="absolute inset-0 z-0 select-none pointer-events-none">
                   <img
-                    src="/assets/img/services.jpeg"
+                    src="/assets/img/services.webp"
                     alt="Services background"
                     className="w-full h-full object-cover opacity-30 filter saturate-50 contrast-125"
                   />

@@ -27,13 +27,13 @@ export default function Header() {
       if (headerEl) {
         headerEl.style.pointerEvents = 'none';
       }
-      
+
       const el = document.elementFromPoint(window.innerWidth / 2, 38);
-      
+
       if (headerEl) {
         headerEl.style.pointerEvents = 'auto';
       }
-      
+
       if (el) {
         // Walk up to find data-header-theme
         const themedParent = el.closest('[data-header-theme]');
@@ -42,7 +42,7 @@ export default function Header() {
           setHeaderTheme(theme === 'light' ? 'light' : 'dark');
           return;
         }
-        
+
         // Fallback to computed background color of the element
         let current: HTMLElement | null = el as HTMLElement;
         let bg = window.getComputedStyle(current).backgroundColor;
@@ -52,7 +52,7 @@ export default function Header() {
             bg = window.getComputedStyle(current).backgroundColor;
           }
         }
-        
+
         if (bg && (bg.startsWith('rgb(') || bg.startsWith('rgba('))) {
           const matches = bg.match(/\d+/g);
           if (matches && matches.length >= 3) {
@@ -65,7 +65,7 @@ export default function Header() {
           }
         }
       }
-      
+
       // Default fallback based on page type
       if (
         pathname === '/' ||
@@ -93,10 +93,10 @@ export default function Header() {
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    
+
     // Check initial state after DOM renders
     const timer = setTimeout(detectTheme, 100);
-    
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
       clearTimeout(timer);
@@ -105,17 +105,16 @@ export default function Header() {
   }, [pathname]);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-[90] transition-all duration-300 ${
-      isScrolled 
+    <header className={`fixed top-0 left-0 right-0 z-[90] transition-all duration-300 ${isScrolled
         ? (headerTheme === 'light' ? 'bg-white/90 backdrop-blur-md border-b border-black/5 shadow-sm' : 'bg-black/80 backdrop-blur-md border-b border-white/5 shadow-sm')
         : 'bg-transparent'
-    }`}>
+      }`}>
       <div className="wrap">
         <nav className="flex items-center justify-between h-[76px]" aria-label="Primary">
           <Link href="/" className="inline-flex items-center" aria-label="Pragyan — home">
-            <img 
-              src="/assets/img/prg.svg" 
-              alt="Pragyan" 
+            <img
+              src="/assets/img/header-logo.webp"
+              alt="Pragyan"
               className="h-[34px] sm:h-[40px] md:h-[44px] w-auto object-contain transition-all duration-300"
               style={headerTheme === 'light' ? { filter: 'brightness(0)' } : undefined}
             />
@@ -141,10 +140,9 @@ export default function Header() {
                       after:h-[1.5px] after:bg-[#4b3fd4] after:origin-left after:transition-transform 
                       after:duration-250 after:ease-[cubic-bezier(0.22,1,0.36,1)]
                       ${isActive ? 'after:scale-x-100' : 'after:scale-x-0 hover:after:scale-x-100'}
-                      ${
-                        headerTheme === 'light'
-                          ? 'text-black/80 hover:text-black max-[920px]:text-grey max-[920px]:hover:text-white'
-                          : 'text-grey hover:text-white'
+                      ${headerTheme === 'light'
+                        ? 'text-black/80 hover:text-black max-[920px]:text-grey max-[920px]:hover:text-white'
+                        : 'text-grey hover:text-white'
                       }
                     `}
                   >
@@ -156,9 +154,8 @@ export default function Header() {
           </ul>
           <div className="flex items-center gap-3 relative z-[60]">
             <button
-              className={`hidden max-[920px]:block bg-transparent border-0 p-2 cursor-pointer relative z-[70] transition-colors duration-300 ${
-                isOpen ? 'text-white' : (headerTheme === 'light' ? 'text-black' : 'text-white')
-              }`}
+              className={`hidden max-[920px]:block bg-transparent border-0 p-2 cursor-pointer relative z-[70] transition-colors duration-300 ${isOpen ? 'text-white' : (headerTheme === 'light' ? 'text-black' : 'text-white')
+                }`}
               aria-expanded={isOpen}
               aria-label="Open menu"
               onClick={() => setIsOpen(!isOpen)}
