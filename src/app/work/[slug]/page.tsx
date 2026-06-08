@@ -56,11 +56,17 @@ interface CaseStudyData {
   additionalSection3?: string;
   heroImage: string;
   heroImagePosition?: string;
+  heroImageAlt?: string;
   showcaseImage1?: string;
+  showcaseImage1Alt?: string;
   showcaseImage2?: string;
+  showcaseImage2Alt?: string;
   showcaseImage3?: string;
+  showcaseImage3Alt?: string;
   showcaseImage4?: string;
+  showcaseImage4Alt?: string;
   showcaseImage5?: string;
+  showcaseImage5Alt?: string;
   quote?: string;
   heroHeaderTheme?: 'light' | 'dark';
   stats?: {
@@ -155,10 +161,15 @@ To build awareness, the communication extended into outdoor advertising across V
 Social media established an ongoing presence and helped communicate everyday moments, culture, and learning experiences.`,
     heroImage: '/ggs-hero.webp',
     showcaseImage1: '/gss-logo.webp',
+    showcaseImage1Alt: 'Logo design concept created by Pragyan for Global Guardians School',
     showcaseImage2: '/GGS.webp',
+    showcaseImage2Alt: 'Pragyan educational work and design implementation at Global Guardians School',
     showcaseImage3: '/ggs-banner.webp',
+    showcaseImage3Alt: 'Billboard campaign created by Pragyan for Global Guardians School',
     showcaseImage4: '/ggs-inside.webp',
+    showcaseImage4Alt: 'Pragyan educational work and design implementation at Global Guardians School',
     showcaseImage5: '/ggs-folder.webp',
+    showcaseImage5Alt: 'Pragyan educational work and design implementation at Global Guardians School',
     outcomesSection: {
       title: 'Outcomes',
       text: `The project created a consistent identity system across admissions, communication, and public visibility.
@@ -397,8 +408,8 @@ export default async function CaseStudyPage({ params }: PageProps) {
         <section data-header-theme={project.heroHeaderTheme || "dark"} className="w-full aspect-[16/9] md:aspect-auto md:h-screen relative overflow-hidden bg-[#eeeeee]">
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-transparent z-10 pointer-events-none" />
           <img
-            alt={project.title}
-            className={`w-full h-full object-cover select-none pointer-events-none relative z-0 ${project.heroImagePosition || 'object-center'}`}
+            alt={project.heroImageAlt || project.title}
+            className={`w-full h-full object-cover relative z-0 ${project.heroImagePosition || 'object-center'}`}
             src={project.heroImage}
           />
         </section>
@@ -583,9 +594,9 @@ export default async function CaseStudyPage({ params }: PageProps) {
             {project.showcaseImage1 && (
               <div className="w-full border border-[#76777b]/30 overflow-hidden rounded-lg">
                 <img
-                  alt={`${project.title} Showcase 1`}
+                  alt={project.showcaseImage1Alt || `${project.title} Showcase 1`}
                   loading="lazy"
-                  className="w-full h-auto object-cover select-none pointer-events-none"
+                  className="w-full h-auto object-cover"
                   src={project.showcaseImage1}
                 />
               </div>
@@ -594,17 +605,17 @@ export default async function CaseStudyPage({ params }: PageProps) {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="border border-[#76777b]/30 overflow-hidden rounded-lg h-full">
                   <img
-                    alt={`${project.title} Showcase 2`}
+                    alt={project.showcaseImage2Alt || `${project.title} Showcase 2`}
                     loading="lazy"
-                    className="w-full h-full object-cover select-none pointer-events-none"
+                    className="w-full h-full object-cover"
                     src={project.showcaseImage2}
                   />
                 </div>
                 <div className="border border-[#76777b]/30 overflow-hidden rounded-lg h-full">
                   <img
-                    alt={`${project.title} Showcase 3`}
+                    alt={project.showcaseImage3Alt || `${project.title} Showcase 3`}
                     loading="lazy"
-                    className="w-full h-full object-cover select-none pointer-events-none"
+                    className="w-full h-full object-cover"
                     src={project.showcaseImage3}
                   />
                 </div>
@@ -615,9 +626,9 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 {project.showcaseImage4 && (
                   <div className="border border-[#76777b]/30 overflow-hidden rounded-lg h-full">
                     <img
-                      alt={`${project.title} Showcase 4`}
+                      alt={project.showcaseImage4Alt || `${project.title} Showcase 4`}
                       loading="lazy"
-                      className="w-full h-full object-cover select-none pointer-events-none"
+                      className="w-full h-full object-cover"
                       src={project.showcaseImage4}
                     />
                   </div>
@@ -625,9 +636,9 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 {project.showcaseImage5 && (
                   <div className="border border-[#76777b]/30 overflow-hidden rounded-lg h-full">
                     <img
-                      alt={`${project.title} Showcase 5`}
+                      alt={project.showcaseImage5Alt || `${project.title} Showcase 5`}
                       loading="lazy"
-                      className="w-full h-full object-cover select-none pointer-events-none"
+                      className="w-full h-full object-cover"
                       src={project.showcaseImage5}
                     />
                   </div>
