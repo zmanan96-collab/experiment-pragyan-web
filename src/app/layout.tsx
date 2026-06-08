@@ -21,13 +21,13 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "Pragyan — Wisdom. Action. Growth. | A 360° brand & marketing agency",
   description: "Pragyan is a 360° brand and marketing agency. We know the appetite, taste, and impact ideas can have when you have a point of view.",
-  metadataBase: new URL("https://pragyaan.in"),
+  metadataBase: new URL("https://www.mypragyan.com"),
   openGraph: {
     type: "website",
     siteName: "Pragyan",
     title: "Pragyan — Wisdom. Action. Growth.",
     description: "A 360° brand and marketing agency. It starts with a point of view.",
-    url: "https://pragyaan.in/",
+    url: "https://www.mypragyan.com/",
     locale: "en_IN",
     images: [
       {
