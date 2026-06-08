@@ -128,7 +128,6 @@ export default function Services() {
                           <span className="block">Some need a stronger identity.</span>
                           <span className="block">Some need better communication.</span>
                           <span className="block">Some need help reaching the right people.</span>
-                          <br className="hidden md:block" />
                           <span className="block md:mt-2">Our services span strategy, branding, communication, and marketing &mdash; tailored to what your business needs most.</span>
                         </p>
                       </Reveal>
@@ -235,7 +234,7 @@ export default function Services() {
                   <div className="mt-20 md:mt-32 relative">
                     <Reveal className="flex items-center justify-end gap-12 max-[760px]:flex-col max-[760px]:items-center">
                       <p className="text-right max-[760px]:text-center text-card-title italic text-white leading-[1.5] max-w-none xl:max-w-[900px]">
-                        Whether you&apos;re starting with a new idea, refining an existing brand,<br />
+                        Whether you&apos;re starting with a new idea,<br />refining an existing brand,<br />
                         or preparing for the next stage of growth,<br />
                         we&apos;d love to hear you. Let&apos;s Talk.
                       </p>

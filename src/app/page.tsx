@@ -12,7 +12,7 @@ const projects = [
   {
     title: "ATC CHAINS INDIA",
     tags: ["MANUFACTURING", "CONVEYOR COMPONENTS", "FOOD & BEVERAGE"],
-    image: "/atc-card.webp"
+    image: "/ATC-card.webp"
   },
   {
     title: "GLOBAL GUARDIANS SCHOOL",
@@ -37,7 +37,7 @@ const projects = [
   {
     title: "BHAKTINANDAN",
     tags: ["Industry: Consumer Goods / Cold-Pressed Oils"],
-    image: "/bhaktinandan-card.webp"
+    image: "/Bhaktinandan-card.webp"
   },
   {
     title: "GANESH VERMA",

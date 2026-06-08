@@ -261,7 +261,7 @@ A coherent identity can communicate reliability before a single specification is
     Authenticity alone is no longer enough.
     It has to be communicated.`,
     additionalSection: `The brand needed an identity and packaging system capable of expressing quality, trust, and tradition without appearing outdated.`,
-    heroImage: '/bhaktinandan-hero.webp',
+    heroImage: '/Bhaktinandan-hero.webp',
     showcaseImage1: '/bhaktinandan-oil.webp',
     showcaseImage2: '/bhaktinandan-mood.webp',
     showcaseImage3: '/bhaktinandan-logo.webp',

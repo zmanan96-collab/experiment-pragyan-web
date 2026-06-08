@@ -106,14 +106,14 @@ export default function Header() {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-[90] transition-all duration-300 ${isScrolled
-        ? (headerTheme === 'light' ? 'bg-white/90 backdrop-blur-md border-b border-black/5 shadow-sm' : 'bg-black/80 backdrop-blur-md border-b border-white/5 shadow-sm')
-        : 'bg-transparent'
+      ? (headerTheme === 'light' ? 'bg-white/90 backdrop-blur-md border-b border-black/5 shadow-sm' : 'bg-black/80 backdrop-blur-md border-b border-white/5 shadow-sm')
+      : 'bg-transparent'
       }`}>
       <div className="wrap">
         <nav className="flex items-center justify-between h-[76px]" aria-label="Primary">
           <Link href="/" className="inline-flex items-center" aria-label="Pragyan — home">
             <img
-              src="/assets/img/header-logo.webp"
+              src="/assets/img/Header-logo.webp"
               alt="Pragyan"
               className="h-[34px] sm:h-[40px] md:h-[44px] w-auto object-contain transition-all duration-300"
               style={headerTheme === 'light' ? { filter: 'brightness(0)' } : undefined}

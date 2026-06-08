@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Reveal from '../../components/Reveal';
@@ -120,7 +121,7 @@ export default function Culture() {
                     <Reveal delay={0.1}>
                       <div className="flex flex-col items-center sm:items-start gap-6 md:gap-3 lg:gap-4 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.03] group cursor-default">
                         <div className="aspect-[1.5/1] w-full max-w-[450px] sm:max-w-none bg-[#f5f5f5] rounded-[20px] overflow-hidden relative">
-                          <div className="absolute inset-0 bg-[url('/assets/img/Thehuman.webp')] bg-cover bg-center grayscale transition-transform duration-700 group-hover:scale-110" />
+                          <Image src="/assets/img/Thehuman.webp" alt="The Human Edge Pragyan" width={900} height={600} className="absolute inset-0 w-full h-full object-cover object-center grayscale transition-transform duration-700 group-hover:scale-110" />
                           <div className="absolute inset-0 bg-black/5" />
                         </div>
                         <div className="text-center sm:text-left">
@@ -144,7 +145,7 @@ export default function Culture() {
                     <Reveal delay={0.2}>
                       <div className="flex flex-col items-center sm:items-start gap-6 md:gap-3 lg:gap-4 translate-y-[clamp(40px,6vw,100px)] md:translate-y-[20px] lg:translate-y-[40px] xl:translate-y-[60px] max-[980px]:translate-y-0 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.03] group cursor-default">
                         <div className="aspect-[1.5/1] w-full max-w-[450px] sm:max-w-none bg-[#f5f5f5] rounded-[20px] overflow-hidden relative">
-                          <div className="absolute -inset-6 bg-[url('/assets/img/intellectual.webp')] bg-cover bg-center grayscale transition-transform duration-700 group-hover:scale-110" />
+                          <Image src="/assets/img/Intellectual.webp" alt="Intellectual Agility Pragyan" width={900} height={600} className="absolute -inset-6 w-[calc(100%+3rem)] h-[calc(100%+3rem)] max-w-none object-cover object-center grayscale transition-transform duration-700 group-hover:scale-110" />
                           <div className="absolute inset-0 bg-black/5" />
                         </div>
                         <div className="text-center sm:text-left">
@@ -167,7 +168,7 @@ export default function Culture() {
                     <Reveal delay={0.3}>
                       <div className="flex flex-col items-center sm:items-start gap-6 md:gap-3 lg:gap-4 translate-y-[-20px] md:translate-y-0 max-[980px]:translate-y-0 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.03] group cursor-default">
                         <div className="aspect-[1.5/1] w-full max-w-[450px] sm:max-w-none bg-[#f5f5f5] rounded-[20px] overflow-hidden relative">
-                          <div className="absolute inset-0 bg-[url('/assets/img/bias-Action.webp')] bg-cover bg-center grayscale transition-transform duration-700 group-hover:scale-110" />
+                          <Image src="/assets/img/Bias-Action.webp" alt="A Bias for Action Pragyan" width={900} height={600} className="absolute inset-0 w-full h-full object-cover object-center grayscale transition-transform duration-700 group-hover:scale-110" />
                           <div className="absolute inset-0 bg-black/5" />
                         </div>
                         <div className="text-center sm:text-left">
@@ -190,7 +191,7 @@ export default function Culture() {
                     <Reveal delay={0.4}>
                       <div className="flex flex-col items-center sm:items-start gap-6 md:gap-3 lg:gap-4 translate-y-[-50px] md:translate-y-[-20px] lg:translate-y-[-30px] max-[980px]:translate-y-0 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.03] group cursor-default">
                         <div className="aspect-[1.5/1] w-full max-w-[450px] sm:max-w-none bg-[#f5f5f5] rounded-[20px] overflow-hidden relative">
-                          <div className="absolute inset-0 bg-[url('/assets/img/uniqueness.webp')] bg-cover bg-center grayscale transition-transform duration-700 group-hover:scale-110" />
+                          <Image src="/assets/img/Uniqueness.webp" alt="Uniqueness Pragyan" width={900} height={600} className="absolute inset-0 w-full h-full object-cover object-center grayscale transition-transform duration-700 group-hover:scale-110" />
                           <div className="absolute inset-0 bg-black/5" />
                         </div>
                         <div className="text-center sm:text-left">

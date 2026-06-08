@@ -119,7 +119,7 @@ export default function AboutClient() {
                   <Reveal delay={0.4} className="mt-2 md:mt-0 relative flex justify-center">
                     <div className="w-full max-w-[1200px] md:max-w-[min(90%,75vh)] lg:max-w-[min(1100px,100vh)] aspect-[3/2] md:aspect-[2.5/1] relative bg-white group border-none outline-none overflow-hidden">
                       <img
-                        src="/assets/img/about-us.webp"
+                        src="/assets/img/About-us.webp"
                         alt="Pragyan Vision"
                         className="w-full h-full object-contain transition-transform duration-700 scale-[1.75] md:scale-[1.8] group-hover:scale-[1.85] md:group-hover:scale-[1.9] mix-blend-multiply"
                       />

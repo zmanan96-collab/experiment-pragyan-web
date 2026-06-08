@@ -23,7 +23,7 @@ const projects: Project[] = [
   {
     title: 'ATC CHAINS INDIA',
     category: 'Manufacturing / Conveyor Components / Food & Beverage',
-    image: '/atc-card.webp'
+    image: '/ATC-card.webp'
   },
   {
     title: 'GLOBAL GUARDIANS SCHOOL',
@@ -43,12 +43,12 @@ const projects: Project[] = [
   {
     title: 'YASH ENGINEERS (INDIA) PVT. LTD.',
     category: 'Industrial Machinery / Manufacturing',
-    image: 'yash-card.webp'
+    image: '/yash-card.webp'
   },
   {
     title: 'BHAKTINANDAN',
     category: 'Consumer Goods / Cold-Pressed Oils / Health & Wellness',
-    image: '/bhaktinandan-card.webp'
+    image: '/Bhaktinandan-card.webp'
   },
   {
     title: 'GANESH VERMA',
