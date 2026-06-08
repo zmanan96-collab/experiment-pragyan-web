@@ -81,11 +81,11 @@ export default function Footer() {
             <div className="flex-1 md:pl-6 md:pr-6 lg:pl-10 lg:pr-10 py-2 md:border-r border-white/5 h-full text-center md:text-left flex flex-col items-center md:items-start">
               <h4 className="text-nav-label text-[#434b9f] mb-4 md:mb-2.5">Connect</h4>
               <div className="flex flex-col gap-4 items-center md:items-start">
-                <a href="https://www.instagram.com/my_pragyan/" className="text-small-desc text-white/70 hover:text-[#4b3fd4] transition-colors flex items-center gap-2.5 group">
+                {/* <a href="#" className="text-small-desc text-white/70 hover:text-[#4b3fd4] transition-colors flex items-center gap-2.5 group">
                   <svg className="w-4 h-4 group-hover:stroke-[#4b3fd4] transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                   Instagram
-                </a>
-                <a href="https://www.linkedin.com/company/pragyan-branding-and-marketing/" className="text-small-desc text-white/70 hover:text-[#4b3fd4] transition-colors flex items-center gap-2.5 group">
+                </a> */}
+                <a href="https://www.linkedin.com/in/dhruti-patel-pragyan/" className="text-small-desc text-white/70 hover:text-[#4b3fd4] transition-colors flex items-center gap-2.5 group">
                   <svg className="w-4 h-4 group-hover:stroke-[#4b3fd4] transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                   LinkedIn
                 </a>
