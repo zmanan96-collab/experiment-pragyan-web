@@ -205,11 +205,11 @@ The goal was to help people understand why the category mattered in the first pl
       title: 'Outcomes',
       text: `April – May 2026
 LinkedIn (Organic)
-• 12,504 impressions
-• 7,712 accounts reached
-• 683 link clicks
-• 277 reactions
-• 56 new followers
+    • 12,504 impressions
+    • 7,712 accounts reached
+    • 683 link clicks
+    • 277 reactions
+    • 56 new followers
 
 The project established a foundation that helped BSU communicate more clearly across audiences while supporting visibility for both the company and its leadership.`
     }
@@ -232,6 +232,8 @@ A coherent identity can communicate reliability before a single specification is
     additionalSection2: `Shreeji had a clear positioning around engineered roofing solutions, but the brand lacked consistency and distinction across customer-facing touchpoints.`,
     heroImage: '/shreeji.webp',
     heroImagePosition: 'object-left',
+    showcaseImage1: '/Shreeji-Brochure.webp',
+    showcaseImage1Alt: 'Pragyan brochure design for Shreeji Enterprise',
     outcomesSection: {
       title: 'Outcomes',
       text: `The project provided Shreeji with a cohesive identity system capable of supporting sales conversations, quotations, presentations, and marketing materials with greater confidence and consistency.`
@@ -253,6 +255,8 @@ A coherent identity can communicate reliability before a single specification is
     The quality of communication influences how the quality of the company is perceived.`,
     additionalSection2: `Existing materials did not fully communicate the sophistication, expertise, and professionalism behind the company's work.`,
     heroImage: '/yash-hero.webp',
+    showcaseImage1: '/Yash-Brochure.webp',
+    showcaseImage1Alt: 'Pragyan brochure design for Yash Engineers',
     outcomesSection: {
       title: 'Outcomes',
       text: `The new materials provided prospects with clearer information and supported more confident conversations throughout the sales process.`

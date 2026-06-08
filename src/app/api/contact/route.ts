@@ -121,7 +121,7 @@ export async function POST(req: NextRequest) {
   <div class="wrapper">
     <div class="header">
       <div class="header-logo">
-        <img src="https://pragyanbrand.vercel.app/assets/img/prg.svg" alt="Pragyan" width="160" height="80" style="display:block;" />
+        <img src="https://www.mypragyan.com/assets/img/Header-logo.webp" alt="Pragyan" width="160" height="80" style="display:block; object-fit: contain;" />
       </div>
     </div>
     <div class="accent-bar"></div>
@@ -159,7 +159,7 @@ export async function POST(req: NextRequest) {
       </div>
     </div>
     <div class="footer">
-      This email was generated automatically from the inquiry form at pragyaan.in.<br />
+      This email was generated automatically from the inquiry form at www.mypragyan.com.<br />
       Reply directly to this email to respond to the lead.
     </div>
   </div>
