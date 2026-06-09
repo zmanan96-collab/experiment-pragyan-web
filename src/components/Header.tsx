@@ -15,6 +15,7 @@ export default function Header() {
     { href: '/services', label: 'Services' },
     { href: '/about', label: 'About' },
     { href: '/culture', label: 'Culture' },
+    { href: '/journal', label: 'Journal' },
     { href: '/inquiry', label: 'Inquiry' },
   ];
 

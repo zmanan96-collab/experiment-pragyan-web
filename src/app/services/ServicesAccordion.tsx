@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import Link from 'next/link';
 import Reveal from '../../components/Reveal';
 
 interface ServiceData {
@@ -65,6 +66,41 @@ export default function ServicesAccordion({ services }: { services: ServiceData[
                     <div className="flex flex-col gap-8 pb-8">
                       <p className="text-main-desc text-[#d9d9d9] text-left max-w-[850px] xl:max-w-[950px] 2xl:max-w-[1050px]">
                         {service.copy.replace(/\\n/g, ' ')}
+                        {service.title === "Brand Strategy" && (
+                          <Link href="/services/brand-strategy" className="inline-flex items-center text-[#786CF0] hover:text-white transition-colors ml-2 border-b border-[#786CF0]/30 hover:border-white font-normal text-[14px] md:text-[16px]" onClick={(e) => e.stopPropagation()}>
+                            View more
+                          </Link>
+                        )}
+                        {service.title === "Identity & Expression" && (
+                          <Link href="/services/identity-and-expression" className="inline-flex items-center text-[#786CF0] hover:text-white transition-colors ml-2 border-b border-[#786CF0]/30 hover:border-white font-normal text-[14px] md:text-[16px]" onClick={(e) => e.stopPropagation()}>
+                            View more
+                          </Link>
+                        )}
+                        {service.title === "Content & Communication" && (
+                          <Link href="/services/content-and-communication" className="inline-flex items-center text-[#786CF0] hover:text-white transition-colors ml-2 border-b border-[#786CF0]/30 hover:border-white font-normal text-[14px] md:text-[16px]" onClick={(e) => e.stopPropagation()}>
+                            View more
+                          </Link>
+                        )}
+                        {service.title === "Digital Marketing" && (
+                          <Link href="/services/digital-marketing" className="inline-flex items-center text-[#786CF0] hover:text-white transition-colors ml-2 border-b border-[#786CF0]/30 hover:border-white font-normal text-[14px] md:text-[16px]" onClick={(e) => e.stopPropagation()}>
+                            View more
+                          </Link>
+                        )}
+                        {service.title === "Social & Community" && (
+                          <Link href="/services/social-and-community" className="inline-flex items-center text-[#786CF0] hover:text-white transition-colors ml-2 border-b border-[#786CF0]/30 hover:border-white font-normal text-[14px] md:text-[16px]" onClick={(e) => e.stopPropagation()}>
+                            View more
+                          </Link>
+                        )}
+                        {service.title === "Personal Branding & LinkedIn" && (
+                          <Link href="/services/personal-branding-linkedin" className="inline-flex items-center text-[#786CF0] hover:text-white transition-colors ml-2 border-b border-[#786CF0]/30 hover:border-white font-normal text-[14px] md:text-[16px]" onClick={(e) => e.stopPropagation()}>
+                            View more
+                          </Link>
+                        )}
+                        {service.title === "OOH Advertising" && (
+                          <Link href="/services/ooh-advertising" className="inline-flex items-center text-[#786CF0] hover:text-white transition-colors ml-2 border-b border-[#786CF0]/30 hover:border-white font-normal text-[14px] md:text-[16px]" onClick={(e) => e.stopPropagation()}>
+                            View more
+                          </Link>
+                        )}
                       </p>
 
                       <div className="pt-6 border-t border-white/5">
