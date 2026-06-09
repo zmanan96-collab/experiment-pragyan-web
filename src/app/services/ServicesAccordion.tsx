@@ -57,7 +57,8 @@ export default function ServicesAccordion({ services }: { services: ServiceData[
                 </div>
 
                 <div className="pt-2 relative z-20 transition-all duration-300 ease-out max-md:flex-1 max-md:min-w-0">
-                  <h3 className="text-card-title mb-2 pb-0.5 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-[#161245] group-hover:to-[#4B3FD4] group-hover:bg-clip-text group-hover:text-transparent inline-block">{service.title}</h3>
+                  <h3 className="sr-only">{(service as any).seoTitle}</h3>
+                  <span className="block text-card-title mb-2 pb-0.5 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-[#161245] group-hover:to-[#4B3FD4] group-hover:bg-clip-text group-hover:text-transparent inline-block" aria-hidden="true">{service.title}</span>
                   <p className="text-main-desc text-[#d9d9d9] max-w-none transition-colors">{service.tagline}</p>
 
                   <div className={`overflow-hidden transition-all duration-700 ease-in-out ${isOpen ? 'max-h-[1400px] mt-12 opacity-100 border-t border-white/10 pt-12' : 'max-h-0 opacity-0'}`}>

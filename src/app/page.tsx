@@ -6,8 +6,8 @@ import HomeSmoothScroll from '../components/HomeSmoothScroll';
 import HomeInteractive from './HomeInteractive';
 
 export const metadata: Metadata = {
-  title: 'Pragyan | Meaningful Brand Perspective',
-  description: "At Pragyan, we transform conviction into strategy, identity, communication, and growth.",
+  title: 'Branding & Brand Strategy Agency in Ahmedabad | Pragyan',
+  description: "Pragyan is a branding and brand strategy agency in Ahmedabad. We help founders build meaningful brands through strategy, identity, content, and growth.",
   alternates: {
     canonical: 'https://www.mypragyan.com',
   },
@@ -17,48 +17,102 @@ const projects = [
   {
     title: "ATC CHAINS INDIA",
     tags: ["MANUFACTURING", "CONVEYOR COMPONENTS", "FOOD & BEVERAGE"],
-    image: "/ATC-card.webp"
+    image: "/ATC-card.webp",
+    alt: "ATC Chains India branding case study by Pragyan"
   },
   {
     title: "GLOBAL GUARDIANS SCHOOL",
     tags: ["Industry: Education"],
-    image: "/ggs-card.webp"
+    image: "/ggs-card.webp",
+    alt: "Global Guardians School branding case study by Pragyan"
   },
   {
     title: "BHAVYA SRISHTI UDYOG",
     tags: ["Industry: Sustainable Manufacturing", "Bamboo"],
-    image: "/bsu-card.webp"
+    image: "/bsu-card.webp",
+    alt: "Bhavya Srishti Udyog branding case study by Pragyan"
   },
   {
     title: "SHREEJI ENTERPRISE",
     tags: ["Industry: Engineered Roofing Solutions"],
-    image: "/card shree ji.webp"
+    image: "/card shree ji.webp",
+    alt: "Shreeji Enterprise branding case study by Pragyan"
   },
   {
     title: "YASH ENGINEERS (INDIA) PVT. LTD.",
     tags: ["Industry: Industrial Machinery"],
-    image: "/yash-card.webp"
+    image: "/yash-card.webp",
+    alt: "Yash Engineers India branding case study by Pragyan"
   },
   {
     title: "BHAKTINANDAN",
     tags: ["Industry: Consumer Goods / Cold-Pressed Oils"],
-    image: "/Bhaktinandan-card.webp"
+    image: "/Bhaktinandan-card.webp",
+    alt: "Bhaktinandan branding case study by Pragyan"
   },
   {
     title: "GANESH VERMA",
     tags: ["Personal Branding & LinkedIn"],
-    image: "/ganesh-card.webp"
+    image: "/ganesh-card.webp",
+    alt: "Ganesh Verma branding case study by Pragyan"
   },
   {
     title: "Apartamento",
     tags: ["PHOTOGRAPHY", "CREATIVE"],
-    image: "https://images.unsplash.com/photo-1542241647-9cbb2225278b?auto=format&fit=crop&q=80&w=800"
+    image: "https://images.unsplash.com/photo-1542241647-9cbb2225278b?auto=format&fit=crop&q=80&w=800",
+    alt: "Apartamento branding case study by Pragyan"
   }
 ];
 
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Pragyan",
+            "description": "Branding and brand strategy agency in Ahmedabad helping founders build meaningful brands.",
+            "url": "https://www.mypragyan.com",
+            "telephone": "+919998081399",
+            "email": "connect@mypragyan.com",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "A-607, Money Plant High Street, SG Highway",
+              "addressLocality": "Ahmedabad",
+              "addressRegion": "Gujarat",
+              "postalCode": "382470",
+              "addressCountry": "IN"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 23.0225,
+              "longitude": 72.5714
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/pragyan"
+            ],
+            "serviceArea": {
+              "@type": "Country",
+              "name": "India"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Branding & Marketing Services",
+              "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brand Strategy" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Identity & Expression" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Content & Communication" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Digital Marketing" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Personal Branding & LinkedIn" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "OOH Advertising" } }
+              ]
+            }
+          })
+        }}
+      />
       <HomeSmoothScroll />
       <div className="noise-effect" />
 
@@ -80,13 +134,14 @@ export default function Home() {
                   <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 lg:gap-16 w-full">
                     <div className="flex flex-col items-start gap-6 md:gap-7 lg:gap-8 w-full md:w-[60%] max-w-[1000px] px-8 md:px-[4vw] lg:px-[6vw] xl:px-[8vw]">
                       <Reveal>
-                        <h1 id="hero-h" className="text-hero text-[#fcfcfc]">
+                        <h1 className="sr-only">Branding &amp; Brand Strategy Agency in Ahmedabad</h1>
+                        <p id="hero-h" className="text-hero text-[#fcfcfc]" aria-hidden="true">
                           <span className="whitespace-normal md:whitespace-nowrap block">Behind every</span>
                           <span className="whitespace-normal md:whitespace-nowrap block">meaningful brand</span>
                           <span className="whitespace-normal md:whitespace-nowrap block">
                             is a <span className="bg-gradient-to-r from-[#1E1F65] via-[#4E54D4] to-[#7678ED] bg-clip-text text-transparent inline-block animate-gradient-flow">perspective.</span>
                           </span>
-                        </h1>
+                        </p>
                       </Reveal>
 
                       <Reveal delay={0.1} className="w-full flex md:hidden justify-center relative z-10 select-none pointer-events-none mt-[5%] mb-2">
@@ -96,6 +151,7 @@ export default function Home() {
                           loop
                           muted
                           playsInline
+                          aria-label="Pragyan brand strategy agency — meaningful brand perspective"
                           className="w-full aspect-square max-w-[400px] object-contain pointer-events-none mix-blend-screen scale-[1.20] translate-y-[5%]"
                         />
                       </Reveal>
@@ -140,6 +196,7 @@ export default function Home() {
                           loop
                           muted
                           playsInline
+                          aria-label="Pragyan brand strategy agency — meaningful brand perspective"
                           className="w-full aspect-square max-w-[500px] object-contain pointer-events-none mix-blend-screen scale-[1.20]"
                         />
                       </Reveal>
@@ -156,7 +213,8 @@ export default function Home() {
               >
                 <div className="wrap w-full manifesto-wrap">
                   <Reveal className="max-w-[1300px] mx-auto text-center">
-                    <span className="text-nav-label tracking-[0.22em] !text-[#a6a6a6] inline-block mb-4 md:mb-[clamp(10px,2vh,20px)]" id="man-h">
+                    <h2 className="sr-only">Why Founders Choose Pragyan for Brand Strategy</h2>
+                    <span className="text-nav-label tracking-[0.22em] !text-[#a6a6a6] inline-block mb-4 md:mb-[clamp(10px,2vh,20px)]" id="man-h" aria-hidden="true">
                       Why Pragyan
                     </span>
                     <div className="relative max-w-[1300px] mx-auto text-center flex flex-col items-center gap-1.5 md:gap-2">
@@ -238,7 +296,7 @@ export default function Home() {
               </section>
 
               {/* SECTION 3: METHODOLOGY */}
-              <section
+              {/* <section
                 id="methodology-section"
                 className="md:absolute md:top-0 md:left-0 md:h-[100vh] h-auto bg-night border-t border-border shadow-[0_-30px_60px_rgba(0,0,0,0.85)] px-[var(--pad)] py-20 md:py-0 flex flex-col justify-center relative overflow-hidden z-25 w-full"
                 aria-labelledby="methodology-h"
@@ -246,11 +304,13 @@ export default function Home() {
                 <div className="wrap w-full methodology-wrap">
                   <div className="methodology-section max-w-[1100px] md:max-w-[760px] xl:max-w-[920px] 2xl:max-w-[1100px] mx-auto">
                     <Reveal className="text-center mb-6 md:mb-4 lg:mb-5 xl:mb-6 2xl:mb-8">
-                      <span id="methodology-h" className="text-nav-label tracking-[0.22em] !text-[#a6a6a6]" style={{ color: '#a6a6a6' }}>Methodology</span>
+                      <h2 className="sr-only">Our Brand-Building Methodology</h2>
+                      <span id="methodology-h" className="text-nav-label tracking-[0.22em] !text-[#a6a6a6]" style={{ color: '#a6a6a6' }} aria-hidden="true">Methodology</span>
                     </Reveal>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-3 xl:gap-4 2xl:gap-6">
                       {[
                         {
+                          seoTitle: "Step 1: We Listen Before We Design",
                           title: "We discuss",
                           desc: "before we design.",
                           illustration: (
@@ -266,6 +326,7 @@ export default function Home() {
                           )
                         },
                         {
+                          seoTitle: "Step 2: We Plan Before We Build",
                           title: "We plan",
                           desc: "before we build.",
                           illustration: (
@@ -281,6 +342,7 @@ export default function Home() {
                           )
                         },
                         {
+                          seoTitle: "Step 3: We Turn Curiosity Into Creative Strategy",
                           title: "We work with you",
                           desc: "to turn curiosity into creativity.",
                           illustration: (
@@ -303,10 +365,11 @@ export default function Home() {
                               <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none z-10"></div>
                             </div>
                             <div className="px-1 flex flex-col">
-                              <h3 className="text-card-title text-white mb-1 transition-colors duration-300 group-hover:text-white">
+                              <h3 className="sr-only">{card.seoTitle}</h3>
+                              <span className="block text-card-title text-white mb-1 transition-colors duration-300 group-hover:text-white" aria-hidden="true">
                                 {card.title}
-                              </h3>
-                              <p className="text-small-desc text-[#A1A1AA] font-light leading-relaxed">
+                              </span>
+                              <p className="text-small-desc text-[#A1A1AA] font-light leading-relaxed" aria-hidden="true">
                                 {card.desc}
                               </p>
                             </div>
@@ -316,7 +379,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </section>
+              </section> */}
 
               {/* SECTION 4: PROCESS */}
               <section
@@ -332,10 +395,11 @@ export default function Home() {
                   <div className="w-full md:w-[90%] lg:w-[85%] md:pl-[4vw] lg:pl-[6vw]">
                     <div className="mb-[clamp(30px,5vh,64px)] md:mb-[clamp(16px,2.5vh,32px)] lg:mb-[clamp(20px,3.5vh,40px)] xl:mb-[clamp(24px,4.5vh,48px)] 2xl:mb-[clamp(32px,5.5vh,64px)] text-left">
                       <Reveal>
-                        <span className="text-nav-label tracking-[0.22em] uppercase text-[#a6a6a6] block mb-2 md:mb-0.5">Process Index</span>
-                        <h2 id="process-h" className="mt-4 md:mt-1 text-section-heading text-[#1b1b1b]">
+                        <span className="text-nav-label tracking-[0.22em] uppercase text-[#a6a6a6] block mb-2 md:mb-0.5" aria-hidden="true">Process Index</span>
+                        <h2 className="sr-only">How We Work — From Insight to Identity</h2>
+                        <span id="process-h" className="mt-4 md:mt-1 text-section-heading text-[#1b1b1b] block" aria-hidden="true">
                           <span>How we</span> <em className="italic font-light">work.</em>
-                        </h2>
+                        </span>
                       </Reveal>
                     </div>
 
@@ -374,11 +438,12 @@ export default function Home() {
               >
                 <div className="wrap w-full px-[var(--pad)]">
                   <Reveal className="mb-[clamp(20px,3vh,48px)] max-w-[820px] text-center md:text-left mx-auto md:mx-0 lg:-translate-y-[15px] xl:-translate-y-[25px] 2xl:translate-y-0">
-                    <span className="text-nav-label tracking-[0.22em] uppercase text-[#6A6A6A] mb-3 md:mb-[clamp(8px,1.5vh,16px)] block">Our Projects</span>
-                    <h2 id="breathe-h" className="text-section-heading text-white">
+                    <h2 className="sr-only">Branding Work We're Proud Of</h2>
+                    <span className="text-nav-label tracking-[0.22em] uppercase text-[#6A6A6A] mb-3 md:mb-[clamp(8px,1.5vh,16px)] block" aria-hidden="true">Our Projects</span>
+                    <span id="breathe-h" className="text-section-heading text-white block" aria-hidden="true">
                       Work that started with<br />
                       <em className="italic font-light">a point of view.</em>
-                    </h2>
+                    </span>
                   </Reveal>
                 </div>
 

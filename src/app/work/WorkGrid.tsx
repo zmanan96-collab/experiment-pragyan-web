@@ -8,6 +8,8 @@ interface Project {
   title: string;
   category: string;
   image: string;
+  alt: string;
+  slug?: string;
 }
 
 const categories = [
@@ -23,37 +25,45 @@ const projects: Project[] = [
   {
     title: 'ATC CHAINS INDIA',
     category: 'Manufacturing / Conveyor Components / Food & Beverage',
-    image: '/ATC-card.webp'
+    image: '/ATC-card.webp',
+    alt: 'ATC Chains India branding case study — B2B brand identity by Pragyan'
   },
   {
     title: 'GLOBAL GUARDIANS SCHOOL',
     category: 'EDUCATION',
-    image: '/ggs-card.webp'
+    image: '/ggs-card.webp',
+    alt: 'Global Guardians School branding case study by Pragyan Ahmedabad'
   },
   {
     title: 'BHAVYA SRISHTI UDYOG',
     category: 'Sustainable Manufacturing / Bamboo',
-    image: '/bsu-card.webp'
+    image: '/bsu-card.webp',
+    alt: 'Bhavya Srishti Udyog sustainable brand identity by Pragyan'
   },
   {
     title: 'SHREEJI ENTERPRISE',
     category: 'Engineered Roofing Solutions / Manufacturing',
-    image: '/card shree ji.webp'
+    image: '/card shree ji.webp',
+    alt: 'Shreeji Enterprise roofing brand strategy case study by Pragyan'
   },
   {
-    title: 'YASH ENGINEERS (INDIA) PVT. LTD.',
+    title: 'YASH ENGINEERS (INDIA) PVT LTD',
     category: 'Industrial Machinery / Manufacturing',
-    image: '/yash-card.webp'
+    image: '/yash-card.webp',
+    alt: 'Yash Engineers India industrial brand identity by Pragyan',
+    slug: 'yash-engineers-india'
   },
   {
     title: 'BHAKTINANDAN',
     category: 'Consumer Goods / Cold-Pressed Oils / Health & Wellness',
-    image: '/Bhaktinandan-card.webp'
+    image: '/Bhaktinandan-card.webp',
+    alt: 'Bhaktinandan cold-pressed oil packaging and brand identity by Pragyan'
   },
   {
     title: 'GANESH VERMA',
     category: 'Personal Branding & LinkedIn',
-    image: '/ganesh-card.webp'
+    image: '/ganesh-card.webp',
+    alt: 'Ganesh Verma personal branding and LinkedIn strategy by Pragyan'
   }
 ];
 
@@ -68,6 +78,13 @@ export default function WorkGrid() {
 
   return (
     <>
+      <h2 className="sr-only">Industries We've Worked In</h2>
+      <div className="sr-only">
+        <h3>Manufacturing</h3>
+        <h3>D2C &amp; FMCG</h3>
+        <h3>Education</h3>
+        <h3>Personal Branding</h3>
+      </div>
       <div className="border-b border-black/5 pb-6 mb-12 overflow-x-auto scrollbar-hide">
         <div className="flex justify-start md:justify-center items-center gap-6 md:gap-10 min-w-max px-4">
           {categories.map((category) => {
@@ -92,11 +109,11 @@ export default function WorkGrid() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 mb-0">
         {filteredProjects.map((project, idx) => (
           <Reveal key={project.title} delay={idx * 0.05} className="group">
-            <Link href={`/work/${project.title.toLowerCase().replace(/ /g, '-')}`} className="block cursor-pointer">
+            <Link href={`/work/${project.slug || project.title.toLowerCase().replace(/ /g, '-')}`} className="block cursor-pointer">
               <div className="relative aspect-[4/3] rounded-[16px] overflow-hidden bg-gray-100 border border-black/5">
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={project.alt}
                   loading="lazy"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 select-none pointer-events-none"
                 />

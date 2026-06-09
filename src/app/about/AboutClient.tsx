@@ -98,13 +98,15 @@ export default function AboutClient() {
                   </Reveal>
 
                   <Reveal delay={0.1}>
-                    <h1 id="about-h" className="text-hero text-black mb-4 md:mb-1 leading-[1.1em]">
+                    <h1 className="sr-only">Pragyan — A Brand Strategy &amp; Communications Agency in Ahmedabad</h1>
+                    <h2 className="sr-only">We Don't Separate Thinking From Execution</h2>
+                    <span id="about-h" className="text-hero text-black mb-4 md:mb-1 leading-[1.1em] block" aria-hidden="true">
                       <span className="block whitespace-nowrap">At Pragyan,</span>
                       <span className="block whitespace-nowrap">the human lens is</span>
                       <span className="block whitespace-nowrap bg-gradient-to-r from-[#161245] via-[#4B3FD4] to-[#786CF0] bg-clip-text text-transparent pb-2">
                         our sharpest tool.
                       </span>
-                    </h1>
+                    </span>
                   </Reveal>
 
                   <Reveal delay={0.2} className="w-full flex justify-center text-center">
@@ -120,7 +122,7 @@ export default function AboutClient() {
                     <div className="w-full max-w-[1200px] md:max-w-[min(90%,75vh)] lg:max-w-[min(1100px,100vh)] aspect-[3/2] md:aspect-[2.5/1] relative bg-white group border-none outline-none overflow-hidden">
                       <img
                         src="/assets/img/About-us.webp"
-                        alt="Pragyan Vision"
+                        alt="Pragyan branding agency team — Ahmedabad"
                         className="w-full h-full object-contain transition-transform duration-700 scale-[1.75] md:scale-[1.8] group-hover:scale-[1.85] md:group-hover:scale-[1.9] mix-blend-multiply"
                       />
                     </div>
@@ -133,12 +135,13 @@ export default function AboutClient() {
                 <div className="wrap">
                   <Reveal className="max-w-[1000px] mb-[clamp(56px,7vw,88px)] md:mb-4 lg:mb-6 xl:mb-10 2xl:mb-12">
                     <div className="md:-ml-48 xl:-ml-64">
-                      <span className="text-nav-label tracking-[0.22em] uppercase text-[#d9d9d9] inline-block mb-8 md:mb-2">Our team</span>
-                      <h2 id="values-h" className="text-section-heading text-white max-w-[1200px]">
+                      <h2 className="sr-only">Meet the Team Behind Your Brand</h2>
+                      <span className="text-nav-label tracking-[0.22em] uppercase text-[#d9d9d9] inline-block mb-8 md:mb-2" aria-hidden="true">Our team</span>
+                      <span id="values-h" className="text-section-heading text-white max-w-[1200px] block" aria-hidden="true">
                         <span className="md:whitespace-nowrap">We&apos;re a group of intellectuals</span><br />
                         who don&apos;t separate thinking<br />
                         from execution.
-                      </h2>
+                      </span>
                     </div>
                   </Reveal>
                 </div>
@@ -148,14 +151,17 @@ export default function AboutClient() {
                   <Reveal delay={0.1} className="w-full flex justify-end">
                     <div className="flex flex-col max-w-[1380px] w-full md:w-[70%] lg:w-[60%] xl:w-[55%] 2xl:w-[50%] border-[1.5px] border-white/20 md:border-r-0 rounded-2xl md:rounded-l-2xl md:rounded-r-none overflow-hidden shadow-2xl ml-4 mr-4 md:ml-0 md:mr-0">
                       <div className="py-[clamp(35px,4vw,50px)] md:py-[clamp(18px,2vw,24px)] px-12 md:pl-10 lg:pl-12 xl:pl-14 md:pr-8 bg-[#414896] flex items-center min-h-[120px] md:min-h-[85px] border-b-[1.5px] border-white/10 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:bg-[#4a52ac] cursor-default relative z-[1]">
-                        <p className="text-card-title !font-light text-[#f5f5f5]">We ask better questions.</p>
+                        <h3 className="sr-only">Strategy-First</h3>
+                        <p className="text-card-title !font-light text-[#f5f5f5]" aria-hidden="true">We ask better questions.</p>
                       </div>
                       <div className="py-[clamp(35px,4vw,50px)] md:py-[clamp(18px,2vw,24px)] px-12 md:pl-10 lg:pl-12 xl:pl-14 md:pr-8 bg-[#2B2F77] flex items-center min-h-[120px] md:min-h-[85px] border-b-[1.5px] border-white/10 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:bg-[#34398d] cursor-default relative z-[1]">
-                        <p className="text-card-title !font-light text-[#f5f5f5]">We argue (constructively).</p>
+                        <h3 className="sr-only">Human-Centered</h3>
+                        <p className="text-card-title !font-light text-[#f5f5f5]" aria-hidden="true">We argue (constructively).</p>
                       </div>
                       <div className="py-[clamp(35px,4vw,50px)] md:py-[clamp(20px,2vw,26px)] px-12 md:pl-10 lg:pl-12 xl:pl-14 md:pr-8 bg-[#222] flex flex-col justify-center min-h-[150px] md:min-h-[100px] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:bg-[#2a2a2a] cursor-default relative z-[1]">
-                        <p className="text-card-title !font-light text-[#f5f5f5]">We refine.</p>
-                        <p className="text-card-title !font-light text-[#f5f5f5] mt-2 md:mt-0">And we don&rsquo;t settle for anything less than right.</p>
+                        <h3 className="sr-only">Built to Scale</h3>
+                        <p className="text-card-title !font-light text-[#f5f5f5]" aria-hidden="true">We refine.</p>
+                        <p className="text-card-title !font-light text-[#f5f5f5] mt-2 md:mt-0" aria-hidden="true">And we don&rsquo;t settle for anything less than right.</p>
                       </div>
                     </div>
                   </Reveal>
@@ -182,7 +188,8 @@ export default function AboutClient() {
                     ref={textRef}
                     className="wrap text-black md:-translate-x-[14vw] md:-translate-y-12 relative z-10"
                   >
-                    <div className="flex flex-col gap-1 text-card-title !font-light text-[#1b1b1b]">
+                    <h2 className="sr-only">Based in Ahmedabad. Built for Founders Everywhere.</h2>
+                    <div className="flex flex-col gap-1 text-card-title !font-light text-[#1b1b1b]" aria-hidden="true">
                       <p>We believe in doing fewer things, better.</p>
                       <p>In building brands with intent.</p>
                     </div>

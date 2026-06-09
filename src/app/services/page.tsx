@@ -4,10 +4,11 @@ import Reveal from '../../components/Reveal';
 import HomeSmoothScroll from '../../components/HomeSmoothScroll';
 import ServicesAnimations from './ServicesAnimations';
 import ServicesAccordion from './ServicesAccordion';
+import FAQAccordion from './FAQAccordion';
 
 export const metadata: Metadata = {
-  title: 'Services — Pragyan',
-  description: "Our services span strategy, branding, communication, and marketing.",
+  title: 'Branding & Marketing Services | Pragyan Ahmedabad',
+  description: "Brand strategy, visual identity, content, digital marketing, personal branding & OOH advertising. Explore how Pragyan turns founder vision into brand reality.",
   alternates: {
     canonical: 'https://www.mypragyan.com/services',
   },
@@ -15,46 +16,72 @@ export const metadata: Metadata = {
 
 const services = [
   {
+    seoTitle: "Brand Strategy — Positioning, Research & Communication",
     title: "Brand Strategy",
     tagline: "The idea everything else builds on.",
     copy: "Every strong brand is built around a clear point of view. Brand strategy is the work of uncovering what makes your business distinct and translating it into direction. It creates the foundation for decisions, communication, and growth.",
     deliverables: ["Positioning", "Research", "Communication Strategy"]
   },
   {
+    seoTitle: "Brand Identity & Visual Expression Design",
     title: "Identity & Expression",
     tagline: "How your brand looks, sounds, and feels.",
     copy: "Identity is more than a logo. It's the complete experience of encountering your brand. We create visual and verbal systems that help businesses show up consistently, confidently, and recognisably across every touchpoint.",
     deliverables: ["Visual Identity", "Verbal Identity", "Brand Guidelines", "Design Systems", "Marketing Collateral"]
   },
   {
+    seoTitle: "Content Strategy & Brand Communication",
     title: "Content & Communication",
     tagline: "Your thinking, made clear.",
     copy: "Good communication helps people understand who you are and why your work matters. We develop content that reflects your perspective, speaks to the right audience, and feels human in every format.",
     deliverables: ["Website Copy", "Brand Stories", "Presentations", "Brochures", "Editorial & Long-form Content"]
   },
   {
+    seoTitle: "Digital Marketing — SEO, Campaigns & Analytics",
     title: "Digital Marketing",
     tagline: "Helping the right people find you.",
     copy: "Marketing works best when it's built on clarity. We create campaigns and digital systems that connect your work with the people most likely to value it, building visibility that supports long-term growth.",
     deliverables: ["Campaign Strategy", "Performance Marketing", "SEO", "Analytics"]
   },
   {
+    seoTitle: "Social Media Management & Community Building",
     title: "Social & Community",
     tagline: "Showing up with consistency and intent.",
     copy: "A meaningful social presence isn't built through volume alone. It's built through relevance, clarity, and a point of view people want to follow. We help brands create content and communities that strengthen relationships over time.",
     deliverables: ["Content Strategy", "Social Media Management", "Community Building", "Reputation Management"]
   },
   {
+    seoTitle: "Personal Branding & LinkedIn Strategy for Founders",
     title: "Personal Branding & LinkedIn",
     tagline: "Building trust through people.",
     copy: "People often connect with founders before they connect with companies. We help founders and professionals articulate their expertise, develop a distinctive voice, and build credibility through thoughtful communication.",
     deliverables: ["LinkedIn Strategy", "Personal Brand Positioning", "Profile Development"]
   },
   {
+    seoTitle: "OOH & Outdoor Advertising Campaigns",
     title: "OOH Advertising",
     tagline: "Built to be seen. Designed to be remembered.",
     copy: "Outdoor advertising demands simplicity and confidence. We develop campaigns that communicate a clear idea quickly and effectively across public spaces, creating memorable brand moments beyond the screen.",
     deliverables: ["Campaign Concepts", "Hoardings", "Media Planning"]
+  }
+];
+
+const faqs = [
+  {
+    question: "What is brand strategy?",
+    answer: "Brand strategy is the foundational blueprint that defines who you are, who you serve, and how you communicate. It aligns your business goals with audience needs to create a distinct, long-lasting market position."
+  },
+  {
+    question: "How long does a branding project take?",
+    answer: "Most comprehensive branding projects take between 6 to 12 weeks, depending on the scope of work—ranging from initial research and strategy to full visual identity and guideline creation."
+  },
+  {
+    question: "Do you work with startups?",
+    answer: "Yes. We frequently partner with early-stage founders to build their initial brand foundations, helping them launch with clarity and professional credibility to attract early adopters and investors."
+  },
+  {
+    question: "What does personal branding include?",
+    answer: "Our personal branding service helps founders and leaders articulate their unique expertise. We develop LinkedIn strategies, personal positioning, and content themes that build trust and industry authority."
   }
 ];
 
@@ -73,12 +100,13 @@ export default function Services() {
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-10 md:gap-12 lg:gap-16 w-full">
                     <div className="w-full md:w-[60%] lg:w-[65%] xl:w-[65%] flex flex-col justify-center text-left px-8 md:px-[4vw] lg:px-[6vw] xl:px-[8vw]">
                       <Reveal className="mb-4 lg:mb-6 max-w-[700px] lg:max-w-[850px] 2xl:max-w-[1000px] transition-transform duration-700 ease-out">
-                        <h2 className="text-hero text-black transition-all duration-700 ease-out pb-2">
+                        <h1 className="sr-only">Branding &amp; Marketing Services for Founders and Growing Businesses</h1>
+                        <span className="text-hero text-black transition-all duration-700 ease-out pb-2 block" aria-hidden="true">
                           <span className="block whitespace-nowrap">Turning ideas</span>
                           <span className="block whitespace-nowrap">into brands,</span>
                           <span className="block whitespace-nowrap">communication,</span>
                           <span className="inline-block bg-gradient-to-r from-[#161245] via-[#4B3FD4] to-[#786CF0] bg-clip-text text-transparent pb-2 whitespace-nowrap">and growth.</span>
-                        </h2>
+                        </span>
                       </Reveal>
 
                       <Reveal delay={0.1} className="transition-transform duration-700 ease-out">
@@ -125,7 +153,8 @@ export default function Services() {
 
                 <div className="wrap relative z-10 text-white">
                   <Reveal className="mb-16 md:mb-20 md:ml-[5vw] lg:ml-[8vw] xl:ml-[10vw]">
-                    <span className="text-nav-label tracking-[0.22em] uppercase text-[#d9d9d9] block">Our Services</span>
+                    <h2 className="sr-only">Our Full-Service Branding &amp; Communication Offerings</h2>
+                    <span className="text-nav-label tracking-[0.22em] uppercase text-[#d9d9d9] block" aria-hidden="true">Our Services</span>
                   </Reveal>
 
                   <div className="max-w-[1200px] relative md:ml-[5vw] lg:ml-[8vw] xl:ml-[10vw]">
@@ -133,8 +162,9 @@ export default function Services() {
                   </div>
 
                   <div className="mt-20 md:mt-32 relative">
+                    <h2 className="sr-only">Ready to Start Your Branding Journey?</h2>
                     <Reveal className="flex items-center justify-end gap-12 max-[760px]:flex-col max-[760px]:items-center">
-                      <p className="text-right max-[760px]:text-center text-card-title italic text-white leading-[1.5] max-w-none xl:max-w-[900px]">
+                      <p className="text-right max-[760px]:text-center text-[28px] md:text-[40px] italic font-light text-white leading-[1.3] max-w-none xl:max-w-[900px]" aria-hidden="true">
                         Whether you&apos;re starting with a new idea,<br />refining an existing brand,<br />
                         or preparing for the next stage of growth,<br />
                         we&apos;d love to hear you. Let&apos;s Talk.
@@ -149,6 +179,16 @@ export default function Services() {
                         </svg>
                       </Link>
                     </Reveal>
+                  </div>
+
+                  {/* FAQ SECTION */}
+                  <div className="mt-32 relative md:ml-[5vw] lg:ml-[8vw] xl:ml-[10vw]">
+                    <Reveal className="mb-12">
+                      <h2 className="text-[32px] md:text-[42px] leading-[1.1] text-white">
+                        Frequently Asked Questions About Our Services
+                      </h2>
+                    </Reveal>
+                    <FAQAccordion faqs={faqs} />
                   </div>
                 </div>
               </section>

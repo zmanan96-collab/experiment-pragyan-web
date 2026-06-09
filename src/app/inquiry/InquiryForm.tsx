@@ -52,6 +52,7 @@ export default function InquiryForm() {
       onSubmit={handleSubmit}
       className="flex flex-col gap-2.5 md:gap-3 transition-all duration-700"
     >
+      <h3 className="sr-only">Fill in the Form and We'll Get Back Within 24 Hours</h3>
       {/* Row 1: Name and Email */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5 md:gap-3">
         <div>

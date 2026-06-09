@@ -1,6 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      {
+        source: '/work/yash-engineers-\\(india\\)-pvt.-ltd.',
+        destination: '/work/yash-engineers-india',
+        permanent: true,
+      },
+    ];
+  },
   allowedDevOrigins: ['192.168.1.10', 'localhost:3000'],
   images: {
     remotePatterns: [

@@ -5,7 +5,7 @@ import Link from 'next/link';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-type Project = { title: string; tags: string[]; image: string };
+type Project = { title: string; tags: string[]; image: string; alt?: string };
 
 export default function HomeInteractive({ projects }: { projects: Project[] }) {
   const [mounted, setMounted] = useState(false);
@@ -243,7 +243,7 @@ export default function HomeInteractive({ projects }: { projects: Project[] }) {
                 <div className="absolute inset-0 rounded-[20px] overflow-hidden transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)]">
                   <img
                     src={project.image}
-                    alt={project.title}
+                    alt={project.alt || `${project.title} branding case study by Pragyan`}
                     loading="lazy"
                     className="w-full h-full object-cover object-top md:group-hover:scale-105 select-none pointer-events-none grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-[filter,transform] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
                   />

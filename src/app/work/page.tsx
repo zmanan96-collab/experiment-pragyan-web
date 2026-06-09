@@ -3,8 +3,8 @@ import Reveal from '../../components/Reveal';
 import WorkGrid from './WorkGrid';
 
 export const metadata: Metadata = {
-  title: 'Work — Pragyan',
-  description: "Our portfolio of work across strategy, branding, and communication.",
+  title: 'Our Work — Branding Case Studies | Pragyan Agency',
+  description: "Explore Pragyan's branding and marketing case studies across manufacturing, D2C, education, and FMCG. Real brands. Real strategy. Real results.",
   alternates: {
     canonical: 'https://www.mypragyan.com/work',
   },
@@ -17,9 +17,11 @@ export default function Work() {
         {/* Page Title */}
         <Reveal className="mb-10 text-center">
           <span className="text-nav-label tracking-[0.22em] uppercase text-[#6a6a6a] block mb-3">Portfolio</span>
-          <h1 className="text-[40px] md:text-[56px] font-bold text-black tracking-tight leading-none uppercase">
+          <h1 className="sr-only">Branding &amp; Marketing Case Studies</h1>
+          <h2 className="sr-only">Real Projects. Real Strategy. Real Impact.</h2>
+          <span className="text-[40px] md:text-[56px] font-bold text-black tracking-tight leading-none uppercase block" aria-hidden="true">
             Our Work
-          </h1>
+          </span>
         </Reveal>
 
         <WorkGrid />

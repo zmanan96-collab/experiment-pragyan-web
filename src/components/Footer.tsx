@@ -29,11 +29,23 @@ export default function Footer() {
           {/* PRE-FOOTER CTA */}
           <div className="mb-4 pb-4 md:mb-2 md:pb-2 flex flex-col w-full">
             <div className="w-full text-center md:text-left relative z-10 md:-mt-8 lg:-mt-12">
-              <p className="text-nav-label text-[#a6a6a6] uppercase tracking-[0.3em] mb-3 md:mb-4">LET&apos;S WORK TOGETHER</p>
-              <h3 className="text-section-heading text-white">
+              <h2 className="sr-only">
+                {pathname === '/work' 
+                  ? "Let's Build Your Brand Story Together" 
+                  : pathname === '/about'
+                  ? "Let's Build Something That Lasts"
+                  : pathname === '/culture'
+                  ? "Think You're a Fit? Let's Talk."
+                  : "Ready to Build a Brand That Lasts?"}
+              </h2>
+              {pathname !== '/work' && pathname !== '/about' && pathname !== '/culture' && (
+                <h3 className="sr-only">Step 4: We Build Brands That Scale</h3>
+              )}
+              <p className="text-nav-label text-[#a6a6a6] uppercase tracking-[0.3em] mb-3 md:mb-4" aria-hidden="true">LET&apos;S WORK TOGETHER</p>
+              <span className="text-section-heading text-white block" aria-hidden="true">
                 <span className="block md:inline md:whitespace-nowrap">Ready to build something</span> <br className="hidden md:inline" />
                 that <span className="italic font-light">lasts</span> ?
-              </h3>
+              </span>
             </div>
             <div className="w-full flex flex-col items-center md:items-start text-center md:text-left mt-6 md:mt-8 relative z-20">
               <div className="flex flex-col items-center md:items-start">

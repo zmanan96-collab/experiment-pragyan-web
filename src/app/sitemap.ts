@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { caseStudies } from './work/[slug]/page';
+import { caseStudies } from '../lib/caseStudiesData';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.mypragyan.com';

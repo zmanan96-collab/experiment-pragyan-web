@@ -114,7 +114,7 @@ export default function Header() {
           <Link href="/" className="inline-flex items-center" aria-label="Pragyan — home">
             <img
               src="/assets/img/Header-logo.webp"
-              alt="Pragyan"
+              alt="Pragyan branding agency logo — Ahmedabad"
               className="h-[34px] sm:h-[40px] md:h-[44px] w-auto object-contain transition-all duration-300"
               style={headerTheme === 'light' ? { filter: 'brightness(0)' } : undefined}
             />
