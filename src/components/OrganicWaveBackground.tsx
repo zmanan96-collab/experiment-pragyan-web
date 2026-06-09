@@ -194,7 +194,7 @@ export default function OrganicWaveBackground() {
     // Setup Three.js scene
     const scene = new THREE.Scene();
     const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
-    
+
     const renderer = new THREE.WebGLRenderer({
       canvas: canvas,
       antialias: false,
@@ -203,7 +203,7 @@ export default function OrganicWaveBackground() {
       stencil: false,
       depth: false,
     });
-    
+
     // Set appropriate pixel ratio with a maximum of 2.0 to prevent performance lag on retina/4K displays
     const pixelRatio = Math.min(window.devicePixelRatio, 2.0);
     renderer.setPixelRatio(pixelRatio);
@@ -234,7 +234,7 @@ export default function OrganicWaveBackground() {
       depthWrite: false,
       depthTest: false,
     });
-    
+
     const mesh = new THREE.Mesh(geometry, material);
     scene.add(mesh);
 
@@ -245,7 +245,7 @@ export default function OrganicWaveBackground() {
     const handleMouseMove = (e: MouseEvent) => {
       const x = e.clientX / window.innerWidth - 0.5;
       const y = e.clientY / window.innerHeight - 0.5;
-      
+
       // Interpolate gently
       uniforms.uMouse.value.x += (x - uniforms.uMouse.value.x) * 0.05;
       uniforms.uMouse.value.y += (y - uniforms.uMouse.value.y) * 0.05;
@@ -283,7 +283,7 @@ export default function OrganicWaveBackground() {
     // Main animation loop
     const animate = () => {
       animationFrameId = requestAnimationFrame(animate);
-      
+
       if (!isVisible) return;
 
       const currentTime = performance.now();
@@ -296,10 +296,10 @@ export default function OrganicWaveBackground() {
       // Scroll speed calculation & smooth interpolation
       const instantaneousSpeed = Math.abs(targetScrollPos - lastScrollY);
       lastScrollY = targetScrollPos;
-      
+
       scrollSpeed += (instantaneousSpeed - scrollSpeed) * 0.1;
       lerpedScrollSpeed += (scrollSpeed - lerpedScrollSpeed) * 0.08;
-      
+
       // Send speed to uniforms (capped to avoid massive distortions on sudden jumps)
       uniforms.uScrollSpeed.value = Math.min(lerpedScrollSpeed, 40.0);
 
@@ -316,7 +316,7 @@ export default function OrganicWaveBackground() {
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('scroll', handleScroll);
       observer.disconnect();
-      
+
       geometry.dispose();
       material.dispose();
       renderer.dispose();
@@ -324,14 +324,14 @@ export default function OrganicWaveBackground() {
   }, []);
 
   return (
-    <div 
-      ref={containerRef} 
+    <div
+      ref={containerRef}
       className="fixed inset-0 w-full h-full -z-10 bg-black pointer-events-none"
       style={{ mixBlendMode: 'normal' }}
     >
-      <canvas 
-        ref={canvasRef} 
-        className="w-full h-full block" 
+      <canvas
+        ref={canvasRef}
+        className="w-full h-full block"
       />
     </div>
   );

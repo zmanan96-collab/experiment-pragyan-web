@@ -137,7 +137,7 @@ export default function Services() {
                     <Reveal delay={0.2} className="w-full md:w-[35%] lg:w-[30%] xl:w-[30%] flex items-center justify-center md:justify-end xl:justify-center md:-translate-x-[5vw] lg:-translate-x-[10vw] xl:-translate-x-[10vw]">
                       <div className="w-full relative group flex justify-end">
                         <video
-                          src="/service-hero.webm"
+                          src="/Service Hero.mp4"
                           autoPlay
                           loop
                           muted
