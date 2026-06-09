@@ -90,7 +90,7 @@ interface CaseStudyData {
   };
 }
 
-const caseStudies: Record<string, CaseStudyData> = {
+export const caseStudies: Record<string, CaseStudyData> = {
   'atc-chains-india': {
     title: 'ATC CHAINS INDIA',
     category: 'Manufacturing / Conveyor Components / Food & Beverage',
@@ -197,7 +197,7 @@ The company also needed a system that could support multiple audiences, each wit
 The goal was not simply to generate visibility.
 The goal was to help people understand why the category mattered in the first place.`,
     heroImage: '/bsu-hero.webp',
-    showcaseImage1: '/bsu-billboard.webp',
+    showcaseImage1: '/BSU-billboard.webp',
     showcaseImage2: '/bsu-phone.webp',
     showcaseImage3: '/bsu-mockups.webp',
     heroHeaderTheme: 'light',
