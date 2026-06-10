@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ScrollSnapController from "../components/ScrollSnapController";
+import ChatWidget from "../components/ChatWidget";
 
 import { Plus_Jakarta_Sans, Space_Grotesk } from "next/font/google";
 
@@ -116,6 +117,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <ChatWidget mode="floating" />
       </body>
     </html>
   );

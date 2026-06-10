@@ -78,21 +78,14 @@ export const caseStudies: Record<string, CaseStudyData> = {
     label: 'BRAND STRATEGY<br/>IDENTITY & EXPRESSION<br/>CONTENT & COMMUNICATION<br/>SOCIAL & COMMUNITY',
     industry: 'Manufacturing / Conveyor Components / Food & Beverage',
     deliverables: 'Visual Identity & Logo<br/>Corporate Stationery<br/>Brochure Design<br/>Industry Materials Consulting',
-    description: `We started by developing a cohesive brand kit that established consistency across communication and visual expression.
-From there, we developed a LinkedIn content strategy focused on industry expertise rather than promotion. The goal was not volume. It was relevance.
-Content covered manufacturing insights, industry observations, operational knowledge, and practical experience accumulated over decades of working in the sector.
-Alongside digital communication, we designed AV materials for exhibitions and industry events, ensuring that every touchpoint reflected the same level of professionalism and expertise.`,
+    description: `We began by developing a cohesive brand kit that brought consistency to the company's communication and visual expression. From there, we developed a LinkedIn content strategy centred around industry expertise rather than promotion. The goal wasn't volume. It was relevance. Content focused on manufacturing insights, operational knowledge, industry observations, and practical experience accumulated over decades of working in the sector. Alongside digital communication, we created audiovisual materials for exhibitions and industry events — ensuring every touchpoint reflected the same level of professionalism and expertise.`,
     descriptionRightOfLabel: `ATC Chains India has been manufacturing conveyor components for the food and beverage industry for over four decades.
 The company had built its reputation the traditional way—through product quality, long-term relationships, and consistent delivery. The expertise was real. The trust had already been earned.
 But buying behaviour was changing.
-Even in industrial sectors, conversations increasingly begin online. Before a procurement manager reaches out, they often research suppliers, explore websites, and review digital presence. The first impression no longer happens at an exhibition or in a meeting room. It happens on a screen.
-The challenge was not creating credibility. It was making existing credibility visible.`,
-    additionalSection: `Industrial manufacturing is not a category known for strong communication.
-Most companies focus on operations, engineering, and sales. Marketing often becomes an afterthought. As a result, much of the category looks and sounds remarkably similar.
-That creates an interesting opportunity.
-When few competitors invest in communication, even thoughtful improvements can create meaningful differentiation. A company that presents itself with clarity, consistency, and expertise immediately feels more trustworthy than one that doesn't.`,
-    additionalSection2: `ATC's experience, technical knowledge, and industry understanding were not being communicated consistently across customer-facing touchpoints.
-The business had decades of credibility, but very little of it was visible to potential buyers discovering the company digitally.`,
+Even in industrial sectors, conversations increasingly begin online. Before a procurement manager reaches out, they often research suppliers, explore websites, and evaluate digital presence. The first impression no longer happens at an exhibition or in a meeting room. It happens on a screen.
+The challenge wasn't creating credibility. It was making existing credibility visible.`,
+    additionalSection: `Industrial manufacturing is not a category known for strong communication. Most companies focus on operations, engineering, and sales. Marketing often becomes an afterthought. As a result, much of the category looks and sounds remarkably similar. That creates an interesting opportunity. When few competitors invest in communication, even thoughtful improvements can create meaningful differentiation. A company that presents itself with clarity, consistency, and expertise immediately feels more trustworthy than one that doesn't.`,
+    additionalSection2: `ATC's experience, technical knowledge, and industry understanding were not being communicated consistently across customer-facing touchpoints. The business had decades of credibility, but very little of it was visible to potential buyers discovering the company digitally.`,
     additionalSection3: `Many manufacturers begin with product communication.
 We believed credibility was the more important challenge.
 Before buyers compare specifications, pricing, or capabilities, they make a quieter judgement: does this company feel trustworthy enough to consider?

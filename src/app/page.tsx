@@ -148,7 +148,7 @@ export default function Home() {
                             <span className="sm:whitespace-nowrap">At Pragyan, we transform that conviction into strategy, identity,</span><br className="hidden sm:inline" /> communication, and growth.
                           </p>
                           <p className="text-main-desc text-[#C9C9CE]">
-                            <span className="sm:whitespace-nowrap">We partner with founders and teams to shape ideas into brands,</span><br className="hidden sm:inline" /> stories, and experiences that build connection, trust, and lasting impact.
+                            <span className="sm:whitespace-nowrap">We partner with founders and teams to shape ideas into brands,</span><br className="hidden sm:inline" /> stories, and experiences that people connect with.
                           </p>
                         </div>
                       </Reveal>
@@ -195,24 +195,24 @@ export default function Home() {
                     <div className="relative max-w-[1300px] mx-auto text-center flex flex-col items-center gap-1.5 md:gap-2">
                       <div className="relative block w-full max-w-[90vw] md:w-fit select-none pointer-events-none">
                         <span className="block text-philosophy-desc text-[#4A4A4D] whitespace-normal md:whitespace-nowrap text-center">
-                          From emerging ventures to growing businesses, we help meaningful
+                          From emerging ventures to growing businesses, we help
                         </span>
                         <span
                           className="text-sweep-line-1 absolute top-0 left-0 right-0 block text-philosophy-desc text-[#E3E3E3] w-full h-full pointer-events-none select-none whitespace-normal md:whitespace-nowrap overflow-hidden text-center"
                           style={{ clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' }}
                         >
-                          From emerging ventures to growing businesses, we help meaningful
+                          From emerging ventures to growing businesses, we help
                         </span>
                       </div>
                       <div className="relative block w-full max-w-[90vw] md:w-fit select-none pointer-events-none">
                         <span className="block text-philosophy-desc text-[#4A4A4D] whitespace-normal md:whitespace-nowrap text-center">
-                          ideas find their voice, earn attention, and create lasting impact.
+                          ideas find clarity, expression, and the attention they deserve.
                         </span>
                         <span
                           className="text-sweep-line-2 absolute top-0 left-0 right-0 block text-philosophy-desc text-[#E3E3E3] w-full h-full pointer-events-none select-none whitespace-normal md:whitespace-nowrap overflow-hidden text-center"
                           style={{ clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' }}
                         >
-                          ideas find their voice, earn attention, and create lasting impact.
+                          ideas find clarity, expression, and the attention they deserve.
                         </span>
                       </div>
                     </div>
@@ -382,7 +382,7 @@ export default function Home() {
 
                     <div>
                       {[
-                        { num: '01', title: 'Listen.', lineWidth: 'w-full md:w-[110%]', desc: <><span className="block md:whitespace-nowrap">Extract the identity that</span><span className="block md:whitespace-nowrap">drives the business.</span></> },
+                        { num: '01', title: 'Listen.', lineWidth: 'w-full md:w-[110%]', desc: <><span className="block md:whitespace-nowrap">Understand what</span><span className="block md:whitespace-nowrap">drives the business.</span></> },
                         { num: '02', title: 'Think.', lineWidth: 'w-full md:w-[105%]', desc: <><span className="block md:whitespace-nowrap">Turn creativity into clear</span><span className="block md:whitespace-nowrap">direction.</span></> },
                         { num: '03', title: 'Simplify.', lineWidth: 'w-full md:w-[95%]', desc: <><span className="block md:whitespace-nowrap">Strip away the noise to</span><span className="block md:whitespace-nowrap">find the voice.</span></> },
                         { num: '04', title: 'Magnify.', lineWidth: 'w-full md:w-[100%]', desc: <><span className="block md:whitespace-nowrap">Take what works and help it</span><span className="block md:whitespace-nowrap">reach the right people.</span></> }
@@ -416,8 +416,8 @@ export default function Home() {
                     <h2 className="sr-only">Branding Work We're Proud Of</h2>
                     <span className="text-nav-label tracking-[0.22em] uppercase text-[#6A6A6A] mb-3 md:mb-[clamp(8px,1.5vh,16px)] block" aria-hidden="true">Our Projects</span>
                     <span id="breathe-h" className="text-section-heading text-white block" aria-hidden="true">
-                      Work that started with<br />
-                      <em className="italic font-light">a point of view.</em>
+                      Ideas in action<br />
+                      <em className="italic font-light text-philosophy-desc leading-tight block mt-1">Explore some of the brands, campaigns, and communication systems we've had the opportunity to build.</em>
                     </span>
                   </Reveal>
                 </div>

@@ -26,7 +26,7 @@ const services = [
     seoTitle: "Brand Identity & Visual Expression Design",
     title: "Identity & Expression",
     tagline: "How your brand looks, sounds, and feels.",
-    copy: "Identity is more than a logo. It's the complete experience of encountering your brand. We create visual and verbal systems that help businesses show up consistently, confidently, and recognisably across every touchpoint.",
+    copy: "Identity is more than a logo. It's the experience of encountering your brand. We create visual and verbal systems that help businesses show up consistently, confidently, and recognisably across every touchpoint.",
     deliverables: ["Visual Identity", "Verbal Identity", "Brand Guidelines", "Design Systems", "Marketing Collateral"]
   },
   {
@@ -60,7 +60,7 @@ const services = [
   {
     seoTitle: "OOH & Outdoor Advertising Campaigns",
     title: "OOH Advertising",
-    tagline: "Built to be seen. Designed to be remembered.",
+    tagline: "Making an idea impossible to miss.",
     copy: "Outdoor advertising demands simplicity and confidence. We develop campaigns that communicate a clear idea quickly and effectively across public spaces, creating memorable brand moments beyond the screen.",
     deliverables: ["Campaign Concepts", "Hoardings", "Media Planning"]
   }
@@ -69,19 +69,19 @@ const services = [
 const faqs = [
   {
     question: "What is brand strategy?",
-    answer: "Brand strategy is the foundational blueprint that defines who you are, who you serve, and how you communicate. It aligns your business goals with audience needs to create a distinct, long-lasting market position."
+    answer: "Brand strategy helps clarify what your business stands for, who it serves, and why people should choose it. It provides the direction that guides identity, communication, and long-term decision-making."
   },
   {
     question: "How long does a branding project take?",
-    answer: "Most comprehensive branding projects take between 6 to 12 weeks, depending on the scope of work—ranging from initial research and strategy to full visual identity and guideline creation."
+    answer: "Timelines vary depending on scope. Smaller projects may take a few weeks, while larger engagements involving strategy, identity, and communication can take several months. We establish timelines collaboratively at the beginning of every project."
   },
   {
     question: "Do you work with startups?",
-    answer: "Yes. We frequently partner with early-stage founders to build their initial brand foundations, helping them launch with clarity and professional credibility to attract early adopters and investors."
+    answer: "Yes. We work with businesses at different stages of growth — from emerging ventures finding their footing to established organisations looking to evolve. What matters most is a willingness to think intentionally about the brand being built."
   },
   {
     question: "What does personal branding include?",
-    answer: "Our personal branding service helps founders and leaders articulate their unique expertise. We develop LinkedIn strategies, personal positioning, and content themes that build trust and industry authority."
+    answer: "Personal branding can include positioning, profile optimisation, content strategy, thought leadership development, and ongoing communication support. The goal is to articulate your perspective clearly and consistently."
   }
 ];
 
@@ -159,7 +159,7 @@ export default function Services() {
                           <span className="block">Some need a stronger identity.</span>
                           <span className="block">Some need better communication.</span>
                           <span className="block">Some need help reaching the right people.</span>
-                          <span className="block md:mt-2">Our services span strategy, branding, communication, and marketing &mdash; tailored to what your business needs most.</span>
+                          <span className="block md:mt-2">Our services span strategy, branding, communication, and marketing &mdash; shaped around what your business needs most.</span>
                         </p>
                       </Reveal>
                     </div>

@@ -112,9 +112,9 @@ export default function AboutClient() {
                   <Reveal delay={0.2} className="w-full flex justify-center text-center">
                     <div className="max-w-[1020px] md:max-w-[900px] w-full text-center space-y-2 md:space-y-1 text-main-desc text-[#555]">
                       <p>We&rsquo;re curious by nature, ethical by choice, and practical in action.</p>
-                      <p>We look for the idea beneath the surface &mdash; then turn it into strategy, identity, content,<br className="hidden md:block" /> and communication that actually moves people.</p>
-                      <p className="md:whitespace-nowrap">Our work spans branding, digital experiences, and marketing &mdash; but it always starts with perspective.</p>
-                      <p>Because when you understand why something exists, the how becomes much clearer.</p>
+                      <p>We believe brands are ultimately built by people &mdash; shaped by their experiences, values, ambitions,<br className="hidden md:block" /> and ways of seeing the world.</p>
+                      <p className="md:whitespace-nowrap">That's why we take the time to understand what drives  &mdash; the work before deciding how the work should move forward.</p>
+                      <p>Because when you understand the people behind a business, better decisions tend to follow.</p>
                     </div>
                   </Reveal>
 
@@ -138,9 +138,9 @@ export default function AboutClient() {
                       <h2 className="sr-only">Meet the Team Behind Your Brand</h2>
                       <span className="text-nav-label tracking-[0.22em] uppercase text-[#d9d9d9] inline-block mb-8 md:mb-2" aria-hidden="true">Our team</span>
                       <span id="values-h" className="text-section-heading text-white max-w-[1200px] block" aria-hidden="true">
-                        <span className="md:whitespace-nowrap">We&apos;re a group of intellectuals</span><br />
-                        who don&apos;t separate thinking<br />
-                        from execution.
+                        <span className="md:whitespace-nowrap">We&apos;re a team of strategists and creators</span><br />
+                        who care deeply about the craft of<br />
+                        what we do.
                       </span>
                     </div>
                   </Reveal>
@@ -156,12 +156,12 @@ export default function AboutClient() {
                       </div>
                       <div className="py-[clamp(35px,4vw,50px)] md:py-[clamp(18px,2vw,24px)] px-12 md:pl-10 lg:pl-12 xl:pl-14 md:pr-8 bg-[#2B2F77] flex items-center min-h-[120px] md:min-h-[85px] border-b-[1.5px] border-white/10 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:bg-[#34398d] cursor-default relative z-[1]">
                         <h3 className="sr-only">Human-Centered</h3>
-                        <p className="text-card-title !font-light text-[#f5f5f5]" aria-hidden="true">We argue (constructively).</p>
+                        <p className="text-card-title !font-light text-[#f5f5f5]" aria-hidden="true">We challenge assumptions.</p>
                       </div>
                       <div className="py-[clamp(35px,4vw,50px)] md:py-[clamp(20px,2vw,26px)] px-12 md:pl-10 lg:pl-12 xl:pl-14 md:pr-8 bg-[#222] flex flex-col justify-center min-h-[150px] md:min-h-[100px] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:bg-[#2a2a2a] cursor-default relative z-[1]">
                         <h3 className="sr-only">Built to Scale</h3>
-                        <p className="text-card-title !font-light text-[#f5f5f5]" aria-hidden="true">We refine.</p>
-                        <p className="text-card-title !font-light text-[#f5f5f5] mt-2 md:mt-0" aria-hidden="true">And we don&rsquo;t settle for anything less than right.</p>
+                        <p className="text-card-title !font-light text-[#f5f5f5]" aria-hidden="true">We refine relentlessly.</p>
+                        <p className="text-card-title !font-light text-[#f5f5f5] mt-1" aria-hidden="true">And we don&rsquo;t settle for work that simply looks good.</p>
                       </div>
                     </div>
                   </Reveal>

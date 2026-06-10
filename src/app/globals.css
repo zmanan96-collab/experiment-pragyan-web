@@ -41,6 +41,19 @@ body {
   /* 8pt approx */
   --text-sub: 0.58rem;
   /* 7pt approx */
+
+  /* ── ChatWidget Design Tokens ─────────────────────────────────────── */
+  --color-agency-dark: #0f0f11;
+  --color-agency-card: #16161a;
+  --color-agency-gold: #c5a880;
+  --color-agency-gold-light: #dfcca7;
+  --color-agency-gold-dark: #a3845b;
+  --color-agency-gold-glow: rgba(197, 168, 128, 0.15);
+  --color-agency-text-primary: #f3f4f6;
+  --color-agency-text-secondary: #9ca3af;
+  --color-agency-text-muted: #6b7280;
+  --shadow-premium: 0 10px 30px -10px rgba(0, 0, 0, 0.5), 0 1px 1px 0 rgba(255, 255, 255, 0.05) inset;
+  --shadow-gold-glow: 0 0 20px 0 rgba(197, 168, 128, 0.2);
 }
 
 /* Force Plus Jakarta Sans on all buttons and specific labels */
@@ -865,4 +878,61 @@ button,
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════
+   CHATBOT WIDGET — Utility classes (scoped, do not modify)
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Glassmorphism panel for the chat window */
+.glassmorphism {
+  background: rgba(22, 22, 26, 0.82);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+/* Custom scrollbar inside the chat message list */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(197, 168, 128, 0.3);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(197, 168, 128, 0.5);
+}
+
+/* Typing indicator dot bounce */
+@keyframes dot-bounce {
+  0%, 80%, 100% { transform: translateY(0); }
+  40%           { transform: translateY(-6px); }
+}
+.dot-bounce {
+  animation: dot-bounce 1.4s infinite ease-in-out both;
+}
+.dot-bounce:nth-child(1) { animation-delay: -0.32s; }
+.dot-bounce:nth-child(2) { animation-delay: -0.16s; }
+
+/* Slide-up animation for chat window opening */
+@keyframes chat-slide-up {
+  0%   { transform: translateY(15px); opacity: 0; }
+  100% { transform: translateY(0);    opacity: 1; }
+}
+.animate-slide-up {
+  animation: chat-slide-up 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Slow pulse for the chat bubble icon */
+@keyframes chat-pulse-slow {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.6; }
+}
+.animate-pulse-slow {
+  animation: chat-pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }

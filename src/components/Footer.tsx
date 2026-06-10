@@ -30,34 +30,61 @@ export default function Footer() {
           <div className="mb-4 pb-4 md:mb-2 md:pb-2 flex flex-col w-full">
             <div className="w-full text-center md:text-left relative z-10 md:-mt-8 lg:-mt-12">
               <h2 className="sr-only">
-                {pathname === '/work' 
-                  ? "Let's Build Your Brand Story Together" 
+                {pathname === '/work'
+                  ? "Let's Build Your Brand Story Together"
                   : pathname === '/about'
-                  ? "Let's Build Something That Lasts"
-                  : pathname === '/culture'
-                  ? "Think You're a Fit? Let's Talk."
-                  : "Ready to Build a Brand That Lasts?"}
+                    ? "Let's Build Something That Lasts"
+                    : pathname === '/culture'
+                      ? "Think You're a Fit? Let's Talk."
+                      : pathname === '/services'
+                        ? "Let's Work Together"
+                        : "Ready to Build a Brand That Lasts?"}
               </h2>
               {pathname !== '/work' && pathname !== '/about' && pathname !== '/culture' && (
                 <h3 className="sr-only">Step 4: We Build Brands That Scale</h3>
               )}
               <p className="text-nav-label text-[#a6a6a6] uppercase tracking-[0.3em] mb-3 md:mb-4" aria-hidden="true">LET&apos;S WORK TOGETHER</p>
-              <span className="text-section-heading text-white block" aria-hidden="true">
-                <span className="block md:inline md:whitespace-nowrap">Ready to build something</span> <br className="hidden md:inline" />
-                that <span className="italic font-light">lasts</span> ?
-              </span>
+              {pathname === '/culture' ? (
+                <span className="text-section-heading text-white block" aria-hidden="true">
+                  Interested in joining <span className="italic font-light">us?</span>
+                </span>
+              ) : (
+                <span className="text-section-heading text-white block" aria-hidden="true">
+                  <span className="block md:inline md:whitespace-nowrap">Ready to build something</span> <br className="hidden md:inline" />
+                  that <span className="italic font-light">lasts</span> ?
+                </span>
+              )}
             </div>
             <div className="w-full flex flex-col items-center md:items-start text-center md:text-left mt-6 md:mt-8 relative z-20">
               <div className="flex flex-col items-center md:items-start">
-                <p className="text-main-desc text-[#D9D9D9] mb-4 md:mb-6 md:whitespace-nowrap text-center md:text-left">
-                  Whether it&apos;s strategy, storytelling, or exploring how we can bring your <br className="hidden md:block" /> brand to life &mdash; reach out, and we&apos;ll figure it out together.
-                </p>
-                <Link
-                  href="/inquiry"
-                  className="inline-flex items-center justify-center btn-gradient text-white px-10 py-[15px] text-nav-label uppercase tracking-[0.2em] transition-all duration-300 rounded-full"
-                >
-                  Start a project
-                </Link>
+                {pathname === '/services' ? (
+                  <p className="text-main-desc text-[#D9D9D9] mb-4 md:mb-6 text-center md:text-left">
+                    Whether you&apos;re starting with a new idea, refining an existing brand, or preparing for the next stage <br />of growth, we&apos;d love to hear from you .
+                  </p>
+                ) : pathname === '/about' ? (
+                  <p className="text-main-desc text-[#D9D9D9] mb-4 md:mb-6 md:whitespace-nowrap text-center md:text-left">
+                    If our way of thinking resonates with you, we&apos;d love to hear what you&apos;re building. <br className="hidden md:block" />
+                    Whether you&apos;re shaping a new idea or evolving an existing one, let&apos;s explore how we can work together.
+                  </p>
+                ) : pathname === '/culture' ? (
+                  <p className="text-main-desc text-[#D9D9D9] mb-4 md:mb-6 text-center md:text-left">
+                    If our way of working resonates with you, we&apos;d love to hear from you. <br />
+                    Send your portfolio and resume to: <br />
+                    <a href="mailto:connect@mypragyan.com" className="text-white font-medium hover:text-[#786CF0] transition-colors duration-300 mt-1 inline-block border-b border-white/30 pb-0.5 hover:border-[#786CF0]">connect@mypragyan.com</a>
+                  </p>
+                ) : (
+                  <p className="text-main-desc text-[#D9D9D9] mb-4 md:mb-6 md:whitespace-nowrap text-center md:text-left">
+                    Whether you&apos;re starting from scratch or refining what already exists, <br className="hidden md:block" /> we&apos;d love to hear what you&apos;re building. <br className="hidden md:block" />Reach out, and we&apos;ll explore where it can go together.
+                  </p>
+                )}
+                {pathname !== '/culture' && (
+                  <Link
+                    href="/inquiry"
+                    className="inline-flex items-center justify-center btn-gradient text-white px-10 py-[15px] text-nav-label uppercase tracking-[0.2em] transition-all duration-300 rounded-full"
+                  >
+                    {pathname === '/services' ? "Let's Talk" : 'Start a project'}
+                  </Link>
+                )}
               </div>
             </div>
           </div>

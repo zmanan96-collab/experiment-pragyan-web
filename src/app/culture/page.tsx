@@ -39,16 +39,24 @@ export default function Culture() {
                       </Reveal>
                       <Reveal delay={0.1}>
                         <div className="text-main-desc text-[#6a6a6a] mb-10 md:mb-8">
-                          <p className="md:whitespace-nowrap">We believe that how we work matters as much as what we create.</p>
-                          <p>Curiosity drives us to explore beyond the obvious.</p>
-                          <p>Openness keeps us looking for new ideas.</p>
-                          <p>Action ensures insights turn into outcomes.</p>
+                          <p className="md:whitespace-nowrap">We believe that how we work matters just as much as what we create.</p>
+                          <p>Curiosity drives us to look beyond the obvious.</p>
+                          <p>Openness keeps us learning, questioning, and evolving.</p>
+                          <p>Action turns insights into outcomes.</p>
+                          <p>And the experiences we gather outside of work shape the perspectives we bring into it.</p>
                         </div>
                       </Reveal>
                       <Reveal delay={0.2} className="relative z-10">
-                        <Button href="/inquiry" variant="on-white" className="min-w-[245px] md:min-w-[200px] justify-center text-nav-label tracking-[0.2em] !py-[15px] md:!py-[12px] uppercase">
-                          JOIN THE TEAM
-                        </Button>
+                        <div className="flex flex-col gap-10 md:gap-12 items-start max-[880px]:items-center mt-4">
+                          <Button href="/inquiry" variant="on-white" className="min-w-[245px] md:min-w-[200px] justify-center text-nav-label tracking-[0.2em] !py-[15px] md:!py-[12px] uppercase">
+                            JOIN THE TEAM
+                          </Button>
+                          <p className="text-[clamp(22px,2.2vw,30px)] font-medium leading-[1.3] text-black block max-w-[1200px] text-center max-[880px]:text-center md:text-left">
+                            <span className="block md:inline md:whitespace-nowrap">We&apos;re building a place where thoughtful people can do</span> <br className="hidden md:block" />
+                            <span className="block md:inline md:whitespace-nowrap">meaningful work, grow in their craft, and contribute to</span> <br className="hidden md:block" />
+                            something larger than themselves.
+                          </p>
+                        </div>
                       </Reveal>
                     </div>
                   </div>
@@ -79,9 +87,9 @@ export default function Culture() {
                               and curiosity over any<br className="hidden md:block" />
                               playbook.<br className="hidden md:block" />
                               Real insight comes from<br className="hidden md:block" />
-                              being in the room, paying<br className="hidden md:block" />
-                              attention, and asking the<br className="hidden md:block" />
-                              right questions.
+                              paying attention, asking better<br className="hidden md:block" />
+                              questions, and understanding the<br className="hidden md:block" />
+                              people behind the problem.
                             </p>
                           </div>
                         </div>
@@ -102,9 +110,12 @@ export default function Culture() {
                               You&apos;re smart — and you<br className="hidden md:block" />
                               know you don&apos;t know<br className="hidden md:block" />
                               everything.<br className="hidden md:block" />
-                              You&apos;re ready to learn,<br className="hidden md:block" />
-                              unlearn, and stay hungry for<br className="hidden md:block" />
-                              the next insight.
+                              You&apos;re willing to learn,<br className="hidden md:block" />
+                              unlearn, and remain open to<br className="hidden md:block" />
+                              new ways of thinking.<br className="hidden md:block" />
+                              You enjoy the challenge of<br className="hidden md:block" />
+                              refining ideas until they<br className="hidden md:block" />
+                              become stronger.
                             </p>
                           </div>
                         </div>
@@ -122,12 +133,16 @@ export default function Culture() {
                           <span className="text-card-title mb-4 md:mb-2 text-black block" aria-hidden="true">A Bias for Action</span>
                           <div className="text-small-desc text-[#6a6a6a]">
                             <p style={{ display: 'block' }}>
-                              You&apos;d rather show a rough<br className="hidden md:block" />
+                              You&apos;d rather share a rough<br className="hidden md:block" />
                               draft than wait for<br className="hidden md:block" />
                               perfection.<br className="hidden md:block" />
+                              You take initiative, move things<br className="hidden md:block" />
+                              forward, and understand that<br className="hidden md:block" />
+                              progress often comes through<br className="hidden md:block" />
+                              iteration.<br className="hidden md:block" />
                               Problems don&apos;t need<br className="hidden md:block" />
-                              invites — you jump in and<br className="hidden md:block" />
-                              fix them.
+                              invitations — you step in<br className="hidden md:block" />
+                              and help solve them.
                             </p>
                           </div>
                         </div>
@@ -147,10 +162,14 @@ export default function Culture() {
                             <p style={{ display: 'block' }}>
                               Perspective is built from<br className="hidden md:block" />
                               living, not just working.<br className="hidden md:block" />
-                              You carry something into<br className="hidden md:block" />
-                              every room that no one<br className="hidden md:block" />
-                              else does — and you know<br className="hidden md:block" />
-                              how to use it.
+                              The books you read, the<br className="hidden md:block" />
+                              conversations you have, the<br className="hidden md:block" />
+                              places you&apos;ve been, and the<br className="hidden md:block" />
+                              things you care about all<br className="hidden md:block" />
+                              shape the work you do.<br className="hidden md:block" />
+                              We value the individuality<br className="hidden md:block" />
+                              that each person brings to<br className="hidden md:block" />
+                              the table.
                             </p>
                           </div>
                         </div>
@@ -178,7 +197,7 @@ export default function Culture() {
                           <h3 className="sr-only">Market-Aligned Salary &amp; Fair Compensation</h3>
                           <span className="text-card-title tracking-[0.1em] md:tracking-[0.05em] uppercase mb-5 md:mb-3 text-white group-hover:text-black transition-colors duration-500 md:whitespace-nowrap md:text-[20px] lg:text-[22px] block" aria-hidden="true">Market-Aligned Salary</span>
                           <p className="text-small-desc text-[#A1A1AA] max-w-[380px] group-hover:text-[#27272A] transition-colors duration-500">
-                            Compensation built around your role, <br className="hidden md:block" />your responsibilities, and the <br className="hidden md:block" />impact you create. Fair, transparent, <br className="hidden md:block" />and built to grow with you.
+                            Compensation built around your role, <br className="hidden md:block" />your responsibilities, and the <br className="hidden md:block" />impact you create. Fair, transparent, <br className="hidden md:block" />and designed to grow alongside you.
                           </p>
                         </div>
                       </div>
@@ -188,7 +207,7 @@ export default function Culture() {
                           <h3 className="sr-only">Festive Reset — Celebrating Culture Together</h3>
                           <span className="text-card-title tracking-[0.1em] md:tracking-[0.05em] uppercase mb-5 md:mb-3 text-white group-hover:text-black transition-colors duration-500 md:whitespace-nowrap md:text-[20px] lg:text-[22px] block" aria-hidden="true">The Festive Reset</span>
                           <p className="text-small-desc text-[#A1A1AA] max-w-[380px] group-hover:text-[#27272A] transition-colors duration-500">
-                            Dedicated days off during the festive <br className="hidden md:block" />season to rest, <br className="hidden md:block" />reconnect, and come back <br className="hidden md:block" />with renewed perspective.
+                            Dedicated time off during the festive <br className="hidden md:block" />season to rest, <br className="hidden md:block" />reconnect, and return with <br className="hidden md:block" />renewed energy and perspective.
                           </p>
                         </div>
                       </div>
@@ -198,7 +217,7 @@ export default function Culture() {
                           <h3 className="sr-only">Time-Back Policy — We Respect Your Hours</h3>
                           <span className="text-card-title tracking-[0.1em] md:tracking-[0.05em] uppercase mb-5 md:mb-3 text-white group-hover:text-black transition-colors duration-500 md:whitespace-nowrap md:text-[20px] lg:text-[22px] block" aria-hidden="true">Time-Back Policy</span>
                           <p className="text-small-desc text-[#A1A1AA] max-w-[380px] group-hover:text-[#27272A] transition-colors duration-500">
-                            Go beyond when the work demands it — <br className="hidden md:block" />and we make sure you&apos;re fairly <br className="hidden md:block" />compensated for it. <br className="hidden md:block" />Your time is yours.
+                            When work occasionally asks more <br className="hidden md:block" />from you, we recognise it. <br className="hidden md:block" />Your time matters, and we <br className="hidden md:block" />believe it should be respected.
                           </p>
                         </div>
                       </div>
@@ -208,7 +227,7 @@ export default function Culture() {
                           <h3 className="sr-only">Paid Vacation &amp; Work-Life Balance</h3>
                           <span className="text-card-title tracking-[0.1em] md:tracking-[0.05em] uppercase mb-5 md:mb-3 text-white group-hover:text-black transition-colors duration-500 md:whitespace-nowrap md:text-[20px] lg:text-[22px] block" aria-hidden="true">Paid Vacation</span>
                           <p className="text-small-desc text-[#A1A1AA] max-w-[380px] group-hover:text-[#27272A] transition-colors duration-500">
-                            Fresh thinking comes from real living. <br className="hidden md:block" />Paid time off each year to step <br className="hidden md:block" />away, recharge, and experience <br className="hidden md:block" />life beyond work — whenever you choose.
+                            Fresh thinking comes from real living. <br className="hidden md:block" />Take the time you need to step <br className="hidden md:block" />away, recharge, and experience <br className="hidden md:block" />life beyond work.
                           </p>
                         </div>
                       </div>
@@ -232,7 +251,13 @@ export default function Culture() {
                       <span className="block text-hero !font-extrabold tracking-[-0.03em] mt-4 md:mt-2 leading-[1.05]">together.</span>
                     </h2>
 
-                    <div className="mt-12 md:mt-8 flex justify-center">
+                    <div className="mt-8 md:mt-10 text-[clamp(16px,1.2vw,18px)] text-[#5a5a5a] max-w-[750px] mx-auto leading-relaxed">
+                      <p className="mb-4 md:mb-2">
+                        We celebrate curiosity, encourage ownership, and believe that the best work happens when people feel trusted, supported, and challenged in equal measure.
+                      </p>
+                    </div>
+
+                    <div className="mt-10 flex justify-center">
                       <Button href="/inquiry" variant="on-white" className="!py-[18px] md:!py-[14px] !px-12 md:!px-8 text-nav-label tracking-[0.15em] uppercase">
                         JOIN THE TEAM
                       </Button>
