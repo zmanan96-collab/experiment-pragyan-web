@@ -66,7 +66,7 @@ export default function Culture() {
                   <div className="grid grid-cols-4 gap-[clamp(24px,4vw,48px)] md:gap-8 lg:gap-10 xl:gap-12 items-start max-[980px]:grid-cols-2 max-[580px]:grid-cols-1">
                     <Reveal delay={0.1}>
                       <div className="flex flex-col items-center sm:items-start gap-6 md:gap-3 lg:gap-4 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.03] group cursor-default">
-                        <div className="aspect-[1.5/1] w-full max-w-[450px] sm:max-w-none bg-[#f5f5f5] rounded-[20px] overflow-hidden relative">
+                        <div className="aspect-[1.5/1] w-full max-w-[450px] sm:max-w-none bg-[#f5f5f5] rounded-[10px] overflow-hidden relative">
                           <Image src="/assets/img/Thehuman.webp" alt="The Human Edge — Pragyan team culture Ahmedabad" width={900} height={600} className="absolute inset-0 w-full h-full object-cover object-center grayscale transition-transform duration-700 group-hover:scale-110" />
                           <div className="absolute inset-0 bg-black/5" />
                         </div>
@@ -90,7 +90,7 @@ export default function Culture() {
 
                     <Reveal delay={0.2}>
                       <div className="flex flex-col items-center sm:items-start gap-6 md:gap-3 lg:gap-4 translate-y-[clamp(40px,6vw,100px)] md:translate-y-[20px] lg:translate-y-[40px] xl:translate-y-[60px] max-[980px]:translate-y-0 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.03] group cursor-default">
-                        <div className="aspect-[1.5/1] w-full max-w-[450px] sm:max-w-none bg-[#f5f5f5] rounded-[20px] overflow-hidden relative">
+                        <div className="aspect-[1.5/1] w-full max-w-[450px] sm:max-w-none bg-[#f5f5f5] rounded-[10px] overflow-hidden relative">
                           <Image src="/assets/img/Intellectual.webp" alt="Intellectual Agility — Pragyan team culture Ahmedabad" width={900} height={600} className="absolute -inset-6 w-[calc(100%+3rem)] h-[calc(100%+3rem)] max-w-none object-cover object-center grayscale transition-transform duration-700 group-hover:scale-110" />
                           <div className="absolute inset-0 bg-black/5" />
                         </div>
@@ -113,7 +113,7 @@ export default function Culture() {
 
                     <Reveal delay={0.3}>
                       <div className="flex flex-col items-center sm:items-start gap-6 md:gap-3 lg:gap-4 translate-y-[-20px] md:translate-y-0 max-[980px]:translate-y-0 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.03] group cursor-default">
-                        <div className="aspect-[1.5/1] w-full max-w-[450px] sm:max-w-none bg-[#f5f5f5] rounded-[20px] overflow-hidden relative">
+                        <div className="aspect-[1.5/1] w-full max-w-[450px] sm:max-w-none bg-[#f5f5f5] rounded-[10px] overflow-hidden relative">
                           <Image src="/assets/img/Bias-Action.webp" alt="A Bias for Action — Pragyan team culture Ahmedabad" width={900} height={600} className="absolute inset-0 w-full h-full object-cover object-center grayscale transition-transform duration-700 group-hover:scale-110" />
                           <div className="absolute inset-0 bg-black/5" />
                         </div>
@@ -136,7 +136,7 @@ export default function Culture() {
 
                     <Reveal delay={0.4}>
                       <div className="flex flex-col items-center sm:items-start gap-6 md:gap-3 lg:gap-4 translate-y-[-50px] md:translate-y-[-20px] lg:translate-y-[-30px] max-[980px]:translate-y-0 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.03] group cursor-default">
-                        <div className="aspect-[1.5/1] w-full max-w-[450px] sm:max-w-none bg-[#f5f5f5] rounded-[20px] overflow-hidden relative">
+                        <div className="aspect-[1.5/1] w-full max-w-[450px] sm:max-w-none bg-[#f5f5f5] rounded-[10px] overflow-hidden relative">
                           <Image src="/assets/img/Uniqueness.webp" alt="Uniqueness — Pragyan team culture Ahmedabad" width={900} height={600} className="absolute inset-0 w-full h-full object-cover object-center grayscale transition-transform duration-700 group-hover:scale-110" />
                           <div className="absolute inset-0 bg-black/5" />
                         </div>
@@ -173,7 +173,7 @@ export default function Culture() {
 
                   <Reveal>
                     <div className="grid grid-cols-2 gap-6 max-w-[1150px] mx-auto max-[768px]:grid-cols-1">
-                      <div className="p-10 md:p-8 lg:p-10 min-h-[240px] md:min-h-[230px] rounded-[12px] border border-white/10 relative group transition-all duration-500 ease-out cursor-default bg-[#121212] hover:bg-white hover:border-white hover:shadow-[0_20px_40px_rgba(255,255,255,0.06)] flex flex-col justify-center">
+                      <div className="p-10 md:p-8 lg:p-10 min-h-[240px] md:min-h-[230px] rounded-[10px] border border-white/10 relative group transition-all duration-500 ease-out cursor-default bg-[#121212] hover:bg-white hover:border-white hover:shadow-[0_20px_40px_rgba(255,255,255,0.06)] flex flex-col justify-center">
                         <div className="relative z-10">
                           <h3 className="sr-only">Market-Aligned Salary &amp; Fair Compensation</h3>
                           <span className="text-card-title tracking-[0.1em] md:tracking-[0.05em] uppercase mb-5 md:mb-3 text-white group-hover:text-black transition-colors duration-500 md:whitespace-nowrap md:text-[20px] lg:text-[22px] block" aria-hidden="true">Market-Aligned Salary</span>
@@ -183,7 +183,7 @@ export default function Culture() {
                         </div>
                       </div>
 
-                      <div className="p-10 md:p-8 lg:p-10 min-h-[240px] md:min-h-[230px] rounded-[12px] border border-white/10 relative group transition-all duration-500 ease-out cursor-default bg-[#121212] hover:bg-white hover:border-white hover:shadow-[0_20px_40px_rgba(255,255,255,0.06)] flex flex-col justify-center">
+                      <div className="p-10 md:p-8 lg:p-10 min-h-[240px] md:min-h-[230px] rounded-[10px] border border-white/10 relative group transition-all duration-500 ease-out cursor-default bg-[#121212] hover:bg-white hover:border-white hover:shadow-[0_20px_40px_rgba(255,255,255,0.06)] flex flex-col justify-center">
                         <div className="relative z-10">
                           <h3 className="sr-only">Festive Reset — Celebrating Culture Together</h3>
                           <span className="text-card-title tracking-[0.1em] md:tracking-[0.05em] uppercase mb-5 md:mb-3 text-white group-hover:text-black transition-colors duration-500 md:whitespace-nowrap md:text-[20px] lg:text-[22px] block" aria-hidden="true">The Festive Reset</span>
@@ -193,7 +193,7 @@ export default function Culture() {
                         </div>
                       </div>
 
-                      <div className="p-10 md:p-8 lg:p-10 min-h-[240px] md:min-h-[230px] rounded-[12px] border border-white/10 relative group transition-all duration-500 ease-out cursor-default bg-[#121212] hover:bg-white hover:border-white hover:shadow-[0_20px_40px_rgba(255,255,255,0.06)] flex flex-col justify-center">
+                      <div className="p-10 md:p-8 lg:p-10 min-h-[240px] md:min-h-[230px] rounded-[10px] border border-white/10 relative group transition-all duration-500 ease-out cursor-default bg-[#121212] hover:bg-white hover:border-white hover:shadow-[0_20px_40px_rgba(255,255,255,0.06)] flex flex-col justify-center">
                         <div className="relative z-10">
                           <h3 className="sr-only">Time-Back Policy — We Respect Your Hours</h3>
                           <span className="text-card-title tracking-[0.1em] md:tracking-[0.05em] uppercase mb-5 md:mb-3 text-white group-hover:text-black transition-colors duration-500 md:whitespace-nowrap md:text-[20px] lg:text-[22px] block" aria-hidden="true">Time-Back Policy</span>
@@ -203,7 +203,7 @@ export default function Culture() {
                         </div>
                       </div>
 
-                      <div className="p-10 md:p-8 lg:p-10 min-h-[240px] md:min-h-[230px] rounded-[12px] border border-white/10 relative group transition-all duration-500 ease-out cursor-default bg-[#121212] hover:bg-white hover:border-white hover:shadow-[0_20px_40px_rgba(255,255,255,0.06)] flex flex-col justify-center">
+                      <div className="p-10 md:p-8 lg:p-10 min-h-[240px] md:min-h-[230px] rounded-[10px] border border-white/10 relative group transition-all duration-500 ease-out cursor-default bg-[#121212] hover:bg-white hover:border-white hover:shadow-[0_20px_40px_rgba(255,255,255,0.06)] flex flex-col justify-center">
                         <div className="relative z-10">
                           <h3 className="sr-only">Paid Vacation &amp; Work-Life Balance</h3>
                           <span className="text-card-title tracking-[0.1em] md:tracking-[0.05em] uppercase mb-5 md:mb-3 text-white group-hover:text-black transition-colors duration-500 md:whitespace-nowrap md:text-[20px] lg:text-[22px] block" aria-hidden="true">Paid Vacation</span>
@@ -221,7 +221,7 @@ export default function Culture() {
               <section id="culture-cta-section" className="md:absolute md:top-0 md:left-0 md:h-[100vh] h-auto bg-black border-t border-white/5 relative overflow-hidden py-[clamp(60px,10vw,120px)] md:py-0 md:flex md:flex-col md:justify-center z-40 w-full" aria-labelledby="culture-cta-h">
                 <div className="section-noise-effect" />
                 <div className="wrap relative z-[1]">
-                  <Reveal className="relative z-[1] max-w-[1200px] mx-auto p-[clamp(20px,3vw,35px)_clamp(50px,8vw,120px)] md:p-[25px_80px] bg-[#fcfcfc]/80 border border-white/20 text-center shadow-2xl rounded-[20px]">
+                  <Reveal className="relative z-[1] max-w-[1200px] mx-auto p-[clamp(20px,3vw,35px)_clamp(50px,8vw,120px)] md:p-[25px_80px] bg-[#fcfcfc]/80 border border-white/20 text-center shadow-2xl rounded-[10px]">
                     <h2 className="sr-only">Our Work Environment &amp; Team Ecosystem</h2>
                     <span className="text-nav-label block tracking-[0.22em] uppercase text-[#6a6a6a] mb-7 md:mb-4" aria-hidden="true">Our Ecosystem</span>
 

@@ -88,6 +88,49 @@ const faqs = [
 export default function Services() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is brand strategy?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Brand strategy is the foundational blueprint that defines who you are, who you serve, and how you communicate. It includes positioning, research, and communication strategy."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does a branding project take?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A branding project at Pragyan typically takes 6-12 weeks depending on scope."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you work with startups?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, Pragyan works with early-stage founders and startups on brand strategy and identity."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does personal branding include?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Personal branding includes LinkedIn strategy, positioning, profile development, and content development for founders."
+                }
+              }
+            ]
+          })
+        }}
+      />
       <HomeSmoothScroll />
       <ServicesAnimations />
       <div className="noise-effect" />

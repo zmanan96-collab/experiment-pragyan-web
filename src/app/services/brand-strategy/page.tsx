@@ -13,9 +13,9 @@ export default function BrandStrategyPage() {
     <>
       <HomeSmoothScroll />
       <div className="noise-effect" />
-      <div id="smooth-wrapper" className="smooth-wrapper w-full bg-[#f6f5ef]">
+      <div id="smooth-wrapper" className="smooth-wrapper w-full bg-white">
         <div id="smooth-content" className="smooth-content w-full relative">
-          <main className="min-h-screen bg-[#f6f5ef] text-[#1a1a1a] pt-[120px] md:pt-[160px] pb-24 md:pb-32 px-6 md:px-12 lg:px-[8vw]">
+          <main className="min-h-screen bg-white text-[#1a1a1a] pt-[120px] md:pt-[160px] pb-24 md:pb-32 px-6 md:px-12 lg:px-[8vw]">
 
             <div className="max-w-[1600px] mx-auto flex flex-col lg:flex-row gap-12 lg:gap-24 relative">
 
@@ -34,7 +34,7 @@ export default function BrandStrategyPage() {
                 </Reveal>
 
                 <Reveal delay={0.2}>
-                  <div className="text-[16px] md:text-[18px] leading-[1.5] italic text-[#4a4a4a] space-y-6">
+                  <div className="text-[16px] md:text-[18px] leading-[1.5] text-[#4a4a4a] space-y-6">
                     <p>
                       Every strong brand starts with a clear point of view. Not a tagline. Not a mission statement written by committee. An actual perspective on what the business does, who it&apos;s for, and why it exists in the way it does.
                     </p>
@@ -62,7 +62,7 @@ export default function BrandStrategyPage() {
               </div>
 
               {/* RIGHT COLUMN - CONTENT */}
-              <div className="w-full lg:w-[65%] flex flex-col gap-16 md:gap-24 lg:pt-4">
+              <div className="w-full lg:w-[65%] flex flex-col gap-12 md:gap-16 lg:pt-4">
 
                 {/* ROW 1: 2 Columns */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
@@ -127,18 +127,18 @@ export default function BrandStrategyPage() {
                       <div className="text-[16px] md:text-[18px] text-[#4a4a4a] leading-[1.6] space-y-4">
                         <p>Strategy doesn&apos;t end with a document. Everything else in the brand comes from it.</p>
                         <ul className="flex flex-col gap-3 mt-4">
-                          <li className="flex items-center gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#4a4a4a]"></span>
+                          <li className="relative pl-4">
+                            <span className="absolute left-0 top-[11px] w-1.5 h-1.5 rounded-full bg-[#4a4a4a]"></span>
                             <span>Identity & Expression</span>
                             <span className="text-[14px] md:text-[16px] opacity-70 ml-1">— how the brand looks and feels</span>
                           </li>
-                          <li className="flex items-center gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#4a4a4a]"></span>
+                          <li className="relative pl-4">
+                            <span className="absolute left-0 top-[11px] w-1.5 h-1.5 rounded-full bg-[#4a4a4a]"></span>
                             <span>Content & Communication</span>
                             <span className="text-[14px] md:text-[16px] opacity-70 ml-1">— how it speaks</span>
                           </li>
-                          <li className="flex items-center gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#4a4a4a]"></span>
+                          <li className="relative pl-4">
+                            <span className="absolute left-0 top-[11px] w-1.5 h-1.5 rounded-full bg-[#4a4a4a]"></span>
                             <span>Personal Branding & LinkedIn</span>
                             <span className="text-[14px] md:text-[16px] opacity-70 ml-1">— how the founder&apos;s voice connects to it</span>
                           </li>

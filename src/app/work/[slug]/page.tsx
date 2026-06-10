@@ -317,41 +317,58 @@ export default async function CaseStudyPage({ params }: PageProps) {
         )}
 
         {/* Visuals Showcase */}
-        {(project.showcaseImage1 || project.showcaseImage2 || project.showcaseImage3 || project.showcaseImage4) && (
+        {(project.gallery || project.showcaseImage1 || project.showcaseImage2 || project.showcaseImage3 || project.showcaseImage4) && (
           <section className="max-w-[1440px] mx-auto px-4 md:px-16 py-8 space-y-12">
-            {project.showcaseImage1 && (
-              <div className="w-full border border-[#76777b]/30 overflow-hidden rounded-lg">
-                <img
-                  alt={project.showcaseImage1Alt || `${project.title} Showcase 1`}
-                  loading="lazy"
-                  className="w-full h-auto object-cover"
-                  src={project.showcaseImage1}
-                />
+            {project.gallery ? (
+              <div className="grid grid-cols-12 gap-6">
+                {project.gallery.map((img, idx) => {
+                  let colClass = "col-span-12";
+                  if (img.cols === 2) colClass = "col-span-12 md:col-span-6";
+                  if (img.cols === 3) colClass = "col-span-12 md:col-span-4";
+
+                  return (
+                    <div key={idx} className={`border border-[#76777b]/30 overflow-hidden rounded-lg ${colClass}`}>
+                      <img
+                        alt={img.alt || `${project.title} Showcase ${idx + 1}`}
+                        loading="lazy"
+                        className="w-full h-full object-cover"
+                        src={img.src}
+                      />
+                    </div>
+                  );
+                })}
               </div>
-            )}
-            {project.showcaseImage2 && project.showcaseImage3 && (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="border border-[#76777b]/30 overflow-hidden rounded-lg h-full">
-                  <img
-                    alt={project.showcaseImage2Alt || `${project.title} Showcase 2`}
-                    loading="lazy"
-                    className="w-full h-full object-cover"
-                    src={project.showcaseImage2}
-                  />
+            ) : project.showcaseImage6 ? (
+              <>
+                {/* 2-3-1 Layout for 6 images (Legacy) */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="border border-[#76777b]/30 overflow-hidden rounded-lg h-full">
+                    <img
+                      alt={project.showcaseImage1Alt || `${project.title} Showcase 1`}
+                      loading="lazy"
+                      className="w-full h-full object-cover"
+                      src={project.showcaseImage1}
+                    />
+                  </div>
+                  <div className="border border-[#76777b]/30 overflow-hidden rounded-lg h-full">
+                    <img
+                      alt={project.showcaseImage2Alt || `${project.title} Showcase 2`}
+                      loading="lazy"
+                      className="w-full h-full object-cover"
+                      src={project.showcaseImage2}
+                    />
+                  </div>
                 </div>
-                <div className="border border-[#76777b]/30 overflow-hidden rounded-lg h-full">
-                  <img
-                    alt={project.showcaseImage3Alt || `${project.title} Showcase 3`}
-                    loading="lazy"
-                    className="w-full h-full object-cover"
-                    src={project.showcaseImage3}
-                  />
-                </div>
-              </div>
-            )}
-            {(project.showcaseImage4 || project.showcaseImage5) && (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {project.showcaseImage4 && (
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="border border-[#76777b]/30 overflow-hidden rounded-lg h-full">
+                    <img
+                      alt={project.showcaseImage3Alt || `${project.title} Showcase 3`}
+                      loading="lazy"
+                      className="w-full h-full object-cover"
+                      src={project.showcaseImage3}
+                    />
+                  </div>
                   <div className="border border-[#76777b]/30 overflow-hidden rounded-lg h-full">
                     <img
                       alt={project.showcaseImage4Alt || `${project.title} Showcase 4`}
@@ -360,8 +377,6 @@ export default async function CaseStudyPage({ params }: PageProps) {
                       src={project.showcaseImage4}
                     />
                   </div>
-                )}
-                {project.showcaseImage5 && (
                   <div className="border border-[#76777b]/30 overflow-hidden rounded-lg h-full">
                     <img
                       alt={project.showcaseImage5Alt || `${project.title} Showcase 5`}
@@ -370,8 +385,75 @@ export default async function CaseStudyPage({ params }: PageProps) {
                       src={project.showcaseImage5}
                     />
                   </div>
+                </div>
+
+                <div className="w-full border border-[#76777b]/30 overflow-hidden rounded-lg">
+                  <img
+                    alt={project.showcaseImage6Alt || `${project.title} Showcase 6`}
+                    loading="lazy"
+                    className="w-full h-auto object-cover"
+                    src={project.showcaseImage6}
+                  />
+                </div>
+              </>
+            ) : (
+              <>
+                {/* Default Layout for 1-5 images (Legacy) */}
+                {project.showcaseImage1 && (
+                  <div className="w-full border border-[#76777b]/30 overflow-hidden rounded-lg">
+                    <img
+                      alt={project.showcaseImage1Alt || `${project.title} Showcase 1`}
+                      loading="lazy"
+                      className="w-full h-auto object-cover"
+                      src={project.showcaseImage1}
+                    />
+                  </div>
                 )}
-              </div>
+                {project.showcaseImage2 && project.showcaseImage3 && (
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="border border-[#76777b]/30 overflow-hidden rounded-lg h-full">
+                      <img
+                        alt={project.showcaseImage2Alt || `${project.title} Showcase 2`}
+                        loading="lazy"
+                        className="w-full h-full object-cover"
+                        src={project.showcaseImage2}
+                      />
+                    </div>
+                    <div className="border border-[#76777b]/30 overflow-hidden rounded-lg h-full">
+                      <img
+                        alt={project.showcaseImage3Alt || `${project.title} Showcase 3`}
+                        loading="lazy"
+                        className="w-full h-full object-cover"
+                        src={project.showcaseImage3}
+                      />
+                    </div>
+                  </div>
+                )}
+                {(project.showcaseImage4 || project.showcaseImage5) && (
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {project.showcaseImage4 && (
+                      <div className="border border-[#76777b]/30 overflow-hidden rounded-lg h-full">
+                        <img
+                          alt={project.showcaseImage4Alt || `${project.title} Showcase 4`}
+                          loading="lazy"
+                          className="w-full h-full object-cover"
+                          src={project.showcaseImage4}
+                        />
+                      </div>
+                    )}
+                    {project.showcaseImage5 && (
+                      <div className="border border-[#76777b]/30 overflow-hidden rounded-lg h-full">
+                        <img
+                          alt={project.showcaseImage5Alt || `${project.title} Showcase 5`}
+                          loading="lazy"
+                          className="w-full h-full object-cover"
+                          src={project.showcaseImage5}
+                        />
+                      </div>
+                    )}
+                  </div>
+                )}
+              </>
             )}
           </section>
         )}

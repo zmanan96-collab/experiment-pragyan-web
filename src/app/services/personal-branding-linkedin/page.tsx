@@ -13,12 +13,12 @@ export default function PersonalBrandingLinkedInPage() {
     <>
       <HomeSmoothScroll />
       <div className="noise-effect" />
-      <div id="smooth-wrapper" className="smooth-wrapper w-full bg-[#f6f5ef]">
+      <div id="smooth-wrapper" className="smooth-wrapper w-full bg-white">
         <div id="smooth-content" className="smooth-content w-full relative">
-          <main className="min-h-screen bg-[#f6f5ef] text-[#1a1a1a] pt-[120px] md:pt-[160px] pb-24 md:pb-32 px-6 md:px-12 lg:px-[8vw]">
-            
+          <main className="min-h-screen bg-white text-[#1a1a1a] pt-[120px] md:pt-[160px] pb-24 md:pb-32 px-6 md:px-12 lg:px-[8vw]">
+
             <div className="max-w-[1600px] mx-auto flex flex-col lg:flex-row gap-12 lg:gap-24 relative">
-              
+
               {/* LEFT COLUMN - STICKY */}
               <div className="w-full lg:w-[35%] lg:sticky lg:top-[160px] self-start">
                 <Reveal>
@@ -26,7 +26,7 @@ export default function PersonalBrandingLinkedInPage() {
                     Personal Branding &amp; LinkedIn
                   </h1>
                 </Reveal>
-                
+
                 <Reveal delay={0.1}>
                   <h2 className="text-[20px] md:text-[24px] leading-[1.3] text-[#4a4a4a] mb-8 font-medium">
                     Building trust through people.
@@ -34,7 +34,7 @@ export default function PersonalBrandingLinkedInPage() {
                 </Reveal>
 
                 <Reveal delay={0.2}>
-                  <div className="text-[16px] md:text-[18px] leading-[1.5] italic text-[#4a4a4a] space-y-6">
+                  <div className="text-[16px] md:text-[18px] leading-[1.5] text-[#4a4a4a] space-y-6">
                     <p>
                       People connect with founders before they connect with companies. That&apos;s just how trust works.
                     </p>
@@ -60,8 +60,8 @@ export default function PersonalBrandingLinkedInPage() {
               </div>
 
               {/* RIGHT COLUMN - CONTENT */}
-              <div className="w-full lg:w-[65%] flex flex-col gap-16 md:gap-24 lg:pt-4">
-                
+              <div className="w-full lg:w-[65%] flex flex-col gap-12 md:gap-16 lg:pt-4">
+
                 {/* ROW 1: 2 Columns */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
                   <Reveal delay={0.3}>
@@ -91,7 +91,7 @@ export default function PersonalBrandingLinkedInPage() {
                 <Reveal delay={0.5}>
                   <div className="w-full border-t border-b border-[#1a1a1a]/10 py-12 md:py-16">
                     <h3 className="text-[28px] md:text-[36px] font-medium leading-[1.2] mb-10 text-center md:text-left">What We Work On</h3>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
                       <div className="flex flex-col gap-3">
                         <h4 className="text-[20px] font-medium">LinkedIn Strategy</h4>
@@ -99,14 +99,14 @@ export default function PersonalBrandingLinkedInPage() {
                           A strategy that defines who you&apos;re building a presence for, what you&apos;ll say, and how often. Built around your actual positioning, not a generic content calendar. Something that reflects where you are and where you&apos;re going.
                         </p>
                       </div>
-                      
+
                       <div className="flex flex-col gap-3">
                         <h4 className="text-[20px] font-medium">Personal Brand Positioning</h4>
                         <p className="text-[#4a4a4a] text-[16px] leading-[1.5]">
                           Before any content is created, we establish what space you occupy and what perspective makes you worth following. Positioning is what makes a personal brand coherent instead of just active.
                         </p>
                       </div>
-                      
+
                       <div className="flex flex-col gap-3">
                         <h4 className="text-[20px] font-medium">Profile Development</h4>
                         <p className="text-[#4a4a4a] text-[16px] leading-[1.5]">
@@ -142,18 +142,18 @@ export default function PersonalBrandingLinkedInPage() {
                       <h3 className="text-[24px] md:text-[28px] font-medium leading-[1.2]">Where It Connects</h3>
                       <div className="text-[16px] md:text-[18px] text-[#4a4a4a] leading-[1.6] space-y-4">
                         <ul className="flex flex-col gap-3 mt-4">
-                          <li className="flex items-center gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#4a4a4a]"></span>
+                          <li className="relative pl-4">
+                            <span className="absolute left-0 top-[11px] w-1.5 h-1.5 rounded-full bg-[#4a4a4a]"></span>
                             <span>Brand Strategy</span>
                             <span className="text-[14px] md:text-[16px] opacity-70 ml-1">— the company&apos;s perspective and positioning</span>
                           </li>
-                          <li className="flex items-center gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#4a4a4a]"></span>
+                          <li className="relative pl-4">
+                            <span className="absolute left-0 top-[11px] w-1.5 h-1.5 rounded-full bg-[#4a4a4a]"></span>
                             <span>Content &amp; Communication</span>
                             <span className="text-[14px] md:text-[16px] opacity-70 ml-1">— the broader voice the brand carries</span>
                           </li>
-                          <li className="flex items-center gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#4a4a4a]"></span>
+                          <li className="relative pl-4">
+                            <span className="absolute left-0 top-[11px] w-1.5 h-1.5 rounded-full bg-[#4a4a4a]"></span>
                             <span>Social &amp; Community</span>
                             <span className="text-[14px] md:text-[16px] opacity-70 ml-1">— the company&apos;s social presence alongside yours</span>
                           </li>
@@ -166,14 +166,14 @@ export default function PersonalBrandingLinkedInPage() {
                 {/* CALL TO ACTION */}
                 <Reveal delay={0.8}>
                   <div className="mt-8 pt-12 border-t border-[#1a1a1a]/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-                    <Link 
+                    <Link
                       href="/inquiry"
                       className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#1a1a1a] text-white rounded-full text-lg hover:bg-[#4B3FD4] transition-colors duration-300 group"
                     >
                       Start a project
                       <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
                     </Link>
-                    
+
                     <p className="text-[14px] text-[#6a6a6a] italic max-w-[300px] text-left md:text-right">
                       Pragyan is a brand strategy and communications agency based in Ahmedabad, India.
                     </p>

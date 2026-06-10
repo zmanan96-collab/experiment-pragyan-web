@@ -108,7 +108,7 @@ export default function Footer() {
             <div className="flex-1 md:pl-6 lg:pl-10 py-2 h-full text-center md:text-left flex flex-col items-center md:items-start">
               <h4 className="text-nav-label text-[#434b9f] mb-4 md:mb-2.5">Navigate</h4>
               <div className="flex flex-col gap-3 items-center md:items-start">
-                {['Home', 'Work', 'Services', 'About', 'Culture'].map((item) => (
+                {['Home', 'Work', 'Services', 'About', 'Culture', 'Journal'].map((item) => (
                   <Link key={item} href={item === 'Home' ? '/' : `/${item.toLowerCase()}`} className="text-small-desc text-white/70 hover:text-[#4b3fd4] transition-colors duration-200 flex items-center group">
                     <span className="w-0 group-hover:w-3 h-[1px] bg-[#4b3fd4] mr-0 group-hover:mr-2 transition-all duration-300"></span>
                     {item}

@@ -13,9 +13,9 @@ export default function OOHAdvertisingPage() {
     <>
       <HomeSmoothScroll />
       <div className="noise-effect" />
-      <div id="smooth-wrapper" className="smooth-wrapper w-full bg-[#f6f5ef]">
+      <div id="smooth-wrapper" className="smooth-wrapper w-full bg-white">
         <div id="smooth-content" className="smooth-content w-full relative">
-          <main className="min-h-screen bg-[#f6f5ef] text-[#1a1a1a] pt-[120px] md:pt-[160px] pb-24 md:pb-32 px-6 md:px-12 lg:px-[8vw]">
+          <main className="min-h-screen bg-white text-[#1a1a1a] pt-[120px] md:pt-[160px] pb-24 md:pb-32 px-6 md:px-12 lg:px-[8vw]">
 
             <div className="max-w-[1600px] mx-auto flex flex-col lg:flex-row gap-12 lg:gap-24 relative">
 
@@ -34,7 +34,7 @@ export default function OOHAdvertisingPage() {
                 </Reveal>
 
                 <Reveal delay={0.2}>
-                  <div className="text-[16px] md:text-[18px] leading-[1.5] italic text-[#4a4a4a] space-y-6">
+                  <div className="text-[16px] md:text-[18px] leading-[1.5] text-[#4a4a4a] space-y-6 text-justify">
                     <p>
                       A hoarding has no skip button. No scroll. No notification competing for the same moment of attention.
                     </p>
@@ -52,14 +52,14 @@ export default function OOHAdvertisingPage() {
               </div>
 
               {/* RIGHT COLUMN - CONTENT */}
-              <div className="w-full lg:w-[65%] flex flex-col gap-16 md:gap-24 lg:pt-4">
+              <div className="w-full lg:w-[65%] flex flex-col gap-12 md:gap-16 lg:pt-4">
 
                 {/* ROW 1: 2 Columns */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
                   <Reveal delay={0.3}>
                     <div className="flex flex-col gap-4">
                       <h3 className="text-[24px] md:text-[28px] font-medium leading-[1.2]">When OOH Makes Sense</h3>
-                      <div className="text-[16px] md:text-[18px] text-[#4a4a4a] leading-[1.6] space-y-4">
+                      <div className="text-[16px] md:text-[18px] text-[#4a4a4a] leading-[1.6] space-y-4 text-justify">
                         <p>Not every brand needs outdoor. But for the right objectives it does something digital can&apos;t — it puts your brand in the physical world at scale, in spaces your audience actually moves through.</p>
                         <p>School admissions season. A product launch in a specific locality. A new retail opening. A campaign you want people to encounter, not scroll past. These are the situations where a well-placed, well-designed hoarding earns its cost within weeks.</p>
                         <p>A single strong outdoor campaign can shift how an entire locality perceives a brand. Not because it&apos;s clever. Because it&apos;s clear and it&apos;s everywhere.</p>
@@ -110,8 +110,19 @@ export default function OOHAdvertisingPage() {
                   </div>
                 </Reveal>
 
-                {/* ROW 3: 1 Column (Work We've Done) */}
+                {/* ROW 3: 1 Column (What Strong Outdoor Work Looks Like & Work We've Done) */}
                 <div className="grid grid-cols-1 gap-12 md:gap-16">
+                  <Reveal delay={0.55}>
+                    <div className="flex flex-col gap-4">
+                      <h3 className="text-[24px] md:text-[28px] font-medium leading-[1.2]">What Strong Outdoor Work Looks Like</h3>
+                      <div className="text-[16px] md:text-[18px] text-[#4a4a4a] leading-[1.6] space-y-4 text-justify">
+                        <p>One clear idea. Not five features, not a tagline and a list and a phone number and a website.</p>
+                        <p>Type that works at thirty metres. High contrast. A visual hierarchy obvious from a moving vehicle, not just a screen mockup.</p>
+                        <p>Something honest. Ahmedabad has seen every trick. What earns attention is a brand that says something direct and true. That&apos;s rarer than it should be, which is why it still works.</p>
+                      </div>
+                    </div>
+                  </Reveal>
+
                   <Reveal delay={0.6}>
                     <div className="flex flex-col gap-4">
                       <h3 className="text-[24px] md:text-[28px] font-medium leading-[1.2]">Work We&apos;ve Done</h3>
@@ -147,32 +158,22 @@ export default function OOHAdvertisingPage() {
                       <h3 className="text-[24px] md:text-[28px] font-medium leading-[1.2]">Where It Connects</h3>
                       <div className="text-[16px] md:text-[18px] text-[#4a4a4a] leading-[1.6] space-y-4">
                         <ul className="flex flex-col gap-3 mt-4">
-                          <li className="flex items-center gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#4a4a4a]"></span>
+                          <li className="relative pl-4">
+                            <span className="absolute left-0 top-[11px] w-1.5 h-1.5 rounded-full bg-[#4a4a4a]"></span>
                             <span>Brand Strategy</span>
                             <span className="text-[14px] md:text-[16px] opacity-70 ml-1">— the message outdoor carries</span>
                           </li>
-                          <li className="flex items-center gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#4a4a4a]"></span>
+                          <li className="relative pl-4">
+                            <span className="absolute left-0 top-[11px] w-1.5 h-1.5 rounded-full bg-[#4a4a4a]"></span>
                             <span>Identity &amp; Expression</span>
                             <span className="text-[14px] md:text-[16px] opacity-70 ml-1">— the visual language it expresses</span>
                           </li>
-                          <li className="flex items-center gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#4a4a4a]"></span>
+                          <li className="relative pl-4">
+                            <span className="absolute left-0 top-[11px] w-1.5 h-1.5 rounded-full bg-[#4a4a4a]"></span>
                             <span>Digital Marketing</span>
                             <span className="text-[14px] md:text-[16px] opacity-70 ml-1">— the channels that extend the campaign online</span>
                           </li>
                         </ul>
-                      </div>
-                    </div>
-                  </Reveal>
-                  <Reveal delay={0.3}>
-                    <div className="mt-12 flex flex-col gap-4">
-                      <h3 className="text-[24px] md:text-[28px] font-medium leading-[1.2]">What Strong Outdoor Work Looks Like</h3>
-                      <div className="text-[16px] md:text-[18px] text-[#4a4a4a] leading-[1.6] space-y-4 text-justify">
-                        <p>One clear idea. Not five features, not a tagline and a list and a phone number and a website.</p>
-                        <p>Type that works at thirty metres. High contrast. A visual hierarchy obvious from a moving vehicle, not just a screen mockup.</p>
-                        <p>Something honest. Ahmedabad has seen every trick. What earns attention is a brand that says something direct and true. That&apos;s rarer than it should be, which is why it still works.</p>
                       </div>
                     </div>
                   </Reveal>

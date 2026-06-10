@@ -33,6 +33,13 @@ export interface CaseStudyData {
   showcaseImage4Alt?: string;
   showcaseImage5?: string;
   showcaseImage5Alt?: string;
+  showcaseImage6?: string;
+  showcaseImage6Alt?: string;
+  gallery?: {
+    src: string;
+    alt?: string;
+    cols?: 1 | 2 | 3;
+  }[];
   quote?: string;
   heroHeaderTheme?: 'light' | 'dark';
   stats?: {
@@ -296,12 +303,26 @@ A coherent identity can communicate reliability before a single specification is
     additionalSection: `The brand needed an identity and packaging system capable of expressing quality, trust, and tradition without appearing outdated.`,
     heroImageAlt: 'Bhaktinandan cold-pressed oil brand identity by Pragyan — D2C food branding',
     heroImage: '/Bhaktinandan-hero.webp',
-    showcaseImage1Alt: 'Bhaktinandan cold-pressed oil packaging design by Pragyan Ahmedabad',
-    showcaseImage1: '/bhaktinandan-oil.webp',
-    showcaseImage2Alt: 'Bhaktinandan brand lifestyle photography — traditional oils, modern identity',
-    showcaseImage2: '/bhaktinandan-mood.webp',
-    showcaseImage3Alt: 'Bhaktinandan logo design and visual identity system by Pragyan',
-    showcaseImage3: '/bhaktinandan-logo.webp',
+    gallery: [
+      { src: '/bhaktinandan-oil.webp', alt: 'Bhaktinandan cold-pressed oil packaging design by Pragyan Ahmedabad', cols: 1 },
+      { src: '/bhaktinandan-mood.webp', alt: 'Bhaktinandan brand lifestyle photography — traditional oils, modern identity', cols: 2 },
+      { src: '/bhaktinandan-logo.webp', alt: 'Bhaktinandan logo design and visual identity system by Pragyan', cols: 2 },
+      { src: '/Almond oil.webp', alt: '', cols: 3 },
+      { src: '/Flax seeds oil.webp', alt: '', cols: 3 },
+      { src: '/Mustard oil.webp', alt: '', cols: 3 },
+      { src: '/White sesame oil.webp', alt: '', cols: 2 },
+      { src: '/Safflower oil.webp', alt: '', cols: 2 },
+      { src: '/Kalonji oil.webp', alt: '', cols: 3 },
+      { src: '/Groundnut oil.webp', alt: '', cols: 3 },
+      { src: '/Coconut oil.webp', alt: '', cols: 3 },
+      { src: '/Castor oil.webp', alt: '', cols: 2 },
+      { src: '/Black sesame oil.webp', alt: '', cols: 2 },
+      { src: '/Sunflower oil.webp', alt: '', cols: 1 },
+
+
+
+
+    ],
     outcomesSection: {
       title: 'The Result: A Cohesive Premium Brand Presence Across All Packaging',
       text: `The rebrand created a more cohesive and premium brand presence across packaging and communication materials.`

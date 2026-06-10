@@ -74,42 +74,17 @@ export default function Home() {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "Pragyan",
-            "description": "Branding and brand strategy agency in Ahmedabad helping founders build meaningful brands.",
+            "description": "Brand strategy and branding agency in Ahmedabad for founders and growing businesses",
             "url": "https://www.mypragyan.com",
             "telephone": "+919998081399",
             "email": "connect@mypragyan.com",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "A-607, Money Plant High Street, SG Highway",
+              "streetAddress": "A-607, Money Planet High Street, SG Highway",
               "addressLocality": "Ahmedabad",
-              "addressRegion": "Gujarat",
-              "postalCode": "382470",
               "addressCountry": "IN"
             },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 23.0225,
-              "longitude": 72.5714
-            },
-            "sameAs": [
-              "https://www.linkedin.com/company/pragyan"
-            ],
-            "serviceArea": {
-              "@type": "Country",
-              "name": "India"
-            },
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Branding & Marketing Services",
-              "itemListElement": [
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brand Strategy" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Identity & Expression" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Content & Communication" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Digital Marketing" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Personal Branding & LinkedIn" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "OOH Advertising" } }
-              ]
-            }
+            "sameAs": ["https://www.linkedin.com/company/mypragyan"]
           })
         }}
       />
