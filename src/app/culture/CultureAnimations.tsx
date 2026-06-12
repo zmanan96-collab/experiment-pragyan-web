@@ -33,6 +33,13 @@ export default function CultureAnimations() {
         0
       );
 
+      // Animate the black bg band symmetrically while Section 2 is active/scrolled
+      tl.fromTo('#culture-mission-bg',
+        { scaleY: 0 },
+        { scaleY: 1.0, ease: 'none' },
+        0
+      );
+
       // Section 3 slides up over Section 2
       tl.fromTo('#culture-features-section',
         { yPercent: 100 },
@@ -52,6 +59,24 @@ export default function CultureAnimations() {
         { yPercent: 100 },
         { yPercent: 0, ease: 'none' },
         3
+      );
+    });
+
+    // ── MOBILE ACTIONS (< 768px) ──
+    mm.add('(max-width: 767px)', () => {
+      // Standard scale scroll animation for black bg on mobile
+      gsap.fromTo('#culture-mission-bg',
+        { scaleY: 0 },
+        {
+          scrollTrigger: {
+            trigger: '#culture-mission-section',
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: true,
+          },
+          scaleY: 1.0,
+          ease: 'none',
+        }
       );
     });
 

@@ -51,18 +51,21 @@ export default function Culture() {
                 </div>
               </section>
 
-              <section id="culture-mission-section" className="md:absolute md:top-0 md:left-0 md:h-[100vh] h-auto bg-white text-black pt-[clamp(80px,10vw,140px)] pb-[clamp(80px,10vw,140px)] md:pt-[90px] md:pb-0 md:flex md:flex-col md:justify-center relative overflow-hidden z-[15] w-full border-t border-[#E5E5E7]" aria-labelledby="mission-h">
-                <div className="wrap flex flex-col items-center text-center justify-center h-full">
-                  <Reveal>
-                    <p className="text-[clamp(22px,2.2vw,30px)] font-medium leading-[1.3] text-black block max-w-[900px] mx-auto text-center mb-10 md:mb-12">
-                      We&apos;re building a place where thoughtful people can do meaningful work, grow in their craft, and contribute to something larger than themselves.
-                    </p>
-                  </Reveal>
-                  <Reveal delay={0.1}>
-                    <Button href="/inquiry" variant="on-white" className="min-w-[245px] md:min-w-[200px] justify-center text-nav-label tracking-[0.2em] !py-[15px] md:!py-[12px] uppercase mx-auto">
-                      JOIN THE TEAM
-                    </Button>
-                  </Reveal>
+              <section id="culture-mission-section" className="md:absolute md:top-0 md:left-0 md:h-[100vh] h-auto bg-white text-white pt-[clamp(80px,10vw,140px)] pb-[clamp(80px,10vw,140px)] md:pt-[90px] md:pb-0 md:flex md:flex-col md:justify-center relative overflow-hidden z-[15] w-full border-t border-[#E5E5E7]" aria-labelledby="mission-h">
+                <div className="w-full relative h-[70vh] md:h-[60vh] md:min-h-[400px] flex flex-col justify-center overflow-hidden">
+                  <div id="culture-mission-bg" className="absolute inset-0 bg-black z-0" style={{ transformOrigin: 'center center' }} />
+                  <div className="wrap flex flex-col items-start text-left justify-center h-full relative z-10 px-4 md:px-0 md:-translate-x-[10vw] md:-translate-y-12">
+                    <Reveal>
+                      <p className="text-[clamp(22px,2.2vw,30px)] font-medium leading-[1.3] text-white block max-w-[900px] mb-10 md:mb-12">
+                        We&apos;re building a place where thoughtful people can do meaningful work, grow in their craft, and contribute to something larger than themselves.
+                      </p>
+                    </Reveal>
+                    <Reveal delay={0.1}>
+                      <Button href="/inquiry" variant="primary" className="min-w-[245px] md:min-w-[200px] justify-center text-nav-label tracking-[0.2em] !py-[15px] md:!py-[12px] uppercase">
+                        JOIN THE TEAM
+                      </Button>
+                    </Reveal>
+                  </div>
                 </div>
               </section>
 

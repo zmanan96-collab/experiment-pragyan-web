@@ -38,13 +38,13 @@ function buildLUT(shift: number) {
     if (p < 0) p = 0; if (p > 1) p = 1;
     return [p, s[1], s[2], s[3]];
   });
-  
+
   for (let i = 0; i < LUT_SIZE; i++) {
     const n = i / (LUT_SIZE - 1);
     let r = 0, g = 0, b = 0;
-    
-    if (n <= stops[0][0]) { 
-      r = stops[0][1]; g = stops[0][2]; b = stops[0][3]; 
+
+    if (n <= stops[0][0]) {
+      r = stops[0][1]; g = stops[0][2]; b = stops[0][3];
     }
     else if (n >= stops[stops.length - 1][0]) {
       const last = stops[stops.length - 1];
@@ -66,7 +66,7 @@ function buildLUT(shift: number) {
     lut[off + 1] = g;
     lut[off + 2] = b;
   }
-  
+
   // limit cache size to avoid unbounded growth
   if (Object.keys(lutCache).length > 32) lutCache = Object.create(null);
   lutCache[key] = lut;
@@ -75,10 +75,10 @@ function buildLUT(shift: number) {
 
 // roundRect polyfill for older Safari etc.
 function roundRect(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, r: number) {
-  if (ctx.roundRect) { 
-    ctx.beginPath(); 
-    ctx.roundRect(x, y, w, h, r); 
-    return; 
+  if (ctx.roundRect) {
+    ctx.beginPath();
+    ctx.roundRect(x, y, w, h, r);
+    return;
   }
   if (r > w * 0.5) r = w * 0.5;
   if (r > h * 0.5) r = h * 0.5;
@@ -161,7 +161,7 @@ export default function PragyanGradient({
       const dx = Math.sin(t * 0.9) * 0.012 + Math.sin(t * 0.45) * 0.005;
       const dy = Math.sin(t * 0.7 + 1.1) * 0.008;
       const dR = 1 + Math.sin(t * 0.55) * 0.014;
-      
+
       // Quantise shift to LUT cache buckets so we reuse the same LUT for many frames.
       const rawShift = Math.sin(t * 0.6) * 0.004;
       const bandShift = Math.round(rawShift * 1000) / 1000;
@@ -181,7 +181,7 @@ export default function PragyanGradient({
       const actualGap = cell * gap;
       const tile = cell - actualGap;
       const actualCorner = tile * corner;
-      
+
       // Centre the grid so cells straddle the canvas symmetrically.
       const ox = -cell * 0.5;
       const oy = -cell * 0.5;
@@ -198,13 +198,13 @@ export default function PragyanGradient({
           const dxC = xC - cx;
           const n = Math.sqrt(dxC * dxC + dyC2) * invR;
           if (n >= 1) continue;
-          
+
           const idx = (n * lutMax) | 0;
           const off = idx * 3;
           const R = lut[off], G = lut[off + 1], B = lut[off + 2];
-          
+
           if (R < 4 && G < 4 && B < 12) continue;  // skip near-black inner cells
-          
+
           ctx.fillStyle = `rgb(${R},${G},${B})`;
           roundRect(ctx, xC - halfTile, yC - halfTile, tile, tile, actualCorner);
           ctx.fill();
@@ -256,10 +256,10 @@ export default function PragyanGradient({
   }, [cell, gap, corner, centerX, centerY, arcR, speed, bg, pauseOffscreen, respectReducedMotion]);
 
   return (
-    <canvas 
-      ref={canvasRef} 
+    <canvas
+      ref={canvasRef}
       className={`block w-full h-full ${className}`}
-      aria-hidden="true" 
+      aria-hidden="true"
     />
   );
 }
