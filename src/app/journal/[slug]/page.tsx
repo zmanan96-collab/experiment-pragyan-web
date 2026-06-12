@@ -13,71 +13,71 @@ const posts: Record<string, any> = {
     h1: "Branding for Manufacturing Companies — Why Industrial Businesses Can't Ignore Brand Anymore",
     date: 'June, 2026',
     author: 'Pragyan',
-    heroImage: '/journal/journal_1_manufacturing.png',
+    heroImage: '/journal/ARK Fabrication Works.webp',
   },
   'brand-identity-design-ahmedabad': {
     title: 'Brand Identity Design in Ahmedabad — What It Is, What It Costs, and How to Get It Right | Pragyan',
     description: 'A guide to brand identity design in Ahmedabad — what a complete identity system includes, what separates a logo from a brand, and what to look for in a local agency.',
     h1: 'Brand Identity Design in Ahmedabad — What Most Businesses Are Getting Wrong',
-    date: 'June, 2026',
+    date: 'May, 2026',
     author: 'Pragyan',
-    heroImage: '/journal/journal_2_brand_identity.png',
+    heroImage: '/journal/blog-2.webp',
   },
   'personal-branding-agencies-india': {
     title: 'Personal Branding Agencies in India — What They Do and Whether You Need One | Pragyan',
     description: 'Personal branding agencies in India — what they actually do, what separates strategic work from content production, and what founders should look for before investing.',
     h1: 'Personal Branding Agencies in India — What They Actually Do and What Most Get Wrong',
-    date: 'June, 2026',
+    date: 'April, 2026',
     author: 'Pragyan',
-    heroImage: '/journal/journal_3_personal_branding.png',
+    heroImage: '/journal/blog-3.webp',
   },
   'ooh-advertising-ahmedabad': {
     title: 'OOH Advertising in Ahmedabad — What Works, What Doesn\'t, and How to Brief an Agency | Pragyan',
     description: 'A practical guide to OOH advertising in Ahmedabad — what formats work, what most outdoor campaigns get wrong, and how to brief a design agency for maximum impact.',
     h1: 'OOH Advertising in Ahmedabad — What Most Campaigns Get Wrong',
-    date: 'June, 2026',
+    date: 'March, 2026',
     author: 'Pragyan',
-    heroImage: '/journal/journal_4_ooh.png',
+    heroImage: '/journal/blog-4.webp',
   },
   'build-brand-as-founder': {
     title: 'How to Build a Brand as a Founder — What Actually Matters and Where to Start | Pragyan',
     description: "Most founders think about brand too late. Here's how to build a brand as a founder — what matters, what doesn't, and what to do first.",
     h1: 'How to Build a Brand as a Founder — Stop Starting With the Logo',
-    date: 'June, 2026',
+    date: 'Feb, 2026',
     author: 'Pragyan',
-    heroImage: '/journal/journal_5_founder_brand.png',
+    heroImage: '/journal/blog-5.webp',
   },
   'linkedin-personal-branding-india': {
     title: "LinkedIn Personal Branding in India — A Founder's Practical Guide | Pragyan",
     description: "How to build a personal brand on LinkedIn in India — profile, content, positioning, and strategy. Practical guidance for founders who want real outcomes, not just followers.",
     h1: "LinkedIn Personal Branding in India — What's Actually Working Right Now",
-    date: 'June, 2026',
+    date: 'Feb, 2026',
     author: 'Pragyan',
-    heroImage: '/journal/journal_6_linkedin.png',
+    heroImage: '/journal/Panda Security.webp',
   },
   'visual-identity-design-india': {
     title: 'Visual Identity Design in India — What It Actually Includes and How to Evaluate an Agency | Pragyan',
     description: 'A guide to visual identity design in India — what a complete identity system includes, the difference between a logo and a brand, and what to look for before hiring an agency.',
     h1: 'Visual Identity Design in India — What Most Businesses Are Actually Missing',
-    date: 'June, 2026',
+    date: 'Jan, 2026',
     author: 'Pragyan',
-    heroImage: '/journal/journal_7_visual_identity.png',
+    heroImage: '/journal/blog-7.webp',
   },
   'personal-brand-consultant-india': {
     title: 'Personal Brand Consultant in India — What They Do and How to Find the Right One | Pragyan',
     description: "Looking for a personal brand consultant in India? Here's what the work actually involves, who needs it, and what to look for before investing.",
     h1: 'Personal Brand Consultant in India — What the Work Actually Involves',
-    date: 'June, 2026',
+    date: 'Jan, 2026',
     author: 'Pragyan',
-    heroImage: '/journal/journal_8_consultant.png',
+    heroImage: '/journal/blog-8.webp',
   },
   'brand-guidelines-design': {
     title: "Brand Guidelines Design — What They Are, What's Inside, and Why You Need Them | Pragyan",
     description: "Brand guidelines tell your team and vendors how to use your brand correctly. Here's what to include in brand guidelines design, and why every growing business needs them.",
     h1: 'Brand Guidelines Design — The Thing Most Businesses Skip and Then Regret',
-    date: 'June, 2026',
+    date: 'Jan, 2026',
     author: 'Pragyan',
-    heroImage: '/journal/journal_9.png',
+    heroImage: '/journal/Google Guidelines - The Rivalry.webp',
   }
 };
 
@@ -151,19 +151,20 @@ export default async function JournalPostPage({ params }: PageProps) {
             </p>
 
             <p>
-              A procurement manager gets your name from someone. Sounds promising. Before they call you back, they Google you. Check your website. Maybe scroll your LinkedIn. Takes two minutes. And in those two minutes, they&apos;ve already decided how serious you are.
+              A procurement manager gets your name from someone. Sounds promising. Before they call you back, they Google you. They check your website. Maybe scroll through your LinkedIn. It takes two minutes.
+              And in those two minutes, they&apos;ve already started forming an opinion about how serious your business is.
             </p>
 
             <p>
-              If your website looks like it was built in 2014 and hasn&apos;t been touched since, that&apos;s the impression. If your brochure looks like every other manufacturer in your category, you&apos;re already behind. Not because your product is bad. Because your brand didn&apos;t show up when it needed to.
+              If your website looks like it hasn't been updated in years, that becomes part of the impression. If your brochure looks like every other manufacturer in your category, you're already blending in. Not because your product isn't good enough. But because your brand didn't show up when it needed to.
             </p>
 
-            <p className="text-2xl md:text-3xl font-medium leading-snug tracking-tight my-10">
-              The brand is doing the first meeting now. Whether you built one or not.
+            <p className="text-xl md:text-2xl font-medium leading-snug tracking-tight my-10">
+              The brand is doing the first meeting now.<br /> Whether you built one or not.
             </p>
 
             <p>
-              This is what Pragyan does as a branding agency for manufacturing companies — and why it matters now more than it did five years ago. We&apos;re based in Ahmedabad and have worked with manufacturers across Gujarat and India.
+              This is why branding matters for manufacturing companies today more than it did five years ago — and why industrial businesses can no longer afford to treat communication as an afterthought.
             </p>
 
             <hr className="my-12 border-gray-200" />
@@ -173,23 +174,32 @@ export default async function JournalPostPage({ params }: PageProps) {
             </h2>
 
             <p>
-              Most founders I talk to in manufacturing say the same thing. &ldquo;Our reputation is built on relationships. The product speaks for itself.&rdquo;
+              Most founders we speak to in manufacturing say the same thing:<br />
+              &ldquo;Our reputation is built on relationships. The product speaks for itself.&rdquo;
             </p>
 
             <p>
-              That&apos;s true. And it&apos;s also not the full picture anymore.
+              They&apos;re not wrong.<br />
+              Relationships still matter. Product quality still matters. Operational excellence still matters.
             </p>
 
             <p>
-              Your existing clients know you. They&apos;ve seen your plant, met your team, seen the quality firsthand. You don&apos;t need to convince them.
+              But the context has changed.<br />
+              Your existing clients already know you. They&apos;ve visited your facility, met your team, and experienced the quality of your work firsthand.
             </p>
 
             <p>
-              But every new buyer who finds you without a referral is forming a judgment before a single conversation. They&apos;re looking at your website, your collateral, your LinkedIn. And if what they see looks generic or outdated, they&apos;re already discounting you. Even if your product is better than everyone else&apos;s.
+              New buyers haven&apos;t.<br />
+              Before reaching out, they&apos;re researching suppliers online. They&apos;re reviewing websites, brochures, LinkedIn profiles, and every publicly available touchpoint they can find.
             </p>
 
             <p>
-              The relationship still matters. But the brand is what gets you into the room to build one.
+              If what they discover feels outdated, inconsistent, or generic, they&apos;re making assumptions before the first conversation even begins.
+            </p>
+
+            <p>
+              The relationship still closes the deal.<br />
+              But increasingly, the brand is what gets you into the room to build one.
             </p>
 
             <hr className="my-12 border-gray-200" />
@@ -199,42 +209,48 @@ export default async function JournalPostPage({ params }: PageProps) {
             </h2>
 
             <p>
-              Most creative agencies get this wrong.
+              Branding for manufacturing businesses comes with its own set of challenges.<br />
+              Industrial products are often technical by nature. Explaining why a precision-engineered component performs better than another isn&apos;t always straightforward. The communication has to remain accessible without oversimplifying what makes the product valuable.
             </p>
 
             <p>
-              Your product is technical. Explaining what makes a precision-engineered component better than the next one is genuinely hard to communicate without watering it down. Most creatives either oversimplify it or miss the point entirely.
+              You&apos;re also communicating with multiple stakeholders.<br />
+              Procurement teams care about reliability and pricing.<br />
+              Plant heads focus on technical performance.<br />
+              Distributors evaluate market potential.<br />
+              Investors may look at entirely different indicators.<br />
+              A strong industrial brand creates consistency across these conversations without losing clarity.
             </p>
 
             <p>
-              You&apos;re also talking to multiple people. Procurement, plant heads, distributors, investors. They care about different things. A good brand holds all of it together without sounding scattered.
+              There&apos;s another challenge too.<br />
+              Many competitors in manufacturing categories present themselves in remarkably similar ways. Similar websites. Similar claims about quality and service. Similar brochures that haven&apos;t evolved in years.
             </p>
 
             <p>
-              And most of your competitors look identical. Go look at ten industrial company websites right now. Same factory floor photos. Same taglines about &ldquo;quality and reliability.&rdquo; Same PDF brochures that haven&apos;t been updated in years.
+              That similarity creates opportunity.<br />
+              A manufacturing company with clear positioning, thoughtful communication, and consistent branding immediately stands apart.
             </p>
 
             <p>
-              That&apos;s not a problem. That&apos;s a gap.
-            </p>
-
-            <p>
-              A manufacturing branding agency that understands B2B knows how to close that gap — without losing the technical credibility your buyers expect.
+              Not because it&apos;s louder.<br />
+              Because it&apos;s easier to trust.
             </p>
 
             <hr className="my-12 border-gray-200" />
 
             <h2 className="text-[24px] md:text-[32px] font-bold text-black tracking-tight mt-16 mb-6">
-              What We&apos;ve Done for Manufacturing Companies
+              What This Looks Like in Practice
             </h2>
 
             <div className="space-y-12">
               <div>
                 <p className="mb-4">
-                  <strong className="font-bold text-black">ATC Chains India</strong> had built a real reputation over decades. The product was serious. The brand didn&apos;t show it. Buyers finding them online had no way of knowing how established the company was.
+                  <strong className="font-bold text-black">ATC Chains India</strong><br />
+                  ATC Chains India had built credibility over decades through product quality and long-term relationships. The expertise was real. The challenge was making that credibility visible to buyers discovering the business online.
                 </p>
                 <p className="mb-4">
-                  We built a full brand strategy and identity system. New visual identity, brand kit, LinkedIn content that put their leadership in front of the right people in the conveyor industry. Eight months in, the brand was consistent across every channel.
+                  We developed a complete brand strategy and communication system, including visual identity assets and LinkedIn content focused on industry expertise. Over time, the company established a more consistent and professional presence across customer touchpoints.
                 </p>
                 <Link href="/work/atc-chains-india" className="text-[#4b3fd4] font-bold uppercase tracking-widest text-xs hover:underline decoration-2 underline-offset-4">
                   Read the case study →
@@ -243,10 +259,11 @@ export default async function JournalPostPage({ params }: PageProps) {
 
               <div>
                 <p className="mb-4">
-                  <strong className="font-bold text-black">Shreeji Enterprise</strong> had a quality product and outdated collateral that wasn&apos;t supporting their sales conversations. Architects and contractors were meeting them and then going home to materials that didn&apos;t match the credibility of the company.
+                  <strong className="font-bold text-black">Shreeji Enterprise</strong><br />
+                  Shreeji Enterprise had a strong product offering, but its brand materials weren&apos;t supporting sales conversations effectively.
                 </p>
                 <p className="mb-4">
-                  We built a complete brand identity for manufacturers like them — a full identity system and a brochure that could sit on any decision-maker&apos;s desk and hold its own.
+                  We developed a visual identity system and supporting collateral that reflected the professionalism already present within the business. The result was a stronger and more confident presentation across proposals, brochures, and client interactions.
                 </p>
                 <Link href="/work/shreeji-enterprise" className="text-[#4b3fd4] font-bold uppercase tracking-widest text-xs hover:underline decoration-2 underline-offset-4">
                   Read the case study →
@@ -255,10 +272,11 @@ export default async function JournalPostPage({ params }: PageProps) {
 
               <div>
                 <p className="mb-4">
-                  <strong className="font-bold text-black">Yash Engineers India</strong> were losing ground in conversations with technical buyers because their materials looked generic. The capability was there. The communication wasn&apos;t matching it.
+                  <strong className="font-bold text-black">Yash Engineers</strong><br />
+                  Yash Engineers manufactures specialised machinery for the metal processing industry. The capability was there. The communication wasn&apos;t reflecting it.
                 </p>
                 <p className="mb-4">
-                  We cleaned up their collateral and communication. Cleaner information, more confident positioning.
+                  We redesigned brochures and supporting materials to improve clarity, structure, and professionalism, helping the company communicate more effectively with technical decision-makers.
                 </p>
                 <Link href="/work/yash-engineers-india" className="text-[#4b3fd4] font-bold uppercase tracking-widest text-xs hover:underline decoration-2 underline-offset-4">
                   Read the case study →
@@ -267,10 +285,11 @@ export default async function JournalPostPage({ params }: PageProps) {
 
               <div>
                 <p className="mb-4">
-                  <strong className="font-bold text-black">Bhavya Srishti Udyog</strong> had a harder problem. Bamboo as an industrial material isn&apos;t something most buyers have seriously considered. The brand had to build awareness and credibility at the same time.
+                  <strong className="font-bold text-black">Bhavya Srishti Udyog</strong><br />
+                  Bhavya Srishti Udyog operates within an emerging category where awareness and credibility needed to be built simultaneously.
                 </p>
                 <p className="mb-4">
-                  We built their identity and a LinkedIn strategy focused on the founder&apos;s voice. Eight weeks: 12,504 impressions, 7,712 accounts reached, 683 link clicks.
+                  We developed the brand identity and communication framework while supporting founder visibility through LinkedIn and strategic content. The objective wasn&apos;t simply visibility. It was helping people understand why the category itself mattered.
                 </p>
                 <Link href="/work/bhavya-srishti-udyog" className="text-[#4b3fd4] font-bold uppercase tracking-widest text-xs hover:underline decoration-2 underline-offset-4">
                   Read the case study →
@@ -285,19 +304,28 @@ export default async function JournalPostPage({ params }: PageProps) {
             </h2>
 
             <p>
-              It&apos;s not flashy. Nobody in B2B manufacturing needs flashy.
+              Good manufacturing branding isn&apos;t flashy.<br />
+              It doesn&apos;t rely on trends or exaggerated claims.<br />
+              Instead, it creates consistency.
             </p>
 
             <p>
-              It looks consistent whether someone picks up your printed brochure at a trade show or finds you on LinkedIn at 11pm. It uses clear language that technical buyers respect. No vague claims, no marketing fluff. Just a brand that makes one thing obvious: this company takes its work seriously.
+              The company someone discovers through a LinkedIn post should feel like the same company they encounter at a trade exhibition.<br />
+              The brochure should reflect the same standards visible in the production process.<br />
+              The website should communicate the same level of professionalism clients experience during meetings.
             </p>
 
             <p>
-              Good manufacturing company brand design works equally well on a website, a LinkedIn profile, a trade show backdrop, and a printed brochure. It looks like the same company in all of them. That consistency is what builds credibility over time.
+              Strong industrial branding uses language technical audiences respect.<br />
+              It communicates expertise without unnecessary complexity.<br />
+              And it reinforces one important message:<br />
+              This is a business that takes its work seriously.
             </p>
 
             <p>
-              The companies we&apos;ve worked with didn&apos;t change what they do. They changed how they&apos;re perceived. And that changed who wants to work with them.
+              The manufacturers we&apos;ve worked with didn&apos;t fundamentally change what they do.<br />
+              They changed how clearly other people understood it.<br />
+              And that changed how they were perceived.
             </p>
 
             <hr className="my-12 border-gray-200" />
@@ -307,19 +335,56 @@ export default async function JournalPostPage({ params }: PageProps) {
             </h2>
 
             <p>
-              We start by looking at where you actually are. Your current brand, your competitors, and the gap between how you&apos;re perceived and where you want to be. We talk to your sales team. We look at what buyers actually see when they find you.
+              The process begins with understanding where the business stands today.<br />
+              We review existing communication, evaluate competitive positioning, and identify the gap between how the company is currently perceived and how it wants to be perceived.
             </p>
 
             <p>
-              Positioning comes before any design. What you stand for, who you&apos;re for, what makes you the right choice over someone else.
+              Positioning comes first.<br />
+              Who are you for?<br />
+              What do you stand for?<br />
+              Why should someone choose you over another supplier?<br />
+              Only after those questions are answered does design begin.
             </p>
 
             <p>
-              Then the work: visual identity, collateral, digital presence, LinkedIn strategy. Applied across the touchpoints that matter most to your buyers.
+              From there, the work expands into the touchpoints that influence buyer perception:<br />
+              &bull; Brand identity systems<br />
+              &bull; Brochures and sales collateral<br />
+              &bull; Website communication<br />
+              &bull; LinkedIn strategy<br />
+              &bull; Exhibition and presentation materials
             </p>
 
             <p>
-              For manufacturers specifically, we spend extra time learning the product. The technical language your buyers use. The objections your sales team faces. That understanding is what separates B2B branding India agencies that get manufacturing from those that don&apos;t.
+              For manufacturing businesses specifically, understanding the product is essential.<br />
+              The technical language.<br />
+              The sales process.<br />
+              The objections buyers raise.<br />
+              Because effective communication starts with understanding what you&apos;re actually communicating.
+            </p>
+
+            <h2 className="text-[24px] md:text-[32px] font-bold text-black tracking-tight mt-16 mb-6">
+              The Bottom Line
+            </h2>
+
+            <p>
+              Manufacturing companies have never competed on branding alone.<br />
+              They compete on quality, reliability, expertise, and relationships.<br />
+              That hasn&apos;t changed.
+            </p>
+
+            <p>
+              What has changed is how people decide who deserves their attention in the first place.<br />
+              Before the factory visit comes the Google search.<br />
+              Before the sales meeting comes the LinkedIn profile.<br />
+              Before someone picks up your brochure at an exhibition, they&apos;ve often already formed an impression.
+            </p>
+
+            <p>
+              The businesses recognising this shift aren&apos;t becoming marketing companies.<br />
+              They&apos;re simply ensuring that the reputation they&apos;ve built over years of work is visible to the people they&apos;re trying to reach.<br />
+              Because if your brand is already doing the first meeting, it should represent you well.
             </p>
 
             <hr className="my-12 border-gray-200" />
@@ -331,27 +396,27 @@ export default async function JournalPostPage({ params }: PageProps) {
             <div className="space-y-8">
               <div>
                 <h3 className="font-bold text-black mb-2 text-[19px]">Do you work with smaller manufacturers?</h3>
-                <p>Most of our manufacturing clients are SMEs. If you make a quality product and want your brand to reflect that, size doesn&apos;t change much.</p>
+                <p>Yes. Many manufacturing businesses are SMEs. If you produce quality work and want your brand to reflect that, company size matters far less than clarity of intent.</p>
               </div>
 
               <div>
                 <h3 className="font-bold text-black mb-2 text-[19px]">Can you help with trade show materials?</h3>
-                <p>Yes. Backdrops, standees, handouts, AV presentations. The brand should look the same whether someone finds you on LinkedIn or walks past your stand at an exhibition.</p>
+                <p>Yes. We create exhibition backdrops, standees, brochures, AV presentations, and supporting collateral designed to maintain consistency across every touchpoint.</p>
               </div>
 
               <div>
-                <h3 className="font-bold text-black mb-2 text-[19px]">How long does it take?</h3>
-                <p>A full brand identity project is typically 6 to 10 weeks from strategy to delivery. Collateral and digital work is scoped separately.</p>
+                <h3 className="font-bold text-black mb-2 text-[19px]">How long does a branding project take?</h3>
+                <p>A complete brand identity project typically takes between six and ten weeks, depending on the scope. Additional communication and marketing requirements are planned separately.</p>
               </div>
 
               <div>
                 <h3 className="font-bold text-black mb-2 text-[19px]">Do you understand technical products?</h3>
-                <p>We make it our job to. Every project starts with a discovery phase where we learn your product, your process, and the language your buyers actually use. We don&apos;t design until we understand what we&apos;re communicating.</p>
+                <p>We make it a priority to understand what we&apos;re communicating before creating anything. Every project begins with discovery — learning the product, the process, and the language buyers actually use.</p>
               </div>
 
               <div>
                 <h3 className="font-bold text-black mb-2 text-[19px]">Are you a manufacturing branding agency based in India?</h3>
-                <p>Yes. Pragyan is based in Ahmedabad, Gujarat. We work with manufacturers across India — from local SMEs to companies with national distribution.</p>
+                <p>Yes. Pragyan is based in Ahmedabad, Gujarat, and works with manufacturing businesses across India, from regional SMEs to companies serving national markets.</p>
               </div>
             </div>
 
@@ -373,97 +438,118 @@ export default async function JournalPostPage({ params }: PageProps) {
         {slug === 'brand-identity-design-ahmedabad' && (
           <>
             <p>
-              Ahmedabad has a serious business culture. Manufacturing corridors, D2C brands, schools, startups — the ecosystem here is genuinely active.
+              Ahmedabad has a serious business culture.<br />
+              Manufacturing corridors, D2C brands, schools, startups — the ecosystem here is genuinely active.<br />
+              But when it comes to brand identity design in Ahmedabad, many businesses are still approaching it as a one-time creative task rather than a long-term business asset.
             </p>
 
             <p>
-              But when it comes to brand identity design in Ahmedabad, most businesses are stuck at step one.
+              They have a logo. Usually designed quickly, chosen from a few options, and launched without much thought about how it will function across the years ahead.<br />
+              Then, over time, the same questions start appearing.<br />
+              Why does the website look different from the brochure?<br />
+              Why do different vendors interpret the brand differently?<br />
+              Why does the business feel inconsistent depending on where people encounter it?
             </p>
 
-            <p>
-              They have a logo. Usually designed quickly, chosen from a few options, and launched without much thought. And then years later they wonder why their brand looks inconsistent everywhere, why vendors keep getting the colours wrong, why the website looks nothing like the brochure.
-            </p>
-
-            <p className="text-2xl md:text-3xl font-medium leading-snug tracking-tight my-10">
-              That&apos;s not a logo problem. It&apos;s a visual identity problem. And it&apos;s fixable.
+            <p className="text-xl md:text-2xl font-medium leading-snug tracking-tight my-10">
+              Most of the time, that&apos;s not a logo problem.<br />
+              It&apos;s a visual identity problem.<br />
+              And it&apos;s fixable.
             </p>
 
             <hr className="my-12 border-gray-200" />
 
-            <h2 className="text-[22px] md:text-[28px] font-bold text-black tracking-tight mt-16 mb-6">
-              Most Ahmedabad Businesses Are Underbranded
+            <h2 className="text-[24px] md:text-[32px] font-bold text-black tracking-tight mt-16 mb-6">
+              Most Businesses Are Underbranded
             </h2>
 
             <p>
-              Not because the quality isn&apos;t there. Because brand identity has always felt like something you do after you&apos;ve made it. Not something that helps you get there.
+              Not because the quality isn&apos;t there.<br />
+              Because brand identity has traditionally been treated as something you invest in after you&apos;ve grown, rather than something that supports growth in the first place.<br />
+              That thinking can become expensive.
             </p>
 
             <p>
-              That thinking is expensive.
-            </p>
-
-            <p>
-              Buyers, partners, and investors make decisions based on digital signals now. A serious business that looks generic gets treated like one. The gap between how good your business is and how good it looks has real commercial consequences — especially when you&apos;re competing beyond your existing relationships.
+              Buyers, partners, and investors increasingly form opinions through digital signals before they ever step into a meeting.<br />
+              A serious business that looks generic risks being perceived as one.<br />
+              The gap between how good your business is and how professional it appears has real commercial consequences — especially when you&apos;re competing beyond referrals and existing relationships.
             </p>
 
             <hr className="my-12 border-gray-200" />
 
-            <h2 className="text-[22px] md:text-[28px] font-bold text-black tracking-tight mt-16 mb-6">
+            <h2 className="text-[24px] md:text-[32px] font-bold text-black tracking-tight mt-16 mb-6">
               A Logo Is Not a Brand Identity
             </h2>
 
             <p>
-              This is worth saying plainly because a lot of clients come to us after being burned by this exact misunderstanding.
+              This is worth saying clearly because many businesses come to us after experiencing this exact challenge.<br />
+              A logo is one asset.<br />
+              A brand identity is a system.
             </p>
 
             <p>
-              A logo is one file. A brand identity is a system.
+              The system includes:<br />
+              &bull; A logo designed to work across multiple applications and formats.<br />
+              &bull; A colour palette with clearly defined digital and print specifications.<br />
+              &bull; Typography systems that establish hierarchy and consistency.<br />
+              &bull; Visual elements that shape how imagery and graphics are used.<br />
+              &bull; Brand guidelines that help every designer, printer, developer, and team member make consistent decisions.
             </p>
 
             <p>
-              The system includes a logo with multiple versions for different contexts. A colour palette with the exact codes for print and digital — not &ldquo;sort of navy blue,&rdquo; the actual HEX, RGB, and CMYK values. A typography system — your heading font and body font, how they&apos;re sized and used. An imagery style that guides every photo and visual decision your team makes for years. And a brand guidelines document that holds all of it together.
-            </p>
-
-            <p>
-              Without the system, every designer who works with you makes different decisions. The cumulative result is a brand that looks different everywhere it appears. That inconsistency erodes trust in ways most business owners don&apos;t realise until they&apos;re deep into a pitch and something feels off.
+              Without these systems, every new touchpoint becomes a fresh interpretation of the brand.<br />
+              Over time, those inconsistencies accumulate.<br />
+              And inconsistency quietly erodes trust.
             </p>
 
             <hr className="my-12 border-gray-200" />
 
-            <h2 className="text-[22px] md:text-[28px] font-bold text-black tracking-tight mt-16 mb-6">
+            <h2 className="text-[24px] md:text-[32px] font-bold text-black tracking-tight mt-16 mb-6">
               How We Approach Brand Identity Design
             </h2>
 
             <p>
-              We don&apos;t open a design file until we understand the business.
+              We don&apos;t begin with design software.<br />
+              We begin with understanding.<br />
+              What does the business do?<br />
+              Who is it trying to reach?<br />
+              What alternatives are customers considering?<br />
+              How should people feel when they encounter the brand?
             </p>
 
             <p>
-              What you do, who you&apos;re competing with, who your buyers are, and what they need to feel when they encounter your brand. Every visual decision has to come from a strategic reason — not personal taste, not what looks trendy right now.
+              Every visual decision should have a reason behind it.<br />
+              Not personal preference.<br />
+              Not whatever happens to be trending.<br />
+              A strategic reason.
             </p>
 
             <p>
-              Then we present visual directions. Different ways the identity could look and feel, each grounded in a clear rationale. You choose a direction. We build from there.
+              Once the strategic direction is clear, we explore visual territories — different ways the identity could express the same underlying idea.<br />
+              From there, we build the system:<br />
+              &bull; Logo variations<br />
+              &bull; Colour architecture<br />
+              &bull; Typography systems<br />
+              &bull; Supporting visual elements<br />
+              &bull; Brand guidelines
             </p>
 
             <p>
-              Logo system, colour, typography, supporting visual elements. Then the brand guidelines document. A clean, usable reference that keeps the brand consistent whether we&apos;re involved or not.
-            </p>
-
-            <p>
-              That last part matters. The guidelines are what make the investment last.
+              Because the value of identity isn&apos;t just in creating something beautiful.<br />
+              It&apos;s in creating something usable and consistent for years to come.
             </p>
 
             <hr className="my-12 border-gray-200" />
 
-            <h2 className="text-[22px] md:text-[28px] font-bold text-black tracking-tight mt-16 mb-6">
-              Brand Identity Work We&apos;ve Done in Ahmedabad and Gujarat
+            <h2 className="text-[24px] md:text-[32px] font-bold text-black tracking-tight mt-16 mb-6">
+              Brand Identity Work We&apos;ve Done Across Ahmedabad and Gujarat
             </h2>
 
             <div className="space-y-12">
               <div>
                 <p className="mb-4">
-                  <strong className="font-bold text-black">ATC Chains India</strong> — a conveyor component manufacturer that needed a brand as credible as their engineering. The brief was to close the gap between how good the product was and how the company looked online.
+                  <strong className="font-bold text-black">ATC Chains India</strong><br />
+                  A conveyor component manufacturer with decades of engineering expertise that needed a brand presence capable of reflecting its credibility.
                 </p>
                 <Link href="/work/atc-chains-india" className="text-[#4b3fd4] font-bold uppercase tracking-widest text-xs hover:underline decoration-2 underline-offset-4">
                   View case study →
@@ -472,7 +558,8 @@ export default async function JournalPostPage({ params }: PageProps) {
 
               <div>
                 <p className="mb-4">
-                  <strong className="font-bold text-black">Shreeji Enterprise</strong> — an engineered roofing company whose identity now supports every sales conversation their team has. Before, the materials didn&apos;t match the quality of the product. Now they do.
+                  <strong className="font-bold text-black">Shreeji Enterprise</strong><br />
+                  An engineered roofing company whose identity system now supports sales conversations with greater confidence and consistency.
                 </p>
                 <Link href="/work/shreeji-enterprise" className="text-[#4b3fd4] font-bold uppercase tracking-widest text-xs hover:underline decoration-2 underline-offset-4">
                   View case study →
@@ -481,7 +568,8 @@ export default async function JournalPostPage({ params }: PageProps) {
 
               <div>
                 <p className="mb-4">
-                  <strong className="font-bold text-black">Global Guardians School</strong> — a school whose brand now communicates its values clearly to the parents it serves, not just the facilities it offers.
+                  <strong className="font-bold text-black">Global Guardians School</strong><br />
+                  A school that needed its philosophy and values translated into a visual identity parents could recognise and trust.
                 </p>
                 <Link href="/work/global-guardians-school" className="text-[#4b3fd4] font-bold uppercase tracking-widest text-xs hover:underline decoration-2 underline-offset-4">
                   View case study →
@@ -490,7 +578,8 @@ export default async function JournalPostPage({ params }: PageProps) {
 
               <div>
                 <p className="mb-4">
-                  <strong className="font-bold text-black">Bhavya Srishti Udyog</strong> — a sustainable bamboo manufacturer with an identity that communicates both innovation and environmental commitment to an audience that&apos;s new to the category.
+                  <strong className="font-bold text-black">Bhavya Srishti Udyog</strong><br />
+                  A sustainable bamboo manufacturer building credibility within an emerging category through strategic identity and communication.
                 </p>
                 <Link href="/work/bhavya-srishti-udyog" className="text-[#4b3fd4] font-bold uppercase tracking-widest text-xs hover:underline decoration-2 underline-offset-4">
                   View case study →
@@ -499,7 +588,8 @@ export default async function JournalPostPage({ params }: PageProps) {
 
               <div>
                 <p className="mb-4">
-                  <strong className="font-bold text-black">Bhaktinandan</strong> — a traditional cold-pressed oil brand with packaging design that earns trust on the shelf and tells the story without needing a paragraph to do it.
+                  <strong className="font-bold text-black">Bhaktinandan</strong><br />
+                  A traditional cold-pressed oil brand whose packaging and identity system helped modernise perception without losing authenticity.
                 </p>
                 <Link href="/work/bhaktinandan" className="text-[#4b3fd4] font-bold uppercase tracking-widest text-xs hover:underline decoration-2 underline-offset-4">
                   View case study →
@@ -509,57 +599,85 @@ export default async function JournalPostPage({ params }: PageProps) {
 
             <hr className="my-12 border-gray-200" />
 
-            <h2 className="text-[22px] md:text-[28px] font-bold text-black tracking-tight mt-16 mb-6">
-              Why a Local Agency Makes a Difference
+            <h2 className="text-[24px] md:text-[32px] font-bold text-black tracking-tight mt-16 mb-6">
+              Why Working With a Local Agency Matters
             </h2>
 
             <p>
-              We understand how business works in Gujarat. The values that matter here — trust, craft, substance over flash — shape how we think about brand identity design. We don&apos;t apply a generic template to every project.
+              Understanding context matters.<br />
+              Business culture in Gujarat often values substance over spectacle, long-term relationships over short-term wins, and clarity over unnecessary complexity.<br />
+              Those values influence how brands are built and how trust is earned.
             </p>
 
             <p>
-              We can also meet in person. Strategy sessions and creative reviews are better face to face. We&apos;re based on SG Highway.
-            </p>
-
-            <p>
-              And we&apos;ve worked nationally. Ugaoo, Cityflo, and other brands outside Gujarat are in our portfolio. Local doesn&apos;t mean limited.
+              Being based in Ahmedabad also allows for in-person workshops, strategy sessions, and collaborative reviews when needed.<br />
+              At the same time, geography doesn&apos;t limit the work.<br />
+              We&apos;ve partnered with organisations across India, adapting our process to businesses operating in very different markets and categories.<br />
+              Local understanding and broader perspective can coexist.
             </p>
 
             <hr className="my-12 border-gray-200" />
 
-            <h2 className="text-[22px] md:text-[28px] font-bold text-black tracking-tight mt-16 mb-6">
+            <h2 className="text-[24px] md:text-[32px] font-bold text-black tracking-tight mt-16 mb-6">
+              The Bottom Line
+            </h2>
+
+            <p>
+              A strong visual identity doesn&apos;t exist to make a business look fashionable.<br />
+              It exists to make the business recognisable, credible, and consistent.
+            </p>
+
+            <p>
+              Because people don&apos;t encounter brands in a single place anymore.<br />
+              They encounter them on websites.<br />
+              On packaging.<br />
+              Through presentations.<br />
+              At exhibitions.<br />
+              Across social media.<br />
+              And every one of those moments contributes to how the business is perceived.
+            </p>
+
+            <p>
+              The businesses that invest in identity early aren&apos;t doing it for aesthetics alone.<br />
+              They&apos;re building systems that support trust at every stage of growth.<br />
+              Because if people are forming impressions before the first conversation, your brand should help you make the right one.
+            </p>
+
+            <hr className="my-12 border-gray-200" />
+
+            <h2 className="text-[24px] md:text-[32px] font-bold text-black tracking-tight mt-16 mb-6">
               Frequently Asked Questions
             </h2>
 
             <div className="space-y-8">
               <div>
                 <h3 className="font-bold text-black mb-2 text-[19px]">How much does brand identity design cost in Ahmedabad?</h3>
-                <p>Every project is scoped based on what you actually need. Some clients need a full identity system with collateral. Others need a focused rebrand. We give you a clear scope and number once we understand the requirements. <Link href="/inquiry" className="text-[#4b3fd4] font-medium hover:underline">Start here.</Link></p>
+                <p>Every project is scoped based on what the business actually needs. Some require a complete identity system with collateral and guidelines. Others need a focused rebrand. Once we understand the scope, we provide a clear proposal and investment estimate.</p>
               </div>
 
               <div>
                 <h3 className="font-bold text-black mb-2 text-[19px]">Do you work outside Ahmedabad?</h3>
-                <p>Yes. Most of our process works well remotely. We have clients in Mumbai, Delhi, Bangalore, and beyond.</p>
+                <p>Yes. While we&apos;re based in Ahmedabad, we work with clients across India through a combination of remote collaboration and in-person sessions when required.</p>
               </div>
 
               <div>
                 <h3 className="font-bold text-black mb-2 text-[19px]">What industries do you work in?</h3>
-                <p>Manufacturing, D2C and FMCG, education, consumer goods. Our approach adapts to the industry and the audience.</p>
+                <p>Our experience spans manufacturing, education, D2C and FMCG brands, consumer businesses, and emerging categories. The process remains strategic while adapting to each audience and industry.</p>
               </div>
 
               <div>
                 <h3 className="font-bold text-black mb-2 text-[19px]">Can you redesign an existing identity?</h3>
-                <p>Yes. We start with an audit of what exists before recommending what to evolve and what to replace.</p>
+                <p>Yes. We begin by understanding what currently exists, identifying what&apos;s working, and recommending what should evolve and what should change.</p>
               </div>
 
               <div>
                 <h3 className="font-bold text-black mb-2 text-[19px]">How long does a brand identity project take?</h3>
-                <p>Typically 6 to 10 weeks from strategy to final guidelines delivery. Depends on scope and how quickly feedback cycles move.</p>
+                <p>Most identity projects take between six and ten weeks from discovery through final guideline delivery, depending on complexity and feedback cycles.</p>
               </div>
 
               <div>
                 <h3 className="font-bold text-black mb-2 text-[19px]">What makes Pragyan different from other brand identity designers in Ahmedabad?</h3>
-                <p>We start with strategy, not design. Most identity projects fail because the design came before the thinking. We do it in the right order — positioning and strategic direction first, then visual identity, then guidelines.</p>
+                <p>We begin with strategy rather than aesthetics.<br />Understanding positioning, audience perception, and business objectives before designing allows the identity to become more than a visual exercise.<br />It becomes a tool that supports recognition, consistency, and long-term growth.</p>
               </div>
             </div>
 
@@ -611,7 +729,7 @@ export default async function JournalPostPage({ params }: PageProps) {
               The shift is already happening across India. Founders who show up consistently on LinkedIn are closing deals that never go to tender. Building partnerships over DMs. Attracting talent that approaches them. Walking into investor meetings with people who already believed in them before the first call.
             </p>
 
-            <p className="text-2xl md:text-3xl font-medium leading-snug tracking-tight my-10">
+            <p className="text-xl md:text-2xl font-medium leading-snug tracking-tight my-10">
               None of that happens by accident.
             </p>
 
@@ -788,7 +906,7 @@ export default async function JournalPostPage({ params }: PageProps) {
               The problem isn&apos;t the design. The design came before the strategy. That&apos;s the only problem.
             </p>
 
-            <p className="text-2xl md:text-3xl font-medium leading-snug tracking-tight my-10">
+            <p className="text-xl md:text-2xl font-medium leading-snug tracking-tight my-10">
               If you&apos;re figuring out how to build a brand as a founder — whether you&apos;re starting fresh or fixing something that&apos;s not working — here&apos;s the order that actually makes sense.
             </p>
 
@@ -1056,7 +1174,7 @@ export default async function JournalPostPage({ params }: PageProps) {
               Three seconds to say something that sticks. Most OOH advertising in Ahmedabad wastes those three seconds completely. As an OOH advertising agency in Ahmedabad, we see the same mistakes repeat — too much copy, too many elements, no single clear idea. The hoarding exists but doesn&apos;t communicate.
             </p>
 
-            <p className="text-2xl md:text-3xl font-medium leading-snug tracking-tight my-10">
+            <p className="text-xl md:text-2xl font-medium leading-snug tracking-tight my-10">
               This is what we&apos;ve learned from actually doing this work, and what you should know before briefing any agency.
             </p>
 
@@ -1267,7 +1385,7 @@ export default async function JournalPostPage({ params }: PageProps) {
               For founders and senior professionals, LinkedIn personal branding in India is no longer optional if you&apos;re serious about building visibility that converts to real outcomes.
             </p>
 
-            <p className="text-2xl md:text-3xl font-medium leading-snug tracking-tight my-10">
+            <p className="text-xl md:text-2xl font-medium leading-snug tracking-tight my-10">
               And the bar for standing out is still surprisingly low.
             </p>
 
@@ -1506,7 +1624,7 @@ export default async function JournalPostPage({ params }: PageProps) {
               That&apos;s not a logo problem. It&apos;s a visual identity problem.
             </p>
 
-            <p className="text-2xl md:text-3xl font-medium leading-snug tracking-tight my-10">
+            <p className="text-xl md:text-2xl font-medium leading-snug tracking-tight my-10">
               As a visual identity design agency in India working with businesses across Ahmedabad and beyond, we see this pattern constantly. And it&apos;s always more expensive to fix than it would have been to build right the first time.
             </p>
 
@@ -1725,7 +1843,7 @@ export default async function JournalPostPage({ params }: PageProps) {
               A personal brand consultant in India helps you take control of that perception — deliberately, strategically, in a way that creates real professional outcomes. Not just more followers. Actual outcomes: inbound leads, faster deal cycles, investor attention, speaking invitations, talent that approaches you.
             </p>
 
-            <p className="text-2xl md:text-3xl font-medium leading-snug tracking-tight my-10">
+            <p className="text-xl md:text-2xl font-medium leading-snug tracking-tight my-10">
               Here&apos;s what the work actually involves, who it&apos;s for, and what to look for before you invest.
             </p>
 
@@ -1926,7 +2044,7 @@ export default async function JournalPostPage({ params }: PageProps) {
               If the answer is &quot;I&apos;m not sure,&quot; you need brand guidelines.
             </p>
 
-            <p className="text-2xl md:text-3xl font-medium leading-snug tracking-tight my-10">
+            <p className="text-xl md:text-2xl font-medium leading-snug tracking-tight my-10">
               Brand guidelines design is the step that makes everything else sustainable. It&apos;s the document that holds your brand together and tells anyone who ever touches it — designers, vendors, employees, agencies, printers — exactly how to use it correctly.
             </p>
 

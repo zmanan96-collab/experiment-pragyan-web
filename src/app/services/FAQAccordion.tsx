@@ -23,7 +23,7 @@ export default function FAQAccordion({ faqs }: { faqs: FAQItem[] }) {
                 className="w-full flex items-center justify-between text-left group cursor-pointer"
                 onClick={() => setOpenIndex(isOpen ? null : idx)}
               >
-                <h3 className="text-[20px] md:text-[24px] text-white transition-colors duration-300 group-hover:text-[#A1A1AA]">
+                <h3 className="text-[20px] md:text-[24px] font-normal text-white transition-colors duration-300 group-hover:text-[#A1A1AA]">
                   {faq.question}
                 </h3>
                 <div className="relative w-6 h-6 shrink-0 flex items-center justify-center ml-4">

@@ -19,7 +19,7 @@ export default function CultureAnimations() {
           id: 'culture-deck-trigger',
           trigger: '#culture-deck-container',
           start: 'top top',
-          end: '+=300%', // 3 transitions
+          end: '+=400%', // 4 transitions
           pin: true,
           pinSpacing: true,
           scrub: 1.2,
@@ -27,24 +27,31 @@ export default function CultureAnimations() {
       });
 
       // Section 2 slides up over Section 1
-      tl.fromTo('#culture-features-section',
+      tl.fromTo('#culture-mission-section',
         { yPercent: 100 },
         { yPercent: 0, ease: 'none' },
         0
       );
 
       // Section 3 slides up over Section 2
-      tl.fromTo('#culture-benefits-section',
+      tl.fromTo('#culture-features-section',
         { yPercent: 100 },
         { yPercent: 0, ease: 'none' },
         1
       );
 
       // Section 4 slides up over Section 3
-      tl.fromTo('#culture-cta-section',
+      tl.fromTo('#culture-benefits-section',
         { yPercent: 100 },
         { yPercent: 0, ease: 'none' },
         2
+      );
+
+      // Section 5 slides up over Section 4
+      tl.fromTo('#culture-cta-section',
+        { yPercent: 100 },
+        { yPercent: 0, ease: 'none' },
+        3
       );
     });
 

@@ -46,20 +46,23 @@ export default function Culture() {
                           <p>And the experiences we gather outside of work shape the perspectives we bring into it.</p>
                         </div>
                       </Reveal>
-                      <Reveal delay={0.2} className="relative z-10">
-                        <div className="flex flex-col gap-10 md:gap-12 items-start max-[880px]:items-center mt-4">
-                          <Button href="/inquiry" variant="on-white" className="min-w-[245px] md:min-w-[200px] justify-center text-nav-label tracking-[0.2em] !py-[15px] md:!py-[12px] uppercase">
-                            JOIN THE TEAM
-                          </Button>
-                          <p className="text-[clamp(22px,2.2vw,30px)] font-medium leading-[1.3] text-black block max-w-[1200px] text-center max-[880px]:text-center md:text-left">
-                            <span className="block md:inline md:whitespace-nowrap">We&apos;re building a place where thoughtful people can do</span> <br className="hidden md:block" />
-                            <span className="block md:inline md:whitespace-nowrap">meaningful work, grow in their craft, and contribute to</span> <br className="hidden md:block" />
-                            something larger than themselves.
-                          </p>
-                        </div>
-                      </Reveal>
                     </div>
                   </div>
+                </div>
+              </section>
+
+              <section id="culture-mission-section" className="md:absolute md:top-0 md:left-0 md:h-[100vh] h-auto bg-white text-black pt-[clamp(80px,10vw,140px)] pb-[clamp(80px,10vw,140px)] md:pt-[90px] md:pb-0 md:flex md:flex-col md:justify-center relative overflow-hidden z-[15] w-full border-t border-[#E5E5E7]" aria-labelledby="mission-h">
+                <div className="wrap flex flex-col items-center text-center justify-center h-full">
+                  <Reveal>
+                    <p className="text-[clamp(22px,2.2vw,30px)] font-medium leading-[1.3] text-black block max-w-[900px] mx-auto text-center mb-10 md:mb-12">
+                      We&apos;re building a place where thoughtful people can do meaningful work, grow in their craft, and contribute to something larger than themselves.
+                    </p>
+                  </Reveal>
+                  <Reveal delay={0.1}>
+                    <Button href="/inquiry" variant="on-white" className="min-w-[245px] md:min-w-[200px] justify-center text-nav-label tracking-[0.2em] !py-[15px] md:!py-[12px] uppercase mx-auto">
+                      JOIN THE TEAM
+                    </Button>
+                  </Reveal>
                 </div>
               </section>
 

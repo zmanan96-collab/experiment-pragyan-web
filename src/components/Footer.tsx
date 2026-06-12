@@ -64,7 +64,7 @@ export default function Footer() {
                 ) : pathname === '/about' ? (
                   <p className="text-main-desc text-[#D9D9D9] mb-4 md:mb-6 md:whitespace-nowrap text-center md:text-left">
                     If our way of thinking resonates with you, we&apos;d love to hear what you&apos;re building. <br className="hidden md:block" />
-                    Whether you&apos;re shaping a new idea or evolving an existing one, let&apos;s explore how we can work together.
+                    Whether you&apos;re shaping a new idea or evolving an existing one, let&apos;s explore how we can work <span className="italic font-light">together.</span>
                   </p>
                 ) : pathname === '/culture' ? (
                   <p className="text-main-desc text-[#D9D9D9] mb-4 md:mb-6 text-center md:text-left">
@@ -74,7 +74,7 @@ export default function Footer() {
                   </p>
                 ) : (
                   <p className="text-main-desc text-[#D9D9D9] mb-4 md:mb-6 md:whitespace-nowrap text-center md:text-left">
-                    Whether you&apos;re starting from scratch or refining what already exists, <br className="hidden md:block" /> we&apos;d love to hear what you&apos;re building. <br className="hidden md:block" />Reach out, and we&apos;ll explore where it can go together.
+                    Whether you&apos;re starting from scratch or refining what already exists, <br className="hidden md:block" /> we&apos;d love to hear what you&apos;re building. <br className="hidden md:block" />Reach out, and we&apos;ll explore where it can go <span className="italic font-light">together.</span>
                   </p>
                 )}
                 {pathname !== '/culture' && (

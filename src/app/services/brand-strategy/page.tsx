@@ -16,156 +16,262 @@ export default function BrandStrategyPage() {
       <div id="smooth-wrapper" className="smooth-wrapper w-full bg-white">
         <div id="smooth-content" className="smooth-content w-full relative">
           <main className="min-h-screen bg-white text-[#1a1a1a] pt-[120px] md:pt-[160px] pb-24 md:pb-32 px-6 md:px-12 lg:px-[8vw]">
+            <div className="max-w-[1400px] mx-auto flex flex-col gap-16 md:gap-20 relative">
 
-            <div className="max-w-[1600px] mx-auto flex flex-col lg:flex-row gap-12 lg:gap-24 relative">
-
-              {/* LEFT COLUMN - STICKY */}
-              <div className="w-full lg:w-[35%] lg:sticky lg:top-[160px] self-start">
-                <Reveal>
-                  <h1 className="text-[40px] md:text-[56px] lg:text-[72px] leading-[1.1] font-medium tracking-tight mb-6">
-                    Brand Strategy
-                  </h1>
-                </Reveal>
-
-                <Reveal delay={0.1}>
-                  <h2 className="text-[20px] md:text-[24px] leading-[1.3] text-[#4a4a4a] mb-8 font-medium">
-                    The idea everything else builds on.
-                  </h2>
-                </Reveal>
-
-                <Reveal delay={0.2}>
-                  <div className="text-[16px] md:text-[18px] leading-[1.5] text-[#4a4a4a] space-y-6">
-                    <p>
-                      Every strong brand starts with a clear point of view. Not a tagline. Not a mission statement written by committee. An actual perspective on what the business does, who it&apos;s for, and why it exists in the way it does.
-                    </p>
-                    <p>
-                      Strategy is the work of finding that. And then making it usable.
-                    </p>
-                    <p>
-                      Most founders have it. They just haven&apos;t put it into words yet. It comes out when they explain what they do to someone who gets it. It shows up in the clients they love working with. It&apos;s in the decisions they make without having to think too hard.
-                    </p>
-                    <p>
-                      Brand strategy takes that and gives it a form the rest of the brand can build from.
-                    </p>
-                  </div>
-                </Reveal>
-
-                <Reveal delay={0.3}>
-                  <div className="mt-12 flex flex-col gap-4">
-                    <h3 className="text-[24px] md:text-[28px] font-medium leading-[1.2]">Who It&apos;s For</h3>
-                    <div className="text-[16px] md:text-[18px] text-[#4a4a4a] leading-[1.6] space-y-4 text-justify">
-                      <p>Founders who are building something real and know their brand isn&apos;t reflecting it yet. People at a point of transition — launching, scaling, rebranding — where the old way of talking about the business no longer fits.</p>
-                      <p>If you&apos;ve found yourself saying &quot;it&apos;s hard to explain&quot; about your own company, that&apos;s usually a sign this work is needed.</p>
+              {/* ROW 1 */}
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
+                {/* Left Column */}
+                <div className="lg:col-span-4 flex flex-col gap-6">
+                  <Reveal>
+                    <h1 className="text-[48px] md:text-[56px] lg:text-[64px] leading-[1.1] font-medium tracking-tight">
+                      Brand<br />Strategy
+                    </h1>
+                  </Reveal>
+                  <Reveal delay={0.1}>
+                    <h2 className="text-[20px] md:text-[22px] leading-[1.3] text-[#6a6a6a] font-normal">
+                      The idea everything else builds on.
+                    </h2>
+                  </Reveal>
+                  <Reveal delay={0.2}>
+                    <div className="text-[14px] md:text-[15px] leading-[1.6] text-[#4a4a4a] space-y-5">
+                      <p>
+                        Every strong brand starts with a clear point of view. Not a tagline. Not a mission statement written by committee. An actual perspective on what the business does, who it&apos;s for, and why it exists in the way it does.
+                      </p>
+                      <p>
+                        Brand strategy is the work of uncovering that perspective — and making it useful.
+                      </p>
+                      <p>
+                        Most founders already have it. It shows up in the decisions they make instinctively, the clients they do their best work with, and the beliefs they hold about their industry. They just haven&apos;t had the time or distance to articulate it clearly.
+                      </p>
+                      <p>
+                        When that clarity exists, everything else becomes easier. Communication sharpens. Decisions become more consistent. Growth becomes more intentional.
+                      </p>
                     </div>
-                  </div>
-                </Reveal>
-              </div>
-
-              {/* RIGHT COLUMN - CONTENT */}
-              <div className="w-full lg:w-[65%] flex flex-col gap-12 md:gap-16 lg:pt-4">
-
-                {/* ROW 1: 2 Columns */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+                  </Reveal>
                   <Reveal delay={0.3}>
-                    <div className="flex flex-col gap-4">
-                      <h3 className="text-[24px] md:text-[28px] font-medium leading-[1.2]">What It Actually Does</h3>
-                      <div className="text-[16px] md:text-[18px] text-[#4a4a4a] leading-[1.6] space-y-4">
-                        <p>Most businesses can describe what they do. Fewer can explain why it matters. And very few can explain why someone should choose them over the obvious alternatives.</p>
-                        <p>That gap costs money. Every time a prospect doesn&apos;t quite get it, or picks a competitor because they sounded clearer, or asks &quot;so what exactly do you do?&quot; for the third time — that&apos;s the gap showing up.</p>
-                        <p>Strategy closes it. Not by inventing something that isn&apos;t there. By making visible what already is.</p>
-                      </div>
-                    </div>
-                  </Reveal>
-
-                  <Reveal delay={0.4}>
-                    <div className="flex flex-col gap-4">
-                      <h3 className="text-[24px] md:text-[28px] font-medium leading-[1.2]">How We Do It</h3>
-                      <div className="text-[16px] md:text-[18px] text-[#4a4a4a] leading-[1.6] space-y-4">
-                        <p>We talk first. A lot. About your business, your customers, what you&apos;ve tried, what&apos;s worked, what hasn&apos;t. The questions we ask tend to feel obvious — but they rarely get answered clearly.</p>
-                        <p>What do you believe about your category that most people in it don&apos;t? Who is this actually for? What does your best client say about you that you&apos;d never say about yourself?</p>
-                        <p>The answers are usually already there. We help you find them and then figure out what to do with them.</p>
-                      </div>
-                    </div>
-                  </Reveal>
-                </div>
-
-                {/* ROW 2: Horizontal */}
-                <Reveal delay={0.5}>
-                  <div className="w-full border-t border-b border-[#1a1a1a]/10 py-12 md:py-16">
-                    <h3 className="text-[28px] md:text-[36px] font-medium leading-[1.2] mb-10 text-center md:text-left">What We Work On</h3>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-                      <div className="flex flex-col gap-3">
-                        <h4 className="text-[20px] font-medium">Positioning</h4>
-                        <p className="text-[#4a4a4a] text-[16px] leading-[1.5]">
-                          Where your brand sits in the market, who it&apos;s for, and what makes it the right choice. This isn&apos;t a claim you make. It&apos;s a decision about what your business is and isn&apos;t.
-                        </p>
-                      </div>
-
-                      <div className="flex flex-col gap-3">
-                        <h4 className="text-[20px] font-medium">Research</h4>
-                        <p className="text-[#4a4a4a] text-[16px] leading-[1.5]">
-                          Understanding your audience, your category, and the competitive context you&apos;re operating in. Strategy built on assumptions tends to break when it meets reality.
-                        </p>
-                      </div>
-
-                      <div className="flex flex-col gap-3">
-                        <h4 className="text-[20px] font-medium">Communication Strategy</h4>
-                        <p className="text-[#4a4a4a] text-[16px] leading-[1.5]">
-                          How the positioning translates into what you actually say. What the message is. How it changes depending on who you&apos;re talking to. Where it needs to go.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </Reveal>
-
-                {/* ROW 3: 1 Column */}
-                <div className="grid grid-cols-1 gap-12 md:gap-16">
-                  <Reveal delay={0.6}>
-                    <div className="flex flex-col gap-4">
-                      <h3 className="text-[24px] md:text-[28px] font-medium leading-[1.2]">Where It Goes Next</h3>
-                      <div className="text-[16px] md:text-[18px] text-[#4a4a4a] leading-[1.6] space-y-4">
-                        <p>Strategy doesn&apos;t end with a document. Everything else in the brand comes from it.</p>
-                        <ul className="flex flex-col gap-3 mt-4">
-                          <li className="relative pl-4">
-                            <span className="absolute left-0 top-[11px] w-1.5 h-1.5 rounded-full bg-[#4a4a4a]"></span>
-                            <span>Identity & Expression</span>
-                            <span className="text-[14px] md:text-[16px] opacity-70 ml-1">— how the brand looks and feels</span>
-                          </li>
-                          <li className="relative pl-4">
-                            <span className="absolute left-0 top-[11px] w-1.5 h-1.5 rounded-full bg-[#4a4a4a]"></span>
-                            <span>Content & Communication</span>
-                            <span className="text-[14px] md:text-[16px] opacity-70 ml-1">— how it speaks</span>
-                          </li>
-                          <li className="relative pl-4">
-                            <span className="absolute left-0 top-[11px] w-1.5 h-1.5 rounded-full bg-[#4a4a4a]"></span>
-                            <span>Personal Branding & LinkedIn</span>
-                            <span className="text-[14px] md:text-[16px] opacity-70 ml-1">— how the founder&apos;s voice connects to it</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </Reveal>
-                </div>
-
-                {/* CALL TO ACTION */}
-                <Reveal delay={0.8}>
-                  <div className="mt-8 pt-12 border-t border-[#1a1a1a]/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
                     <Link
                       href="/inquiry"
-                      className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#1a1a1a] text-white rounded-full text-lg hover:bg-[#4B3FD4] transition-colors duration-300 group"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#1a1a1a] text-white rounded-full text-[14px] hover:bg-[#4B3FD4] transition-colors duration-300 group w-fit mt-4"
                     >
-                      Start a project
+                      Start a Conversation
                       <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
                     </Link>
+                  </Reveal>
+                </div>
 
-                    <p className="text-[14px] text-[#6a6a6a] italic max-w-[300px] text-left md:text-right">
-                      Pragyan is a brand strategy and communications agency based in Ahmedabad, India.
-                    </p>
-                  </div>
-                </Reveal>
-
+                {/* Right Column */}
+                <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-12 lg:pl-16">
+                  <Reveal delay={0.3}>
+                    <div className="flex flex-col gap-4">
+                      <h3 className="text-[20px] md:text-[22px] font-medium leading-[1.2]">Why It Matters</h3>
+                      <div className="text-[14px] md:text-[15px] text-[#4a4a4a] leading-[1.6] space-y-5">
+                        <p>Most businesses can explain what they do. Far fewer can explain why it matters. And even fewer can clearly answer why someone should choose them over the alternatives.</p>
+                        <p>That gap shows up in everyday moments: Prospects who almost understand but don&apos;t quite connect. Sales conversations that take longer than they should. Opportunities lost to competitors who simply sound clearer.</p>
+                        <p>Strategy closes that gap. Not by inventing something that isn&apos;t there, but by making visible what already is.</p>
+                      </div>
+                    </div>
+                  </Reveal>
+                  <Reveal delay={0.4}>
+                    <div className="flex flex-col gap-4">
+                      <h3 className="text-[20px] md:text-[22px] font-medium leading-[1.2]">How We Work</h3>
+                      <div className="text-[14px] md:text-[15px] text-[#4a4a4a] leading-[1.6] space-y-5">
+                        <p>We start with conversations. About the business, the people behind it, the customers you serve, and the decisions that have shaped where you are today.</p>
+                        <p>The questions are often simple: What do you believe about your category that others don&apos;t? Who benefits most from what you do? What do your best clients consistently value about working with you? What kind of work do you want more of?</p>
+                        <p>The answers are usually already present. Our role is to uncover them, organise them, and translate them into a strategic foundation the brand can grow from.</p>
+                      </div>
+                    </div>
+                  </Reveal>
+                </div>
               </div>
+
+              <div className="w-full h-px bg-[#1a1a1a]/10" />
+
+              {/* ROW 2 */}
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
+                {/* Left Column */}
+                <div className="lg:col-span-4 flex flex-col gap-5">
+                  <Reveal>
+                    <div className="w-8 h-8 mb-2">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full text-[#1a1a1a]">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-[20px] md:text-[22px] font-medium leading-[1.2]">Who It&apos;s For</h3>
+                    <div className="text-[14px] md:text-[15px] text-[#4a4a4a] leading-[1.6] space-y-4 mt-2">
+                      <p>Founders building something meaningful but struggling to express it. Businesses entering a new stage — launching, scaling, repositioning, or rebranding — where the old way of talking about the business no longer fits.</p>
+                      <p>If you&apos;ve ever found yourself saying, &quot;It&apos;s harder to explain than it should be,&quot; this work is probably relevant.</p>
+                    </div>
+                  </Reveal>
+                </div>
+
+                {/* Right Column */}
+                <div className="lg:col-span-8 lg:pl-16 flex flex-col gap-8">
+                  <Reveal delay={0.2}>
+                    <h3 className="text-[20px] md:text-[22px] font-medium leading-[1.2]">What We Work On</h3>
+                  </Reveal>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <Reveal delay={0.3} className="h-full">
+                      <div className="bg-[#FAF9F6] rounded-2xl p-8 flex flex-col gap-6 h-full border border-black/5">
+                        <div className="w-7 h-7">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full text-[#1a1a1a]">
+                            <circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" />
+                          </svg>
+                        </div>
+                        <div className="flex flex-col gap-3">
+                          <h4 className="text-[16px] font-medium text-[#1a1a1a]">Positioning</h4>
+                          <p className="text-[13px] text-[#6a6a6a] leading-[1.6]">Defining where your brand sits in the market, who it&apos;s for, and what makes it the right choice.</p>
+                        </div>
+                      </div>
+                    </Reveal>
+                    <Reveal delay={0.4} className="h-full">
+                      <div className="bg-[#FAF9F6] rounded-2xl p-8 flex flex-col gap-6 h-full border border-black/5">
+                        <div className="w-7 h-7">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full text-[#1a1a1a]">
+                            <circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" />
+                          </svg>
+                        </div>
+                        <div className="flex flex-col gap-3">
+                          <h4 className="text-[16px] font-medium text-[#1a1a1a]">Research</h4>
+                          <p className="text-[13px] text-[#6a6a6a] leading-[1.6]">Understanding your audience, category, and competitive landscape to ensure decisions are grounded in reality rather than assumptions.</p>
+                        </div>
+                      </div>
+                    </Reveal>
+                    <Reveal delay={0.5} className="h-full">
+                      <div className="bg-[#FAF9F6] rounded-2xl p-8 flex flex-col gap-6 h-full border border-black/5">
+                        <div className="w-7 h-7">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full text-[#1a1a1a]">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                            <line x1="9" y1="9" x2="15" y2="9" /><line x1="9" y1="13" x2="15" y2="13" />
+                          </svg>
+                        </div>
+                        <div className="flex flex-col gap-3">
+                          <h4 className="text-[16px] font-medium text-[#1a1a1a]">Communication Strategy</h4>
+                          <p className="text-[13px] text-[#6a6a6a] leading-[1.6]">Developing the messages, narratives, and frameworks that shape how your brand speaks across different audiences and contexts.</p>
+                        </div>
+                      </div>
+                    </Reveal>
+                  </div>
+                </div>
+              </div>
+
+              <div className="w-full h-px bg-[#1a1a1a]/10" />
+
+
+              {/* ROW 4 */}
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
+                {/* Left Column */}
+                <div className="lg:col-span-4 flex flex-col gap-4">
+                  <Reveal>
+                    <h3 className="text-[20px] md:text-[22px] font-medium leading-[1.2]">Where It Leads</h3>
+                    <div className="text-[14px] md:text-[15px] text-[#4a4a4a] leading-[1.6] mt-2 space-y-4">
+                      <p>Strategy isn&apos;t the final deliverable. It&apos;s the starting point.</p>
+                      <p>It informs how the brand looks, how it sounds, and how it shows up in the world. Because when the thinking is clear, everything built on top of it becomes stronger.</p>
+                    </div>
+                    <Link
+                      href="/work"
+                      className="inline-flex items-center gap-2 text-[#4B3FD4] hover:text-[#786CF0] font-medium text-[16px] md:text-[18px] transition-colors duration-300 group mt-6"
+                    >
+                      View our Project
+                      <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
+                    </Link>
+                  </Reveal>
+                </div>
+
+                {/* Right Column - Horizontal Cards */}
+                <div className="lg:col-span-8 lg:pl-16 flex flex-col md:flex-row items-center justify-between gap-4">
+                  <Reveal delay={0.2} className="w-full">
+                    <div className="bg-[#FAF9F6] rounded-2xl p-5 flex flex-col justify-center gap-4 w-full md:w-[150px] lg:w-[170px] h-[150px] border border-black/5">
+                      <div className="w-6 h-6">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full text-[#1a1a1a]">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
+                        </svg>
+                      </div>
+                      <div className="flex flex-col gap-1">
+                        <h4 className="text-[12px] font-medium text-[#1a1a1a] leading-[1.3]">Identity & Expression</h4>
+                        <p className="text-[10px] text-[#6a6a6a] leading-[1.3]">how the brand looks and feels</p>
+                      </div>
+                    </div>
+                  </Reveal>
+
+                  <Reveal delay={0.3} className="hidden md:flex items-center justify-center">
+                    <div className="text-[#1a1a1a]/40">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                    </div>
+                  </Reveal>
+
+                  <Reveal delay={0.4} className="w-full">
+                    <div className="bg-[#FAF9F6] rounded-2xl p-5 flex flex-col justify-center gap-4 w-full md:w-[150px] lg:w-[170px] h-[150px] border border-black/5">
+                      <div className="w-6 h-6">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full text-[#1a1a1a]">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+                        </svg>
+                      </div>
+                      <div className="flex flex-col gap-1">
+                        <h4 className="text-[12px] font-medium text-[#1a1a1a] leading-[1.3]">Content & Communication</h4>
+                        <p className="text-[10px] text-[#6a6a6a] leading-[1.3]">how it speaks</p>
+                      </div>
+                    </div>
+                  </Reveal>
+
+                  <Reveal delay={0.5} className="hidden md:flex items-center justify-center">
+                    <div className="text-[#1a1a1a]/40">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                    </div>
+                  </Reveal>
+
+                  <Reveal delay={0.6} className="w-full">
+                    <div className="bg-[#FAF9F6] rounded-2xl p-5 flex flex-col justify-center gap-4 w-full md:w-[150px] lg:w-[170px] h-[150px] border border-black/5">
+                      <div className="w-6 h-6">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full text-[#1a1a1a]">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+                        </svg>
+                      </div>
+                      <div className="flex flex-col gap-1">
+                        <h4 className="text-[12px] font-medium text-[#1a1a1a] leading-[1.3]">Digital Marketing</h4>
+                        <p className="text-[10px] text-[#6a6a6a] leading-[1.3]">how it reaches the right people</p>
+                      </div>
+                    </div>
+                  </Reveal>
+
+                  <Reveal delay={0.7} className="hidden md:flex items-center justify-center">
+                    <div className="text-[#1a1a1a]/40">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                    </div>
+                  </Reveal>
+
+                  <Reveal delay={0.8} className="w-full">
+                    <div className="bg-[#FAF9F6] rounded-2xl p-5 flex flex-col justify-center gap-4 w-full md:w-[150px] lg:w-[170px] h-[150px] border border-black/5">
+                      <div className="w-6 h-6">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full text-[#1a1a1a]">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                        </svg>
+                      </div>
+                      <div className="flex flex-col gap-1">
+                        <h4 className="text-[12px] font-medium text-[#1a1a1a] leading-[1.3]">Personal Branding & LinkedIn</h4>
+                        <p className="text-[10px] text-[#6a6a6a] leading-[1.3]">how the founder&apos;s voice connects to it</p>
+                      </div>
+                    </div>
+                  </Reveal>
+
+                </div>
+              </div>
+
+              <div className="w-full h-px bg-[#1a1a1a]/10" />
+
+              {/* QUOTE SECTION */}
+              <Reveal>
+                <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start py-4">
+                  <div className="text-[64px] leading-none font-serif text-[#1a1a1a]">“</div>
+                  <div className="flex flex-col gap-4 mt-2">
+                    <p className="text-[18px] md:text-[20px] font-medium text-[#1a1a1a]">
+                      Great brands rarely begin with answers.<br className="hidden md:block" />
+                      They begin with better questions.
+                    </p>
+                    <p className="text-[14px] text-[#6a6a6a]">— Pragyan</p>
+                  </div>
+                </div>
+              </Reveal>
+
             </div>
           </main>
         </div>

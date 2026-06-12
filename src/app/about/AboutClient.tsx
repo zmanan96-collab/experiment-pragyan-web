@@ -113,7 +113,7 @@ export default function AboutClient() {
                     <div className="max-w-[1020px] md:max-w-[900px] w-full text-center space-y-2 md:space-y-1 text-main-desc text-[#555]">
                       <p>We&rsquo;re curious by nature, ethical by choice, and practical in action.</p>
                       <p>We believe brands are ultimately built by people &mdash; shaped by their experiences, values, ambitions,<br className="hidden md:block" /> and ways of seeing the world.</p>
-                      <p className="md:whitespace-nowrap">That's why we take the time to understand what drives  &mdash; the work before deciding how the work should move forward.</p>
+                      <p className="md:whitespace-nowrap">That's why we take the time to understand what drives the work before deciding how the work should move forward.</p>
                       <p>Because when you understand the people behind a business, better decisions tend to follow.</p>
                     </div>
                   </Reveal>
@@ -161,7 +161,7 @@ export default function AboutClient() {
                       <div className="py-[clamp(35px,4vw,50px)] md:py-[clamp(20px,2vw,26px)] px-12 md:pl-10 lg:pl-12 xl:pl-14 md:pr-8 bg-[#222] flex flex-col justify-center min-h-[150px] md:min-h-[100px] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:bg-[#2a2a2a] cursor-default relative z-[1]">
                         <h3 className="sr-only">Built to Scale</h3>
                         <p className="text-card-title !font-light text-[#f5f5f5]" aria-hidden="true">We refine relentlessly.</p>
-                        <p className="text-card-title !font-light text-[#f5f5f5] mt-1" aria-hidden="true">And we don&rsquo;t settle for work that simply looks good.</p>
+                        <p className="text-card-title !font-light text-[#f5f5f5] mt-1" aria-hidden="true">And we don&rsquo;t settle for anything less than right.</p>
                       </div>
                     </div>
                   </Reveal>

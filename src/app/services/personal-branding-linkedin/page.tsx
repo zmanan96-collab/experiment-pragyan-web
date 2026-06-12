@@ -17,170 +17,272 @@ export default function PersonalBrandingLinkedInPage() {
         <div id="smooth-content" className="smooth-content w-full relative">
           <main className="min-h-screen bg-white text-[#1a1a1a] pt-[120px] md:pt-[160px] pb-24 md:pb-32 px-6 md:px-12 lg:px-[8vw]">
 
-            <div className="max-w-[1600px] mx-auto flex flex-col lg:flex-row gap-12 lg:gap-24 relative">
+            <div className="max-w-[1400px] mx-auto flex flex-col gap-16 md:gap-20 relative">
 
-              {/* LEFT COLUMN - STICKY */}
-              <div className="w-full lg:w-[35%] lg:sticky lg:top-[160px] self-start">
-                <Reveal>
-                  <h1 className="text-[40px] md:text-[56px] lg:text-[72px] leading-[1.1] font-medium tracking-tight mb-6">
-                    Personal Branding &amp; LinkedIn
-                  </h1>
-                </Reveal>
-
-                <Reveal delay={0.1}>
-                  <h2 className="text-[20px] md:text-[24px] leading-[1.3] text-[#4a4a4a] mb-8 font-medium">
-                    Building trust through people.
-                  </h2>
-                </Reveal>
-
-                <Reveal delay={0.2}>
-                  <div className="text-[16px] md:text-[18px] leading-[1.5] text-[#4a4a4a] space-y-6">
-                    <p>
-                      People connect with founders before they connect with companies. That&apos;s just how trust works.
-                    </p>
-                    <p>
-                      When a founder has a visible, consistent presence — when their thinking is out there and their credibility is clear — it changes how the business gets perceived. Potential clients arrive already warmed up. Investors have already formed a view. Partners know what they&apos;re walking into before the first meeting.
-                    </p>
-                    <p>
-                      A personal brand isn&apos;t a performance. It&apos;s just a clearer version of how you already think, expressed in a way other people can find and understand.
-                    </p>
-                  </div>
-                </Reveal>
-
-                <Reveal delay={0.3}>
-                  <div className="mt-12 flex flex-col gap-4">
-                    <h3 className="text-[24px] md:text-[28px] font-medium leading-[1.2]">What Good Personal Branding Looks Like</h3>
-                    <div className="text-[16px] md:text-[18px] text-[#4a4a4a] leading-[1.6] space-y-4 text-justify">
-                      <p>It doesn&apos;t look like personal branding.</p>
-                      <p>The founders who do it well aren&apos;t performing visibility. They&apos;re sharing things they actually think about and problems they&apos;re actually working on. The consistency comes from the strategy. The trust comes from the perspective being real.</p>
-                      <p>People follow them because it gives them something. Not because it&apos;s selling to them.</p>
+              {/* ROW 1 */}
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
+                {/* Left Column */}
+                <div className="lg:col-span-4 flex flex-col gap-6">
+                  <Reveal>
+                    <h1 className="text-[48px] md:text-[56px] lg:text-[64px] leading-[1.1] font-medium tracking-tight">
+                      Personal<br />Branding &amp;<br />LinkedIn
+                    </h1>
+                  </Reveal>
+                  <Reveal delay={0.1}>
+                    <h2 className="text-[20px] md:text-[22px] leading-[1.3] text-[#6a6a6a] font-normal">
+                      Building trust through people.
+                    </h2>
+                  </Reveal>
+                  <Reveal delay={0.2}>
+                    <div className="text-[14px] md:text-[15px] leading-[1.6] text-[#4a4a4a] space-y-5">
+                      <p>People often connect with founders before they connect with companies.</p>
+                      <p>The way you think, communicate, and show up publicly shapes how others perceive the business behind you. Potential clients begin to understand your approach. Partners gain confidence in who they&apos;re working with. Opportunities emerge through familiarity long before formal conversations begin.</p>
+                      <p>A personal brand isn&apos;t about becoming someone else.</p>
+                      <p>It&apos;s about making your experience, perspective, and expertise more visible to the people who would benefit from hearing it.</p>
                     </div>
-                  </div>
-                </Reveal>
-              </div>
-
-              {/* RIGHT COLUMN - CONTENT */}
-              <div className="w-full lg:w-[65%] flex flex-col gap-12 md:gap-16 lg:pt-4">
-
-                {/* ROW 1: 2 Columns */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+                  </Reveal>
                   <Reveal delay={0.3}>
-                    <div className="flex flex-col gap-4">
-                      <h3 className="text-[24px] md:text-[28px] font-medium leading-[1.2]">Why It Compounds</h3>
-                      <div className="text-[16px] md:text-[18px] text-[#4a4a4a] leading-[1.6] space-y-4">
-                        <p>The founders who do this well tend to be surprised by how much comes from it over time.</p>
-                        <p>Not immediately. Personal branding doesn&apos;t work in thirty days, despite what some agencies will tell you. But over six months, twelve months, two years — the visibility builds. The credibility accrues. And the opportunities that come in start to look different.</p>
-                        <p>People reach out already knowing what you do. Deals move faster. Hiring gets easier. Speaking invitations arrive. Not because you sold harder, but because you showed up consistently and said something real.</p>
-                      </div>
-                    </div>
-                  </Reveal>
-
-                  <Reveal delay={0.4}>
-                    <div className="flex flex-col gap-4">
-                      <h3 className="text-[24px] md:text-[28px] font-medium leading-[1.2]">How We Work</h3>
-                      <div className="text-[16px] md:text-[18px] text-[#4a4a4a] leading-[1.6] space-y-4">
-                        <p>We start by listening. To your background, your expertise, your goals, and how you actually think and communicate.</p>
-                        <p>The voice we help you build is yours. Not a polished version of it. Not a corporate approximation. The real perspective you bring to your work, in a form that lands with a professional audience.</p>
-                        <p>We handle the strategy and creative so you can show up consistently without spending three hours a week trying to figure out what to say.</p>
-                      </div>
-                    </div>
-                  </Reveal>
-                </div>
-
-                {/* ROW 2: Horizontal */}
-                <Reveal delay={0.5}>
-                  <div className="w-full border-t border-b border-[#1a1a1a]/10 py-12 md:py-16">
-                    <h3 className="text-[28px] md:text-[36px] font-medium leading-[1.2] mb-10 text-center md:text-left">What We Work On</h3>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-                      <div className="flex flex-col gap-3">
-                        <h4 className="text-[20px] font-medium">LinkedIn Strategy</h4>
-                        <p className="text-[#4a4a4a] text-[16px] leading-[1.5]">
-                          A strategy that defines who you&apos;re building a presence for, what you&apos;ll say, and how often. Built around your actual positioning, not a generic content calendar. Something that reflects where you are and where you&apos;re going.
-                        </p>
-                      </div>
-
-                      <div className="flex flex-col gap-3">
-                        <h4 className="text-[20px] font-medium">Personal Brand Positioning</h4>
-                        <p className="text-[#4a4a4a] text-[16px] leading-[1.5]">
-                          Before any content is created, we establish what space you occupy and what perspective makes you worth following. Positioning is what makes a personal brand coherent instead of just active.
-                        </p>
-                      </div>
-
-                      <div className="flex flex-col gap-3">
-                        <h4 className="text-[20px] font-medium">Profile Development</h4>
-                        <p className="text-[#4a4a4a] text-[16px] leading-[1.5]">
-                          Your LinkedIn profile is a landing page, not a resume. We rebuild every section — headline, about, featured — to communicate your value and credibility to the people you&apos;re trying to reach.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </Reveal>
-
-                {/* ROW 3: 1 Column (On LinkedIn Specifically) */}
-                <div className="grid grid-cols-1 gap-12 md:gap-16">
-                  <Reveal delay={0.6}>
-                    <div className="flex flex-col gap-4">
-                      <h3 className="text-[24px] md:text-[28px] font-medium leading-[1.2]">On LinkedIn Specifically</h3>
-                      <div className="text-[16px] md:text-[18px] text-[#4a4a4a] leading-[1.6] space-y-4">
-                        <p>For most Indian founders and senior professionals, LinkedIn is the best platform to build on right now. The audience is professional. Organic reach is still real. And the bar for genuinely good content — content that has a point of view and something honest to say — is low enough that showing up thoughtfully stands out.</p>
-                        <p>We&apos;ve built personal brand strategies and LinkedIn presences for founders across manufacturing, sustainability, consumer goods, and education.</p>
-                        <p className="pt-2">
-                          <Link href="/work/ganesh-verma" className="inline-flex items-center text-[#4B3FD4] hover:text-[#786CF0] font-medium transition-colors">
-                            &rarr; See the Ganesh Verma case study
-                          </Link>
-                        </p>
-                      </div>
-                    </div>
-                  </Reveal>
-                </div>
-
-                {/* ROW 4: 1 Column (Where It Connects) */}
-                <div className="grid grid-cols-1 gap-12 md:gap-16">
-                  <Reveal delay={0.7}>
-                    <div className="flex flex-col gap-4">
-                      <h3 className="text-[24px] md:text-[28px] font-medium leading-[1.2]">Where It Connects</h3>
-                      <div className="text-[16px] md:text-[18px] text-[#4a4a4a] leading-[1.6] space-y-4">
-                        <ul className="flex flex-col gap-3 mt-4">
-                          <li className="relative pl-4">
-                            <span className="absolute left-0 top-[11px] w-1.5 h-1.5 rounded-full bg-[#4a4a4a]"></span>
-                            <span>Brand Strategy</span>
-                            <span className="text-[14px] md:text-[16px] opacity-70 ml-1">— the company&apos;s perspective and positioning</span>
-                          </li>
-                          <li className="relative pl-4">
-                            <span className="absolute left-0 top-[11px] w-1.5 h-1.5 rounded-full bg-[#4a4a4a]"></span>
-                            <span>Content &amp; Communication</span>
-                            <span className="text-[14px] md:text-[16px] opacity-70 ml-1">— the broader voice the brand carries</span>
-                          </li>
-                          <li className="relative pl-4">
-                            <span className="absolute left-0 top-[11px] w-1.5 h-1.5 rounded-full bg-[#4a4a4a]"></span>
-                            <span>Social &amp; Community</span>
-                            <span className="text-[14px] md:text-[16px] opacity-70 ml-1">— the company&apos;s social presence alongside yours</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </Reveal>
-                </div>
-
-                {/* CALL TO ACTION */}
-                <Reveal delay={0.8}>
-                  <div className="mt-8 pt-12 border-t border-[#1a1a1a]/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
                     <Link
                       href="/inquiry"
-                      className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#1a1a1a] text-white rounded-full text-lg hover:bg-[#4B3FD4] transition-colors duration-300 group"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#1a1a1a] text-white rounded-full text-[14px] hover:bg-[#4B3FD4] transition-colors duration-300 group w-fit mt-4"
                     >
-                      Start a project
+                      Start a Conversation
                       <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
                     </Link>
+                  </Reveal>
+                </div>
 
-                    <p className="text-[14px] text-[#6a6a6a] italic max-w-[300px] text-left md:text-right">
-                      Pragyan is a brand strategy and communications agency based in Ahmedabad, India.
-                    </p>
-                  </div>
-                </Reveal>
-
+                {/* Right Column */}
+                <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-12 lg:pl-16">
+                  <Reveal delay={0.3}>
+                    <div className="flex flex-col gap-4">
+                      <h3 className="text-[20px] md:text-[22px] font-medium leading-[1.2]">Why It Matters</h3>
+                      <div className="text-[14px] md:text-[15px] text-[#4a4a4a] leading-[1.6] space-y-5">
+                        <p>Trust rarely begins at the first meeting anymore.</p>
+                        <p>People look you up. They read your profile, explore your work, and pay attention to how you think before deciding whether to reach out.</p>
+                        <p>A thoughtful personal brand helps reduce uncertainty. It gives people context. It demonstrates expertise. And it creates familiarity before a formal relationship ever begins.</p>
+                        <p>The effects are rarely immediate. But over time, consistency compounds. Conversations become warmer. Opportunities become more aligned. And the people finding you tend to already understand what you stand for.</p>
+                      </div>
+                    </div>
+                  </Reveal>
+                  <Reveal delay={0.4}>
+                    <div className="flex flex-col gap-4">
+                      <h3 className="text-[20px] md:text-[22px] font-medium leading-[1.2]">How We Work</h3>
+                      <div className="text-[14px] md:text-[15px] text-[#4a4a4a] leading-[1.6] space-y-5">
+                        <p>We begin by listening. To your experiences, your goals, the way you naturally communicate, and the ideas you return to repeatedly in your work.</p>
+                        <p>The aim isn&apos;t to manufacture a public persona. It&apos;s to uncover the perspective that&apos;s already there and help you express it more consistently.</p>
+                        <p>We support the strategic and creative process so you can build a meaningful presence without having to start from a blank page every week.</p>
+                      </div>
+                    </div>
+                  </Reveal>
+                </div>
               </div>
+
+              <div className="w-full h-px bg-[#1a1a1a]/10" />
+
+              {/* ROW 2 */}
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
+                {/* Left Column */}
+                <div className="lg:col-span-4 flex flex-col gap-5">
+                  <Reveal>
+                    <div className="w-8 h-8 mb-2">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full text-[#1a1a1a]">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-[20px] md:text-[22px] font-medium leading-[1.2]">Who It&apos;s For</h3>
+                    <div className="text-[14px] md:text-[15px] text-[#4a4a4a] leading-[1.6] space-y-4 mt-2">
+                      <p>Founders, business leaders, and professionals who have built meaningful experience but haven&apos;t yet translated it into a consistent public presence.</p>
+                      <p>People who want to contribute to conversations within their industry, build credibility over time, and create opportunities that extend beyond traditional networking.</p>
+                      <p>If people regularly tell you, &quot;You should share this more often,&quot; this work is probably relevant.</p>
+                    </div>
+                  </Reveal>
+                  <Reveal delay={0.2}>
+                    <div className="mt-12 flex flex-col gap-2">
+                      <h3 className="text-[20px] md:text-[22px] font-medium leading-[1.2]">Why LinkedIn</h3>
+                      <div className="text-[14px] md:text-[15px] text-[#4a4a4a] leading-[1.6] mt-2 space-y-4">
+                        <p>For many founders and professionals, LinkedIn offers a unique opportunity to share expertise in a professional context.</p>
+                        <p>People come to the platform looking for ideas, perspectives, and individuals they can learn from or collaborate with.</p>
+                        <p>Showing up consistently doesn&apos;t require becoming a content creator. It requires having something valuable to contribute — and the willingness to share it.</p>
+                      </div>
+                    </div>
+                  </Reveal>
+                </div>
+
+                {/* Right Column */}
+                <div className="lg:col-span-8 lg:pl-16 grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <Reveal delay={0.2} className="h-full">
+                    <div className="bg-[#FAF9F6] rounded-2xl p-8 flex flex-col gap-6 h-full border border-black/5">
+                      <div className="w-7 h-7">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full text-[#1a1a1a]">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                        </svg>
+                      </div>
+                      <div className="flex flex-col gap-3">
+                        <h4 className="text-[16px] font-medium text-[#1a1a1a]">Personal Brand Positioning</h4>
+                        <p className="text-[13px] text-[#6a6a6a] leading-[1.6]">Defining the expertise, experiences, and perspectives that shape how you want to be known professionally.</p>
+                      </div>
+                    </div>
+                  </Reveal>
+                  <Reveal delay={0.3} className="h-full">
+                    <div className="bg-[#FAF9F6] rounded-2xl p-8 flex flex-col gap-6 h-full border border-black/5">
+                      <div className="w-7 h-7">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full text-[#1a1a1a]">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+                        </svg>
+                      </div>
+                      <div className="flex flex-col gap-3">
+                        <h4 className="text-[16px] font-medium text-[#1a1a1a]">LinkedIn Strategy</h4>
+                        <p className="text-[13px] text-[#6a6a6a] leading-[1.6]">Developing a sustainable approach to content, audience-building, and visibility aligned with your goals.</p>
+                      </div>
+                    </div>
+                  </Reveal>
+                  <Reveal delay={0.4} className="h-full">
+                    <div className="bg-[#FAF9F6] rounded-2xl p-8 flex flex-col gap-6 h-full border border-black/5">
+                      <div className="w-7 h-7">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full text-[#1a1a1a]">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25M9 16.5v.75m3-3v3M15 12v5.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+                        </svg>
+                      </div>
+                      <div className="flex flex-col gap-3">
+                        <h4 className="text-[16px] font-medium text-[#1a1a1a]">Profile Development</h4>
+                        <p className="text-[13px] text-[#6a6a6a] leading-[1.6]">Refining your LinkedIn profile so it communicates credibility, clarity, and relevance to the people you want to reach.</p>
+                      </div>
+                    </div>
+                  </Reveal>
+                  <Reveal delay={0.5} className="h-full">
+                    <div className="bg-[#FAF9F6] rounded-2xl p-8 flex flex-col gap-6 h-full border border-black/5">
+                      <div className="w-7 h-7">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full text-[#1a1a1a]">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+                        </svg>
+                      </div>
+                      <div className="flex flex-col gap-3">
+                        <h4 className="text-[16px] font-medium text-[#1a1a1a]">Content Development</h4>
+                        <p className="text-[13px] text-[#6a6a6a] leading-[1.6]">Creating thoughtful content rooted in your real experiences, observations, and professional insights.</p>
+                      </div>
+                    </div>
+                  </Reveal>
+                  <Reveal delay={0.6} className="h-full md:col-span-2 lg:col-span-1">
+                    <div className="bg-[#FAF9F6] rounded-2xl p-8 flex flex-col gap-6 h-full border border-black/5">
+                      <div className="w-7 h-7">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full text-[#1a1a1a]">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+                        </svg>
+                      </div>
+                      <div className="flex flex-col gap-3">
+                        <h4 className="text-[16px] font-medium text-[#1a1a1a]">Engagement &amp; Community Building</h4>
+                        <p className="text-[13px] text-[#6a6a6a] leading-[1.6]">Supporting meaningful interactions that strengthen relationships and expand your professional network over time.</p>
+                      </div>
+                    </div>
+                  </Reveal>
+                </div>
+              </div>
+
+              <div className="w-full h-px bg-[#1a1a1a]/10" />
+
+              {/* ROW 3 */}
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
+                {/* Left Column */}
+                <div className="lg:col-span-4 flex flex-col gap-4">
+                  <Reveal>
+                    <h3 className="text-[20px] md:text-[22px] font-medium leading-[1.2]">Where It Leads</h3>
+                    <div className="text-[14px] md:text-[15px] text-[#4a4a4a] leading-[1.6] mt-2 space-y-4">
+                      <p>A founder&apos;s personal brand and a company&apos;s brand inevitably influence one another.</p>
+                      <p>When both communicate with clarity and consistency, trust grows faster. The business gains visibility. The founder gains credibility. And the opportunities that emerge tend to be more aligned with the work both are trying to create.</p>
+                    </div>
+                  </Reveal>
+                  <Reveal delay={0.2}>
+                    <Link
+                      href="/work"
+                      className="inline-flex items-center gap-2 text-[#4B3FD4] hover:text-[#786CF0] font-medium text-[16px] md:text-[18px] transition-colors duration-300 group mt-6"
+                    >
+                      View our Project
+                      <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
+                    </Link>
+                  </Reveal>
+                </div>
+
+                {/* Right Column - Horizontal Cards */}
+                <div className="lg:col-span-8 lg:pl-16 flex flex-col gap-6">
+                  <Reveal delay={0.2}>
+                    <h3 className="text-[18px] font-medium leading-[1.2] text-[#1a1a1a]">Where It Connects:</h3>
+                  </Reveal>
+                  <div className="flex flex-wrap items-center gap-4">
+                    <Reveal delay={0.2} className="w-full md:w-auto">
+                      <div className="bg-[#FAF9F6] rounded-2xl p-5 flex flex-col justify-center gap-4 w-full md:w-[150px] lg:w-[170px] h-[150px] border border-black/5">
+                        <div className="w-6 h-6">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full text-[#1a1a1a]">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+                          </svg>
+                        </div>
+                        <div className="flex flex-col gap-1">
+                          <h4 className="text-[12px] font-medium text-[#1a1a1a] leading-[1.3]">Brand Strategy</h4>
+                          <p className="text-[10px] text-[#6a6a6a] leading-[1.3]">the company&apos;s perspective</p>
+                        </div>
+                      </div>
+                    </Reveal>
+
+                    <Reveal delay={0.3} className="hidden md:flex items-center justify-center w-4 h-4">
+                      <div className="text-[#1a1a1a]/40">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" /></svg>
+                      </div>
+                    </Reveal>
+
+                    <Reveal delay={0.4} className="w-full md:w-auto">
+                      <div className="bg-[#FAF9F6] rounded-2xl p-5 flex flex-col justify-center gap-4 w-full md:w-[150px] lg:w-[170px] h-[150px] border border-black/5">
+                        <div className="w-6 h-6">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full text-[#1a1a1a]">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                          </svg>
+                        </div>
+                        <div className="flex flex-col gap-1">
+                          <h4 className="text-[12px] font-medium text-[#1a1a1a] leading-[1.3]">Content &amp; Comm.</h4>
+                          <p className="text-[10px] text-[#6a6a6a] leading-[1.3]">the broader voice</p>
+                        </div>
+                      </div>
+                    </Reveal>
+
+                    <Reveal delay={0.5} className="hidden md:flex items-center justify-center w-4 h-4">
+                      <div className="text-[#1a1a1a]/40">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" /></svg>
+                      </div>
+                    </Reveal>
+
+                    <Reveal delay={0.6} className="w-full md:w-auto">
+                      <div className="bg-[#FAF9F6] rounded-2xl p-5 flex flex-col justify-center gap-4 w-full md:w-[150px] lg:w-[170px] h-[150px] border border-black/5">
+                        <div className="w-6 h-6">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full text-[#1a1a1a]">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+                          </svg>
+                        </div>
+                        <div className="flex flex-col gap-1">
+                          <h4 className="text-[12px] font-medium text-[#1a1a1a] leading-[1.3]">Social &amp; Community</h4>
+                          <p className="text-[10px] text-[#6a6a6a] leading-[1.3]">the company&apos;s presence</p>
+                        </div>
+                      </div>
+                    </Reveal>
+                  </div>
+                </div>
+              </div>
+
+              <div className="w-full h-px bg-[#1a1a1a]/10 mt-8 lg:mt-0" />
+
+              {/* QUOTE-STYLE TEXT */}
+              <Reveal>
+                <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start py-4">
+                  <div className="text-[64px] leading-none font-serif text-[#1a1a1a]">“</div>
+                  <div className="flex flex-col gap-4 mt-2">
+                    <p className="text-[18px] md:text-[20px] font-medium text-[#1a1a1a]">
+                      Pragyan is a brand strategy and<br className="hidden md:block" />
+                      communications agency based in<br className="hidden md:block" />
+                      Ahmedabad, India.
+                    </p>
+                    <p className="text-[14px] text-[#6a6a6a]">— Pragyan</p>
+                  </div>
+                </div>
+              </Reveal>
+
             </div>
           </main>
         </div>

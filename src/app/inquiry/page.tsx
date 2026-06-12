@@ -52,7 +52,6 @@ export default function Inquiry() {
                       <h2 className="sr-only">Tell Us About Your Brand Goals</h2>
                       <p className="text-[#3F3F46] text-[14px] md:text-[15px] xl:text-[16px] mb-6 md:mb-6 leading-[1.6]">
                         Whether you&apos;re building something new, refining what already exists, or simply looking for a fresh perspective, we&apos;d love to hear from you. <br className="hidden md:block" />
-                        Tell us a little about what you&apos;re working on, and we&apos;ll take it from there.
                       </p>
                       <InquiryForm />
 
@@ -60,9 +59,7 @@ export default function Inquiry() {
                         <h2 className="sr-only">Reach Us Directly</h2>
                         <h3 className="sr-only">Pragyan, Ahmedabad — A-607, Money Plant High Street, SG Highway</h3>
                         <div className="text-[14px] md:text-[15px] xl:text-[15px] text-[#555] leading-relaxed" aria-hidden="true">
-                          <p className="font-semibold text-[15px] md:text-[16px] text-black mb-1">Reach us directly.</p>
-                          <p className="mb-5">If forms aren&apos;t your thing, feel free to reach out using the details below.</p>
-
+                          <p className="font-semibold text-[15px] md:text-[16px] text-black mb-1">If forms aren&apos;t your thing, feel free to reach out using the details below.</p>
                           <p className="font-medium text-black">Pragyan Branding &amp; Marketing</p>
                           <p>A-607, Money Plant High Street,</p>
                           <p className="mb-4">SG Highway, Ahmedabad &ndash; 382470</p>

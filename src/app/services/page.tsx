@@ -228,7 +228,7 @@ export default function Services() {
                   <div className="mt-32 relative md:ml-[5vw] lg:ml-[8vw] xl:ml-[10vw]">
                     <Reveal className="mb-12">
                       <h2 className="text-[32px] md:text-[42px] leading-[1.1] text-white">
-                        Frequently Asked Questions About Our Services
+                        Frequently Asked Questions
                       </h2>
                     </Reveal>
                     <FAQAccordion faqs={faqs} />
