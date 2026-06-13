@@ -264,9 +264,9 @@ It was to help the business look as dependable as the work it had been deliverin
     heroImagePosition: 'object-left',
     showcaseImage1: '/Shreeji-Brochure.webp',
     showcaseImage1Alt: 'Shreeji Enterprise brand brochure and sales collateral designed by Pragyan',
-    showcaseImage2: '/Shreeji envelope.webp',
-    showcaseImage2Alt: 'Shreeji Enterprise brand envelope and sales collateral designed by Pragyan',
-    showcaseImage3: '/Shreeji stationery.webp',
+    showcaseImage2: '/shreeji envelope.webp',
+    showcaseImage2Alt: 'shreeji Enterprise brand envelope and sales collateral designed by Pragyan',
+    showcaseImage3: '/shreeji stationery.webp',
     showcaseImage3Alt: 'Shreeji Enterprise brand stationery and sales collateral designed by Pragyan',
     outcomesSection: {
       title: 'Outcomes',
