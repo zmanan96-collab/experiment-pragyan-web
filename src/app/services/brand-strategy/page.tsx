@@ -51,7 +51,7 @@ export default function BrandStrategyPage() {
                   <Reveal delay={0.3}>
                     <Link
                       href="/inquiry"
-                      className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#1a1a1a] text-white rounded-full text-[14px] hover:bg-[#4B3FD4] transition-colors duration-300 group w-fit mt-4"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#1a1a1a] text-white rounded-full text-[14px] hover:bg-white hover:text-[#1a1a1a] hover:outline hover:outline-2 hover:outline-[#1a1a1a] transition-all duration-300 group w-fit mt-4"
                     >
                       Start a Conversation
                       <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
@@ -111,7 +111,7 @@ export default function BrandStrategyPage() {
                   </Reveal>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <Reveal delay={0.3} className="h-full">
-                      <div className="bg-[#FAF9F6] rounded-2xl p-8 flex flex-col gap-6 h-full border border-black/5">
+                      <div className="bg-[#e3e3e3] rounded-2xl p-8 flex flex-col gap-6 h-full border border-black/5">
                         <div className="w-7 h-7">
                           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full text-[#1a1a1a]">
                             <circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" />
@@ -124,7 +124,7 @@ export default function BrandStrategyPage() {
                       </div>
                     </Reveal>
                     <Reveal delay={0.4} className="h-full">
-                      <div className="bg-[#FAF9F6] rounded-2xl p-8 flex flex-col gap-6 h-full border border-black/5">
+                      <div className="bg-[#e3e3e3] rounded-2xl p-8 flex flex-col gap-6 h-full border border-black/5">
                         <div className="w-7 h-7">
                           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full text-[#1a1a1a]">
                             <circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" />
@@ -137,7 +137,7 @@ export default function BrandStrategyPage() {
                       </div>
                     </Reveal>
                     <Reveal delay={0.5} className="h-full">
-                      <div className="bg-[#FAF9F6] rounded-2xl p-8 flex flex-col gap-6 h-full border border-black/5">
+                      <div className="bg-[#e3e3e3] rounded-2xl p-8 flex flex-col gap-6 h-full border border-black/5">
                         <div className="w-7 h-7">
                           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full text-[#1a1a1a]">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
@@ -169,9 +169,9 @@ export default function BrandStrategyPage() {
                     </div>
                     <Link
                       href="/work"
-                      className="inline-flex items-center gap-2 text-[#4B3FD4] hover:text-[#786CF0] font-medium text-[16px] md:text-[18px] transition-colors duration-300 group mt-6"
+                      className="inline-flex items-center gap-2 text-[#1a1a1a] hover:text-[#4a4a4a] font-medium text-[16px] md:text-[18px] transition-colors duration-300 group mt-6"
                     >
-                      View our Project
+                      View our work
                       <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
                     </Link>
                   </Reveal>
@@ -180,7 +180,7 @@ export default function BrandStrategyPage() {
                 {/* Right Column - Horizontal Cards */}
                 <div className="lg:col-span-8 lg:pl-16 flex flex-col md:flex-row items-center justify-between gap-4">
                   <Reveal delay={0.2} className="w-full">
-                    <div className="bg-[#FAF9F6] rounded-2xl p-5 flex flex-col justify-center gap-4 w-full md:w-[150px] lg:w-[170px] h-[150px] border border-black/5">
+                    <div className="bg-[#e3e3e3] rounded-2xl p-5 flex flex-col justify-center gap-4 w-full md:w-[150px] lg:w-[170px] h-[150px] border border-black/5">
                       <div className="w-6 h-6">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full text-[#1a1a1a]">
                           <path strokeLinecap="round" strokeLinejoin="round" d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
@@ -200,7 +200,7 @@ export default function BrandStrategyPage() {
                   </Reveal>
 
                   <Reveal delay={0.4} className="w-full">
-                    <div className="bg-[#FAF9F6] rounded-2xl p-5 flex flex-col justify-center gap-4 w-full md:w-[150px] lg:w-[170px] h-[150px] border border-black/5">
+                    <div className="bg-[#e3e3e3] rounded-2xl p-5 flex flex-col justify-center gap-4 w-full md:w-[150px] lg:w-[170px] h-[150px] border border-black/5">
                       <div className="w-6 h-6">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full text-[#1a1a1a]">
                           <path strokeLinecap="round" strokeLinejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
@@ -220,7 +220,7 @@ export default function BrandStrategyPage() {
                   </Reveal>
 
                   <Reveal delay={0.6} className="w-full">
-                    <div className="bg-[#FAF9F6] rounded-2xl p-5 flex flex-col justify-center gap-4 w-full md:w-[150px] lg:w-[170px] h-[150px] border border-black/5">
+                    <div className="bg-[#e3e3e3] rounded-2xl p-5 flex flex-col justify-center gap-4 w-full md:w-[150px] lg:w-[170px] h-[150px] border border-black/5">
                       <div className="w-6 h-6">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full text-[#1a1a1a]">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
@@ -240,7 +240,7 @@ export default function BrandStrategyPage() {
                   </Reveal>
 
                   <Reveal delay={0.8} className="w-full">
-                    <div className="bg-[#FAF9F6] rounded-2xl p-5 flex flex-col justify-center gap-4 w-full md:w-[150px] lg:w-[170px] h-[150px] border border-black/5">
+                    <div className="bg-[#e3e3e3] rounded-2xl p-5 flex flex-col justify-center gap-4 w-full md:w-[150px] lg:w-[170px] h-[150px] border border-black/5">
                       <div className="w-6 h-6">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full text-[#1a1a1a]">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />

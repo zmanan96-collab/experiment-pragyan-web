@@ -45,7 +45,7 @@ export default function OOHAdvertisingPage() {
                   <Reveal delay={0.3}>
                     <Link
                       href="/inquiry"
-                      className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#1a1a1a] text-white rounded-full text-[14px] hover:bg-[#4B3FD4] transition-colors duration-300 group w-fit mt-4"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#1a1a1a] text-white rounded-full text-[14px] hover:bg-white hover:text-[#1a1a1a] hover:outline hover:outline-2 hover:outline-[#1a1a1a] transition-all duration-300 group w-fit mt-4"
                     >
                       Start a Conversation
                       <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
@@ -112,7 +112,7 @@ export default function OOHAdvertisingPage() {
                   </Reveal>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <Reveal delay={0.3} className="h-full">
-                      <div className="bg-[#FAF9F6] rounded-2xl p-8 flex flex-col gap-6 h-full border border-black/5">
+                      <div className="bg-[#e3e3e3] rounded-2xl p-8 flex flex-col gap-6 h-full border border-black/5">
                         <div className="w-7 h-7">
                           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full text-[#1a1a1a]">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.829 1.58-2.083a4.5 4.5 0 1 0-7.66 0c.922.254 1.58 1.1 1.58 2.083v.192" />
@@ -125,7 +125,7 @@ export default function OOHAdvertisingPage() {
                       </div>
                     </Reveal>
                     <Reveal delay={0.4} className="h-full">
-                      <div className="bg-[#FAF9F6] rounded-2xl p-8 flex flex-col gap-6 h-full border border-black/5">
+                      <div className="bg-[#e3e3e3] rounded-2xl p-8 flex flex-col gap-6 h-full border border-black/5">
                         <div className="w-7 h-7">
                           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full text-[#1a1a1a]">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605" />
@@ -138,7 +138,7 @@ export default function OOHAdvertisingPage() {
                       </div>
                     </Reveal>
                     <Reveal delay={0.5} className="h-full">
-                      <div className="bg-[#FAF9F6] rounded-2xl p-8 flex flex-col gap-6 h-full border border-black/5">
+                      <div className="bg-[#e3e3e3] rounded-2xl p-8 flex flex-col gap-6 h-full border border-black/5">
                         <div className="w-7 h-7">
                           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full text-[#1a1a1a]">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" />
@@ -151,7 +151,7 @@ export default function OOHAdvertisingPage() {
                       </div>
                     </Reveal>
                     <Reveal delay={0.6} className="h-full">
-                      <div className="bg-[#FAF9F6] rounded-2xl p-8 flex flex-col gap-6 h-full border border-black/5">
+                      <div className="bg-[#e3e3e3] rounded-2xl p-8 flex flex-col gap-6 h-full border border-black/5">
                         <div className="w-7 h-7">
                           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full text-[#1a1a1a]">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
@@ -180,7 +180,7 @@ export default function OOHAdvertisingPage() {
                         <p className="font-medium text-[#1a1a1a]">Global Guardians School</p>
                         <p className="mt-1">Supporting admissions communication through outdoor campaigns designed to build local awareness and reinforce the school&apos;s distinctive educational philosophy.</p>
                         <p className="mt-2">
-                          <Link href="/work/global-guardians-school" className="inline-flex items-center text-[#4B3FD4] hover:text-[#786CF0] font-medium transition-colors">
+                          <Link href="/work/global-guardians-school" className="inline-flex items-center text-[#1a1a1a] hover:text-[#4a4a4a] font-medium transition-colors">
                             &rarr; View case study
                           </Link>
                         </p>
@@ -190,7 +190,7 @@ export default function OOHAdvertisingPage() {
                         <p className="font-medium text-[#1a1a1a]">Bhavya Srishti Udyog</p>
                         <p className="mt-1">Developing outdoor communication that introduced a sustainable manufacturing brand to new audiences and expanded visibility beyond industry circles.</p>
                         <p className="mt-2">
-                          <Link href="/work/bhavya-srishti-udyog" className="inline-flex items-center text-[#4B3FD4] hover:text-[#786CF0] font-medium transition-colors">
+                          <Link href="/work/bhavya-srishti-udyog" className="inline-flex items-center text-[#1a1a1a] hover:text-[#4a4a4a] font-medium transition-colors">
                             &rarr; View case study
                           </Link>
                         </p>
@@ -214,9 +214,9 @@ export default function OOHAdvertisingPage() {
                     </div>
                     <Link
                       href="/work"
-                      className="inline-flex items-center gap-2 text-[#4B3FD4] hover:text-[#786CF0] font-medium text-[16px] md:text-[18px] transition-colors duration-300 group mt-6"
+                      className="inline-flex items-center gap-2 text-[#1a1a1a] hover:text-[#4a4a4a] font-medium text-[16px] md:text-[18px] transition-colors duration-300 group mt-6"
                     >
-                      View our Project
+                      View our work
                       <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
                     </Link>
                   </Reveal>

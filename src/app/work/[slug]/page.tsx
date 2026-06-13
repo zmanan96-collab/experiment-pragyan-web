@@ -41,6 +41,22 @@ function formatParagraphText(text: string | undefined): string {
   return formattedLines.join('\n');
 }
 
+function formatSectionHeading(text: string | undefined, defaultText: string) {
+  const heading = text || defaultText;
+  if (!heading.includes(':')) {
+    return <span className="font-bold block">{heading}</span>;
+  }
+  const [prefix, ...restParts] = heading.split(':');
+  const rest = restParts.join(':').trim();
+  
+  return (
+    <>
+      <span className="font-bold block">{prefix.trim()}</span>
+      <span className="font-normal block mt-2">{rest}</span>
+    </>
+  );
+}
+
 import { CaseStudyData, caseStudies } from '../../../lib/caseStudiesData';
 
 
@@ -172,8 +188,10 @@ export default async function CaseStudyPage({ params }: PageProps) {
         {(project.additionalSection || project.additionalSection2) && (
           <section className="max-w-[1440px] mx-auto px-10 md:px-16 py-8">
             <div className="border-b border-[#76777b]/30 pb-8 grid grid-cols-4 md:grid-cols-12 gap-6">
-              <div className="col-span-4 md:col-span-3">
-                <h2 className="text-sm text-black font-semibold leading-relaxed">{project.contextHeading || 'CONTEXT'}</h2>
+              <div className="col-span-4 md:col-span-3 md:pr-8 lg:pr-12">
+                <h2 className="text-[20px] md:text-[26px] text-black leading-tight tracking-tight">
+                  {formatSectionHeading(project.contextHeading, 'CONTEXT')}
+                </h2>
               </div>
               <div className="col-span-4 md:col-span-9 flex flex-col gap-6">
                 {project.additionalSection && (
@@ -197,8 +215,10 @@ export default async function CaseStudyPage({ params }: PageProps) {
         {project.additionalSection3 && (
           <section className="max-w-[1440px] mx-auto px-10 md:px-16 py-8">
             <div className="border-b border-[#76777b]/30 pb-8 grid grid-cols-4 md:grid-cols-12 gap-6">
-              <div className="col-span-4 md:col-span-3">
-                <h2 className="text-sm text-black font-semibold leading-relaxed">{project.processHeading || 'PROCESS'}</h2>
+              <div className="col-span-4 md:col-span-3 md:pr-8 lg:pr-12">
+                <h2 className="text-[20px] md:text-[26px] text-black leading-tight tracking-tight">
+                  {formatSectionHeading(project.processHeading, 'PROCESS')}
+                </h2>
               </div>
               <div className="col-span-4 md:col-span-9">
                 <p
