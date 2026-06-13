@@ -131,7 +131,7 @@ class LLMService:
             
         except Exception as e:
             logger.error(f"Error during LLM completion stream: {e}", exc_info=True)
-            error_message = "I apologize, but I encountered a temporary connection issue. Please give me a moment or contact our team directly at connect@mypragyan.com."
+            error_message = f"I apologize, but I encountered a temporary connection issue. [DEBUG: {str(e)}]. Please contact our team directly at connect@mypragyan.com."
             yield error_message
             await db_service.add_message(conv_id, "assistant", error_message)
 
