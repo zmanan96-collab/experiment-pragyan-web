@@ -275,6 +275,8 @@ export default function Culture() {
           </article>
         </div>
       </div>
+      {/* Fix for sub-pixel white line gap on Windows displays (125%/150% scaling) */}
+      <div className="w-full h-[2px] bg-black -mb-[2px] relative z-50" aria-hidden="true"></div>
     </>
   );
 }

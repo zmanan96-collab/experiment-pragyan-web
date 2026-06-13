@@ -17,21 +17,21 @@ interface ChatWidgetProps {
 function parseTextInline(text: string): React.ReactNode[] {
   const tokens: React.ReactNode[] = [];
   let index = 0;
-  
+
   // Match bold text (**text**) and markdown links ([label](url))
   const regex = /(\*\*.*?\*\*|\[.*?\]\(.*?\))/g;
   let match;
   let keyIdx = 0;
-  
+
   while ((match = regex.exec(text)) !== null) {
     const matchStr = match[0];
     const matchIdx = match.index;
-    
+
     // Add text before match
     if (matchIdx > index) {
       tokens.push(text.substring(index, matchIdx));
     }
-    
+
     if (matchStr.startsWith('**') && matchStr.endsWith('**')) {
       const boldText = matchStr.substring(2, matchStr.length - 2);
       tokens.push(
@@ -43,9 +43,9 @@ function parseTextInline(text: string): React.ReactNode[] {
       const closeBracket = matchStr.indexOf('](');
       const label = matchStr.substring(1, closeBracket);
       const url = matchStr.substring(closeBracket + 2, matchStr.length - 1);
-      
+
       tokens.push(
-        <a 
+        <a
           key={`l_${keyIdx++}`}
           href={url}
           target="_blank"
@@ -56,14 +56,14 @@ function parseTextInline(text: string): React.ReactNode[] {
         </a>
       );
     }
-    
+
     index = regex.lastIndex;
   }
-  
+
   if (index < text.length) {
     tokens.push(text.substring(index));
   }
-  
+
   return tokens.length > 0 ? tokens : [text];
 }
 
@@ -73,35 +73,35 @@ function renderMessageContent(content: string) {
   const stepRegex = /^\s*(\d+)\.\s+\*\*(.*?)\*\*:\s*(.*)$/gm;
   stepRegex.lastIndex = 0;
   const matches = [...content.matchAll(stepRegex)];
-  
+
   if (matches.length > 0) {
     const firstMatchLine = content.match(/^\s*\d+\.\s+\*\*/m);
     const firstMatchIndex = firstMatchLine ? content.indexOf(firstMatchLine[0]) : -1;
     const introText = firstMatchIndex > 0 ? content.substring(0, firstMatchIndex).trim() : "";
-    
+
     const listLines = content.match(/^\s*\d+\.\s+\*\*.*$/gm) || [];
     const lastLine = listLines[listLines.length - 1];
     const lastMatchIndex = lastLine ? content.lastIndexOf(lastLine) + lastLine.length : -1;
     const outroText = (lastMatchIndex > -1 && lastMatchIndex < content.length) ? content.substring(lastMatchIndex).trim() : "";
-    
+
     return (
       <div className="space-y-3 font-sans">
         {introText && <p className="text-[13px] text-agency-text-secondary leading-relaxed whitespace-pre-line">{parseTextInline(introText)}</p>}
-        
+
         {/* Stepper Timeline Container */}
         <div className="relative pl-6 border-l border-white/10 space-y-4 my-3 ml-2">
           {matches.map((match, idx) => {
             const stepNum = match[1];
             const title = match[2];
             const desc = match[3];
-            
+
             return (
               <div key={idx} className="relative group">
                 {/* Timeline node bubble */}
                 <div className="absolute -left-[35px] top-0.5 w-6 h-6 rounded-full bg-agency-dark border border-agency-gold/40 flex items-center justify-center text-[10px] font-bold text-agency-gold shadow-gold-glow group-hover:bg-agency-gold group-hover:text-agency-dark group-hover:border-agency-gold transition-all duration-300">
                   {stepNum}
                 </div>
-                
+
                 {/* Step Content */}
                 <div className="bg-white/[0.02] border border-white/5 rounded-xl p-3 hover:border-agency-gold/20 hover:bg-white/[0.04] transition-all duration-300">
                   <h4 className="text-[13px] font-bold text-agency-gold mb-1 tracking-wide">
@@ -115,37 +115,37 @@ function renderMessageContent(content: string) {
             );
           })}
         </div>
-        
+
         {outroText && <p className="text-[13px] text-agency-text-secondary leading-relaxed mt-2 whitespace-pre-line">{parseTextInline(outroText)}</p>}
       </div>
     );
   }
-  
+
   // 2. Fallback: Parse normal bullet lists or key-value contacts
   const bulletRegex = /^\s*[-*]\s+\*\*(.*?)\*\*:\s*(.*)$/gm;
   bulletRegex.lastIndex = 0;
   const bulletMatches = [...content.matchAll(bulletRegex)];
-  
+
   if (bulletMatches.length > 0) {
     const firstMatchLine = content.match(/^\s*[-*]\s+\*\*/m);
     const firstMatchIndex = firstMatchLine ? content.indexOf(firstMatchLine[0]) : -1;
     const introText = firstMatchIndex > 0 ? content.substring(0, firstMatchIndex).trim() : "";
-    
+
     const listLines = content.match(/^\s*[-*]\s+\*\*.*$/gm) || [];
     const lastLine = listLines[listLines.length - 1];
     const lastMatchIndex = lastLine ? content.lastIndexOf(lastLine) + lastLine.length : -1;
     const outroText = (lastMatchIndex > -1 && lastMatchIndex < content.length) ? content.substring(lastMatchIndex).trim() : "";
-    
+
     return (
       <div className="space-y-3 font-sans">
         {introText && <p className="text-[13px] text-agency-text-secondary leading-relaxed whitespace-pre-line">{parseTextInline(introText)}</p>}
-        
+
         {/* Contact/Key-Value Card */}
         <div className="bg-white/[0.02] border border-white/5 rounded-2xl p-4 my-2 space-y-2.5">
           {bulletMatches.map((match, idx) => {
             const label = match[1];
             const val = match[2];
-            
+
             return (
               <div key={idx} className="flex justify-between items-start text-[12.5px] border-b border-white/5 pb-2 last:border-b-0 last:pb-0">
                 <span className="text-agency-text-secondary font-medium mr-4">{label}</span>
@@ -154,7 +154,7 @@ function renderMessageContent(content: string) {
             );
           })}
         </div>
-        
+
         {outroText && <p className="text-[13px] text-agency-text-secondary leading-relaxed whitespace-pre-line">{parseTextInline(outroText)}</p>}
       </div>
     );
@@ -222,7 +222,7 @@ export default function ChatWidget({ mode = 'floating' }: ChatWidgetProps) {
       content: "Hello! I am Pragyan's AI Brand Consultant. We work with founders to build brands grounded in strategy, clarity, and long-term intent.\n\nAre you looking to scale your brand, design a new visual identity, launch a high-conversion digital product, or simply learn more about our process?",
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
     };
-    
+
     // Attempt to pull saved messages from local storage for instant loading
     const savedLocalMsgs = localStorage.getItem(`pragyan_chat_history_${currentSessionId}`);
     if (savedLocalMsgs) {
@@ -278,7 +278,7 @@ export default function ChatWidget({ mode = 'floating' }: ChatWidgetProps) {
       content: '',
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
     };
-    
+
     setMessages(prev => [...prev, newAssistantMsg]);
 
     try {
@@ -306,25 +306,25 @@ export default function ChatWidget({ mode = 'floating' }: ChatWidgetProps) {
       while (true) {
         const { value, done } = await reader.read();
         if (done) break;
-        
+
         buffer += decoder.decode(value, { stream: true });
         let boundary = buffer.indexOf('\n\n');
-        
+
         while (boundary !== -1) {
           const packet = buffer.substring(0, boundary).trim();
           buffer = buffer.substring(boundary + 2);
           boundary = buffer.indexOf('\n\n');
-          
+
           if (packet.startsWith('data: ')) {
             try {
               const jsonStr = packet.substring(6).trim();
               const parsed = JSON.parse(jsonStr);
-              
+
               const token = parsed.token || "";
-              
+
               if (token) {
                 fullAssistantText += token;
-                setMessages(prev => prev.map(m => 
+                setMessages(prev => prev.map(m =>
                   m.id === assistantMsgId ? { ...m, content: fullAssistantText } : m
                 ));
               }
@@ -342,7 +342,7 @@ export default function ChatWidget({ mode = 'floating' }: ChatWidgetProps) {
 
     } catch (err) {
       console.error("SSE Streaming Error:", err);
-      setMessages(prev => prev.map(m => 
+      setMessages(prev => prev.map(m =>
         m.id === assistantMsgId ? { ...m, content: "I apologize, but I encountered a network connection issue. Please make sure the backend server is running, or contact our team directly at connect@mypragyan.com." } : m
       ));
     } finally {
@@ -356,14 +356,14 @@ export default function ChatWidget({ mode = 'floating' }: ChatWidgetProps) {
       localStorage.setItem('pragyan_chat_session_id', newSessId);
       setSessionId(newSessId);
       localStorage.removeItem(`pragyan_chat_history_${sessionId}`);
-      
+
       const welcomeMsg: Message = {
         id: 'welcome',
         role: 'assistant',
         content: "Hello! I am Pragyan's AI Brand Consultant. We work with founders to build brands grounded in strategy, clarity, and long-term intent.\n\nAre you looking to scale your brand, design a new visual identity, launch a high-conversion digital product, or simply learn more about our process?",
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
       };
-      
+
       setMessages([welcomeMsg]);
     }
   };
@@ -375,22 +375,19 @@ export default function ChatWidget({ mode = 'floating' }: ChatWidgetProps) {
         <div className="p-4 bg-gradient-to-r from-agency-card to-agency-dark border-b border-white/10 flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <div className="w-10 h-10 rounded-xl flex items-center justify-center overflow-hidden border border-white/10 bg-agency-dark/50 shadow-gold-glow">
-              <img src="/assets/img/Title-icons.webp" alt="Pragyan Logo" className="w-full h-full object-contain p-1" />
+              <img src="/assets/img/pragyanlogo.webp" alt="Pragyan Logo" className="w-full h-full object-contain p-1" />
             </div>
             <div>
               <h3 className="font-semibold text-agency-text-primary text-sm flex items-center space-x-1.5 font-sans">
-                <span>Pragyan Brand AI</span>
+                <span>Pragyan</span>
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
               </h3>
-              <p className="text-[11px] text-agency-gold flex items-center">
-                <Sparkles className="w-3 h-3 mr-1 text-agency-gold" />
-                Senior Branding Consultant
-              </p>
+
             </div>
           </div>
-          
+
           <div className="flex items-center space-x-2">
-            <button 
+            <button
               onClick={handleResetChat}
               className="text-[10px] uppercase tracking-wider text-agency-text-secondary hover:text-agency-gold border border-white/10 hover:border-agency-gold/30 rounded-md px-1.5 py-0.5 transition-all"
               title="Restart Chat"
@@ -398,7 +395,7 @@ export default function ChatWidget({ mode = 'floating' }: ChatWidgetProps) {
               Reset
             </button>
             {!isEmbed && (
-              <button 
+              <button
                 onClick={() => setIsOpen(false)}
                 className="p-1 rounded-lg text-agency-text-secondary hover:text-agency-text-primary hover:bg-white/5 transition-all"
               >
@@ -409,23 +406,21 @@ export default function ChatWidget({ mode = 'floating' }: ChatWidgetProps) {
         </div>
 
         {/* Messages Container */}
-        <div 
+        <div
           ref={messageContainerRef}
           className="flex-1 p-4 overflow-y-auto custom-scrollbar space-y-4 bg-agency-dark/40"
         >
           {messages.map((msg) => (
-            <div 
-              key={msg.id} 
-              className={`flex flex-col max-w-[85%] ${
-                msg.role === 'user' ? 'ml-auto items-end' : 'mr-auto items-start'
-              }`}
-            >
-              <div 
-                className={`p-3.5 rounded-2xl text-[13.5px] leading-relaxed shadow-sm font-sans ${
-                  msg.role === 'user' 
-                    ? 'bg-agency-gold text-agency-dark rounded-tr-none font-medium whitespace-pre-line' 
-                    : 'bg-agency-card border border-white/5 text-agency-text-primary rounded-tl-none'
+            <div
+              key={msg.id}
+              className={`flex flex-col max-w-[85%] ${msg.role === 'user' ? 'ml-auto items-end' : 'mr-auto items-start'
                 }`}
+            >
+              <div
+                className={`p-3.5 rounded-2xl text-[13.5px] leading-relaxed shadow-sm font-sans ${msg.role === 'user'
+                  ? 'bg-white text-black rounded-tr-none font-medium whitespace-pre-line'
+                  : 'bg-agency-card border border-white/5 text-agency-text-primary rounded-tl-none'
+                  }`}
               >
                 {msg.role === 'user' ? msg.content : renderMessageContent(msg.content)}
               </div>
@@ -434,7 +429,7 @@ export default function ChatWidget({ mode = 'floating' }: ChatWidgetProps) {
               </span>
             </div>
           ))}
-          
+
           {/* Typing Indicator */}
           {isTyping && (
             <div className="flex flex-col items-start max-w-[85%]">
@@ -445,24 +440,24 @@ export default function ChatWidget({ mode = 'floating' }: ChatWidgetProps) {
               </div>
             </div>
           )}
-          
+
           <div ref={chatEndRef} />
         </div>
 
         {/* Input Panel */}
-        <form 
+        <form
           onSubmit={handleSendMessage}
           className="p-3 bg-agency-card border-t border-white/10 flex items-center space-x-2"
         >
-          <input 
+          <input
             ref={inputRef}
-            type="text" 
+            type="text"
             value={inputMessage}
             onChange={(e) => setInputMessage(e.target.value)}
             placeholder="Type a message or discuss a project..."
             className="flex-1 bg-agency-dark/80 text-agency-text-primary border border-white/10 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-agency-gold/50 placeholder-agency-text-muted transition-all"
           />
-          <button 
+          <button
             type="submit"
             disabled={!inputMessage.trim() || isTyping}
             className="p-2.5 rounded-xl bg-agency-gold disabled:bg-agency-card border border-agency-gold disabled:border-white/10 text-agency-dark disabled:text-agency-text-muted font-medium transition-all hover:bg-agency-gold-light shadow-gold-glow disabled:shadow-none cursor-pointer disabled:cursor-not-allowed"
