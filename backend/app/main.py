@@ -53,11 +53,13 @@ origins = [
     "https://mypragyan.com",
     "https://pragyaan.in",
     "https://www.pragyaan.in",
+    "https://experiment-pragyan-web.vercel.app",
 ]
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
