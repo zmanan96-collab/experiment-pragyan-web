@@ -92,6 +92,18 @@ Before buyers compare specifications, pricing, or capabilities, they make a quie
 Every decision that followed was guided by that question.`,
     heroImageAlt: 'ATC Chains India brand identity redesign by Pragyan — manufacturing branding',
     heroImage: '/ATC-hero.webp',
+    gallery: [
+      {
+        src: "/atc-social-media.webp",
+        alt: "ATC Chains India LinkedIn and Social Media Strategy",
+        cols: 1
+      },
+      {
+        src: "/atc-mockups.webp",
+        alt: "ATC Chains India Brand Identity Mockups",
+        cols: 1
+      }
+    ],
     customTwoCards: {
       title: "Within a span of 8 months..",
       items: [
