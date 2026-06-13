@@ -488,11 +488,11 @@ export default function ChatWidget({ mode = 'floating' }: ChatWidgetProps) {
         {!isOpen && (
           <button
             onClick={() => setIsOpen(true)}
-            className="group flex items-center md:space-x-3.5 bg-agency-gold hover:bg-agency-gold-light text-agency-dark p-4 md:px-5 md:py-4 rounded-full shadow-premium shadow-gold-glow hover:shadow-2xl transition-all duration-300 hover:scale-105"
+            className="group flex items-center md:space-x-3.5 bg-white hover:bg-[#FAFAFA] text-black outline outline-2 outline-black p-4 md:px-5 md:py-4 rounded-full shadow-premium hover:shadow-2xl transition-all duration-300 hover:scale-105"
           >
             <div className="relative">
               <MessageSquare className="w-6 h-6 animate-pulse-slow" />
-              <span className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-emerald-500 border border-agency-dark"></span>
+              <span className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-emerald-500 border border-white"></span>
             </div>
             <span className="hidden md:block text-sm font-semibold tracking-wide font-sans pr-1">
               Consult with Pragyan
